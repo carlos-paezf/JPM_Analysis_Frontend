@@ -1,5 +1,8 @@
 import { FormGroup } from "@angular/forms";
 
+export { AppUserType } from './app-user.type';
+
+
 export type ColumnTableType<T> = {
     columnDef: string;
     header: string;
