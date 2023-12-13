@@ -1,4 +1,4 @@
-import { TColumnTable } from "../types";
+import { ColumnTableType } from "../types";
 
 /**
  * An abstract class is defined with a generic type, 
@@ -12,5 +12,5 @@ export abstract class InfoTableBaseComponent<T> {
     public isEmptyTable: boolean = true;
     public data: T[] = [];
     public abstract displayedColumns: string[];
-    public abstract columns: TColumnTable<T>[];
+    public abstract columns: ColumnTableType<T>[];
 }
