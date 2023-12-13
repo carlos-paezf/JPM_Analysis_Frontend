@@ -1,29 +1,29 @@
 import { FormGroup } from "@angular/forms";
 
-export type TColumnTable<T> = {
+export type ColumnTableType<T> = {
     columnDef: string;
     header: string;
     cell: ( row: T ) => unknown;
 };
 
 
-export type TResponseSheets<T> = {
+export type ResponseSheetsType<T> = {
     totalResults: number;
     data: T[];
 };
 
 
-export type TSidenavLink = {
+export type SidenavLinkType = {
     label: string;
     icon?: string;
     routeLink?: string;
     openTab?: boolean;
-    children?: TSidenavLink[];
+    children?: SidenavLinkType[];
     requiresAdmin: boolean;
 };
 
 
-export type TFormBase = {
+export type FormBaseType = {
     form: FormGroup;
     submitted: boolean;
     onSubmit (): void;
