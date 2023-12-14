@@ -1,5 +1,17 @@
 import { FormGroup } from "@angular/forms";
 
+export {
+    ControlDateType,
+    ProfileType,
+    FunctionType,
+    ProductType,
+    ProfileFunctionType,
+    CompanyUserType,
+    AccountType,
+    ClientType,
+    UserEntitlementType,
+    JPMDataAppType
+} from './jpm-types.type';
 export { AppUserType } from './app-user.type';
 
 
