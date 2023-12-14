@@ -4,6 +4,7 @@ import { CustomIfDirective } from './directives/custom-if.directive';
 import { InputErrorMessageDirective } from './directives/input-error-message.directive';
 import { NoteFieldFormDirective } from './directives/note-field-form.directive';
 import { OptionalFieldDirective } from './directives/optional-field.directive';
+import { TransformCellValuePipe } from './pipes/transform-cell-value.pipe';
 
 
 
@@ -12,7 +13,8 @@ import { OptionalFieldDirective } from './directives/optional-field.directive';
     CustomIfDirective,
     InputErrorMessageDirective,
     NoteFieldFormDirective,
-    OptionalFieldDirective
+    OptionalFieldDirective,
+    TransformCellValuePipe
   ],
   imports: [
     CommonModule
