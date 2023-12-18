@@ -48,6 +48,23 @@ import { TransformCellValuePipe } from './pipes/transform-cell-value.pipe';
         CommonModule,
         MaterialDesignModule,
         RouterModule,
+    ],
+    exports: [
+        CustomIfDirective,
+        DialogSectionComponent,
+        FooterComponent,
+        HeaderComponent,
+        InputErrorMessageDirective,
+        InputFileComponent,
+        InternalServerErrorComponent,
+        LoadingComponent,
+        NoteFieldFormDirective,
+        NotFoundComponent,
+        SidenavComponent,
+        SupportImageComponent,
+        TableBaseComponent,
+        TableLoadingComponent,
+        TransformCellValuePipe,
     ]
 } )
 export class SharedModule { }
