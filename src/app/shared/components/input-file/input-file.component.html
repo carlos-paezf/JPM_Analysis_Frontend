@@ -1,0 +1,12 @@
+<label for="file" class="file-input" #fileInputLabel>
+    <div [class]="fileName ? 'drop-zone fill' :'drop-zone'">
+        <p *ngIf="!loading">{{fileName ?? 'Seleccionar un archivo o arrastrar aquí'}}</p>
+        <mat-progress-bar mode="indeterminate" *ngIf="loading"></mat-progress-bar>
+    </div>
+    <input type="file" #fileInput id="excel-file" name="excel-file" accept=".xlsx" (change)="inputFile($event)">
+</label>
+
+<div class="file-list">
+    <button mat-stroked-button color="accent" (click)="removeFile()" type="button" [disabled]="!fileName">Eliminar
+        archivo</button>
+</div>

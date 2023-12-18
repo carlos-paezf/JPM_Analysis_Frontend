@@ -1,0 +1,25 @@
+<header>
+    <button mat-icon-button color="primary" aria-label="Sidenav toggle" (click)="toggleDrawer()">
+        <mat-icon>menu</mat-icon>
+    </button>
+
+    <div class="user__options">
+        <div class="basic__links">
+            <a routerLink="dashboard" mat-button>Inicio</a>
+            <a routerLink="file-upload" mat-button>Cargar archivo con reporte</a>
+        </div>
+
+        <div class="user__menu">
+            <button mat-fab extended color="primary" [matMenuTriggerFor]="menu">
+                <mat-icon>account_circle</mat-icon>
+                {{ appUserName }}
+            </button>
+
+            <mat-menu #menu="matMenu">
+                <a [routerLink]="'app-users/' + appLogon" mat-menu-item>Editar información de la cuenta</a>
+                <hr />
+                <button mat-menu-item (click)="logout()">Cerrar Sesión</button>
+            </mat-menu>
+        </div>
+    </div>
+</header>

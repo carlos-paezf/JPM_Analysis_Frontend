@@ -1,0 +1,126 @@
+/* header {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+    top: 0;
+    background: var(--main-background);
+    box-shadow: var(--dark-shadow);
+
+    .sec-menu {
+        width: 100%;
+        background: var(--primary);
+        height: 35px;
+        display: flex;
+        align-content: center;
+        justify-content: space-between;
+        padding: 0 5%;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: 150;
+
+        .general__menu {
+            .btn__menu {
+                height: 100%;
+                color: var(--second-background);
+
+                &:hover {
+                    background: darken($color: #003E6C, $amount: 3);
+                }
+            }
+        }
+
+        .individual__menu {
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            gap: 1rem;
+
+            a {
+                color: var(--second-background)
+            }
+        }
+    }
+
+    .header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+
+        picture {
+            width: var(--max-width);
+            height: 100%;
+            display: flex;
+            align-items: center;
+
+            img {
+                height: 75%;
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    header {
+        picture {
+            max-width: var(--medium-width);
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        picture {
+            max-width: var(--phone-width);
+        }
+    }
+} */
+
+header {
+    align-items: center;
+    background: var(--main-background);
+    box-shadow: var(--dark-shadow);
+    display: flex;
+    flex-direction: row;
+    height: 75px;
+    justify-content: space-between;
+    padding: 0 5rem;
+    position: sticky;
+    top: 0;
+    width: 100vw;
+    z-index: 1000;
+
+    .user__options {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        min-width: var(--phone-width);
+        gap: 2rem;
+
+        .basic__links {
+            border-right: 2px solid var(--primary-dark);
+            padding: 0 1.25rem;
+        }
+
+        .user__menu {
+            display: flex;
+
+            button {
+                border-radius: 15px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    header .user__options {
+        justify-content: flex-end;
+
+        .basic__links {
+            display: none;
+        }
+    }
+}

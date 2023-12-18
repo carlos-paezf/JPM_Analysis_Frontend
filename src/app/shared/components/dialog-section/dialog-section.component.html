@@ -1,0 +1,15 @@
+<section class="dialog__modal">
+    <div class="dialog__content">
+
+        <div class="dialog__header">
+            <button mat-stroked-button extended color="accent" aria-label="Back History" (click)="goBack()">
+                <mat-icon>arrow_back_ios</mat-icon> Atrás
+            </button>
+            <h2>{{ header }}</h2>
+        </div>
+
+        <div class="dialog__body">
+            <ng-content></ng-content>
+        </div>
+    </div>
+</section>

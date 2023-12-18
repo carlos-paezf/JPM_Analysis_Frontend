@@ -1,0 +1,41 @@
+.loading-shade {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+
+    .empty-table {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        p {
+            font-size: 1.25rem;
+        }
+
+        picture {
+            img {
+                width: 400px;
+            }
+
+            a {
+                background-color: var(--main-background);
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                left: 0;
+                text-align: right;
+                display: none;
+
+            }
+
+            &:hover {
+                a {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}

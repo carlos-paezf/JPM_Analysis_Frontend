@@ -1,0 +1,20 @@
+<section class="page__error">
+    <app-support-image [imgSrc]="imgSrc" [sourceSrcset]="sourceSrcset" alt="Internal Server Error Status"
+        message=""></app-support-image>
+
+    <div class="content_box_error">
+        <h1 class="mb-1">Opps!!!</h1>
+
+        <h3>Error interno en el servidor</h3>
+
+        <div class="suggest__message">
+            <strong>
+                Ha ocurrido un error inesperado en el servidor. Por favor espera e intentalo de nuevo más tarde
+            </strong>
+        </div>
+    </div>
+
+    <div class="buttons">
+        <button mat-raised-button color="primary" (click)="refresh()">Recargar aplicación</button>
+    </div>
+</section>

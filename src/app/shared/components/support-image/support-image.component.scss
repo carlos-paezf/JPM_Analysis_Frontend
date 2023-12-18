@@ -1,0 +1,33 @@
+section {
+    width: 100%;
+    display: grid;
+    place-items: center;
+
+    p {
+        font-size: 1.25rem;
+        max-width: var(--fixed-width);
+        text-align: center;
+    }
+
+    picture {
+        img {
+            width: 400px;
+        }
+
+        a {
+            background-color: var(--main-background);
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            left: 0;
+            text-align: right;
+            display: none;
+        }
+
+        &:hover {
+            a {
+                display: inline-block;
+            }
+        }
+    }
+}

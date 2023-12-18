@@ -1,0 +1,92 @@
+footer {
+    background-color: var(--text-color);
+    min-height: 200px;
+    display: grid;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+
+    .footer {
+        max-width: var(--max-width);
+        width: 100%;
+        display: grid;
+        grid-template-columns: 100px repeat(3, minmax(30px, 1fr));
+        gap: 1rem;
+        padding: 2rem 0;
+
+        picture {
+            display: flex;
+            justify-content: center;
+
+            img {
+                height: 75px;
+            }
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            border-right: 1px solid var(--overlay-background);
+
+            a {
+                color: var(--overlay-background);
+
+                &:hover {
+                    color: var(--primary-light);
+                }
+            }
+        }
+
+        .links {
+            a {
+                text-transform: uppercase;
+                line-height: 2rem;
+            }
+
+            .social-network {
+                display: flex;
+                gap: 1rem;
+                margin-top: 1rem;
+
+                .social {
+                    width: 30px;
+                    height: 30px;
+                    border: 1px solid var(--overlay-background);
+                    border-radius: 50%;
+                    color: var(--overlay-background);
+
+                    &:hover {
+                        border: 1px solid var(--primary-light);
+                        color: var(--primary-light);
+                    }
+                }
+            }
+        }
+
+        .accessibility a,
+        .contact a {
+            line-height: 1.25rem;
+
+            &:nth-child(1) {
+                line-height: 2.5rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    footer .footer {
+        max-width: var(--phone-width);
+        grid-template-columns: 1fr;
+
+        picture {
+            display: none;
+        }
+
+        div {
+            padding-bottom: 1rem;
+            border: none;
+            border-bottom: 1px solid var(--overlay-background);
+        }
+    }
+}

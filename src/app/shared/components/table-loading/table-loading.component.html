@@ -1,0 +1,8 @@
+<div class="loading-shade">
+    <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
+
+    <div class="empty-table" *ngIf="isEmptyTable && !isLoadingResults">
+        <app-support-image [imgSrc]="imgSrc" [sourceSrcset]="sourceSrcset" alt="Searching"
+            message="No hay datos registrados en la base de datos"></app-support-image>
+    </div>
+</div>
