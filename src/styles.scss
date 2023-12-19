@@ -1,1 +1,368 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+    --primary: #003E6C;
+    --primary-dark: #002e52;
+    --primary-light: #8BB9DC;
+    --mdc-checkbox-disabled-selected-icon-color: rgb(5, 1, 58);
+    --mdc-switch-disabled-selected-handle-color: rgb(5, 1, 58);
+
+
+    --text-color: #333333;
+    --text-color-secondary: #aaaaaa;
+
+    --secondary: #911B28;
+
+    --main-background: #F8F7F7;
+    --second-background: #F2F3F7;
+    --third-background: #b6b6b6;
+    --overlay-background: #949494c5;
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, .1);
+    --dark-shadow: 0 2px 1px rgba(0, 0, 0, 0.507);
+
+    --transition: all 300ms linear;
+    --radius: .25rem;
+    --max-width: 1200px;
+    --medium-width: 768px;
+    --phone-width: 460px;
+    --min-height: 550px;
+    --fixed-width: 620px;
+
+    --font-family: Roboto, "Helvetica Neue", sans-serif;
+    --font-size: .875rem;
+    --spacing: 0.05rem;
+}
+
+.mat-mdc-slide-toggle {
+    --mdc-switch-disabled-selected-handle-color: rgb(5, 1, 58);
+}
+
+.mat-mdc-slide-toggle .mdc-switch--disabled+label {
+    color: rgb(0, 0, 0);
+}
+
+.mat-mdc-form-field-infix {
+    min-height: 45px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: smooth !important;
+    }
+}
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    background: var(--main-background);
+    color: var(--text-color);
+    font-size: var(--font-size);
+    overflow-x: hidden;
+    position: absolute;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-light);
+}
+
+h1,
+h2,
+h3,
+h4 {
+    letter-spacing: var(--spacing);
+    line-height: 1.25;
+    // margin: .75rem 0;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+h4 {
+    font-size: .875rem;
+}
+
+p {
+    margin-bottom: 1.25rem;
+    color: var(--text-color)
+}
+
+app-root,
+mat-drawer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.protected {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+mat-drawer-content {
+    height: 100vh;
+}
+
+main {
+    min-height: var(--min-height);
+    max-width: var(--max-width);
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 2.5rem;
+
+    .history__navigation {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    main {
+        max-width: var(--medium-width);
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        max-width: var(--phone-width);
+    }
+}
+
+picture {
+    position: relative;
+
+    a {
+        background-color: var(--main-background);
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        left: 0;
+        text-align: right;
+        display: none;
+    }
+
+    &:hover {
+        a {
+            display: inline-block;
+        }
+    }
+}
+
+.page__error {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    min-height: var(--min-height);
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    text-align: center;
+    gap: 1rem;
+    padding: 2.5rem 0;
+
+    img {
+        height: 25rem;
+    }
+
+    .content_box_error {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+
+        p {
+            text-align: center;
+        }
+    }
+
+    .buttons {
+        min-width: var(--fixed-width);
+        display: flex;
+        justify-content: space-evenly;
+
+        button {
+            min-width: 15rem;
+        }
+    }
+}
+
+.loading__section {
+    display: grid;
+    justify-items: center;
+}
+
+.form-group-control {
+    display: flex;
+    flex-direction: column;
+    margin: 1.5rem 0;
+    gap: .5rem;
+}
+
+.form-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 1rem 0;
+}
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: .5rem;
+    margin: .5rem 2rem;
+
+    .label {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        label {
+            margin: 0;
+        }
+    }
+
+    input {
+        height: 45px;
+    }
+}
+
+.opacity_icon {
+    color: var(--primary);
+}
+
+.sheet__info {
+    width: 100%;
+
+    .loading-shade {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 300px;
+
+        .empty-table {
+            font-size: 1.25rem;
+        }
+    }
+
+    mat-form-field {
+        width: 100%;
+    }
+
+    .table__report {
+        overflow: auto;
+    }
+}
+
+
+.dialog__modal {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100%;
+    min-height: 100vh;
+    background-color: var(--overlay-background);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    .dialog__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 1rem;
+        background-color: white;
+        height: auto;
+        width: 100%;
+        max-width: var(--max-width);
+        min-width: var(--phone-width);
+        padding: 2.5rem;
+        border-radius: 7.5px;
+        -webkit-box-shadow: 0px 6px 66px -8px rgba(0, 0, 0, 1);
+        -moz-box-shadow: 0px 6px 66px -8px rgba(0, 0, 0, 1);
+        box-shadow: 0px 6px 66px -8px rgba(0, 0, 0, 1);
+
+        .dialog__header {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin: 0;
+            gap: 2rem;
+
+            h2 {
+                margin: 0;
+            }
+        }
+
+        .dialog__body {
+            display: grid;
+            place-items: center;
+            min-width: 100%;
+            margin: 0;
+            height: 100%;
+            overflow: auto;
+        }
+    }
+}
+
+body:has(.dialog__modal) {
+    overflow: hidden;
+}
+
+input {
+    padding: .5rem 1rem;
+    font-family: var(--font-family);
+    font-size: medium;
+    border: 1px solid var(--third-background);
+    border-radius: .25rem;
+    margin: 0;
+    height: 2rem;
+
+    &:disabled {
+        color: black;
+    }
+}
