@@ -1,0 +1,31 @@
+<mat-drawer-container hasBackdrop="false">
+    <mat-drawer #drawer mode="over">
+        <app-sidenav [drawer]="drawer"></app-sidenav>
+    </mat-drawer>
+
+    <mat-drawer-content>
+        <app-header [drawer]="drawer"></app-header>
+
+        <div class="protected" (click)="drawer.close()">
+            <app-loading></app-loading>
+
+            <main>
+                <div class="history__navigation">
+                    <button mat-icon-button color="accent" aria-label="Back History" (click)="goBack()">
+                        <mat-icon>chevron_left</mat-icon>
+                    </button>
+
+                    <button mat-icon-button color="accent" aria-label="Forward History" (click)="goForward()">
+                        <mat-icon>chevron_right</mat-icon>
+                    </button>
+                </div>
+
+                <app-internal-server-error *ngIf="internalServerError"></app-internal-server-error>
+
+                <router-outlet *customIf="!internalServerError && !forbiddenError && !notFoundError"></router-outlet>
+            </main>
+        </div>
+
+        <app-footer></app-footer>
+    </mat-drawer-content>
+</mat-drawer-container>
