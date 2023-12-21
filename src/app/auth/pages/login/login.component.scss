@@ -1,0 +1,32 @@
+.login {
+    min-width: var(--phone-width);
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    align-content: center;
+}
+
+form {
+    min-width: var(--phone-width);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .form__password {
+        position: relative;
+
+        input {
+            // position: absolute;
+            width: 100%;
+        }
+
+        button {
+            position: absolute;
+            right: 0;
+            height: 45px !important;
+        }
+    }
+}
