@@ -50,7 +50,7 @@ export class TableBaseComponent implements OnInit, AfterViewInit {
     @Input() public displayedColumns: string[] = [];
     @Input() public data: any[] = [];
     @Input() public columns: ColumnTableType<any>[] = [];
-    @Input() public stickyColumn: string = 'userName';
+    @Input() public stickyColumn: string = 'user_name';
     @Input() public baseUrl!: string;
     @Input() public deleteFunction!: Function;
 
@@ -140,12 +140,12 @@ export class TableBaseComponent implements OnInit, AfterViewInit {
      * @param {string} idUser - The idUser parameter is a string that represents the unique identifier
      * of a user.
      */
-    handleRedirectUser ( idUser: string, userName: string ) {
+    handleRedirectUser ( access_id: string, userName: string ) {
         const redirectionAccepted = window.confirm( `¿Desea abrir la vista detallada del usuario ${ userName }?` );
 
         if ( !redirectionAccepted ) return;
 
-        this._router.navigateByUrl( `app/company-users/${ idUser }` );
+        this._router.navigateByUrl( `app/company-users/${ access_id }` );
     }
 
     /**

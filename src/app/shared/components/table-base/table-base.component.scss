@@ -43,6 +43,10 @@ mat-form-field {
                     background: #efefef;
                 }
             }
+
+            td {
+                min-width: 170px;
+            }
         }
 
         .element-row {
