@@ -30,7 +30,7 @@ export type CompanyUserType = ControlDateType & {
     access_id: string;
     user_name: string;
     user_status: boolean;
-    user_type: "SA1" | "SA2" | "SAviewer" | "End User";
+    user_type: "SA1" | "SA2" | "SAviewer" | "End User" | "SAOther";
     employee_id: string | null;
     email_address: string;
     user_location: string | null;
