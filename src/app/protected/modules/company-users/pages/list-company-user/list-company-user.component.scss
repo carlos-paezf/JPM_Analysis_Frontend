@@ -1,0 +1,19 @@
+section {
+    width: 100%;
+    margin: 1rem 0;
+
+    mat-form-field {
+        width: 100%;
+    }
+
+    .table__report {
+        overflow: auto;
+        max-height: 600px;
+
+        table {
+            mat-row {
+                border-color: currentColor;
+            }
+        }
+    }
+}
