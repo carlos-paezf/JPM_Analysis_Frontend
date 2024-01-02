@@ -1,7 +1,7 @@
-import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Component, Input, OnInit } from '@angular/core';
 import { MatDrawer } from '@angular/material/sidenav';
 
+import { SIDENAV_ITEMS, slideInOutAnimationTrigger } from '../../constants/sidenav';
 import { AuthUsersService } from '../../services/auth-users.service';
 import { SidenavLinkType } from '../../types';
 
@@ -15,13 +15,7 @@ import { SidenavLinkType } from '../../types';
     selector: 'app-sidenav',
     templateUrl: './sidenav.component.html',
     styleUrls: [ './sidenav.component.scss' ],
-    animations: [
-        trigger( 'slideInOut', [
-            state( 'false', style( { height: '0px', opacity: 0, display: 'none' } ) ),
-            state( 'true', style( { height: '*', opacity: 1 } ) ),
-            transition( 'false <=> true', animate( '300ms ease-in-out' ) )
-        ] ),
-    ]
+    animations: [ slideInOutAnimationTrigger ]
 } )
 export class SidenavComponent implements OnInit {
     @Input() drawer!: MatDrawer;
@@ -30,73 +24,7 @@ export class SidenavComponent implements OnInit {
 
     public isAdminUser: boolean = false;
 
-    public linksMenu: SidenavLinkType[] = [
-        {
-            label: 'Inicio',
-            icon: 'home',
-            routeLink: 'dashboard',
-            requiresAdmin: false
-        },
-        {
-            label: 'Cargar archivo con reporte',
-            icon: 'upload_file',
-            routeLink: 'file-upload',
-            requiresAdmin: false
-        },
-        {
-            label: 'JPM Transaction Instruction Manager (TIM)',
-            icon: 'list',
-            openTab: false,
-            children: [
-                {
-                    label: 'TIM Cash',
-                    routeLink: 'sheets/tim-cash',
-                    requiresAdmin: false
-                },
-                {
-                    label: 'TIM FX',
-                    routeLink: 'sheets/tim-fx',
-                    requiresAdmin: false
-                },
-                {
-                    label: 'TIM Listed Sec',
-                    routeLink: 'sheets/tim-listed-sec',
-                    requiresAdmin: false
-                },
-            ],
-            requiresAdmin: false
-        },
-        {
-            label: 'Perfiles de usuarios JPM',
-            icon: 'people',
-            routeLink: 'profiles',
-            requiresAdmin: false
-        },
-        {
-            label: 'Usuarios de la compañía',
-            icon: 'contacts',
-            routeLink: 'company-users',
-            requiresAdmin: false
-        },
-        {
-            label: 'Usuarios de la aplicación',
-            icon: 'desktop_windows',
-            openTab: false,
-            children: [
-                {
-                    label: 'Usuarios de la APP',
-                    routeLink: 'app-users/app-users-list',
-                    requiresAdmin: false
-                },
-                {
-                    label: 'Crear Usuario APP',
-                    routeLink: 'app-users/create-app-user',
-                    requiresAdmin: true
-                }
-            ],
-            requiresAdmin: false
-        }
-    ];
+    public linksMenu: SidenavLinkType[] = SIDENAV_ITEMS;
 
     constructor ( private readonly _authUserService: AuthUsersService ) { }
 
