@@ -1,0 +1,11 @@
+<h2>Módulos de la aplicación</h2>
+
+<div class="dashboard__panels" *ngFor="let module of appModulesPanels">
+    <h3>{{ module.title }}</h3>
+    <div class="sub__panels">
+        <span class="panel" *ngFor="let panel of module.panels" [routerLink]="'../' + panel.routeLink">
+            {{ panel.label }}
+        </span>
+    </div>
+    <hr />
+</div>
