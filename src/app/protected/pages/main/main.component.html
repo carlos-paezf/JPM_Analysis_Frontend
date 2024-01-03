@@ -10,7 +10,8 @@
             <app-loading></app-loading>
 
             <main>
-                <div class="history__navigation">
+                <!-- TODO: Analizar si es útil esta forma de navegación -->
+                <!-- <div class="history__navigation">
                     <button mat-icon-button color="accent" aria-label="Back History" (click)="goBack()">
                         <mat-icon>chevron_left</mat-icon>
                     </button>
@@ -18,7 +19,7 @@
                     <button mat-icon-button color="accent" aria-label="Forward History" (click)="goForward()">
                         <mat-icon>chevron_right</mat-icon>
                     </button>
-                </div>
+                </div> -->
 
                 <app-internal-server-error *ngIf="internalServerError"></app-internal-server-error>
 
