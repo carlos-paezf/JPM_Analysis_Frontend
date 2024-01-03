@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
 import { InfoTableBaseComponent } from '../../../../../shared/classes/sheet-base-component.class';
-import { CompanyUsersService } from '../../services/company-users.service';
 import { ColumnTableType, CompanyUserType } from '../../../../../shared/types';
-import { COMPANY_USERS } from '../../../../../shared/mocks';
+import { CompanyUsersService } from '../../services/company-users.service';
 
 
 @Component( {
@@ -43,8 +42,6 @@ export class ListCompanyUserComponent extends InfoTableBaseComponent<CompanyUser
         { columnDef: 'profile_id', header: 'Profile', cell: ( row ) => row.profile_id },
         { columnDef: 'updated_at', header: 'Última Actualización', cell: ( row ) => row.updated_at },
     ];
-
-    public override data: CompanyUserType[] = [];
 
     constructor ( private _companyUsersService: CompanyUsersService ) {
         super();
