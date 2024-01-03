@@ -1,0 +1,16 @@
+<h2>Listado de Perfiles</h2>
+
+<p>A continuación se listan los perfiles en cuales puedes estar clasificados los usuarios de la compañía.</p>
+
+<section>
+    <ng-container *ngIf="isLoadingResults || isEmptyTable; else tableComponent">
+        <app-table-loading [isLoadingResults]="isLoadingResults" [isEmptyTable]="isEmptyTable"></app-table-loading>
+    </ng-container>
+
+    <ng-template #tableComponent>
+        <app-table-base [displayedColumns]="displayedColumns" [data]="data" [columns]="columns"
+            baseUrl="profiles"></app-table-base>
+    </ng-template>
+</section>
+
+<router-outlet></router-outlet>
