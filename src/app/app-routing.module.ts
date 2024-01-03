@@ -8,19 +8,16 @@ import { noActiveSessionGuard } from './shared/guards/no-active-session.guard';
 
 const routes: Routes = [
     {
-        path: 'auth',
+        path: '',
         canActivateChild: [ noActiveSessionGuard ],
         canMatch: [ noActiveSessionGuard ],
         loadChildren: () => import( './auth/auth.module' ).then( m => m.AuthModule )
     },
     {
-        path: 'app',
+        path: '',
         canActivateChild: [ isLoggedGuard ],
         canMatch: [ isLoggedGuard ],
         loadChildren: () => import( './protected/protected.module' ).then( m => m.ProtectedModule )
-    },
-    {
-        path: '', pathMatch: 'full', redirectTo: 'app'
     },
     {
         path: '**', component: NotFoundComponent, data: { title: '404 - No encontrado' }

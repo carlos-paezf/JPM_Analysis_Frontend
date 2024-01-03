@@ -58,7 +58,7 @@ export class LoginComponent extends CustomValidators implements FormBaseType, On
 
         this.submitted = true;
 
-        this._router.navigateByUrl( 'app/dashboard' );
+        this._router.navigateByUrl( '' );
 
         this._toastrNotificationService.cleanAllToast();
 
