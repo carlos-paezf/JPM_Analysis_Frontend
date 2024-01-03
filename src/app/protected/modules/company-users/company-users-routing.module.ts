@@ -8,7 +8,7 @@ import { ListCompanyUserComponent } from './pages/list-company-user/list-company
 
 const routes: Routes = [
     {
-        path: '',
+        path: 'list-company-users',
         component: ListCompanyUserComponent,
         data: { title: 'JPM Lista de Usuarios' },
         pathMatch: 'full'
@@ -20,7 +20,7 @@ const routes: Routes = [
         data: { title: 'JPM Detalle de Usuario' }
     },
     {
-        path: '', redirectTo: '', pathMatch: 'full'
+        path: '', redirectTo: 'list-company-users', pathMatch: 'full'
     },
     {
         path: '**', component: NotFoundComponent,
