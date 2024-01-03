@@ -48,11 +48,14 @@ const routes: Routes = [
                 path: 'user-entitlements',
                 loadChildren: () => import( './modules/user-entitlements/user-entitlements.module' ).then( m => m.UserEntitlementsModule )
             },
+            {
+                path: '', redirectTo: 'dashboard', pathMatch: 'full'
+            },
+            {
+                path: '**', component: NotFoundComponent, data: { title: '404 - No encontrado' }
+            }
         ]
     },
-    {
-        path: '**', component: NotFoundComponent, data: { title: '404 - No encontrado' }
-    }
 ];
 
 @NgModule( {
