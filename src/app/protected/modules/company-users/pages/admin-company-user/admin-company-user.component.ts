@@ -7,10 +7,17 @@ import { BaseDetailClass } from '../../../../../shared/classes/base-detail.class
 import { AuthUsersService } from '../../../../../shared/services/auth-users.service';
 import { ToastrNotificationService } from '../../../../../shared/services/toastr-notification.service';
 import { CompanyUserType, FormBaseType, ProfileType } from '../../../../../shared/types';
-import { CompanyUsersService } from '../../services/company-users.service';
 import { ProfilesService } from '../../../profiles/services/profiles.service';
+import { CompanyUsersService } from '../../services/company-users.service';
 
 
+/**
+ * The `AdminCompanyUserComponent` class is a TypeScript component that handles the 
+ * administration of company user profiles, including form creation, data retrieval, 
+ * and updating user information. 
+ * 
+ * @author cpaezfer
+ */
 @Component( {
     selector: 'app-admin-company-user',
     templateUrl: './admin-company-user.component.html',
@@ -40,6 +47,10 @@ export class AdminCompanyUserComponent extends BaseDetailClass<CompanyUserType> 
         super();
     }
 
+    /**
+     * The ngOnInit function initializes the component by checking if the user is an admin, setting
+     * profile information, and retrieving company user data based on the access ID parameter.
+     */
     ngOnInit (): void {
         this.isAdminUser = this._authUserService.getIsAdminAppUser();
         this._setProfilesInfo();
@@ -57,6 +68,10 @@ export class AdminCompanyUserComponent extends BaseDetailClass<CompanyUserType> 
         } );
     }
 
+    /**
+     * The function `_setProfilesInfo` retrieves profiles information from a service and assigns it to
+     * the `profilesInfo` variable.
+     */
     private _setProfilesInfo () {
         this._profileService.getProfiles().subscribe( value => {
             this.profilesInfo = value.data;
@@ -127,7 +142,7 @@ export class AdminCompanyUserComponent extends BaseDetailClass<CompanyUserType> 
 
         this._toastrNotificationService.success( {
             title: 'Actualización exitosa',
-            message: 'La información del perfil ha sido actualizada correctamente'
+            message: 'La información del usuario ha sido actualizada correctamente'
         } );
 
         this.submitted = true;
