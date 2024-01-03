@@ -9,6 +9,10 @@ const routes: Routes = [
         component: MainComponent,
         children: [
             {
+                path: 'dashboard',
+                loadChildren: () => import( './modules/dashboard/dashboard.module' ).then( m => m.DashboardModule )
+            },
+            {
                 path: 'file-upload',
                 loadChildren: () => import( './modules/files/files.module' ).then( m => m.FilesModule )
             },
