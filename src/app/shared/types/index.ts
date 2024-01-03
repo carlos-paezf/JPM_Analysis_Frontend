@@ -28,6 +28,18 @@ export type ResponseSheetsType<T> = {
 };
 
 
+export type PanelLinkType = {
+    label: string;
+    routeLink: string;
+};
+
+
+export type ModulesPanelsType = {
+    title: string;
+    panels: PanelLinkType[];
+};
+
+
 export type SidenavLinkType = {
     label: string;
     icon?: string;
