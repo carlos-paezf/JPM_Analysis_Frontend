@@ -25,30 +25,35 @@ export const SIDENAV_ITEMS: SidenavLinkType[] = [
         routeLink: 'file-upload',
         requiresAdmin: false
     },
+    // {
+    //     label: 'Perfiles de usuarios JPM',
+    //     icon: 'people',
+    //     routeLink: 'profiles',
+    //     requiresAdmin: false
+    // },
     {
-        label: 'Perfiles de usuarios JPM',
-        icon: 'people',
-        routeLink: 'profiles',
-        requiresAdmin: false
-    },
-    {
-        label: 'Perfiles',
+        label: 'Perfiles JPM',
         icon: 'people',
         openTab: false,
         children: [
             {
+                label: 'Lista de perfiles',
+                routeLink: 'profiles/list-profiles',
+                requiresAdmin: false
+            },
+            {
                 label: 'Usuarios por perfil',
-                routeLink: 'app-users/app-users-list',
+                routeLink: 'profiles/users-by-profiles',
                 requiresAdmin: false
             },
             {
                 label: 'Acciones',
-                routeLink: 'app-users/create-app-user',
+                routeLink: 'profiles/actions',
                 requiresAdmin: true
             },
             {
                 label: 'Funciones',
-                routeLink: 'app-users/create-app-user',
+                routeLink: 'profiles/functions',
                 requiresAdmin: true
             }
         ],
