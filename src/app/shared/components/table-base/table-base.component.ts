@@ -145,7 +145,7 @@ export class TableBaseComponent implements OnInit, AfterViewInit {
 
         if ( !redirectionAccepted ) return;
 
-        this._router.navigateByUrl( `company-users/${ access_id }` );
+        this._router.navigateByUrl( `company-users/admin/${ access_id }` );
     }
 
     /**
@@ -153,7 +153,7 @@ export class TableBaseComponent implements OnInit, AfterViewInit {
      * @param {string} id - The id parameter is of type `string`, that represents the unique identifier.
      */
     handleRedirectDetail ( id: string ) {
-        this._router.navigateByUrl( `${ this.baseUrl }/${ id }` );
+        this._router.navigateByUrl( `${ this.baseUrl }/admin/${ id }` );
     }
 
     /**
