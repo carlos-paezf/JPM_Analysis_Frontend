@@ -14,7 +14,7 @@ const routes: Routes = [
         pathMatch: 'full'
     },
     {
-        path: ':access_id',
+        path: 'admin/:access_id',
         component: AdminCompanyUserComponent,
         pathMatch: 'full',
         data: { title: 'JPM Detalle de Usuario' }
