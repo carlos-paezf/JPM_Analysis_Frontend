@@ -1,0 +1,137 @@
+<h2>Información detallada del perfil "{{ id }}"</h2>
+
+<ng-container *ngIf="isLoading || !data; else profileInfo">
+    <div class="loading__section">
+        <mat-spinner *ngIf="isLoading"></mat-spinner>
+
+        <app-support-image *ngIf="!data && !isLoading" [imgSrc]="imgSrc" [sourceSrcset]="sourceSrcset"
+            alt="Curiosity People"
+            message="No se ha encontrado el perfil solicitado. Por favor, verifica que el perfil aún existe en la lista de perfiles."></app-support-image>
+    </div>
+</ng-container>
+
+<ng-template #profileInfo>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <section>
+            <h4>Datos del perfil</h4>
+            <div class="form-group">
+                <div class="form-control">
+                    <div class="label">
+                        <mat-icon class="opacity_icon" fontIcon="person"></mat-icon>
+                        <label for="id">Profile Id:</label>
+                    </div>
+                    <input matInput formControlName="id" id="id" [disabled]="true">
+                </div>
+
+                <div class="form-control">
+                    <div class="label">
+                        <mat-icon class="opacity_icon" fontIcon="person"></mat-icon>
+                        <label for="profile_name">Profile Name:</label>
+                    </div>
+                    <input matInput formControlName="profile_name" id="profile_name">
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h4>Fechas de control</h4>
+            <div class="form-group">
+                <div class="form-control">
+                    <div class="label">
+                        <mat-icon class="opacity_icon" fontIcon="event_available"></mat-icon>
+                        <label for="createdAt">Fecha de creación:</label>
+                    </div>
+
+                    <mat-form-field disabled>
+                        <input matInput id="createdAt" formControlName="createdAt" [matDatepicker]="createdAtPicker">
+                        <mat-datepicker-toggle matIconSuffix [for]="createdAtPicker" disabled></mat-datepicker-toggle>
+                        <mat-datepicker #createdAtPicker disabled></mat-datepicker>
+                    </mat-form-field>
+                </div>
+
+                <div class="form-control">
+                    <div class="label">
+                        <mat-icon class="opacity_icon" fontIcon="edit_calendar"></mat-icon>
+                        <label for="updatedAt">Fecha de última actualización:</label>
+                    </div>
+                    <mat-form-field>
+                        <input matInput id="updatedAt" formControlName="updatedAt" [matDatepicker]="updatedAtPicker">
+                        <mat-datepicker-toggle matIconSuffix [for]="updatedAtPicker" disabled></mat-datepicker-toggle>
+                        <mat-datepicker #updatedAtPicker disabled></mat-datepicker>
+                    </mat-form-field>
+                </div>
+
+
+                <div class="form-control" *ngIf="data?.deleted_at">
+                    <div class="label">
+                        <mat-icon class="opacity_icon" fontIcon="edit_calendar"></mat-icon>
+                        <label for="deletedAt">Fecha de eliminación:</label>
+                    </div>
+                    <mat-form-field>
+                        <input matInput id="deletedAt" formControlName="deletedAt" [matDatepicker]="deletedAtPicker">
+                        <mat-datepicker-toggle matIconSuffix [for]="deletedAtPicker" disabled></mat-datepicker-toggle>
+                        <mat-datepicker #deletedAtPicker disabled></mat-datepicker>
+                    </mat-form-field>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h4>Funciones relacionadas al perfil</h4>
+
+            <div class="form-group extended">
+                <div class="form-control">
+                    <div class="label">
+                        <mat-icon class="opacity_icon" fontIcon="functions"></mat-icon>
+                        <label for="functions">Funciones:</label>
+                    </div>
+
+                    <div class="functions">
+                        <div class="list__functions">
+                            <span>Funciones asociadas</span>
+                            <ul>
+                                <li *ngIf="associatedFunctions.length === 0">
+                                    Sin funciones asociadas al perfil
+                                </li>
+                                <li *ngFor="let func of associatedFunctions">
+                                    <mat-checkbox
+                                        (change)="toggleFunctionsRemove(func)">{{ func.function_name }}</mat-checkbox>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="functions__actions">
+                            <button type="button" mat-raised-button color="warn" (click)="removeFunctions()"
+                                [disabled]="!functionsToRemove.length">Remover</button>
+                            <button type="button" mat-raised-button color="primary" (click)="addFunctions()"
+                                [disabled]="!functionsToAdd.length">Añadir</button>
+                        </div>
+
+                        <div class="list__functions">
+                            <span>Funciones disponibles</span>
+                            <ul>
+                                <li *ngIf="availableFunctions.length === 0">
+                                    Sin funciones disponibles para asociar
+                                </li>
+                                <li *ngFor="let func of availableFunctions">
+                                    <mat-checkbox
+                                        (change)="toggleFunctionsAdd(func)">{{ func.function_name }}</mat-checkbox>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <ng-container *ngIf="isAdminUser">
+            <button mat-raised-button color="primary" [disabled]="!isDataChanged">
+                Actualizar Perfil
+            </button>
+        </ng-container>
+    </form>
+
+
+
+</ng-template>
