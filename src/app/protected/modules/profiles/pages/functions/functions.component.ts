@@ -24,6 +24,10 @@ export class FunctionsComponent extends BaseDetailClass<ProfileFunctionType[]> i
         super();
     }
 
+    /**
+     * The ngOnInit function makes multiple API calls using forkJoin and assigns the response data to
+     * different variables.
+     */
     ngOnInit (): void {
         forkJoin(
             [
@@ -46,6 +50,16 @@ export class FunctionsComponent extends BaseDetailClass<ProfileFunctionType[]> i
         } );
     }
 
+    /**
+     * The function checks if a profile with a specific profileId and functionId exists in the data and
+     * returns a "✔" if it does, otherwise it returns null.
+     * @param {string} profileId - The profileId parameter is a string that represents the ID of a
+     * profile.
+     * @param {string} functionId - The `functionId` parameter is a string that represents the ID of a
+     * function.
+     * @returns either "✔" if there is a match for the given profileId and functionId in the data, or
+     * null if there is no match.
+     */
     getProfileFunction ( profileId: string, functionId: string ) {
         return this.data!.some( e => e.profile_id === profileId && e.function_id === functionId ) ? "✔" : null;
     }
