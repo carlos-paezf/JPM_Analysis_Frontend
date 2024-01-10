@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { NotFoundComponent } from '../../../shared/components/not-found/not-found.component';
 import { AdminProfilesComponent } from './pages/admin-profiles/admin-profiles.component';
+import { FunctionsComponent } from './pages/functions/functions.component';
 import { ListProfilesComponent } from './pages/list-profiles/list-profiles.component';
 import { UsersByProfilesComponent } from './pages/users-by-profiles/users-by-profiles.component';
 
@@ -25,6 +26,12 @@ const routes: Routes = [
         component: UsersByProfilesComponent,
         pathMatch: 'full',
         data: { title: 'Usuarios por Perfiles' }
+    },
+    {
+        path: 'functions',
+        component: FunctionsComponent,
+        pathMatch: 'full',
+        data: { title: 'Funciones' }
     },
     {
         path: '', redirectTo: 'list-profiles', pathMatch: 'full'
