@@ -1417,326 +1417,272 @@ export const PROFILES_FUNCTIONS: ProfileFunctionType[] = [
     {
         "id": 1,
         "profile_id": "administrator",
-        "function_id": "manage_credentials",
-        ...controlDateHelper
+        "function_id": "manage_credentials"
     },
     {
         "id": 2,
         "profile_id": "administrator",
-        "function_id": "run_reports",
-        ...controlDateHelper
+        "function_id": "run_reports"
     },
     {
         "id": 3,
         "profile_id": "administrator",
-        "function_id": "view_reports",
-        ...controlDateHelper
+        "function_id": "view_reports"
     },
     {
         "id": 4,
         "profile_id": "administrator",
-        "function_id": "additional_token_request",
-        ...controlDateHelper
+        "function_id": "additional_token_request"
     },
     {
         "id": 5,
         "profile_id": "administrator",
-        "function_id": "view_products",
-        ...controlDateHelper
+        "function_id": "view_products"
     },
     {
         "id": 6,
         "profile_id": "administrator",
-        "function_id": "view_client",
-        ...controlDateHelper
+        "function_id": "view_client"
     },
     {
         "id": 7,
         "profile_id": "administrator",
-        "function_id": "links_online",
-        ...controlDateHelper
+        "function_id": "links_online"
     },
     {
         "id": 8,
         "profile_id": "administrator",
-        "function_id": "view_accounts",
-        ...controlDateHelper
+        "function_id": "view_accounts"
     },
     {
         "id": 9,
         "profile_id": "administrator",
-        "function_id": "modify",
-        ...controlDateHelper
+        "function_id": "modify"
     },
     {
         "id": 10,
         "profile_id": "administrator",
-        "function_id": "client_location_groups",
-        ...controlDateHelper
+        "function_id": "client_location_groups"
     },
     {
         "id": 11,
         "profile_id": "administrator",
-        "function_id": "view",
-        ...controlDateHelper
+        "function_id": "view"
     },
     {
         "id": 12,
         "profile_id": "administrator",
-        "function_id": "approve",
-        ...controlDateHelper
+        "function_id": "approve"
     },
     {
         "id": 13,
         "profile_id": "administrator",
-        "function_id": "view_client_location_groups",
-        ...controlDateHelper
+        "function_id": "view_client_location_groups"
     },
     {
         "id": 14,
         "profile_id": "administrator",
-        "function_id": "common_services",
-        ...controlDateHelper
+        "function_id": "common_services"
     },
     {
         "id": 15,
         "profile_id": "administrator",
-        "function_id": "clone",
-        ...controlDateHelper
+        "function_id": "clone"
     },
     {
         "id": 16,
         "profile_id": "administrator",
-        "function_id": "manage_product_settings",
-        ...controlDateHelper
+        "function_id": "manage_product_settings"
     },
     {
         "id": 17,
         "profile_id": "administrator",
-        "function_id": "approve_credentials",
-        ...controlDateHelper
+        "function_id": "approve_credentials"
     },
     {
         "id": 18,
         "profile_id": "administrator",
-        "function_id": "delete",
-        ...controlDateHelper
+        "function_id": "delete"
     },
     {
         "id": 19,
         "profile_id": "administrator",
-        "function_id": "custody_fund_services",
-        ...controlDateHelper
+        "function_id": "custody_fund_services"
     },
     {
         "id": 20,
         "profile_id": "administrator",
-        "function_id": "create",
-        ...controlDateHelper
+        "function_id": "create"
     },
     {
         "id": 21,
         "profile_id": "administrator",
-        "function_id": "view_request",
-        ...controlDateHelper
+        "function_id": "view_request"
     },
     {
         "id": 22,
         "profile_id": "administrator",
-        "function_id": "delete_request",
-        ...controlDateHelper
+        "function_id": "delete_request"
     },
     {
         "id": 23,
         "profile_id": "administrator",
-        "function_id": "visibility",
-        ...controlDateHelper
+        "function_id": "visibility"
     },
     {
         "id": 24,
         "profile_id": "administrator",
-        "function_id": "manage_reports",
-        ...controlDateHelper
+        "function_id": "manage_reports"
     },
     {
         "id": 25,
         "profile_id": "administrator",
-        "function_id": "manage_templates",
-        ...controlDateHelper
+        "function_id": "manage_templates"
     },
     {
         "id": 26,
         "profile_id": "authorization",
-        "function_id": "allow_cls",
-        ...controlDateHelper
+        "function_id": "allow_cls"
     },
     {
         "id": 27,
         "profile_id": "authorization",
-        "function_id": "view",
-        ...controlDateHelper
+        "function_id": "view"
     },
     {
         "id": 28,
         "profile_id": "authorization",
-        "function_id": "file_import",
-        ...controlDateHelper
+        "function_id": "file_import"
     },
     {
         "id": 29,
         "profile_id": "authorization",
-        "function_id": "release",
-        ...controlDateHelper
+        "function_id": "release"
     },
     {
         "id": 30,
         "profile_id": "authorization",
-        "function_id": "usgen2ccy",
-        ...controlDateHelper
+        "function_id": "usgen2ccy"
     },
     {
         "id": 31,
         "profile_id": "authorization",
-        "function_id": "visibility",
-        ...controlDateHelper
+        "function_id": "visibility"
     },
     {
         "id": 32,
         "profile_id": "capture",
-        "function_id": "allow_cls",
-        ...controlDateHelper
+        "function_id": "allow_cls"
     },
     {
         "id": 33,
         "profile_id": "capture",
-        "function_id": "create_template",
-        ...controlDateHelper
+        "function_id": "create_template"
     },
     {
         "id": 34,
         "profile_id": "capture",
-        "function_id": "input",
-        ...controlDateHelper
+        "function_id": "input"
     },
     {
         "id": 35,
         "profile_id": "capture",
-        "function_id": "view",
-        ...controlDateHelper
+        "function_id": "view"
     },
     {
         "id": 36,
         "profile_id": "capture",
-        "function_id": "view_template",
-        ...controlDateHelper
+        "function_id": "view_template"
     },
     {
         "id": 37,
         "profile_id": "capture",
-        "function_id": "cancel",
-        ...controlDateHelper
+        "function_id": "cancel"
     },
     {
         "id": 38,
         "profile_id": "capture",
-        "function_id": "amend",
-        ...controlDateHelper
+        "function_id": "amend"
     },
     {
         "id": 39,
         "profile_id": "capture",
-        "function_id": "usgen2ccy",
-        ...controlDateHelper
+        "function_id": "usgen2ccy"
     },
     {
         "id": 40,
         "profile_id": "capture",
-        "function_id": "visibility",
-        ...controlDateHelper
+        "function_id": "visibility"
     },
     {
         "id": 41,
         "profile_id": "verification",
-        "function_id": "approve",
-        ...controlDateHelper
+        "function_id": "approve"
     },
     {
         "id": 42,
         "profile_id": "verification",
-        "function_id": "view",
-        ...controlDateHelper
+        "function_id": "view"
     },
     {
         "id": 43,
         "profile_id": "verification",
-        "function_id": "file_import",
-        ...controlDateHelper
+        "function_id": "file_import"
     },
     {
         "id": 44,
         "profile_id": "verification",
-        "function_id": "view_template",
-        ...controlDateHelper
+        "function_id": "view_template"
     },
     {
         "id": 45,
         "profile_id": "verification",
-        "function_id": "approve_template",
-        ...controlDateHelper
+        "function_id": "approve_template"
     },
     {
         "id": 46,
         "profile_id": "verification",
-        "function_id": "usgen2ccy",
-        ...controlDateHelper
+        "function_id": "usgen2ccy"
     },
     {
         "id": 47,
         "profile_id": "verification",
-        "function_id": "visibility",
-        ...controlDateHelper
+        "function_id": "visibility"
     },
     {
         "id": 48,
         "profile_id": "verification",
-        "function_id": "allow_cls",
-        ...controlDateHelper
+        "function_id": "allow_cls"
     },
     {
         "id": 49,
         "profile_id": "viewer",
-        "function_id": "investigations",
-        ...controlDateHelper
+        "function_id": "investigations"
     },
     {
         "id": 50,
         "profile_id": "viewer",
-        "function_id": "reports",
-        ...controlDateHelper
+        "function_id": "reports"
     },
     {
         "id": 51,
         "profile_id": "viewer",
-        "function_id": "positions_and_settlement_status",
-        ...controlDateHelper
+        "function_id": "positions_and_settlement_status"
     },
     {
         "id": 52,
         "profile_id": "viewer",
-        "function_id": "system",
-        ...controlDateHelper
+        "function_id": "system"
     },
     {
         "id": 53,
         "profile_id": "viewer",
-        "function_id": "alerts_and_events",
-        ...controlDateHelper
+        "function_id": "alerts_and_events"
     },
     {
         "id": 54,
         "profile_id": "viewer",
-        "function_id": "visibility",
-        ...controlDateHelper
+        "function_id": "visibility"
     } ];
 
 
