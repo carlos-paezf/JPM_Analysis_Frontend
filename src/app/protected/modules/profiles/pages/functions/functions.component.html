@@ -1,0 +1,30 @@
+<h2>Comparación de Perfiles por Funciones</h2>
+
+<p>A continuación se realiza la comparación entre perfiles, y la lista de funciones asociadas a cada uno.</p>
+
+<ng-container *ngIf="isLoading || !data; else info">
+    <div class="loading__section">
+        <mat-spinner *ngIf="isLoading"></mat-spinner>
+
+        <app-support-image *ngIf="!data && !isLoading" [imgSrc]="imgSrc" [sourceSrcset]="sourceSrcset"
+            alt="Curiosity People"
+            message="No se ha encontrado el registro solicitado. Por favor, selecciona alguno de los perfiles listados"></app-support-image>
+    </div>
+</ng-container>
+
+<ng-template #info>
+    <table>
+        <thead>
+            <tr>
+                <th>Función - Perfil</th>
+                <th *ngFor="let profile of profiles">{{ profile.profile_name }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let function of functions">
+                <th>{{ function.function_name }}</th>
+                <td *ngFor="let profile of profiles">{{ getProfileFunction(profile.id, function.id) }}</td>
+            </tr>
+        </tbody>
+    </table>
+</ng-template>
