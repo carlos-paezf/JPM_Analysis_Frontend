@@ -20,7 +20,7 @@ export type ProductType = ControlDateType & {
     sub_product: string | null;
 };
 
-export type ProfileFunctionType = ControlDateType & {
+export type ProfileFunctionType = {
     id: number;
     profile_id: string;
     function_id: string;
