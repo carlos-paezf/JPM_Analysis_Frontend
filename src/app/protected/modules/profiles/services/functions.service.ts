@@ -1,7 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Observable, delay, of } from 'rxjs';
-import { FunctionType, ResponseSheetsType } from '../../../../shared/types';
-import { FUNCTIONS, PROFILES, PROFILES_FUNCTIONS } from '../../../../shared/mocks';
+
+import { FUNCTIONS, PROFILES_FUNCTIONS } from '../../../../shared/mocks';
+import { FunctionType, ProfileFunctionType, ResponseSheetsType } from '../../../../shared/types';
+
 
 @Injectable( {
     providedIn: 'root'
@@ -61,15 +63,13 @@ export class FunctionsService {
     }
 
     public updateProfileFunctions ( profileId: string, functions: FunctionType[] ) {
-        const profilesFunctions = PROFILES_FUNCTIONS.filter( ( x ) => x.profile_id !== profileId );
+        const profilesFunctions: ProfileFunctionType[] = PROFILES_FUNCTIONS.filter( ( x ) => x.profile_id !== profileId );
+
         for ( const fun of functions ) {
             profilesFunctions.push( {
                 id: profilesFunctions.length + 1,
                 function_id: fun.id,
-                profile_id: profileId,
-                created_at: new Date(),
-                updated_at: new Date(),
-                deleted_at: null
+                profile_id: profileId
             } );
         }
 
