@@ -47,11 +47,6 @@ export const SIDENAV_ITEMS: SidenavLinkType[] = [
                 requiresAdmin: false
             },
             {
-                label: 'Acciones',
-                routeLink: 'profiles/actions',
-                requiresAdmin: true
-            },
-            {
                 label: 'Funciones',
                 routeLink: 'profiles/functions',
                 requiresAdmin: true
