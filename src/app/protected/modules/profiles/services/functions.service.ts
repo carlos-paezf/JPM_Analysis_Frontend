@@ -22,6 +22,15 @@ export class FunctionsService {
 
     }
 
+    public getProfilesFunctions (): Observable<ResponseSheetsType<ProfileFunctionType>> {
+        const response: ResponseSheetsType<ProfileFunctionType> = {
+            data: PROFILES_FUNCTIONS,
+            totalResults: PROFILES_FUNCTIONS.length
+        };
+
+        return of( response ).pipe( delay( Math.random() * 1000 ) );
+    }
+
     public getFunctionsByProfileId ( profileId: string ): Observable<ResponseSheetsType<FunctionType>> {
         const data: FunctionType[] = [];
 
