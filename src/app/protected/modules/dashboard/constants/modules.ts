@@ -23,10 +23,6 @@ export const APP_MODULES_PANELS: ModulesPanelsType[] = [
                 routeLink: 'profiles/users-by-profiles'
             },
             {
-                label: 'Acciones',
-                routeLink: 'profiles/actions'
-            },
-            {
                 label: 'Funciones',
                 routeLink: 'profiles/functions'
             }
