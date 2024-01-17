@@ -2,6 +2,42 @@
 
 <p>A continuación se realiza la comparación entre perfiles, y la lista de funciones asociadas a cada uno.</p>
 
+<section class="section__form">
+    <button mat-raised-button color="accent" (click)="toggleShowForm()">
+        {{ showForm ? 'Ocultar formulario' : 'Añadir nueva función'}}
+    </button>
+
+    <ng-container *ngIf="showForm">
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <div class="form-control">
+                    <div class="label">
+                        <mat-icon class="opacity_icon" fontIcon="functions"></mat-icon>
+                        <label for="function_name">Nombre de la función:</label>
+                    </div>
+                    <input matInput formControlName="function_name" id="function_name">
+                </div>
+
+                <div class="form-control">
+                    <div class="label">
+                        <mat-icon class="opacity_icon" fontIcon="person"></mat-icon>
+                        <label for="profile_name">Perfiles asociados:</label>
+                    </div>
+                    <ul>
+                        <li *ngFor="let profile of profiles">
+                            <mat-checkbox (change)="toggleProfile(profile)">{{ profile.profile_name }}</mat-checkbox>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <button mat-raised-button color="primary" [disabled]="form.status === 'INVALID'">
+                Actualizar Perfil
+            </button>
+        </form>
+    </ng-container>
+</section>
+
 <ng-container *ngIf="isLoading || !data; else info">
     <div class="loading__section">
         <mat-spinner *ngIf="isLoading"></mat-spinner>

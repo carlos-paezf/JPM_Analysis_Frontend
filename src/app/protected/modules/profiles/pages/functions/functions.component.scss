@@ -1,3 +1,7 @@
+.section__form {
+    margin: 1rem 0;
+}
+
 table {
     width: 100%;
     text-align: center;
@@ -9,6 +13,10 @@ table {
         text-transform: capitalize;
 
         tr:first-child {
+            th:nth-child(1) {
+                color: var(--primary);
+            }
+
             &:nth-child(1n) {
                 background-color: var(--second-background);
             }
