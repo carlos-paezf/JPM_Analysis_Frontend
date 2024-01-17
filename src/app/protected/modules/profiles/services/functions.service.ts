@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable, delay, of } from 'rxjs';
 
 import { FUNCTIONS, PROFILES_FUNCTIONS } from '../../../../shared/mocks';
-import { FunctionType, ProfileFunctionType, ResponseSheetsType } from '../../../../shared/types';
+import { FunctionType, ProfileFunctionType, ProfileType, ResponseSheetsType } from '../../../../shared/types';
 
 
 @Injectable( {
@@ -85,6 +85,25 @@ export class FunctionsService {
         for ( let index = 0; index < profilesFunctions.length; index++ ) {
             const element = profilesFunctions[ index ];
             PROFILES_FUNCTIONS[ index ] = element;
+        }
+    }
+
+    public createFunction ( functionName: string, profiles: ProfileType[] ) {
+        const functionID = functionName.trim().toLowerCase().replace( ' - ', '_' ).replace( ', ', '_' ).replace( ' ', '_' ).replace( '\ufeff', '' ).replace( '(', '' ).replace( ')', '' );
+        FUNCTIONS[ FUNCTIONS.length ] = {
+            id: functionID,
+            function_name: functionName,
+            created_at: new Date(),
+            updated_at: new Date(),
+            deleted_at: null
+        };
+
+        for ( const p of profiles ) {
+            PROFILES_FUNCTIONS[ PROFILES_FUNCTIONS.length ] = {
+                id: PROFILES_FUNCTIONS.length,
+                function_id: functionID,
+                profile_id: p.id
+            };
         }
     }
 }
