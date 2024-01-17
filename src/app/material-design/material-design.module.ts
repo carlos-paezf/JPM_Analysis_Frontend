@@ -50,6 +50,7 @@ import { MatTabsModule } from '@angular/material/tabs';
         MatSelectModule,
         MatNativeDateModule,
         MatDatepickerModule,
+        MatExpansionModule
     ],
     providers: [
         {
