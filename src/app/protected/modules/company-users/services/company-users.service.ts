@@ -45,4 +45,14 @@ export class CompanyUsersService {
 
         return of( true );
     }
+
+    public getCompanyUsersByProfileId ( profileId: string ): Observable<ResponseSheetsType<CompanyUserType>> {
+        const response: ResponseSheetsType<CompanyUserType> = {
+            data: COMPANY_USERS.filter( ( element ) => element.profile_id === profileId ),
+            totalResults: COMPANY_USERS.length
+        };
+
+        return of( response ).pipe( delay( Math.random() * 1000 ) );
+
+    }
 }
