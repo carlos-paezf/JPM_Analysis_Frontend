@@ -1,0 +1,31 @@
+<h2>Listado de Usuarios por Perfil</h2>
+
+<p>A continuación se listan los usuarios catalogados por perfil.</p>
+
+<section>
+    <ng-container *ngIf="isLoadingResults || isEmptyResults; else tableComponent">
+        <app-table-loading [isLoadingResults]="isLoadingResults" [isEmptyTable]="isEmptyResults"></app-table-loading>
+    </ng-container>
+
+    <ng-template #tableComponent>
+        <div class="action-buttons">
+            <button mat-flat-button color="primary" (click)="accordion.openAll()">Expand All</button>
+            <button mat-flat-button color="accent" (click)="accordion.closeAll()">Collapse All</button>
+        </div>
+
+        <mat-accordion multi>
+            <mat-expansion-panel *ngFor="let profile of profilesData">
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        {{ profile.profile_name }}
+                    </mat-panel-title>
+                    <mat-panel-description>
+                        Última actualización: {{profile.updated_at | date}}
+                    </mat-panel-description>
+                </mat-expansion-panel-header>
+
+                <app-users-by-profile-table [profileId]="profile.id" />
+            </mat-expansion-panel>
+        </mat-accordion>
+    </ng-template>
+</section>
