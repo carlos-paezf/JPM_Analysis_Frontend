@@ -1,7 +1,7 @@
 <section>
     <mat-form-field>
         <mat-label>Ingresa un término de búsqueda</mat-label>
-        <input matInput (keyup)="applyFilter($event)" placeholder="Ejemplo: Carlos" #input>
+        <input matInput (keyup)="applyFilter($event)" placeholder="Ejemplo: Captura" #input>
     </mat-form-field>
 
     <div class="table__options">
@@ -27,9 +27,7 @@
                         {{ column.header }}
                     </th>
                     <td mat-cell *matCellDef="let row" class="user-link">
-                        <button mat-button (click)="handleRedirectUser(row.access_id, row.user_name)">
-                            {{ column.cell(row) }}&nbsp;<mat-icon color="accent">open_in_new</mat-icon>
-                        </button>
+                        {{ column.cell(row) }}
                     </td>
                 </ng-container>
 
@@ -65,7 +63,8 @@
                             Ver/Editar información
                         </button>
 
-                        <button mat-fab extended color="warn" (click)="deleteItem(row.id)">
+                        <button *ngIf="deleteFunction !== undefined" mat-fab extended color="warn"
+                            (click)="deleteItem(row.id)">
                             <mat-icon>delete</mat-icon>
                             Eliminar item
                         </button>
