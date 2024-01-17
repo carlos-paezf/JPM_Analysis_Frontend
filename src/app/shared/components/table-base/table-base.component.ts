@@ -167,4 +167,20 @@ export class TableBaseComponent implements OnInit, AfterViewInit {
             message: "Información actualizada con éxito"
         } );
     }
+
+
+    /**
+     * The function prompts the user to confirm the deletion of an item with a given ID, and if
+     * confirmed, it calls a delete function and reloads the data.
+     * @param {unknown} id - The id parameter is the identifier of the item that you want to delete.
+     * @returns the result of the `reloadData()` function if the user confirms the deletion, otherwise
+     * it returns nothing.
+     */
+    deleteItem ( id: unknown ) {
+        if ( window.confirm( `¿Está seguro de eliminar el item con llave "${ id }"?` ) ) {
+            this.deleteFunction( id );
+            return this.reloadData();
+        }
+        return;
+    }
 }
