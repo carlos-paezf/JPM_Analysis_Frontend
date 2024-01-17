@@ -8,8 +8,8 @@
     </ng-container>
 
     <ng-template #tableComponent>
-        <app-table-base [displayedColumns]="displayedColumns" [data]="data" [columns]="columns"
-            baseUrl="profiles"></app-table-base>
+        <app-table-base [displayedColumns]="displayedColumns" [data]="data" [columns]="columns" baseUrl="profiles"
+            [deleteFunction]="deleteProfile"></app-table-base>
     </ng-template>
 </section>
 

@@ -26,6 +26,8 @@ export class ListProfilesComponent extends InfoTableBaseComponent<ProfileType> i
         { columnDef: 'deleted_at', header: 'Fecha de desactivación', cell: ( row ) => row.deleted_at },
     ];
 
+    public deleteProfile!: Function;
+
     constructor ( private _profilesService: ProfilesService ) {
         super();
     }
@@ -37,5 +39,6 @@ export class ListProfilesComponent extends InfoTableBaseComponent<ProfileType> i
                 this.isEmptyTable = ( response.data.length <= 0 );
                 this.isLoadingResults = false;
             } );
+        this.deleteProfile = this._profilesService.deleteProfile;
     }
 }
