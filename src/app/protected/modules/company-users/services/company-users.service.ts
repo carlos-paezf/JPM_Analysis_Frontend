@@ -36,11 +36,21 @@ export class CompanyUsersService {
         return of( true );
     }
 
-    public deleteCompanyUser ( id: string ): Observable<boolean> {
-        const index = COMPANY_USERS.findIndex( companyUser => companyUser.access_id === id );
+    public deleteCompanyUser ( accessId: string ): Observable<boolean> {
+        const index = COMPANY_USERS.findIndex( companyUser => companyUser.access_id === accessId );
 
         if ( index !== -1 ) {
             COMPANY_USERS[ index ] = { ...COMPANY_USERS[ index ], deleted_at: new Date() };
+        }
+
+        return of( true );
+    }
+
+    public reactivateCompanyUser ( accessId: string ): Observable<boolean> {
+        const index = COMPANY_USERS.findIndex( companyUser => companyUser.access_id === accessId );
+
+        if ( index !== -1 ) {
+            COMPANY_USERS[ index ] = { ...COMPANY_USERS[ index ], deleted_at: null };
         }
 
         return of( true );
