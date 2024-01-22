@@ -1,9 +1,10 @@
 import { CdkDrag, CdkDropList } from '@angular/cdk/drag-drop';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-
 import { RouterModule } from '@angular/router';
+
 import { MaterialDesignModule } from '../material-design/material-design.module';
+import { ControlDatesFormComponent } from './components/control-dates-form/control-dates-form.component';
 import { DialogSectionComponent } from './components/dialog-section/dialog-section.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -25,31 +26,33 @@ import { TransformCellValuePipe } from './pipes/transform-cell-value.pipe';
 
 @NgModule( {
     declarations: [
+        ControlDatesFormComponent,
         CustomIfDirective,
-        InputErrorMessageDirective,
-        NoteFieldFormDirective,
-        OptionalFieldDirective,
-        TransformCellValuePipe,
-        LoadingComponent,
         DialogSectionComponent,
         FooterComponent,
         HeaderComponent,
+        InputErrorMessageDirective,
         InputFileComponent,
         InternalServerErrorComponent,
+        LoadingComponent,
+        NoteFieldFormDirective,
         NotFoundComponent,
+        OptionalFieldDirective,
         SidenavComponent,
         SupportImageComponent,
         TableBaseComponent,
-        TableLoadingComponent
+        TableLoadingComponent,
+        TransformCellValuePipe,
     ],
     imports: [
-        CdkDrag,
-        CdkDropList,
         CommonModule,
         MaterialDesignModule,
+        CdkDrag,
+        CdkDropList,
         RouterModule,
     ],
     exports: [
+        ControlDatesFormComponent,
         CustomIfDirective,
         DialogSectionComponent,
         FooterComponent,
