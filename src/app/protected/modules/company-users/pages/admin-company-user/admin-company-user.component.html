@@ -12,173 +12,156 @@
 
 <ng-template #userInfo>
     <form [formGroup]="form" (ngSubmit)="onSubmit()">
-        <div class="form-group">
-            <div class="form-control">
-                <div class="label">
-                    <mat-icon class="opacity_icon" fontIcon="person"></mat-icon>
-                    <label for="access_id">Access Id</label>
-                </div>
-                <input matInput formControlName="access_id" id="access_id" [disabled]="true">
-            </div>
-
-            <div class="form-control">
-                <div class="label">
-                    <mat-icon class="opacity_icon" fontIcon="person"></mat-icon>
-                    <label for="user_name">Name</label>
-                </div>
-                <input matInput formControlName="user_name" id="user_name">
-            </div>
-
-            <div class="form-control">
-                <div class="label">
-                    <mat-icon class="opacity_icon" fontIcon="verified_user"></mat-icon>
-                    <label for="user_status">Status</label>
-                </div>
-                <mat-slide-toggle color="accent" formControlName="user_status" labelPosition="before" id="user_status">
-                    Activo:
-                </mat-slide-toggle>
-            </div>
-
-            <div class="form-control">
-                <div class="label">
-                    <mat-icon class="opacity_icon" fontIcon="assignment_ind"></mat-icon>
-                    <label for="user_type">Type</label>
-                </div>
-                <input matInput formControlName="user_type" id="user_type">
-            </div>
-
-            <div class="form-control">
-                <div class="label">
-                    <mat-icon class="opacity_icon" fontIcon="mail"></mat-icon>
-                    <label for="email_address">Email Address</label>
-                </div>
-                <input matInput formControlName="email_address" id="email_address">
-            </div>
-
-            <div class="form-control">
-                <div class="label">
-                    <mat-icon class="opacity_icon" fontIcon="person_pin_circle"></mat-icon>
-                    <label for="user_location">Location</label>
-                </div>
-                <input matInput formControlName="user_location" id="user_location">
-            </div>
-
-            <div class="form-control">
-                <div class="label">
-                    <mat-icon class="opacity_icon" fontIcon="public"></mat-icon>
-                    <label for="user_country">Country</label>
-                </div>
-                <input matInput formControlName="user_country" id="user_country">
-            </div>
-
-            <div class="form-control">
-                <div class="label">
-                    <mat-icon class="opacity_icon" fontIcon="badge"></mat-icon>
-                    <label for="user_logon_type">Logon Type</label>
-                </div>
-                <input matInput formControlName="user_logon_type" id="user_logon_type">
-            </div>
-
-            <div class="form-control">
-                <div class="label">
-                    <mat-icon class="opacity_icon" fontIcon="event_available"></mat-icon>
-                    <label for="user_last_logon_dt">Last Logon Date</label>
-                </div>
-                <input matInput formControlName="user_last_logon_dt" id="user_last_logon_dt">
-            </div>
-
-            <div class="form-control">
-                <div class="label">
-                    <mat-icon class="opacity_icon" fontIcon="badge"></mat-icon>
-                    <label for="user_logon_status">Logon Status</label>
-                </div>
-                <input matInput formControlName="user_logon_status" id="user_logon_status">
-            </div>
-
-            <div class="form-control">
-                <div class="label">
-                    <mat-icon class="opacity_icon" fontIcon="admin_panel_settings"></mat-icon>
-                    <label for="profile_id">Profile</label>
-                </div>
-                <input matInput formControlName="profile_id" id="profile_id">
-            </div>
-
-            <div class="form-control">
-                <div class="label">
-                    <mat-icon class="opacity_icon" fontIcon="admin_panel_settings"></mat-icon>
-                    <label for="profile_id">Profile</label>
-                </div>
-                <mat-select formControlName="profile_id" id="profile_id">
-                    <mat-option *ngFor="let profile of profilesInfo"
-                        [value]="profile.id">{{ profile.profile_name }}</mat-option>
-                </mat-select>
-            </div>
-
-            <div class="form-control">
-                <div class="label">
-                    <mat-icon class="opacity_icon" fontIcon="badge"></mat-icon>
-                    <label for="user_group_membership">Group Membership</label>
-                </div>
-                <input matInput formControlName="user_group_membership" id="user_group_membership">
-            </div>
-
-            <div class="form-control">
-                <div class="label">
-                    <mat-icon class="opacity_icon" fontIcon="badge"></mat-icon>
-                    <label for="user_role">Role</label>
-                </div>
-                <input matInput formControlName="user_role" id="user_role">
-            </div>
-
-            <div class="form-control">
-                <div class="label">
-                    <mat-icon class="opacity_icon" fontIcon="badge"></mat-icon>
-                    <label for="employee_id">Employee Id</label>
-                </div>
-                <input matInput formControlName="employee_id" id="employee_id">
-            </div>
-
-            <div class="form-control">
-                <div class="label">
-                    <mat-icon class="opacity_icon" fontIcon="event_available"></mat-icon>
-                    <label for="createdAt">Fecha de creación:</label>
+        <section>
+            <h4>Datos de acceso</h4>
+            <div class="form-group">
+                <div class="form-control">
+                    <div class="label">
+                        <mat-icon class="opacity_icon" fontIcon="person"></mat-icon>
+                        <label for="access_id">Access Id</label>
+                    </div>
+                    <input matInput formControlName="access_id" id="access_id" [disabled]="true">
                 </div>
 
-                <mat-form-field disabled>
-                    <input matInput id="createdAt" formControlName="createdAt" [matDatepicker]="createdAtPicker">
-                    <mat-datepicker-toggle matIconSuffix [for]="createdAtPicker" disabled></mat-datepicker-toggle>
-                    <mat-datepicker #createdAtPicker disabled></mat-datepicker>
-                </mat-form-field>
-            </div>
-
-            <div class="form-control">
-                <div class="label">
-                    <mat-icon class="opacity_icon" fontIcon="edit_calendar"></mat-icon>
-                    <label for="updatedAt">Fecha de última actualización:</label>
+                <div class="form-control">
+                    <div class="label">
+                        <mat-icon class="opacity_icon" fontIcon="person"></mat-icon>
+                        <label for="user_name">Name</label>
+                    </div>
+                    <input matInput formControlName="user_name" id="user_name">
                 </div>
-                <mat-form-field>
-                    <input matInput id="updatedAt" formControlName="updatedAt" [matDatepicker]="updatedAtPicker">
-                    <mat-datepicker-toggle matIconSuffix [for]="updatedAtPicker" disabled></mat-datepicker-toggle>
-                    <mat-datepicker #updatedAtPicker disabled></mat-datepicker>
-                </mat-form-field>
-            </div>
 
-            <div class="form-control" *ngIf="!data!.user_status">
-                <div class="label">
-                    <mat-icon class="opacity_icon" fontIcon="edit_calendar"></mat-icon>
-                    <label for="deletedAt">Fecha de eliminación:</label>
+                <div class="form-control">
+                    <div class="label">
+                        <mat-icon class="opacity_icon" fontIcon="mail"></mat-icon>
+                        <label for="email_address">Email Address</label>
+                    </div>
+                    <input matInput formControlName="email_address" id="email_address">
                 </div>
-                <mat-form-field>
-                    <input matInput id="deletedAt" formControlName="deletedAt" [matDatepicker]="deletedAtPicker">
-                    <mat-datepicker-toggle matIconSuffix [for]="deletedAtPicker" disabled></mat-datepicker-toggle>
-                    <mat-datepicker #deletedAtPicker disabled></mat-datepicker>
-                </mat-form-field>
+
+                <div class="form-control">
+                    <div class="label">
+                        <mat-icon class="opacity_icon" fontIcon="assignment_ind"></mat-icon>
+                        <label for="user_type">Type</label>
+                    </div>
+                    <input matInput formControlName="user_type" id="user_type">
+                </div>
+
+                <div class="form-control">
+                    <div class="label">
+                        <mat-icon class="opacity_icon" fontIcon="verified_user"></mat-icon>
+                        <label for="user_status">Status</label>
+                    </div>
+                    <mat-slide-toggle color="accent" formControlName="user_status" labelPosition="before"
+                        id="user_status">
+                        Activo:
+                    </mat-slide-toggle>
+                </div>
             </div>
-        </div>
+        </section>
+
+        <section>
+            <h4>Datos de ubicación</h4>
+            <div class="form-group">
+                <div class="form-control">
+                    <div class="label">
+                        <mat-icon class="opacity_icon" fontIcon="person_pin_circle"></mat-icon>
+                        <label for="user_location">Location</label>
+                    </div>
+                    <input matInput formControlName="user_location" id="user_location">
+                </div>
+
+                <div class="form-control">
+                    <div class="label">
+                        <mat-icon class="opacity_icon" fontIcon="public"></mat-icon>
+                        <label for="user_country">Country</label>
+                    </div>
+                    <input matInput formControlName="user_country" id="user_country">
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h4>Información de Logon</h4>
+            <div class="form-group">
+                <div class="form-control">
+                    <div class="label">
+                        <mat-icon class="opacity_icon" fontIcon="badge"></mat-icon>
+                        <label for="user_logon_type">Logon Type</label>
+                    </div>
+                    <input matInput formControlName="user_logon_type" id="user_logon_type">
+                </div>
+
+                <div class="form-control">
+                    <div class="label">
+                        <mat-icon class="opacity_icon" fontIcon="badge"></mat-icon>
+                        <label for="user_logon_status">Logon Status</label>
+                    </div>
+                    <input matInput formControlName="user_logon_status" id="user_logon_status">
+                </div>
+
+                <div class="form-control">
+                    <div class="label">
+                        <mat-icon class="opacity_icon" fontIcon="event_available"></mat-icon>
+                        <label for="user_last_logon_dt">Last Logon Date</label>
+                    </div>
+                    <input matInput formControlName="user_last_logon_dt" id="user_last_logon_dt">
+                    <!-- <mat-form-field disabled>
+                        <input matInput id="user_last_logon_dt" formControlName="user_last_logon_dt"
+                            [matDatepicker]="user_last_logon_dtPicker">
+                        <mat-datepicker-toggle matIconSuffix [for]="user_last_logon_dtPicker"></mat-datepicker-toggle>
+                        <mat-datepicker #user_last_logon_dtPicker></mat-datepicker>
+                    </mat-form-field> -->
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h4>TODO: No sé que poner</h4>
+            <div class="form-group">
+                <div class="form-control">
+                    <div class="label">
+                        <mat-icon class="opacity_icon" fontIcon="admin_panel_settings"></mat-icon>
+                        <label for="profile_id">Profile</label>
+                    </div>
+                    <mat-select formControlName="profile_id" id="profile_id" class="form__select">
+                        <mat-option *ngFor="let profile of profilesInfo"
+                            [value]="profile.id">{{ profile.profile_name }}</mat-option>
+                    </mat-select>
+                </div>
+
+                <div class="form-control">
+                    <div class="label">
+                        <mat-icon class="opacity_icon" fontIcon="badge"></mat-icon>
+                        <label for="user_group_membership">Group Membership</label>
+                    </div>
+                    <input matInput formControlName="user_group_membership" id="user_group_membership">
+                </div>
+
+                <div class="form-control">
+                    <div class="label">
+                        <mat-icon class="opacity_icon" fontIcon="badge"></mat-icon>
+                        <label for="user_role">Role</label>
+                    </div>
+                    <input matInput formControlName="user_role" id="user_role">
+                </div>
+
+                <div class="form-control">
+                    <div class="label">
+                        <mat-icon class="opacity_icon" fontIcon="badge"></mat-icon>
+                        <label for="employee_id">Employee Id</label>
+                    </div>
+                    <input matInput formControlName="employee_id" id="employee_id">
+                </div>
+            </div>
+        </section>
+
+        <app-control-dates-form [createdAt]="data!.created_at" [updatedAt]="data!.updated_at"
+            [deletedAt]="data?.deleted_at" />
 
         <ng-container *ngIf="isAdminUser">
             <button mat-raised-button color="primary" [disabled]="!isDataChanged">
-                Actualizar Perfil
+                Actualizar Company User
             </button>
         </ng-container>
     </form>

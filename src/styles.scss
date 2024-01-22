@@ -45,6 +45,15 @@
     min-height: 45px;
 }
 
+form {
+    .mat-mdc-select {
+        padding: .5rem 1rem;
+        border: 1px solid var(--overlay-background);
+        background: white;
+        border-radius: 5px;
+    }
+}
+
 @media (prefers-reduced-motion: reduce) {
     * {
         animation-duration: 0.01ms !important;
