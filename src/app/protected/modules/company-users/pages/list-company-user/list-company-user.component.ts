@@ -13,18 +13,19 @@ import { CompanyUsersService } from '../../services/company-users.service';
 export class ListCompanyUserComponent extends InfoTableBaseComponent<CompanyUserType> implements OnInit {
     public override displayedColumns: string[] = [
         'user_name',
+        'profile_id',
+        'email_address',
         'user_status',
         'user_type',
-        'employee_id',
-        'email_address',
         'user_location',
         'user_country',
         'user_logon_type',
         'user_last_logon_dt',
         'user_group_membership',
         'user_role',
-        'profile_id',
+        'employee_id',
         'updated_at',
+        'deleted_at',
     ];
 
     public override columns: ColumnTableType<CompanyUserType>[] = [
@@ -41,7 +42,11 @@ export class ListCompanyUserComponent extends InfoTableBaseComponent<CompanyUser
         { columnDef: 'user_role', header: 'Role', cell: ( row ) => row.user_role },
         { columnDef: 'profile_id', header: 'Profile', cell: ( row ) => row.profile_id },
         { columnDef: 'updated_at', header: 'Última Actualización', cell: ( row ) => row.updated_at },
+        { columnDef: 'deleted_at', header: 'Fecha de Desactivación', cell: ( row ) => row.deleted_at },
     ];
+
+    public deleteCompanyUser!: Function;
+    public reactivateCompanyUser!: Function;
 
     constructor ( private _companyUsersService: CompanyUsersService ) {
         super();
@@ -59,5 +64,7 @@ export class ListCompanyUserComponent extends InfoTableBaseComponent<CompanyUser
                 this.isEmptyTable = ( response.data.length <= 0 );
                 this.isLoadingResults = false;
             } );
+        this.deleteCompanyUser = this._companyUsersService.deleteCompanyUser;
+        this.reactivateCompanyUser = this._companyUsersService.reactivateCompanyUser;
     }
 }
