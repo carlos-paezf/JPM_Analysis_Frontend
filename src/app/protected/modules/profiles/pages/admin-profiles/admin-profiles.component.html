@@ -34,49 +34,6 @@
         </section>
 
         <section>
-            <h4>Fechas de control</h4>
-            <div class="form-group">
-                <div class="form-control">
-                    <div class="label">
-                        <mat-icon class="opacity_icon" fontIcon="event_available"></mat-icon>
-                        <label for="createdAt">Fecha de creación:</label>
-                    </div>
-
-                    <mat-form-field disabled>
-                        <input matInput id="createdAt" formControlName="createdAt" [matDatepicker]="createdAtPicker">
-                        <mat-datepicker-toggle matIconSuffix [for]="createdAtPicker" disabled></mat-datepicker-toggle>
-                        <mat-datepicker #createdAtPicker disabled></mat-datepicker>
-                    </mat-form-field>
-                </div>
-
-                <div class="form-control">
-                    <div class="label">
-                        <mat-icon class="opacity_icon" fontIcon="edit_calendar"></mat-icon>
-                        <label for="updatedAt">Fecha de última actualización:</label>
-                    </div>
-                    <mat-form-field>
-                        <input matInput id="updatedAt" formControlName="updatedAt" [matDatepicker]="updatedAtPicker">
-                        <mat-datepicker-toggle matIconSuffix [for]="updatedAtPicker" disabled></mat-datepicker-toggle>
-                        <mat-datepicker #updatedAtPicker disabled></mat-datepicker>
-                    </mat-form-field>
-                </div>
-
-
-                <div class="form-control" *ngIf="data?.deleted_at">
-                    <div class="label">
-                        <mat-icon class="opacity_icon" fontIcon="edit_calendar"></mat-icon>
-                        <label for="deletedAt">Fecha de eliminación:</label>
-                    </div>
-                    <mat-form-field>
-                        <input matInput id="deletedAt" formControlName="deletedAt" [matDatepicker]="deletedAtPicker">
-                        <mat-datepicker-toggle matIconSuffix [for]="deletedAtPicker" disabled></mat-datepicker-toggle>
-                        <mat-datepicker #deletedAtPicker disabled></mat-datepicker>
-                    </mat-form-field>
-                </div>
-            </div>
-        </section>
-
-        <section>
             <h4>Funciones relacionadas al perfil</h4>
 
             <div class="form-group extended">
@@ -124,6 +81,9 @@
                 </div>
             </div>
         </section>
+
+        <app-control-dates-form [createdAt]="data!.created_at" [updatedAt]="data!.updated_at"
+            [deletedAt]="data?.deleted_at" />
 
         <ng-container *ngIf="isAdminUser">
             <button mat-raised-button color="primary" [disabled]="!isDataChanged">
