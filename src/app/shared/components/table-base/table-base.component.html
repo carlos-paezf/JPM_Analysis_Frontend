@@ -10,14 +10,15 @@
             Actualizar información
         </button>
 
-        <mat-paginator [pageSizeOptions]="[5, 10, 25, 50, 100]" showFirstLastButtons
+        <mat-paginator [pageSizeOptions]="[10, 15, 20, 25, 50, 100]" showFirstLastButtons
             aria-label="Seleccionar página de registros">
         </mat-paginator>
     </div>
 
     <div class="mat-elevation-z5 table__report">
-        <table mat-table matSort cdkDropList multiTemplateDataRows cdkDropListOrientation="horizontal"
-            [dataSource]="dataSource" (matSortChange)="announceSortChange($event)" (cdkDropListDropped)="drop($event)">
+        <table mat-table multiTemplateDataRows [dataSource]="dataSource" matSort
+            (matSortChange)="announceSortChange($event)" cdkDropList cdkDropListOrientation="horizontal"
+            (cdkDropListDropped)="drop($event)">
 
             <ng-container *ngFor="let column of columns" [matColumnDef]="column.columnDef"
                 [sticky]="column.columnDef === stickyColumn">
@@ -63,10 +64,16 @@
                             Ver/Editar información
                         </button>
 
-                        <button *ngIf="deleteFunction !== undefined" mat-fab extended color="warn"
-                            (click)="deleteItem(row.id)">
+                        <button *ngIf="deleteFunction !== undefined && !row.deleted_at" mat-fab extended color="warn"
+                            (click)="deleteItem(row.id || row.access_id)">
                             <mat-icon>delete</mat-icon>
-                            Eliminar item
+                            Desactivar item
+                        </button>
+
+                        <button *ngIf="reactivateFunction !== undefined && row.deleted_at" mat-fab extended
+                            (click)=" reactivateItem(row.id || row.access_id)">
+                            <mat-icon>check</mat-icon>
+                            Reactivar item
                         </button>
                     </div>
                 </td>

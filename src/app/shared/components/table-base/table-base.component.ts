@@ -53,6 +53,7 @@ export class TableBaseComponent implements OnInit, AfterViewInit {
     @Input() public stickyColumn: string = 'user_name';
     @Input() public baseUrl!: string;
     @Input() public deleteFunction!: Function;
+    @Input() public reactivateFunction!: Function;
 
     public expandedRow: any | null;
     public columnsToDisplayWithExpand = [ ...this.displayedColumns, 'expand' ];
@@ -179,6 +180,22 @@ export class TableBaseComponent implements OnInit, AfterViewInit {
     deleteItem ( id: unknown ) {
         if ( window.confirm( `¿Está seguro de eliminar el item con llave "${ id }"?` ) ) {
             this.deleteFunction( id );
+            return this.reloadData();
+        }
+        return;
+    }
+
+
+    /**
+     * The function `reactivateItem` prompts the user to confirm reactivating an item with a given ID,
+     * and if confirmed, calls a `reactivateFunction` and reloads data.
+     * @param {unknown} id - The id parameter is the unique identifier of the item that needs to be
+     * reactivated.
+     * @returns The function `reactivateItem` returns the result of calling the `reloadData` function.
+     */
+    reactivateItem ( id: unknown ) {
+        if ( window.confirm( `¿Está seguro de reactivar el item con la llave "${ id }"?` ) ) {
+            this.reactivateFunction( id );
             return this.reloadData();
         }
         return;
