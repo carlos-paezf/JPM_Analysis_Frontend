@@ -1,0 +1,29 @@
+<section>
+    <h4>Fechas de control</h4>
+    <div class="form-group">
+        <div class="form-control">
+            <div class="label">
+                <mat-icon class="opacity_icon" fontIcon="event_available"></mat-icon>
+                <label for="createdAt">Fecha de creación:</label>
+            </div>
+            <input matInput [value]="createdAt" id="createdAt" [disabled]="true">
+        </div>
+
+        <div class="form-control">
+            <div class="label">
+                <mat-icon class="opacity_icon" fontIcon="edit_calendar"></mat-icon>
+                <label for="updatedAt">Fecha de última actualización:</label>
+            </div>
+            <input matInput [value]="updatedAt" id="updatedAt" [disabled]="true">
+        </div>
+
+
+        <div class="form-control" *ngIf="deletedAt">
+            <div class="label">
+                <mat-icon class="opacity_icon" fontIcon="edit_calendar"></mat-icon>
+                <label for="deletedAt">Fecha de eliminación:</label>
+            </div>
+            <input matInput [value]="deletedAt" id="deletedAt" [disabled]="true">
+        </div>
+    </div>
+</section>
