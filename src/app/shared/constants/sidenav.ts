@@ -97,9 +97,15 @@ export const SIDENAV_ITEMS: SidenavLinkType[] = [
         requiresAdmin: false
     },
     {
-        label: 'Funciones',
-        icon: 'functions',
-        routeLink: 'functions',
+        label: 'Clientes',
+        icon: 'account_balance_wallet',
+        routeLink: 'clients',
+        requiresAdmin: false
+    },
+    {
+        label: 'Circularización de Usuarios',
+        icon: 'group',
+        routeLink: 'circularization',
         requiresAdmin: false
     },
     {
