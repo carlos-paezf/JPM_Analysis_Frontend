@@ -14,9 +14,9 @@ export class ListCompanyUserComponent extends InfoTableBaseComponent<CompanyUser
     public override displayedColumns: string[] = [
         'user_name',
         'profile_id',
+        'user_type',
         'email_address',
         'user_status',
-        'user_type',
         'user_location',
         'user_country',
         'user_logon_type',
