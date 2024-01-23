@@ -45,6 +45,12 @@
     min-height: 45px;
 }
 
+.mat-mdc-text-field-wrapper:not(.mdc-text-field--outlined) .mat-mdc-form-field-infix {
+    padding-top: 25px;
+    padding-bottom: 10px;
+    font-size: large;
+}
+
 form {
     .mat-mdc-select {
         padding: .5rem 1rem;
