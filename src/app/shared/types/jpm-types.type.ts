@@ -26,6 +26,13 @@ export type ProfileFunctionType = {
     function_id: string;
 };
 
+export type ProfileFunctionEagerLoadingType =
+    ProfileFunctionType
+    & {
+        profile: ProfileType;
+        function: FunctionType;
+    };
+
 export type CompanyUserType = ControlDateType & {
     access_id: string;
     user_name: string;
@@ -53,9 +60,15 @@ export type AccountType = ControlDateType & {
 export type ClientType = ControlDateType & {
     id: number;
     product_id: string;
-    account_name: string;
     account_number: string;
 };
+
+export type ClientEagerLoadingType =
+    ClientType
+    & {
+        product: ProductType;
+        account: AccountType;
+    };
 
 export type UserEntitlementType = ControlDateType & {
     id: number;
@@ -64,8 +77,16 @@ export type UserEntitlementType = ControlDateType & {
     function_type: string;
     function_id: string;
     account_number: string;
-    account_name: string;
 };
+
+export type UserEntitlementEagerLoadingType =
+    UserEntitlementType
+    & {
+        company_user: CompanyUserType;
+        product: ProductType;
+        function: FunctionType;
+        account: AccountType;
+    };
 
 export type JPMDataAppType = {
     profiles: ProfileType[];
