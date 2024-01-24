@@ -189,550 +189,473 @@ export const ACCOUNTS: AccountType[] = [
 export const CLIENTS: ClientType[] = [
     {
         "id": 1,
-        "account_name": "BANCO DE LA REPUBLICA-PACIFIC INVESTMENT MANAGEMENT COMPANY LLC",
         "account_number": "P 35946",
         "product_id": "tim_foreign_exchange",
         ...controlDateHelper
     },
     {
         "id": 2,
-        "account_name": "FIDEICOMISO FAE - GOLDMAN SACHS ASSETMANAGEMENT, L.P.",
         "account_number": "P 46407",
         "product_id": "tim_foreign_exchange",
         ...controlDateHelper
     },
     {
         "id": 3,
-        "account_name": "FIDEICOMISO FAE",
         "account_number": "82783",
         "product_id": "tim_foreign_exchange",
         ...controlDateHelper
     },
     {
         "id": 4,
-        "account_name": "BANCO DE LA REPUBLICA-WELLINGTONMANAGEMENT COMPANY LLP",
         "account_number": "S 17006",
         "product_id": "tim_foreign_exchange",
         ...controlDateHelper
     },
     {
         "id": 5,
-        "account_name": "BANCO DE LA REPUBLICA - STATE STREET GLOBAL ADVISORS TRUST COMPANY",
         "account_number": "EPR68",
         "product_id": "tim_foreign_exchange",
         ...controlDateHelper
     },
     {
         "id": 6,
-        "account_name": "BANCO DE LA REPUBLICA.",
         "account_number": "S 97871",
         "product_id": "tim_foreign_exchange",
         ...controlDateHelper
     },
     {
         "id": 7,
-        "account_name": "BANCO DE LA REPUBLICA - STATE STREETGLOBAL ADVISORS TRUST COMPANY",
         "account_number": "P 92590",
         "product_id": "tim_foreign_exchange",
         ...controlDateHelper
     },
     {
         "id": 8,
-        "account_name": "FIDEICOMISO FAE",
         "account_number": "P 88529",
         "product_id": "tim_foreign_exchange",
         ...controlDateHelper
     },
     {
         "id": 9,
-        "account_name": "FIDEICOMISO FAE - WELLINGTON MANAGEMENT COMPANY, LLP",
         "account_number": "P 46408",
         "product_id": "tim_foreign_exchange",
         ...controlDateHelper
     },
     {
         "id": 10,
-        "account_name": "FIDEICOMISO FAE - GOLDMAN SACHS ASSET MANAGEMENT, L.P.",
         "account_number": "EMH26",
         "product_id": "tim_foreign_exchange",
         ...controlDateHelper
     },
     {
         "id": 11,
-        "account_name": "BANCO DE LA REPUBLICA",
         "account_number": "05421",
         "product_id": "tim_foreign_exchange",
         ...controlDateHelper
     },
     {
         "id": 12,
-        "account_name": "FIDEICOMISO FAE - WELLINGTON MANAGEMENT COMPANY, LLP",
         "account_number": "EMH27",
         "product_id": "tim_foreign_exchange",
         ...controlDateHelper
     },
     {
         "id": 13,
-        "account_name": "FIDEICOMISO FAE - BLACKROCK INSTITUTIONAL TRUST COMPANY, N.A. EQUITY",
         "account_number": "EID10",
         "product_id": "tim_foreign_exchange",
         ...controlDateHelper
     },
     {
         "id": 14,
-        "account_name": "FIDEICOMISO FAE - BLACKROCK INSTITUTIONAL TRUST COMPANY, N.A. EQUITY",
         "account_number": "P 79897",
         "product_id": "tim_foreign_exchange",
         ...controlDateHelper
     },
     {
         "id": 15,
-        "account_name": "BANCO DE LA REPUBLICA-WELLINGTONMANAGEMENT COMPANY LLP",
         "account_number": "FDA63",
         "product_id": "tim_foreign_exchange",
         ...controlDateHelper
     },
     {
         "id": 16,
-        "account_name": "BANCO DE LA REPUBLICA-PACIFIC INVESTMENT MANAGEMENT COMANY LLC",
         "account_number": "AIF62",
         "product_id": "tim_foreign_exchange",
         ...controlDateHelper
     },
     {
         "id": 17,
-        "account_name": "BANCO DE LA REPUBLICA-PACIFIC INVESTMENT MANAGEMENT COMPANY LLC",
         "account_number": "P 35946",
         "product_id": "tim_listed_securities",
         ...controlDateHelper
     },
     {
         "id": 18,
-        "account_name": "FIDEICOMISO FAE - GOLDMAN SACHS ASSETMANAGEMENT, L.P.",
         "account_number": "P 46407",
         "product_id": "tim_listed_securities",
         ...controlDateHelper
     },
     {
         "id": 19,
-        "account_name": "FIDEICOMISO FAE",
         "account_number": "82783",
         "product_id": "tim_listed_securities",
         ...controlDateHelper
     },
     {
         "id": 20,
-        "account_name": "BANCO DE LA REPUBLICA-WELLINGTONMANAGEMENT COMPANY LLP",
         "account_number": "S 17006",
         "product_id": "tim_listed_securities",
         ...controlDateHelper
     },
     {
         "id": 21,
-        "account_name": "BANCO DE LA REPUBLICA - STATE STREET GLOBAL ADVISORS TRUST COMPANY",
         "account_number": "EPR68",
         "product_id": "tim_listed_securities",
         ...controlDateHelper
     },
     {
         "id": 22,
-        "account_name": "BANCO DE LA REPUBLICA - STATE STREETGLOBAL ADVISORS TRUST COMPANY",
         "account_number": "P 92590",
         "product_id": "tim_listed_securities",
         ...controlDateHelper
     },
     {
         "id": 23,
-        "account_name": "BANCO DE LA REPUBLICA.",
         "account_number": "S 97871",
         "product_id": "tim_listed_securities",
         ...controlDateHelper
     },
     {
         "id": 24,
-        "account_name": "FIDEICOMISO FAE",
         "account_number": "P 88529",
         "product_id": "tim_listed_securities",
         ...controlDateHelper
     },
     {
         "id": 25,
-        "account_name": "FIDEICOMISO FAE - WELLINGTON MANAGEMENT COMPANY, LLP",
         "account_number": "P 46408",
         "product_id": "tim_listed_securities",
         ...controlDateHelper
     },
     {
         "id": 26,
-        "account_name": "FIDEICOMISO FAE - GOLDMAN SACHS ASSET MANAGEMENT, L.P.",
         "account_number": "EMH26",
         "product_id": "tim_listed_securities",
         ...controlDateHelper
     },
     {
         "id": 27,
-        "account_name": "BANCO DE LA REPUBLICA",
         "account_number": "05421",
         "product_id": "tim_listed_securities",
         ...controlDateHelper
     },
     {
         "id": 28,
-        "account_name": "FIDEICOMISO FAE - WELLINGTON MANAGEMENT COMPANY, LLP",
         "account_number": "EMH27",
         "product_id": "tim_listed_securities",
         ...controlDateHelper
     },
     {
         "id": 29,
-        "account_name": "FIDEICOMISO FAE - BLACKROCK INSTITUTIONAL TRUST COMPANY, N.A. EQUITY",
         "account_number": "EID10",
         "product_id": "tim_listed_securities",
         ...controlDateHelper
     },
     {
         "id": 30,
-        "account_name": "BANCO DE LA REPUBLICA-WELLINGTONMANAGEMENT COMPANY LLP",
         "account_number": "FDA63",
         "product_id": "tim_listed_securities",
         ...controlDateHelper
     },
     {
         "id": 31,
-        "account_name": "FIDEICOMISO FAE - BLACKROCK INSTITUTIONAL TRUST COMPANY, N.A. EQUITY",
         "account_number": "P 79897",
         "product_id": "tim_listed_securities",
         ...controlDateHelper
     },
     {
         "id": 32,
-        "account_name": "BANCO DE LA REPUBLICA-PACIFIC INVESTMENT MANAGEMENT COMANY LLC",
         "account_number": "AIF62",
         "product_id": "tim_listed_securities",
         ...controlDateHelper
     },
     {
         "id": 33,
-        "account_name": "BANCO DE LA REPUBLICA-PACIFIC INVESTMENT MANAGEMENT COMPANY LLC",
         "account_number": "P 35946",
         "product_id": "tim_cash",
         ...controlDateHelper
     },
     {
         "id": 34,
-        "account_name": "FIDEICOMISO FAE - GOLDMAN SACHS ASSETMANAGEMENT, L.P.",
         "account_number": "P 46407",
         "product_id": "tim_cash",
         ...controlDateHelper
     },
     {
         "id": 35,
-        "account_name": "FIDEICOMISO FAE",
         "account_number": "82783",
         "product_id": "tim_cash",
         ...controlDateHelper
     },
     {
         "id": 36,
-        "account_name": "BANCO DE LA REPUBLICA-WELLINGTONMANAGEMENT COMPANY LLP",
         "account_number": "S 17006",
         "product_id": "tim_cash",
         ...controlDateHelper
     },
     {
         "id": 37,
-        "account_name": "BANCO DE LA REPUBLICA - STATE STREET GLOBAL ADVISORS TRUST COMPANY",
         "account_number": "EPR68",
         "product_id": "tim_cash",
         ...controlDateHelper
     },
     {
         "id": 38,
-        "account_name": "BANCO DE LA REPUBLICA.",
         "account_number": "S 97871",
         "product_id": "tim_cash",
         ...controlDateHelper
     },
     {
         "id": 39,
-        "account_name": "BANCO DE LA REPUBLICA - STATE STREETGLOBAL ADVISORS TRUST COMPANY",
         "account_number": "P 92590",
         "product_id": "tim_cash",
         ...controlDateHelper
     },
     {
         "id": 40,
-        "account_name": "FIDEICOMISO FAE",
         "account_number": "P 88529",
         "product_id": "tim_cash",
         ...controlDateHelper
     },
     {
         "id": 41,
-        "account_name": "FIDEICOMISO FAE - WELLINGTON MANAGEMENT COMPANY, LLP",
         "account_number": "P 46408",
         "product_id": "tim_cash",
         ...controlDateHelper
     },
     {
         "id": 42,
-        "account_name": "FIDEICOMISO FAE - GOLDMAN SACHS ASSET MANAGEMENT, L.P.",
         "account_number": "EMH26",
         "product_id": "tim_cash",
         ...controlDateHelper
     },
     {
         "id": 43,
-        "account_name": "BANCO DE LA REPUBLICA",
         "account_number": "05421",
         "product_id": "tim_cash",
         ...controlDateHelper
     },
     {
         "id": 44,
-        "account_name": "FIDEICOMISO FAE - WELLINGTON MANAGEMENT COMPANY, LLP",
         "account_number": "EMH27",
         "product_id": "tim_cash",
         ...controlDateHelper
     },
     {
         "id": 45,
-        "account_name": "FIDEICOMISO FAE - BLACKROCK INSTITUTIONAL TRUST COMPANY, N.A. EQUITY",
         "account_number": "EID10",
         "product_id": "tim_cash",
         ...controlDateHelper
     },
     {
         "id": 46,
-        "account_name": "BANCO DE LA REPUBLICA-WELLINGTONMANAGEMENT COMPANY LLP",
         "account_number": "FDA63",
         "product_id": "tim_cash",
         ...controlDateHelper
     },
     {
         "id": 47,
-        "account_name": "FIDEICOMISO FAE - BLACKROCK INSTITUTIONAL TRUST COMPANY, N.A. EQUITY",
         "account_number": "P 79897",
         "product_id": "tim_cash",
         ...controlDateHelper
     },
     {
         "id": 48,
-        "account_name": "BANCO DE LA REPUBLICA-PACIFIC INVESTMENT MANAGEMENT COMANY LLC",
         "account_number": "AIF62",
         "product_id": "tim_cash",
         ...controlDateHelper
     },
     {
         "id": 49,
-        "account_name": "FIDEICOMISO FAE - BLACKROCK INSTITUTIONAL TRUST COMPANY, N.A. FIX INCM",
         "account_number": "EMO35",
         "product_id": "corporate_action_manager",
         ...controlDateHelper
     },
     {
         "id": 50,
-        "account_name": "FIDEICOMISO FAE - GOLDMAN SACHS ASSETMANAGEMENT, L.P.",
         "account_number": "P 46407",
         "product_id": "corporate_action_manager",
         ...controlDateHelper
     },
     {
         "id": 51,
-        "account_name": "BANCO DE LA REPUBLICA -WESTERNASSET MANAGEMENT",
         "account_number": "P 06252",
         "product_id": "corporate_action_manager",
         ...controlDateHelper
     },
     {
         "id": 52,
-        "account_name": "BANCO DE LA REPUBLICA-WELLINGTONMANAGEMENT COMPANY LLP",
         "account_number": "S 17006",
         "product_id": "corporate_action_manager",
         ...controlDateHelper
     },
     {
         "id": 53,
-        "account_name": "BANCO DE LA REPUBLICA.",
         "account_number": "S 97871",
         "product_id": "corporate_action_manager",
         ...controlDateHelper
     },
     {
         "id": 54,
-        "account_name": "FIDEICOMISO FAE - WELLINGTON MANAGEMENT COMPANY, LLP",
         "account_number": "P 46408",
         "product_id": "corporate_action_manager",
         ...controlDateHelper
     },
     {
         "id": 55,
-        "account_name": "BANCO DE LA REPUBLICA FAEP UBSBRINSON",
         "account_number": "19534",
         "product_id": "corporate_action_manager",
         ...controlDateHelper
     },
     {
         "id": 56,
-        "account_name": "FIDEICOMISO FAE - GOLDMAN SACHS ASSET MANAGEMENT, L.P.",
         "account_number": "EMH26",
         "product_id": "corporate_action_manager",
         ...controlDateHelper
     },
     {
         "id": 57,
-        "account_name": "BANCO DE LA REPUBLICA",
         "account_number": "05421",
         "product_id": "corporate_action_manager",
         ...controlDateHelper
     },
     {
         "id": 58,
-        "account_name": "FIDEICOMISO FAE - WELLINGTON MANAGEMENT COMPANY, LLP",
         "account_number": "EMH27",
         "product_id": "corporate_action_manager",
         ...controlDateHelper
     },
     {
         "id": 59,
-        "account_name": "BANCO DE LA REPUBLICA GOLDMAN SACHS FORWARD CASH TO STATE STREET BANK & TRUST ABA: 011000028 A/C: 10365211 NAME: BANCO DE LA REPUBLICA",
         "account_number": "P 83234",
         "product_id": "corporate_action_manager",
         ...controlDateHelper
     },
     {
         "id": 60,
-        "account_name": "BANCO DE LA REPUBLICA GOLDMAN SACHS",
         "account_number": "18987",
         "product_id": "corporate_action_manager",
         ...controlDateHelper
     },
     {
         "id": 61,
-        "account_name": "FIDEICOMISO FAE - BLACKROCK INSTITUTIONAL TRUST COMPANY, N.A. EQUITY",
         "account_number": "EID10",
         "product_id": "corporate_action_manager",
         ...controlDateHelper
     },
     {
         "id": 62,
-        "account_name": "FIDEICOMISO FAE - BLACKROCK INSTITUTIONAL TRUST COMPANY, N.A. EQUITY",
         "account_number": "P 79897",
         "product_id": "corporate_action_manager",
         ...controlDateHelper
     },
     {
         "id": 63,
-        "account_name": "BANCO DE LA REPUBLICA-WELLINGTONMANAGEMENT COMPANY LLP",
         "account_number": "FDA63",
         "product_id": "corporate_action_manager",
         ...controlDateHelper
     },
     {
         "id": 64,
-        "account_name": "FIDEICOMISO FAE - BLACKROCK INSTITUTIONAL TRUST COMPANY, N.A. FIX INCM",
         "account_number": "P 49913",
         "product_id": "corporate_action_manager",
         ...controlDateHelper
     },
     {
         "id": 65,
-        "account_name": "BANCOVEW",
         "account_number": "",
         "product_id": "corporate_action_manager_instruction_without_event",
         ...controlDateHelper
     },
     {
         "id": 66,
-        "account_name": "BANCOVEW",
         "account_number": "",
         "product_id": "corporate_action_manager_corporate_instruction",
         ...controlDateHelper
     },
     {
         "id": 67,
-        "account_name": "",
         "account_number": "",
         "product_id": "tim_foreign_exchange",
         ...controlDateHelper
     },
     {
         "id": 68,
-        "account_name": "",
         "account_number": "",
         "product_id": "tim_listed_securities",
         ...controlDateHelper
     },
     {
         "id": 69,
-        "account_name": "",
         "account_number": "",
         "product_id": "tim_listed_securities_receive_free_of_payment",
         ...controlDateHelper
     },
     {
         "id": 70,
-        "account_name": "",
         "account_number": "",
         "product_id": "tim_listed_securities_inter_account_trade_transfer",
         ...controlDateHelper
     },
     {
         "id": 71,
-        "account_name": "",
         "account_number": "",
         "product_id": "tim_cash",
         ...controlDateHelper
     },
     {
         "id": 72,
-        "account_name": "",
         "account_number": "",
         "product_id": "tim_listed_securities_deliver_free_of_payment",
         ...controlDateHelper
     },
     {
         "id": 73,
-        "account_name": "",
         "account_number": "",
         "product_id": "tim_cash_inter_account_transfer",
         ...controlDateHelper
     },
     {
         "id": 74,
-        "account_name": "",
         "account_number": "",
         "product_id": "tim_listed_securities_receive_against_payment",
         ...controlDateHelper
     },
     {
         "id": 75,
-        "account_name": "",
         "account_number": "",
         "product_id": "tim_cash_advice_to_receive",
         ...controlDateHelper
     },
     {
         "id": 76,
-        "account_name": "",
         "account_number": "",
         "product_id": "tim_listed_securities_deliver_against_payment",
         ...controlDateHelper
     },
     {
         "id": 77,
-        "account_name": "",
         "account_number": "",
         "product_id": "tim_foreign_exchange_3rd_party_fx",
         ...controlDateHelper
     },
     {
         "id": 78,
-        "account_name": "",
         "account_number": "",
         "product_id": "tim_cash_payment_order",
         ...controlDateHelper
-    } ];
+    }
+];
 
 
 export const COMPANY_USERS: CompanyUserType[] = [
@@ -1683,7 +1606,8 @@ export const PROFILES_FUNCTIONS: ProfileFunctionType[] = [
         "id": 54,
         "profile_id": "viewer",
         "function_id": "visibility"
-    } ];
+    }
+];
 
 
 export const PROFILES: ProfileType[] = [
@@ -1719,7 +1643,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 1,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-PACIFIC INVESTMENT MANAGEMENT COMPANY LLC",
         "account_number": "P 35946",
         "access_id": "adiazcortes",
         "product_id": "tim_foreign_exchange",
@@ -1729,7 +1652,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 2,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - GOLDMAN SACHS ASSETMANAGEMENT, L.P.",
         "account_number": "P 46407",
         "access_id": "adiazcortes",
         "product_id": "tim_foreign_exchange",
@@ -1739,7 +1661,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 3,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-WELLINGTONMANAGEMENT COMPANY LLP",
         "account_number": "S 17006",
         "access_id": "adiazcortes",
         "product_id": "tim_foreign_exchange",
@@ -1749,7 +1670,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 4,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE",
         "account_number": "82783",
         "access_id": "adiazcortes",
         "product_id": "tim_foreign_exchange",
@@ -1759,7 +1679,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 5,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA - STATE STREET GLOBAL ADVISORS TRUST COMPANY",
         "account_number": "EPR68",
         "access_id": "adiazcortes",
         "product_id": "tim_foreign_exchange",
@@ -1769,7 +1688,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 6,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA - STATE STREETGLOBAL ADVISORS TRUST COMPANY",
         "account_number": "P 92590",
         "access_id": "adiazcortes",
         "product_id": "tim_foreign_exchange",
@@ -1779,7 +1697,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 7,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA.",
         "account_number": "S 97871",
         "access_id": "adiazcortes",
         "product_id": "tim_foreign_exchange",
@@ -1789,7 +1706,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 8,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE",
         "account_number": "P 88529",
         "access_id": "adiazcortes",
         "product_id": "tim_foreign_exchange",
@@ -1799,7 +1715,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 9,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - WELLINGTON MANAGEMENT COMPANY, LLP",
         "account_number": "P 46408",
         "access_id": "adiazcortes",
         "product_id": "tim_foreign_exchange",
@@ -1809,7 +1724,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 10,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - GOLDMAN SACHS ASSET MANAGEMENT, L.P.",
         "account_number": "EMH26",
         "access_id": "adiazcortes",
         "product_id": "tim_foreign_exchange",
@@ -1819,7 +1733,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 11,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA",
         "account_number": "05421",
         "access_id": "adiazcortes",
         "product_id": "tim_foreign_exchange",
@@ -1829,7 +1742,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 12,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - WELLINGTON MANAGEMENT COMPANY, LLP",
         "account_number": "EMH27",
         "access_id": "adiazcortes",
         "product_id": "tim_foreign_exchange",
@@ -1839,7 +1751,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 13,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - BLACKROCK INSTITUTIONAL TRUST COMPANY, N.A. EQUITY",
         "account_number": "EID10",
         "access_id": "adiazcortes",
         "product_id": "tim_foreign_exchange",
@@ -1849,7 +1760,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 14,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-WELLINGTONMANAGEMENT COMPANY LLP",
         "account_number": "FDA63",
         "access_id": "adiazcortes",
         "product_id": "tim_foreign_exchange",
@@ -1859,7 +1769,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 15,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - BLACKROCK INSTITUTIONAL TRUST COMPANY, N.A. EQUITY",
         "account_number": "P 79897",
         "access_id": "adiazcortes",
         "product_id": "tim_foreign_exchange",
@@ -1869,7 +1778,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 16,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-PACIFIC INVESTMENT MANAGEMENT COMANY LLC",
         "account_number": "AIF62",
         "access_id": "adiazcortes",
         "product_id": "tim_foreign_exchange",
@@ -1879,7 +1787,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 17,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-PACIFIC INVESTMENT MANAGEMENT COMPANY LLC",
         "account_number": "P 35946",
         "access_id": "adiazcortes",
         "product_id": "tim_listed_securities",
@@ -1889,7 +1796,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 18,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - GOLDMAN SACHS ASSETMANAGEMENT, L.P.",
         "account_number": "P 46407",
         "access_id": "adiazcortes",
         "product_id": "tim_listed_securities",
@@ -1899,7 +1805,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 19,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE",
         "account_number": "82783",
         "access_id": "adiazcortes",
         "product_id": "tim_listed_securities",
@@ -1909,7 +1814,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 20,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-WELLINGTONMANAGEMENT COMPANY LLP",
         "account_number": "S 17006",
         "access_id": "adiazcortes",
         "product_id": "tim_listed_securities",
@@ -1919,7 +1823,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 21,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA - STATE STREET GLOBAL ADVISORS TRUST COMPANY",
         "account_number": "EPR68",
         "access_id": "adiazcortes",
         "product_id": "tim_listed_securities",
@@ -1929,7 +1832,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 22,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA - STATE STREETGLOBAL ADVISORS TRUST COMPANY",
         "account_number": "P 92590",
         "access_id": "adiazcortes",
         "product_id": "tim_listed_securities",
@@ -1939,7 +1841,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 23,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA.",
         "account_number": "S 97871",
         "access_id": "adiazcortes",
         "product_id": "tim_listed_securities",
@@ -1949,7 +1850,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 24,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE",
         "account_number": "P 88529",
         "access_id": "adiazcortes",
         "product_id": "tim_listed_securities",
@@ -1959,7 +1859,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 25,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - WELLINGTON MANAGEMENT COMPANY, LLP",
         "account_number": "P 46408",
         "access_id": "adiazcortes",
         "product_id": "tim_listed_securities",
@@ -1969,7 +1868,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 26,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - GOLDMAN SACHS ASSET MANAGEMENT, L.P.",
         "account_number": "EMH26",
         "access_id": "adiazcortes",
         "product_id": "tim_listed_securities",
@@ -1979,7 +1877,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 27,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - WELLINGTON MANAGEMENT COMPANY, LLP",
         "account_number": "EMH27",
         "access_id": "adiazcortes",
         "product_id": "tim_listed_securities",
@@ -1989,7 +1886,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 28,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA",
         "account_number": "05421",
         "access_id": "adiazcortes",
         "product_id": "tim_listed_securities",
@@ -1999,7 +1895,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 29,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - BLACKROCK INSTITUTIONAL TRUST COMPANY, N.A. EQUITY",
         "account_number": "EID10",
         "access_id": "adiazcortes",
         "product_id": "tim_listed_securities",
@@ -2009,7 +1904,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 30,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - BLACKROCK INSTITUTIONAL TRUST COMPANY, N.A. EQUITY",
         "account_number": "P 79897",
         "access_id": "adiazcortes",
         "product_id": "tim_listed_securities",
@@ -2019,7 +1913,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 31,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-WELLINGTONMANAGEMENT COMPANY LLP",
         "account_number": "FDA63",
         "access_id": "adiazcortes",
         "product_id": "tim_listed_securities",
@@ -2029,7 +1922,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 32,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-PACIFIC INVESTMENT MANAGEMENT COMANY LLC",
         "account_number": "AIF62",
         "access_id": "adiazcortes",
         "product_id": "tim_listed_securities",
@@ -2039,7 +1931,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 33,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "adiazcortes",
         "product_id": "tim_listed_securities_inter_account_trade_transfer",
@@ -2049,7 +1940,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 34,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "adiazcortes",
         "product_id": "tim_listed_securities_inter_account_trade_transfer",
@@ -2059,7 +1949,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 35,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "adiazcortes",
         "product_id": "tim_listed_securities_inter_account_trade_transfer",
@@ -2069,7 +1958,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 36,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "adiazcortes",
         "product_id": "tim_listed_securities_receive_free_of_payment",
@@ -2079,7 +1967,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 37,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "adiazcortes",
         "product_id": "tim_listed_securities_receive_free_of_payment",
@@ -2089,7 +1976,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 38,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "adiazcortes",
         "product_id": "tim_listed_securities_receive_free_of_payment",
@@ -2099,7 +1985,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 39,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "adiazcortes",
         "product_id": "tim_cash_advice_to_receive",
@@ -2109,7 +1994,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 40,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "adiazcortes",
         "product_id": "tim_cash_advice_to_receive",
@@ -2119,7 +2003,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 41,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "adiazcortes",
         "product_id": "tim_listed_securities_deliver_against_payment",
@@ -2129,7 +2012,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 42,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "adiazcortes",
         "product_id": "tim_listed_securities_deliver_against_payment",
@@ -2139,7 +2021,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 43,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "adiazcortes",
         "product_id": "tim_listed_securities_deliver_against_payment",
@@ -2149,7 +2030,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 44,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "adiazcortes",
         "product_id": "tim_cash_payment_order",
@@ -2159,7 +2039,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 45,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "adiazcortes",
         "product_id": "tim_cash_payment_order",
@@ -2169,7 +2048,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 46,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "adiazcortes",
         "product_id": "tim_foreign_exchange_3rd_party_fx",
@@ -2179,7 +2057,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 47,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "adiazcortes",
         "product_id": "tim_foreign_exchange_3rd_party_fx",
@@ -2189,7 +2066,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 48,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "adiazcortes",
         "product_id": "tim_foreign_exchange_3rd_party_fx",
@@ -2199,7 +2075,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 49,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "adiazcortes",
         "product_id": "tim_foreign_exchange_3rd_party_fx",
@@ -2209,7 +2084,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 50,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "adiazcortes",
         "product_id": "import_manager_and_template_manager",
@@ -2219,7 +2093,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 51,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "adiazcortes",
         "product_id": "import_manager_and_template_manager",
@@ -2229,7 +2102,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 52,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "adiazcortes",
         "product_id": "import_manager_and_template_manager",
@@ -2239,7 +2111,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 53,
         "function_type": "Merchant Services Reporting Functions",
-        "account_name": "",
         "account_number": "",
         "access_id": "adiazcortes",
         "product_id": "securities_services_products_views_portfolio_reporting",
@@ -2249,7 +2120,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 54,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-PACIFIC INVESTMENT MANAGEMENT COMPANY LLC",
         "account_number": "P 35946",
         "access_id": "adiazcortes",
         "product_id": "tim_cash",
@@ -2259,7 +2129,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 55,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - GOLDMAN SACHS ASSETMANAGEMENT, L.P.",
         "account_number": "P 46407",
         "access_id": "adiazcortes",
         "product_id": "tim_cash",
@@ -2269,7 +2138,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 56,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE",
         "account_number": "82783",
         "access_id": "adiazcortes",
         "product_id": "tim_cash",
@@ -2279,7 +2147,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 57,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-WELLINGTONMANAGEMENT COMPANY LLP",
         "account_number": "S 17006",
         "access_id": "adiazcortes",
         "product_id": "tim_cash",
@@ -2289,7 +2156,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 58,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA - STATE STREET GLOBAL ADVISORS TRUST COMPANY",
         "account_number": "EPR68",
         "access_id": "adiazcortes",
         "product_id": "tim_cash",
@@ -2299,7 +2165,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 59,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA.",
         "account_number": "S 97871",
         "access_id": "adiazcortes",
         "product_id": "tim_cash",
@@ -2309,7 +2174,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 60,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA - STATE STREETGLOBAL ADVISORS TRUST COMPANY",
         "account_number": "P 92590",
         "access_id": "adiazcortes",
         "product_id": "tim_cash",
@@ -2319,7 +2183,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 61,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE",
         "account_number": "P 88529",
         "access_id": "adiazcortes",
         "product_id": "tim_cash",
@@ -2329,7 +2192,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 62,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - WELLINGTON MANAGEMENT COMPANY, LLP",
         "account_number": "P 46408",
         "access_id": "adiazcortes",
         "product_id": "tim_cash",
@@ -2339,7 +2201,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 63,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - GOLDMAN SACHS ASSET MANAGEMENT, L.P.",
         "account_number": "EMH26",
         "access_id": "adiazcortes",
         "product_id": "tim_cash",
@@ -2349,7 +2210,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 64,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - WELLINGTON MANAGEMENT COMPANY, LLP",
         "account_number": "EMH27",
         "access_id": "adiazcortes",
         "product_id": "tim_cash",
@@ -2359,7 +2219,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 65,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA",
         "account_number": "05421",
         "access_id": "adiazcortes",
         "product_id": "tim_cash",
@@ -2369,7 +2228,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 66,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - BLACKROCK INSTITUTIONAL TRUST COMPANY, N.A. EQUITY",
         "account_number": "EID10",
         "access_id": "adiazcortes",
         "product_id": "tim_cash",
@@ -2379,7 +2237,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 67,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - BLACKROCK INSTITUTIONAL TRUST COMPANY, N.A. EQUITY",
         "account_number": "P 79897",
         "access_id": "adiazcortes",
         "product_id": "tim_cash",
@@ -2389,7 +2246,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 68,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-WELLINGTONMANAGEMENT COMPANY LLP",
         "account_number": "FDA63",
         "access_id": "adiazcortes",
         "product_id": "tim_cash",
@@ -2399,7 +2255,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 69,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-PACIFIC INVESTMENT MANAGEMENT COMANY LLC",
         "account_number": "AIF62",
         "access_id": "adiazcortes",
         "product_id": "tim_cash",
@@ -2409,7 +2264,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 70,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "adiazcortes",
         "product_id": "tim_cash_inter_account_transfer",
@@ -2419,7 +2273,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 71,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "adiazcortes",
         "product_id": "tim_cash_inter_account_transfer",
@@ -2429,7 +2282,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 72,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "adiazcortes",
         "product_id": "tim_listed_securities_deliver_free_of_payment",
@@ -2439,7 +2291,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 73,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "adiazcortes",
         "product_id": "tim_listed_securities_deliver_free_of_payment",
@@ -2449,7 +2300,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 74,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "adiazcortes",
         "product_id": "tim_listed_securities_deliver_free_of_payment",
@@ -2459,7 +2309,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 75,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "adiazcortes",
         "product_id": "tim_listed_securities_receive_against_payment",
@@ -2469,7 +2318,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 76,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "adiazcortes",
         "product_id": "tim_listed_securities_receive_against_payment",
@@ -2479,7 +2327,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 77,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "adiazcortes",
         "product_id": "tim_listed_securities_receive_against_payment",
@@ -2489,7 +2336,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 78,
         "function_type": "Merchant Services Reporting Functions",
-        "account_name": "",
         "account_number": "",
         "access_id": "adiazcortes",
         "product_id": "securities_services_products_custody_dashboard",
@@ -2499,7 +2345,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 79,
         "function_type": "",
-        "account_name": "",
         "account_number": "",
         "access_id": "adiazcortes",
         "product_id": "securities_services_products",
@@ -2509,7 +2354,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 80,
         "function_type": "Merchant Services Reporting Functions",
-        "account_name": "",
         "account_number": "",
         "access_id": "amachete",
         "product_id": "securities_services_products_views_portfolio_reporting",
@@ -2519,7 +2363,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 81,
         "function_type": "Merchant Services Reporting Functions",
-        "account_name": "",
         "account_number": "",
         "access_id": "amachete",
         "product_id": "securities_services_products_custody_dashboard",
@@ -2529,7 +2372,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 82,
         "function_type": "",
-        "account_name": "",
         "account_number": "",
         "access_id": "amachete",
         "product_id": "securities_services_products",
@@ -2539,7 +2381,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 83,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-PACIFIC INVESTMENT MANAGEMENT COMPANY LLC",
         "account_number": "P 35946",
         "access_id": "carlespinosa",
         "product_id": "tim_foreign_exchange",
@@ -2549,7 +2390,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 84,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - GOLDMAN SACHS ASSETMANAGEMENT, L.P.",
         "account_number": "P 46407",
         "access_id": "carlespinosa",
         "product_id": "tim_foreign_exchange",
@@ -2559,7 +2399,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 85,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-WELLINGTONMANAGEMENT COMPANY LLP",
         "account_number": "S 17006",
         "access_id": "carlespinosa",
         "product_id": "tim_foreign_exchange",
@@ -2569,7 +2408,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 86,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE",
         "account_number": "82783",
         "access_id": "carlespinosa",
         "product_id": "tim_foreign_exchange",
@@ -2579,7 +2417,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 87,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA - STATE STREET GLOBAL ADVISORS TRUST COMPANY",
         "account_number": "EPR68",
         "access_id": "carlespinosa",
         "product_id": "tim_foreign_exchange",
@@ -2589,7 +2426,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 88,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA.",
         "account_number": "S 97871",
         "access_id": "carlespinosa",
         "product_id": "tim_foreign_exchange",
@@ -2599,7 +2435,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 89,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA - STATE STREETGLOBAL ADVISORS TRUST COMPANY",
         "account_number": "P 92590",
         "access_id": "carlespinosa",
         "product_id": "tim_foreign_exchange",
@@ -2609,7 +2444,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 90,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE",
         "account_number": "P 88529",
         "access_id": "carlespinosa",
         "product_id": "tim_foreign_exchange",
@@ -2619,7 +2453,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 91,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - WELLINGTON MANAGEMENT COMPANY, LLP",
         "account_number": "P 46408",
         "access_id": "carlespinosa",
         "product_id": "tim_foreign_exchange",
@@ -2629,7 +2462,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 92,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - GOLDMAN SACHS ASSET MANAGEMENT, L.P.",
         "account_number": "EMH26",
         "access_id": "carlespinosa",
         "product_id": "tim_foreign_exchange",
@@ -2639,7 +2471,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 93,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA",
         "account_number": "05421",
         "access_id": "carlespinosa",
         "product_id": "tim_foreign_exchange",
@@ -2649,7 +2480,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 94,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - WELLINGTON MANAGEMENT COMPANY, LLP",
         "account_number": "EMH27",
         "access_id": "carlespinosa",
         "product_id": "tim_foreign_exchange",
@@ -2659,7 +2489,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 95,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - BLACKROCK INSTITUTIONAL TRUST COMPANY, N.A. EQUITY",
         "account_number": "EID10",
         "access_id": "carlespinosa",
         "product_id": "tim_foreign_exchange",
@@ -2669,7 +2498,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 96,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - BLACKROCK INSTITUTIONAL TRUST COMPANY, N.A. EQUITY",
         "account_number": "P 79897",
         "access_id": "carlespinosa",
         "product_id": "tim_foreign_exchange",
@@ -2679,7 +2507,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 97,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-WELLINGTONMANAGEMENT COMPANY LLP",
         "account_number": "FDA63",
         "access_id": "carlespinosa",
         "product_id": "tim_foreign_exchange",
@@ -2689,7 +2516,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 98,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-PACIFIC INVESTMENT MANAGEMENT COMANY LLC",
         "account_number": "AIF62",
         "access_id": "carlespinosa",
         "product_id": "tim_foreign_exchange",
@@ -2699,7 +2525,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 99,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-PACIFIC INVESTMENT MANAGEMENT COMPANY LLC",
         "account_number": "P 35946",
         "access_id": "carlespinosa",
         "product_id": "tim_listed_securities",
@@ -2709,7 +2534,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 100,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - GOLDMAN SACHS ASSETMANAGEMENT, L.P.",
         "account_number": "P 46407",
         "access_id": "carlespinosa",
         "product_id": "tim_listed_securities",
@@ -2719,7 +2543,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 101,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-WELLINGTONMANAGEMENT COMPANY LLP",
         "account_number": "S 17006",
         "access_id": "carlespinosa",
         "product_id": "tim_listed_securities",
@@ -2729,7 +2552,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 102,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE",
         "account_number": "82783",
         "access_id": "carlespinosa",
         "product_id": "tim_listed_securities",
@@ -2739,7 +2561,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 103,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA - STATE STREET GLOBAL ADVISORS TRUST COMPANY",
         "account_number": "EPR68",
         "access_id": "carlespinosa",
         "product_id": "tim_listed_securities",
@@ -2749,7 +2570,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 104,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA - STATE STREETGLOBAL ADVISORS TRUST COMPANY",
         "account_number": "P 92590",
         "access_id": "carlespinosa",
         "product_id": "tim_listed_securities",
@@ -2759,7 +2579,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 105,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA.",
         "account_number": "S 97871",
         "access_id": "carlespinosa",
         "product_id": "tim_listed_securities",
@@ -2769,7 +2588,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 106,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE",
         "account_number": "P 88529",
         "access_id": "carlespinosa",
         "product_id": "tim_listed_securities",
@@ -2779,7 +2597,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 107,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - WELLINGTON MANAGEMENT COMPANY, LLP",
         "account_number": "P 46408",
         "access_id": "carlespinosa",
         "product_id": "tim_listed_securities",
@@ -2789,7 +2606,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 108,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - GOLDMAN SACHS ASSET MANAGEMENT, L.P.",
         "account_number": "EMH26",
         "access_id": "carlespinosa",
         "product_id": "tim_listed_securities",
@@ -2799,7 +2615,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 109,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA",
         "account_number": "05421",
         "access_id": "carlespinosa",
         "product_id": "tim_listed_securities",
@@ -2809,7 +2624,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 110,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - WELLINGTON MANAGEMENT COMPANY, LLP",
         "account_number": "EMH27",
         "access_id": "carlespinosa",
         "product_id": "tim_listed_securities",
@@ -2819,7 +2633,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 111,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - BLACKROCK INSTITUTIONAL TRUST COMPANY, N.A. EQUITY",
         "account_number": "EID10",
         "access_id": "carlespinosa",
         "product_id": "tim_listed_securities",
@@ -2829,7 +2642,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 112,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - BLACKROCK INSTITUTIONAL TRUST COMPANY, N.A. EQUITY",
         "account_number": "P 79897",
         "access_id": "carlespinosa",
         "product_id": "tim_listed_securities",
@@ -2839,7 +2651,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 113,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-WELLINGTONMANAGEMENT COMPANY LLP",
         "account_number": "FDA63",
         "access_id": "carlespinosa",
         "product_id": "tim_listed_securities",
@@ -2849,7 +2660,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 114,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-PACIFIC INVESTMENT MANAGEMENT COMANY LLC",
         "account_number": "AIF62",
         "access_id": "carlespinosa",
         "product_id": "tim_listed_securities",
@@ -2859,7 +2669,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 115,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "carlespinosa",
         "product_id": "tim_listed_securities_inter_account_trade_transfer",
@@ -2869,7 +2678,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 116,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "carlespinosa",
         "product_id": "tim_listed_securities_receive_free_of_payment",
@@ -2879,7 +2687,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 117,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "carlespinosa",
         "product_id": "tim_cash_advice_to_receive",
@@ -2889,7 +2696,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 118,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "carlespinosa",
         "product_id": "tim_listed_securities_deliver_against_payment",
@@ -2899,7 +2705,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 119,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "carlespinosa",
         "product_id": "tim_cash_payment_order",
@@ -2909,7 +2714,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 120,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "carlespinosa",
         "product_id": "tim_foreign_exchange_3rd_party_fx",
@@ -2919,7 +2723,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 121,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "carlespinosa",
         "product_id": "tim_foreign_exchange_3rd_party_fx",
@@ -2929,7 +2732,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 122,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "carlespinosa",
         "product_id": "import_manager_and_template_manager",
@@ -2939,7 +2741,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 123,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "carlespinosa",
         "product_id": "import_manager_and_template_manager",
@@ -2949,7 +2750,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 124,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "carlespinosa",
         "product_id": "import_manager_and_template_manager",
@@ -2959,7 +2759,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 125,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "carlespinosa",
         "product_id": "import_manager_and_template_manager",
@@ -2969,7 +2768,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 126,
         "function_type": "Merchant Services Reporting Functions",
-        "account_name": "",
         "account_number": "",
         "access_id": "carlespinosa",
         "product_id": "securities_services_products_views_portfolio_reporting",
@@ -2979,7 +2777,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 127,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-PACIFIC INVESTMENT MANAGEMENT COMPANY LLC",
         "account_number": "P 35946",
         "access_id": "carlespinosa",
         "product_id": "tim_cash",
@@ -2989,7 +2786,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 128,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - GOLDMAN SACHS ASSETMANAGEMENT, L.P.",
         "account_number": "P 46407",
         "access_id": "carlespinosa",
         "product_id": "tim_cash",
@@ -2999,7 +2795,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 129,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE",
         "account_number": "82783",
         "access_id": "carlespinosa",
         "product_id": "tim_cash",
@@ -3009,7 +2804,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 130,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-WELLINGTONMANAGEMENT COMPANY LLP",
         "account_number": "S 17006",
         "access_id": "carlespinosa",
         "product_id": "tim_cash",
@@ -3019,7 +2813,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 131,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA - STATE STREET GLOBAL ADVISORS TRUST COMPANY",
         "account_number": "EPR68",
         "access_id": "carlespinosa",
         "product_id": "tim_cash",
@@ -3029,7 +2822,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 132,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA.",
         "account_number": "S 97871",
         "access_id": "carlespinosa",
         "product_id": "tim_cash",
@@ -3039,7 +2831,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 133,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA - STATE STREETGLOBAL ADVISORS TRUST COMPANY",
         "account_number": "P 92590",
         "access_id": "carlespinosa",
         "product_id": "tim_cash",
@@ -3049,7 +2840,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 134,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE",
         "account_number": "P 88529",
         "access_id": "carlespinosa",
         "product_id": "tim_cash",
@@ -3059,7 +2849,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 135,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - WELLINGTON MANAGEMENT COMPANY, LLP",
         "account_number": "P 46408",
         "access_id": "carlespinosa",
         "product_id": "tim_cash",
@@ -3069,7 +2858,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 136,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - GOLDMAN SACHS ASSET MANAGEMENT, L.P.",
         "account_number": "EMH26",
         "access_id": "carlespinosa",
         "product_id": "tim_cash",
@@ -3079,7 +2867,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 137,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - WELLINGTON MANAGEMENT COMPANY, LLP",
         "account_number": "EMH27",
         "access_id": "carlespinosa",
         "product_id": "tim_cash",
@@ -3089,7 +2876,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 138,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA",
         "account_number": "05421",
         "access_id": "carlespinosa",
         "product_id": "tim_cash",
@@ -3099,7 +2885,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 139,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - BLACKROCK INSTITUTIONAL TRUST COMPANY, N.A. EQUITY",
         "account_number": "EID10",
         "access_id": "carlespinosa",
         "product_id": "tim_cash",
@@ -3109,7 +2894,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 140,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - BLACKROCK INSTITUTIONAL TRUST COMPANY, N.A. EQUITY",
         "account_number": "P 79897",
         "access_id": "carlespinosa",
         "product_id": "tim_cash",
@@ -3119,7 +2903,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 141,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-WELLINGTONMANAGEMENT COMPANY LLP",
         "account_number": "FDA63",
         "access_id": "carlespinosa",
         "product_id": "tim_cash",
@@ -3129,7 +2912,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 142,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-PACIFIC INVESTMENT MANAGEMENT COMANY LLC",
         "account_number": "AIF62",
         "access_id": "carlespinosa",
         "product_id": "tim_cash",
@@ -3139,7 +2921,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 143,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "carlespinosa",
         "product_id": "tim_cash_inter_account_transfer",
@@ -3149,7 +2930,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 144,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "carlespinosa",
         "product_id": "tim_listed_securities_deliver_free_of_payment",
@@ -3159,7 +2939,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 145,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "carlespinosa",
         "product_id": "tim_listed_securities_receive_against_payment",
@@ -3169,7 +2948,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 146,
         "function_type": "Merchant Services Reporting Functions",
-        "account_name": "",
         "account_number": "",
         "access_id": "carlespinosa",
         "product_id": "securities_services_products_custody_dashboard",
@@ -3179,7 +2957,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 147,
         "function_type": "",
-        "account_name": "",
         "account_number": "",
         "access_id": "carlespinosa",
         "product_id": "securities_services_products",
@@ -3189,7 +2966,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 148,
         "function_type": "Merchant Services Reporting Functions",
-        "account_name": "",
         "account_number": "",
         "access_id": "cecanon",
         "product_id": "securities_services_products_views_portfolio_reporting",
@@ -3199,7 +2975,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 149,
         "function_type": "Merchant Services Reporting Functions",
-        "account_name": "",
         "account_number": "",
         "access_id": "cecanon",
         "product_id": "securities_services_products_custody_dashboard",
@@ -3209,7 +2984,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 150,
         "function_type": "",
-        "account_name": "",
         "account_number": "",
         "access_id": "cecanon",
         "product_id": "securities_services_products",
@@ -3219,7 +2993,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 151,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - GOLDMAN SACHS ASSETMANAGEMENT, L.P.",
         "account_number": "P 46407",
         "access_id": "claudiamartin",
         "product_id": "tim_foreign_exchange",
@@ -3229,7 +3002,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 152,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-WELLINGTONMANAGEMENT COMPANY LLP",
         "account_number": "S 17006",
         "access_id": "claudiamartin",
         "product_id": "tim_foreign_exchange",
@@ -3239,7 +3011,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 153,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE",
         "account_number": "82783",
         "access_id": "claudiamartin",
         "product_id": "tim_foreign_exchange",
@@ -3249,7 +3020,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 154,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA - STATE STREET GLOBAL ADVISORS TRUST COMPANY",
         "account_number": "EPR68",
         "access_id": "claudiamartin",
         "product_id": "tim_foreign_exchange",
@@ -3259,7 +3029,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 155,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA.",
         "account_number": "S 97871",
         "access_id": "claudiamartin",
         "product_id": "tim_foreign_exchange",
@@ -3269,7 +3038,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 156,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA - STATE STREETGLOBAL ADVISORS TRUST COMPANY",
         "account_number": "P 92590",
         "access_id": "claudiamartin",
         "product_id": "tim_foreign_exchange",
@@ -3279,7 +3047,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 157,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE",
         "account_number": "P 88529",
         "access_id": "claudiamartin",
         "product_id": "tim_foreign_exchange",
@@ -3289,7 +3056,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 158,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - WELLINGTON MANAGEMENT COMPANY, LLP",
         "account_number": "P 46408",
         "access_id": "claudiamartin",
         "product_id": "tim_foreign_exchange",
@@ -3299,7 +3065,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 159,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - GOLDMAN SACHS ASSET MANAGEMENT, L.P.",
         "account_number": "EMH26",
         "access_id": "claudiamartin",
         "product_id": "tim_foreign_exchange",
@@ -3309,7 +3074,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 160,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - WELLINGTON MANAGEMENT COMPANY, LLP",
         "account_number": "EMH27",
         "access_id": "claudiamartin",
         "product_id": "tim_foreign_exchange",
@@ -3319,7 +3083,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 161,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA",
         "account_number": "05421",
         "access_id": "claudiamartin",
         "product_id": "tim_foreign_exchange",
@@ -3329,7 +3092,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 162,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - BLACKROCK INSTITUTIONAL TRUST COMPANY, N.A. EQUITY",
         "account_number": "EID10",
         "access_id": "claudiamartin",
         "product_id": "tim_foreign_exchange",
@@ -3339,7 +3101,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 163,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-WELLINGTONMANAGEMENT COMPANY LLP",
         "account_number": "FDA63",
         "access_id": "claudiamartin",
         "product_id": "tim_foreign_exchange",
@@ -3349,7 +3110,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 164,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - BLACKROCK INSTITUTIONAL TRUST COMPANY, N.A. EQUITY",
         "account_number": "P 79897",
         "access_id": "claudiamartin",
         "product_id": "tim_foreign_exchange",
@@ -3359,7 +3119,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 165,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - GOLDMAN SACHS ASSETMANAGEMENT, L.P.",
         "account_number": "P 46407",
         "access_id": "claudiamartin",
         "product_id": "tim_listed_securities",
@@ -3369,7 +3128,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 166,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE",
         "account_number": "82783",
         "access_id": "claudiamartin",
         "product_id": "tim_listed_securities",
@@ -3379,7 +3137,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 167,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-WELLINGTONMANAGEMENT COMPANY LLP",
         "account_number": "S 17006",
         "access_id": "claudiamartin",
         "product_id": "tim_listed_securities",
@@ -3389,7 +3146,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 168,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA - STATE STREET GLOBAL ADVISORS TRUST COMPANY",
         "account_number": "EPR68",
         "access_id": "claudiamartin",
         "product_id": "tim_listed_securities",
@@ -3399,7 +3155,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 169,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA.",
         "account_number": "S 97871",
         "access_id": "claudiamartin",
         "product_id": "tim_listed_securities",
@@ -3409,7 +3164,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 170,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA - STATE STREETGLOBAL ADVISORS TRUST COMPANY",
         "account_number": "P 92590",
         "access_id": "claudiamartin",
         "product_id": "tim_listed_securities",
@@ -3419,7 +3173,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 171,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE",
         "account_number": "P 88529",
         "access_id": "claudiamartin",
         "product_id": "tim_listed_securities",
@@ -3429,7 +3182,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 172,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - WELLINGTON MANAGEMENT COMPANY, LLP",
         "account_number": "P 46408",
         "access_id": "claudiamartin",
         "product_id": "tim_listed_securities",
@@ -3439,7 +3191,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 173,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - GOLDMAN SACHS ASSET MANAGEMENT, L.P.",
         "account_number": "EMH26",
         "access_id": "claudiamartin",
         "product_id": "tim_listed_securities",
@@ -3449,7 +3200,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 174,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - WELLINGTON MANAGEMENT COMPANY, LLP",
         "account_number": "EMH27",
         "access_id": "claudiamartin",
         "product_id": "tim_listed_securities",
@@ -3459,7 +3209,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 175,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA",
         "account_number": "05421",
         "access_id": "claudiamartin",
         "product_id": "tim_listed_securities",
@@ -3469,7 +3218,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 176,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - BLACKROCK INSTITUTIONAL TRUST COMPANY, N.A. EQUITY",
         "account_number": "EID10",
         "access_id": "claudiamartin",
         "product_id": "tim_listed_securities",
@@ -3479,7 +3227,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 177,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - BLACKROCK INSTITUTIONAL TRUST COMPANY, N.A. EQUITY",
         "account_number": "P 79897",
         "access_id": "claudiamartin",
         "product_id": "tim_listed_securities",
@@ -3489,7 +3236,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 178,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-WELLINGTONMANAGEMENT COMPANY LLP",
         "account_number": "FDA63",
         "access_id": "claudiamartin",
         "product_id": "tim_listed_securities",
@@ -3499,7 +3245,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 179,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "claudiamartin",
         "product_id": "tim_listed_securities_inter_account_trade_transfer",
@@ -3509,7 +3254,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 180,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "claudiamartin",
         "product_id": "tim_listed_securities_receive_free_of_payment",
@@ -3519,7 +3263,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 181,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "claudiamartin",
         "product_id": "tim_cash_advice_to_receive",
@@ -3529,7 +3272,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 182,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "claudiamartin",
         "product_id": "tim_listed_securities_deliver_against_payment",
@@ -3539,7 +3281,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 183,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "claudiamartin",
         "product_id": "tim_cash_payment_order",
@@ -3549,7 +3290,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 184,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "claudiamartin",
         "product_id": "tim_foreign_exchange_3rd_party_fx",
@@ -3559,7 +3299,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 185,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "claudiamartin",
         "product_id": "tim_foreign_exchange_3rd_party_fx",
@@ -3569,7 +3308,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 186,
         "function_type": "",
-        "account_name": "",
         "account_number": "",
         "access_id": "claudiamartin",
         "product_id": "import_manager_and_template_manager",
@@ -3579,7 +3317,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 187,
         "function_type": "Merchant Services Reporting Functions",
-        "account_name": "",
         "account_number": "",
         "access_id": "claudiamartin",
         "product_id": "securities_services_products_views_portfolio_reporting",
@@ -3589,7 +3326,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 188,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - GOLDMAN SACHS ASSETMANAGEMENT, L.P.",
         "account_number": "P 46407",
         "access_id": "claudiamartin",
         "product_id": "tim_cash",
@@ -3599,7 +3335,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 189,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-WELLINGTONMANAGEMENT COMPANY LLP",
         "account_number": "S 17006",
         "access_id": "claudiamartin",
         "product_id": "tim_cash",
@@ -3609,7 +3344,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 190,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE",
         "account_number": "82783",
         "access_id": "claudiamartin",
         "product_id": "tim_cash",
@@ -3619,7 +3353,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 191,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA - STATE STREET GLOBAL ADVISORS TRUST COMPANY",
         "account_number": "EPR68",
         "access_id": "claudiamartin",
         "product_id": "tim_cash",
@@ -3629,7 +3362,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 192,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA - STATE STREETGLOBAL ADVISORS TRUST COMPANY",
         "account_number": "P 92590",
         "access_id": "claudiamartin",
         "product_id": "tim_cash",
@@ -3639,7 +3371,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 193,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA.",
         "account_number": "S 97871",
         "access_id": "claudiamartin",
         "product_id": "tim_cash",
@@ -3649,7 +3380,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 194,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE",
         "account_number": "P 88529",
         "access_id": "claudiamartin",
         "product_id": "tim_cash",
@@ -3659,7 +3389,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 195,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - WELLINGTON MANAGEMENT COMPANY, LLP",
         "account_number": "P 46408",
         "access_id": "claudiamartin",
         "product_id": "tim_cash",
@@ -3669,7 +3398,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 196,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - GOLDMAN SACHS ASSET MANAGEMENT, L.P.",
         "account_number": "EMH26",
         "access_id": "claudiamartin",
         "product_id": "tim_cash",
@@ -3679,7 +3407,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 197,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - WELLINGTON MANAGEMENT COMPANY, LLP",
         "account_number": "EMH27",
         "access_id": "claudiamartin",
         "product_id": "tim_cash",
@@ -3689,7 +3416,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 198,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA",
         "account_number": "05421",
         "access_id": "claudiamartin",
         "product_id": "tim_cash",
@@ -3699,7 +3425,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 199,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - BLACKROCK INSTITUTIONAL TRUST COMPANY, N.A. EQUITY",
         "account_number": "EID10",
         "access_id": "claudiamartin",
         "product_id": "tim_cash",
@@ -3709,7 +3434,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 200,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-WELLINGTONMANAGEMENT COMPANY LLP",
         "account_number": "FDA63",
         "access_id": "claudiamartin",
         "product_id": "tim_cash",
@@ -3719,7 +3443,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 201,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - BLACKROCK INSTITUTIONAL TRUST COMPANY, N.A. EQUITY",
         "account_number": "P 79897",
         "access_id": "claudiamartin",
         "product_id": "tim_cash",
@@ -3729,7 +3452,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 202,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "claudiamartin",
         "product_id": "tim_cash_inter_account_transfer",
@@ -3739,7 +3461,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 203,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "claudiamartin",
         "product_id": "tim_listed_securities_deliver_free_of_payment",
@@ -3749,7 +3470,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 204,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "claudiamartin",
         "product_id": "tim_listed_securities_receive_against_payment",
@@ -3759,7 +3479,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 205,
         "function_type": "Merchant Services Reporting Functions",
-        "account_name": "",
         "account_number": "",
         "access_id": "claudiamartin",
         "product_id": "securities_services_products_custody_dashboard",
@@ -3769,7 +3488,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 206,
         "function_type": "",
-        "account_name": "",
         "account_number": "",
         "access_id": "claudiamartin",
         "product_id": "securities_services_products",
@@ -3779,7 +3497,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 207,
         "function_type": "Merchant Services Reporting Functions",
-        "account_name": "",
         "account_number": "",
         "access_id": "glperalta",
         "product_id": "securities_services_products_views_portfolio_reporting",
@@ -3789,7 +3506,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 208,
         "function_type": "Continuous Links Settlement",
-        "account_name": "",
         "account_number": "",
         "access_id": "glperalta",
         "product_id": "continuous_link_settlement",
@@ -3799,7 +3515,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 209,
         "function_type": "Continuous Links Settlement",
-        "account_name": "",
         "account_number": "",
         "access_id": "glperalta",
         "product_id": "continuous_link_settlement",
@@ -3809,7 +3524,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 210,
         "function_type": "Continuous Links Settlement",
-        "account_name": "",
         "account_number": "",
         "access_id": "glperalta",
         "product_id": "continuous_link_settlement",
@@ -3819,7 +3533,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 211,
         "function_type": "Continuous Links Settlement",
-        "account_name": "",
         "account_number": "",
         "access_id": "glperalta",
         "product_id": "continuous_link_settlement",
@@ -3829,7 +3542,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 212,
         "function_type": "Continuous Links Settlement",
-        "account_name": "",
         "account_number": "",
         "access_id": "glperalta",
         "product_id": "continuous_link_settlement",
@@ -3839,7 +3551,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 213,
         "function_type": "Merchant Services Reporting Functions",
-        "account_name": "",
         "account_number": "",
         "access_id": "glperalta",
         "product_id": "securities_services_products_custody_dashboard",
@@ -3849,7 +3560,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 214,
         "function_type": "",
-        "account_name": "",
         "account_number": "",
         "access_id": "glperalta",
         "product_id": "securities_services_products",
@@ -3859,7 +3569,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 215,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-PACIFIC INVESTMENT MANAGEMENT COMPANY LLC",
         "account_number": "P 35946",
         "access_id": "jackbohn8002",
         "product_id": "tim_foreign_exchange",
@@ -3869,7 +3578,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 216,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - GOLDMAN SACHS ASSETMANAGEMENT, L.P.",
         "account_number": "P 46407",
         "access_id": "jackbohn8002",
         "product_id": "tim_foreign_exchange",
@@ -3879,7 +3587,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 217,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE",
         "account_number": "82783",
         "access_id": "jackbohn8002",
         "product_id": "tim_foreign_exchange",
@@ -3889,7 +3596,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 218,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-WELLINGTONMANAGEMENT COMPANY LLP",
         "account_number": "S 17006",
         "access_id": "jackbohn8002",
         "product_id": "tim_foreign_exchange",
@@ -3899,7 +3605,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 219,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA - STATE STREET GLOBAL ADVISORS TRUST COMPANY",
         "account_number": "EPR68",
         "access_id": "jackbohn8002",
         "product_id": "tim_foreign_exchange",
@@ -3909,7 +3614,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 220,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA.",
         "account_number": "S 97871",
         "access_id": "jackbohn8002",
         "product_id": "tim_foreign_exchange",
@@ -3919,7 +3623,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 221,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA - STATE STREETGLOBAL ADVISORS TRUST COMPANY",
         "account_number": "P 92590",
         "access_id": "jackbohn8002",
         "product_id": "tim_foreign_exchange",
@@ -3929,7 +3632,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 222,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE",
         "account_number": "P 88529",
         "access_id": "jackbohn8002",
         "product_id": "tim_foreign_exchange",
@@ -3939,7 +3641,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 223,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - WELLINGTON MANAGEMENT COMPANY, LLP",
         "account_number": "P 46408",
         "access_id": "jackbohn8002",
         "product_id": "tim_foreign_exchange",
@@ -3949,7 +3650,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 224,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - GOLDMAN SACHS ASSET MANAGEMENT, L.P.",
         "account_number": "EMH26",
         "access_id": "jackbohn8002",
         "product_id": "tim_foreign_exchange",
@@ -3959,7 +3659,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 225,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - WELLINGTON MANAGEMENT COMPANY, LLP",
         "account_number": "EMH27",
         "access_id": "jackbohn8002",
         "product_id": "tim_foreign_exchange",
@@ -3969,7 +3668,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 226,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA",
         "account_number": "05421",
         "access_id": "jackbohn8002",
         "product_id": "tim_foreign_exchange",
@@ -3979,7 +3677,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 227,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - BLACKROCK INSTITUTIONAL TRUST COMPANY, N.A. EQUITY",
         "account_number": "EID10",
         "access_id": "jackbohn8002",
         "product_id": "tim_foreign_exchange",
@@ -3989,7 +3686,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 228,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-WELLINGTONMANAGEMENT COMPANY LLP",
         "account_number": "FDA63",
         "access_id": "jackbohn8002",
         "product_id": "tim_foreign_exchange",
@@ -3999,7 +3695,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 229,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - BLACKROCK INSTITUTIONAL TRUST COMPANY, N.A. EQUITY",
         "account_number": "P 79897",
         "access_id": "jackbohn8002",
         "product_id": "tim_foreign_exchange",
@@ -4009,7 +3704,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 230,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-PACIFIC INVESTMENT MANAGEMENT COMANY LLC",
         "account_number": "AIF62",
         "access_id": "jackbohn8002",
         "product_id": "tim_foreign_exchange",
@@ -4019,7 +3713,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 231,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-PACIFIC INVESTMENT MANAGEMENT COMPANY LLC",
         "account_number": "P 35946",
         "access_id": "jackbohn8002",
         "product_id": "tim_listed_securities",
@@ -4029,7 +3722,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 232,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - GOLDMAN SACHS ASSETMANAGEMENT, L.P.",
         "account_number": "P 46407",
         "access_id": "jackbohn8002",
         "product_id": "tim_listed_securities",
@@ -4039,7 +3731,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 233,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-WELLINGTONMANAGEMENT COMPANY LLP",
         "account_number": "S 17006",
         "access_id": "jackbohn8002",
         "product_id": "tim_listed_securities",
@@ -4049,7 +3740,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 234,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE",
         "account_number": "82783",
         "access_id": "jackbohn8002",
         "product_id": "tim_listed_securities",
@@ -4059,7 +3749,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 235,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA - STATE STREET GLOBAL ADVISORS TRUST COMPANY",
         "account_number": "EPR68",
         "access_id": "jackbohn8002",
         "product_id": "tim_listed_securities",
@@ -4069,7 +3758,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 236,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA - STATE STREETGLOBAL ADVISORS TRUST COMPANY",
         "account_number": "P 92590",
         "access_id": "jackbohn8002",
         "product_id": "tim_listed_securities",
@@ -4079,7 +3767,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 237,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA.",
         "account_number": "S 97871",
         "access_id": "jackbohn8002",
         "product_id": "tim_listed_securities",
@@ -4089,7 +3776,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 238,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE",
         "account_number": "P 88529",
         "access_id": "jackbohn8002",
         "product_id": "tim_listed_securities",
@@ -4099,7 +3785,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 239,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - WELLINGTON MANAGEMENT COMPANY, LLP",
         "account_number": "P 46408",
         "access_id": "jackbohn8002",
         "product_id": "tim_listed_securities",
@@ -4109,7 +3794,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 240,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - GOLDMAN SACHS ASSET MANAGEMENT, L.P.",
         "account_number": "EMH26",
         "access_id": "jackbohn8002",
         "product_id": "tim_listed_securities",
@@ -4119,7 +3803,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 241,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - WELLINGTON MANAGEMENT COMPANY, LLP",
         "account_number": "EMH27",
         "access_id": "jackbohn8002",
         "product_id": "tim_listed_securities",
@@ -4129,7 +3812,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 242,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA",
         "account_number": "05421",
         "access_id": "jackbohn8002",
         "product_id": "tim_listed_securities",
@@ -4139,7 +3821,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 243,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - BLACKROCK INSTITUTIONAL TRUST COMPANY, N.A. EQUITY",
         "account_number": "EID10",
         "access_id": "jackbohn8002",
         "product_id": "tim_listed_securities",
@@ -4149,7 +3830,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 244,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - BLACKROCK INSTITUTIONAL TRUST COMPANY, N.A. EQUITY",
         "account_number": "P 79897",
         "access_id": "jackbohn8002",
         "product_id": "tim_listed_securities",
@@ -4159,7 +3839,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 245,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-WELLINGTONMANAGEMENT COMPANY LLP",
         "account_number": "FDA63",
         "access_id": "jackbohn8002",
         "product_id": "tim_listed_securities",
@@ -4169,7 +3848,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 246,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-PACIFIC INVESTMENT MANAGEMENT COMANY LLC",
         "account_number": "AIF62",
         "access_id": "jackbohn8002",
         "product_id": "tim_listed_securities",
@@ -4179,7 +3857,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 247,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "jackbohn8002",
         "product_id": "tim_listed_securities_inter_account_trade_transfer",
@@ -4189,7 +3866,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 248,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "jackbohn8002",
         "product_id": "tim_listed_securities_receive_free_of_payment",
@@ -4199,7 +3875,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 249,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "jackbohn8002",
         "product_id": "tim_cash_advice_to_receive",
@@ -4209,7 +3884,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 250,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "jackbohn8002",
         "product_id": "tim_listed_securities_deliver_against_payment",
@@ -4219,7 +3893,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 251,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "jackbohn8002",
         "product_id": "tim_cash_payment_order",
@@ -4229,7 +3902,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 252,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "jackbohn8002",
         "product_id": "tim_foreign_exchange_3rd_party_fx",
@@ -4239,7 +3911,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 253,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "jackbohn8002",
         "product_id": "tim_foreign_exchange_3rd_party_fx",
@@ -4249,7 +3920,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 254,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "jackbohn8002",
         "product_id": "import_manager_and_template_manager",
@@ -4259,7 +3929,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 255,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "jackbohn8002",
         "product_id": "import_manager_and_template_manager",
@@ -4269,7 +3938,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 256,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "jackbohn8002",
         "product_id": "import_manager_and_template_manager",
@@ -4279,7 +3947,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 257,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "jackbohn8002",
         "product_id": "import_manager_and_template_manager",
@@ -4289,7 +3956,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 258,
         "function_type": "Merchant Services Reporting Functions",
-        "account_name": "",
         "account_number": "",
         "access_id": "jackbohn8002",
         "product_id": "securities_services_products_views_portfolio_reporting",
@@ -4299,7 +3965,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 259,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-PACIFIC INVESTMENT MANAGEMENT COMPANY LLC",
         "account_number": "P 35946",
         "access_id": "jackbohn8002",
         "product_id": "tim_cash",
@@ -4309,7 +3974,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 260,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - GOLDMAN SACHS ASSETMANAGEMENT, L.P.",
         "account_number": "P 46407",
         "access_id": "jackbohn8002",
         "product_id": "tim_cash",
@@ -4319,7 +3983,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 261,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-WELLINGTONMANAGEMENT COMPANY LLP",
         "account_number": "S 17006",
         "access_id": "jackbohn8002",
         "product_id": "tim_cash",
@@ -4329,7 +3992,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 262,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE",
         "account_number": "82783",
         "access_id": "jackbohn8002",
         "product_id": "tim_cash",
@@ -4339,7 +4001,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 263,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA - STATE STREET GLOBAL ADVISORS TRUST COMPANY",
         "account_number": "EPR68",
         "access_id": "jackbohn8002",
         "product_id": "tim_cash",
@@ -4349,7 +4010,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 264,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA.",
         "account_number": "S 97871",
         "access_id": "jackbohn8002",
         "product_id": "tim_cash",
@@ -4359,7 +4019,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 265,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA - STATE STREETGLOBAL ADVISORS TRUST COMPANY",
         "account_number": "P 92590",
         "access_id": "jackbohn8002",
         "product_id": "tim_cash",
@@ -4369,7 +4028,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 266,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE",
         "account_number": "P 88529",
         "access_id": "jackbohn8002",
         "product_id": "tim_cash",
@@ -4379,7 +4037,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 267,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - WELLINGTON MANAGEMENT COMPANY, LLP",
         "account_number": "P 46408",
         "access_id": "jackbohn8002",
         "product_id": "tim_cash",
@@ -4389,7 +4046,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 268,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - GOLDMAN SACHS ASSET MANAGEMENT, L.P.",
         "account_number": "EMH26",
         "access_id": "jackbohn8002",
         "product_id": "tim_cash",
@@ -4399,7 +4055,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 269,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - WELLINGTON MANAGEMENT COMPANY, LLP",
         "account_number": "EMH27",
         "access_id": "jackbohn8002",
         "product_id": "tim_cash",
@@ -4409,7 +4064,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 270,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA",
         "account_number": "05421",
         "access_id": "jackbohn8002",
         "product_id": "tim_cash",
@@ -4419,7 +4073,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 271,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - BLACKROCK INSTITUTIONAL TRUST COMPANY, N.A. EQUITY",
         "account_number": "EID10",
         "access_id": "jackbohn8002",
         "product_id": "tim_cash",
@@ -4429,7 +4082,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 272,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - BLACKROCK INSTITUTIONAL TRUST COMPANY, N.A. EQUITY",
         "account_number": "P 79897",
         "access_id": "jackbohn8002",
         "product_id": "tim_cash",
@@ -4439,7 +4091,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 273,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-WELLINGTONMANAGEMENT COMPANY LLP",
         "account_number": "FDA63",
         "access_id": "jackbohn8002",
         "product_id": "tim_cash",
@@ -4449,7 +4100,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 274,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-PACIFIC INVESTMENT MANAGEMENT COMANY LLC",
         "account_number": "AIF62",
         "access_id": "jackbohn8002",
         "product_id": "tim_cash",
@@ -4459,7 +4109,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 275,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "jackbohn8002",
         "product_id": "tim_cash_inter_account_transfer",
@@ -4469,7 +4118,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 276,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "jackbohn8002",
         "product_id": "tim_listed_securities_deliver_free_of_payment",
@@ -4479,7 +4127,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 277,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "jackbohn8002",
         "product_id": "tim_listed_securities_receive_against_payment",
@@ -4489,7 +4136,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 278,
         "function_type": "Merchant Services Reporting Functions",
-        "account_name": "",
         "account_number": "",
         "access_id": "jackbohn8002",
         "product_id": "securities_services_products_custody_dashboard",
@@ -4499,7 +4145,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 279,
         "function_type": "",
-        "account_name": "",
         "account_number": "",
         "access_id": "jackbohn8002",
         "product_id": "securities_services_products",
@@ -4509,7 +4154,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 280,
         "function_type": "",
-        "account_name": "",
         "account_number": "",
         "access_id": "jammoreno",
         "product_id": "administration",
@@ -4519,7 +4163,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 281,
         "function_type": "Manage Account Groups",
-        "account_name": "",
         "account_number": "",
         "access_id": "jammoreno",
         "product_id": "administration",
@@ -4529,7 +4172,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 282,
         "function_type": "Manage Account Groups",
-        "account_name": "",
         "account_number": "",
         "access_id": "jammoreno",
         "product_id": "administration",
@@ -4539,7 +4181,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 283,
         "function_type": "Manage Account Groups",
-        "account_name": "",
         "account_number": "",
         "access_id": "jammoreno",
         "product_id": "administration",
@@ -4549,7 +4190,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 284,
         "function_type": "Manage Account Groups",
-        "account_name": "",
         "account_number": "",
         "access_id": "jammoreno",
         "product_id": "administration",
@@ -4559,7 +4199,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 285,
         "function_type": "Manage Account Groups",
-        "account_name": "",
         "account_number": "",
         "access_id": "jammoreno",
         "product_id": "administration",
@@ -4569,7 +4208,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 286,
         "function_type": "Manage Account Groups",
-        "account_name": "",
         "account_number": "",
         "access_id": "jammoreno",
         "product_id": "administration",
@@ -4579,7 +4217,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 287,
         "function_type": "Manage Administration Reports",
-        "account_name": "",
         "account_number": "",
         "access_id": "jammoreno",
         "product_id": "administration",
@@ -4589,7 +4226,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 288,
         "function_type": "Manage Administration Reports",
-        "account_name": "",
         "account_number": "",
         "access_id": "jammoreno",
         "product_id": "administration",
@@ -4599,7 +4235,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 289,
         "function_type": "Manage Administration Reports",
-        "account_name": "",
         "account_number": "",
         "access_id": "jammoreno",
         "product_id": "administration",
@@ -4609,7 +4244,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 290,
         "function_type": "Manage Administration Reports",
-        "account_name": "",
         "account_number": "",
         "access_id": "jammoreno",
         "product_id": "administration",
@@ -4619,7 +4253,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 291,
         "function_type": "Manage Credentials",
-        "account_name": "",
         "account_number": "",
         "access_id": "jammoreno",
         "product_id": "administration",
@@ -4629,7 +4262,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 292,
         "function_type": "Manage Credentials",
-        "account_name": "",
         "account_number": "",
         "access_id": "jammoreno",
         "product_id": "administration",
@@ -4639,7 +4271,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 293,
         "function_type": "Manage Credentials",
-        "account_name": "",
         "account_number": "",
         "access_id": "jammoreno",
         "product_id": "administration",
@@ -4649,7 +4280,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 294,
         "function_type": "Manage Credentials",
-        "account_name": "",
         "account_number": "",
         "access_id": "jammoreno",
         "product_id": "administration",
@@ -4659,7 +4289,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 295,
         "function_type": "Manage Credentials",
-        "account_name": "",
         "account_number": "",
         "access_id": "jammoreno",
         "product_id": "administration",
@@ -4669,7 +4298,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 296,
         "function_type": "Manage Products",
-        "account_name": "",
         "account_number": "",
         "access_id": "jammoreno",
         "product_id": "administration",
@@ -4679,7 +4307,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 297,
         "function_type": "Manage Products",
-        "account_name": "",
         "account_number": "",
         "access_id": "jammoreno",
         "product_id": "administration",
@@ -4689,7 +4316,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 298,
         "function_type": "Manage Products",
-        "account_name": "",
         "account_number": "",
         "access_id": "jammoreno",
         "product_id": "administration",
@@ -4699,7 +4325,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 299,
         "function_type": "Manage Requests",
-        "account_name": "",
         "account_number": "",
         "access_id": "jammoreno",
         "product_id": "administration",
@@ -4709,7 +4334,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 300,
         "function_type": "Manage Requests",
-        "account_name": "",
         "account_number": "",
         "access_id": "jammoreno",
         "product_id": "administration",
@@ -4719,7 +4343,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 301,
         "function_type": "Manage Users",
-        "account_name": "",
         "account_number": "",
         "access_id": "jammoreno",
         "product_id": "administration",
@@ -4729,7 +4352,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 302,
         "function_type": "Manage Users",
-        "account_name": "",
         "account_number": "",
         "access_id": "jammoreno",
         "product_id": "administration",
@@ -4739,7 +4361,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 303,
         "function_type": "Manage Users",
-        "account_name": "",
         "account_number": "",
         "access_id": "jammoreno",
         "product_id": "administration",
@@ -4749,7 +4370,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 304,
         "function_type": "Manage Users",
-        "account_name": "",
         "account_number": "",
         "access_id": "jammoreno",
         "product_id": "administration",
@@ -4759,7 +4379,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 305,
         "function_type": "Manage Users",
-        "account_name": "",
         "account_number": "",
         "access_id": "jammoreno",
         "product_id": "administration",
@@ -4769,7 +4388,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 306,
         "function_type": "Manage Users",
-        "account_name": "",
         "account_number": "",
         "access_id": "jammoreno",
         "product_id": "administration",
@@ -4779,7 +4397,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 307,
         "function_type": "Other",
-        "account_name": "",
         "account_number": "",
         "access_id": "jammoreno",
         "product_id": "administration",
@@ -4789,7 +4406,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 308,
         "function_type": "Other",
-        "account_name": "",
         "account_number": "",
         "access_id": "jammoreno",
         "product_id": "administration",
@@ -4799,7 +4415,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 309,
         "function_type": "Other",
-        "account_name": "",
         "account_number": "",
         "access_id": "jammoreno",
         "product_id": "administration",
@@ -4809,7 +4424,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 310,
         "function_type": "",
-        "account_name": "",
         "account_number": "",
         "access_id": "jsandovalfernandez",
         "product_id": "administration",
@@ -4819,7 +4433,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 311,
         "function_type": "Manage Account Groups",
-        "account_name": "",
         "account_number": "",
         "access_id": "jsandovalfernandez",
         "product_id": "administration",
@@ -4829,7 +4442,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 312,
         "function_type": "Manage Account Groups",
-        "account_name": "",
         "account_number": "",
         "access_id": "jsandovalfernandez",
         "product_id": "administration",
@@ -4839,7 +4451,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 313,
         "function_type": "Manage Account Groups",
-        "account_name": "",
         "account_number": "",
         "access_id": "jsandovalfernandez",
         "product_id": "administration",
@@ -4849,7 +4460,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 314,
         "function_type": "Manage Account Groups",
-        "account_name": "",
         "account_number": "",
         "access_id": "jsandovalfernandez",
         "product_id": "administration",
@@ -4859,7 +4469,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 315,
         "function_type": "Manage Account Groups",
-        "account_name": "",
         "account_number": "",
         "access_id": "jsandovalfernandez",
         "product_id": "administration",
@@ -4869,7 +4478,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 316,
         "function_type": "Manage Account Groups",
-        "account_name": "",
         "account_number": "",
         "access_id": "jsandovalfernandez",
         "product_id": "administration",
@@ -4879,7 +4487,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 317,
         "function_type": "Manage Administration Reports",
-        "account_name": "",
         "account_number": "",
         "access_id": "jsandovalfernandez",
         "product_id": "administration",
@@ -4889,7 +4496,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 318,
         "function_type": "Manage Administration Reports",
-        "account_name": "",
         "account_number": "",
         "access_id": "jsandovalfernandez",
         "product_id": "administration",
@@ -4899,7 +4505,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 319,
         "function_type": "Manage Administration Reports",
-        "account_name": "",
         "account_number": "",
         "access_id": "jsandovalfernandez",
         "product_id": "administration",
@@ -4909,7 +4514,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 320,
         "function_type": "Manage Administration Reports",
-        "account_name": "",
         "account_number": "",
         "access_id": "jsandovalfernandez",
         "product_id": "administration",
@@ -4919,7 +4523,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 321,
         "function_type": "Manage Credentials",
-        "account_name": "",
         "account_number": "",
         "access_id": "jsandovalfernandez",
         "product_id": "administration",
@@ -4929,7 +4532,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 322,
         "function_type": "Manage Credentials",
-        "account_name": "",
         "account_number": "",
         "access_id": "jsandovalfernandez",
         "product_id": "administration",
@@ -4939,7 +4541,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 323,
         "function_type": "Manage Credentials",
-        "account_name": "",
         "account_number": "",
         "access_id": "jsandovalfernandez",
         "product_id": "administration",
@@ -4949,7 +4550,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 324,
         "function_type": "Manage Credentials",
-        "account_name": "",
         "account_number": "",
         "access_id": "jsandovalfernandez",
         "product_id": "administration",
@@ -4959,7 +4559,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 325,
         "function_type": "Manage Credentials",
-        "account_name": "",
         "account_number": "",
         "access_id": "jsandovalfernandez",
         "product_id": "administration",
@@ -4969,7 +4568,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 326,
         "function_type": "Manage Products",
-        "account_name": "",
         "account_number": "",
         "access_id": "jsandovalfernandez",
         "product_id": "administration",
@@ -4979,7 +4577,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 327,
         "function_type": "Manage Products",
-        "account_name": "",
         "account_number": "",
         "access_id": "jsandovalfernandez",
         "product_id": "administration",
@@ -4989,7 +4586,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 328,
         "function_type": "Manage Products",
-        "account_name": "",
         "account_number": "",
         "access_id": "jsandovalfernandez",
         "product_id": "administration",
@@ -4999,7 +4595,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 329,
         "function_type": "Manage Requests",
-        "account_name": "",
         "account_number": "",
         "access_id": "jsandovalfernandez",
         "product_id": "administration",
@@ -5009,7 +4604,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 330,
         "function_type": "Manage Requests",
-        "account_name": "",
         "account_number": "",
         "access_id": "jsandovalfernandez",
         "product_id": "administration",
@@ -5019,7 +4613,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 331,
         "function_type": "Manage Users",
-        "account_name": "",
         "account_number": "",
         "access_id": "jsandovalfernandez",
         "product_id": "administration",
@@ -5029,7 +4622,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 332,
         "function_type": "Manage Users",
-        "account_name": "",
         "account_number": "",
         "access_id": "jsandovalfernandez",
         "product_id": "administration",
@@ -5039,7 +4631,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 333,
         "function_type": "Manage Users",
-        "account_name": "",
         "account_number": "",
         "access_id": "jsandovalfernandez",
         "product_id": "administration",
@@ -5049,7 +4640,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 334,
         "function_type": "Manage Users",
-        "account_name": "",
         "account_number": "",
         "access_id": "jsandovalfernandez",
         "product_id": "administration",
@@ -5059,7 +4649,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 335,
         "function_type": "Manage Users",
-        "account_name": "",
         "account_number": "",
         "access_id": "jsandovalfernandez",
         "product_id": "administration",
@@ -5069,7 +4658,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 336,
         "function_type": "Manage Users",
-        "account_name": "",
         "account_number": "",
         "access_id": "jsandovalfernandez",
         "product_id": "administration",
@@ -5079,7 +4667,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 337,
         "function_type": "Other",
-        "account_name": "",
         "account_number": "",
         "access_id": "jsandovalfernandez",
         "product_id": "administration",
@@ -5089,7 +4676,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 338,
         "function_type": "Other",
-        "account_name": "",
         "account_number": "",
         "access_id": "jsandovalfernandez",
         "product_id": "administration",
@@ -5099,7 +4685,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 339,
         "function_type": "Other",
-        "account_name": "",
         "account_number": "",
         "access_id": "jsandovalfernandez",
         "product_id": "administration",
@@ -5109,7 +4694,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 340,
         "function_type": "Merchant Services Reporting Functions",
-        "account_name": "",
         "account_number": "",
         "access_id": "juandiaz1980",
         "product_id": "securities_services_products_views_portfolio_reporting",
@@ -5119,7 +4703,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 341,
         "function_type": "Merchant Services Reporting Functions",
-        "account_name": "",
         "account_number": "",
         "access_id": "juandiaz1980",
         "product_id": "securities_services_products_custody_dashboard",
@@ -5129,7 +4712,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 342,
         "function_type": "",
-        "account_name": "",
         "account_number": "",
         "access_id": "juandiaz1980",
         "product_id": "securities_services_products",
@@ -5139,7 +4721,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 343,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-PACIFIC INVESTMENT MANAGEMENT COMPANY LLC",
         "account_number": "P 35946",
         "access_id": "juangutierrez0496",
         "product_id": "tim_foreign_exchange",
@@ -5149,7 +4730,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 344,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - GOLDMAN SACHS ASSETMANAGEMENT, L.P.",
         "account_number": "P 46407",
         "access_id": "juangutierrez0496",
         "product_id": "tim_foreign_exchange",
@@ -5159,7 +4739,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 345,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-WELLINGTONMANAGEMENT COMPANY LLP",
         "account_number": "S 17006",
         "access_id": "juangutierrez0496",
         "product_id": "tim_foreign_exchange",
@@ -5169,7 +4748,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 346,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE",
         "account_number": "82783",
         "access_id": "juangutierrez0496",
         "product_id": "tim_foreign_exchange",
@@ -5179,7 +4757,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 347,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA - STATE STREET GLOBAL ADVISORS TRUST COMPANY",
         "account_number": "EPR68",
         "access_id": "juangutierrez0496",
         "product_id": "tim_foreign_exchange",
@@ -5189,7 +4766,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 348,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA - STATE STREETGLOBAL ADVISORS TRUST COMPANY",
         "account_number": "P 92590",
         "access_id": "juangutierrez0496",
         "product_id": "tim_foreign_exchange",
@@ -5199,7 +4775,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 349,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA.",
         "account_number": "S 97871",
         "access_id": "juangutierrez0496",
         "product_id": "tim_foreign_exchange",
@@ -5209,7 +4784,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 350,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE",
         "account_number": "P 88529",
         "access_id": "juangutierrez0496",
         "product_id": "tim_foreign_exchange",
@@ -5219,7 +4793,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 351,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - WELLINGTON MANAGEMENT COMPANY, LLP",
         "account_number": "P 46408",
         "access_id": "juangutierrez0496",
         "product_id": "tim_foreign_exchange",
@@ -5229,7 +4802,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 352,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - GOLDMAN SACHS ASSET MANAGEMENT, L.P.",
         "account_number": "EMH26",
         "access_id": "juangutierrez0496",
         "product_id": "tim_foreign_exchange",
@@ -5239,7 +4811,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 353,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - WELLINGTON MANAGEMENT COMPANY, LLP",
         "account_number": "EMH27",
         "access_id": "juangutierrez0496",
         "product_id": "tim_foreign_exchange",
@@ -5249,7 +4820,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 354,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA",
         "account_number": "05421",
         "access_id": "juangutierrez0496",
         "product_id": "tim_foreign_exchange",
@@ -5259,7 +4829,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 355,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - BLACKROCK INSTITUTIONAL TRUST COMPANY, N.A. EQUITY",
         "account_number": "EID10",
         "access_id": "juangutierrez0496",
         "product_id": "tim_foreign_exchange",
@@ -5269,7 +4838,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 356,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-WELLINGTONMANAGEMENT COMPANY LLP",
         "account_number": "FDA63",
         "access_id": "juangutierrez0496",
         "product_id": "tim_foreign_exchange",
@@ -5279,7 +4847,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 357,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - BLACKROCK INSTITUTIONAL TRUST COMPANY, N.A. EQUITY",
         "account_number": "P 79897",
         "access_id": "juangutierrez0496",
         "product_id": "tim_foreign_exchange",
@@ -5289,7 +4856,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 358,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-PACIFIC INVESTMENT MANAGEMENT COMANY LLC",
         "account_number": "AIF62",
         "access_id": "juangutierrez0496",
         "product_id": "tim_foreign_exchange",
@@ -5299,7 +4865,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 359,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-PACIFIC INVESTMENT MANAGEMENT COMPANY LLC",
         "account_number": "P 35946",
         "access_id": "juangutierrez0496",
         "product_id": "tim_listed_securities",
@@ -5309,7 +4874,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 360,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - GOLDMAN SACHS ASSETMANAGEMENT, L.P.",
         "account_number": "P 46407",
         "access_id": "juangutierrez0496",
         "product_id": "tim_listed_securities",
@@ -5319,7 +4883,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 361,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-WELLINGTONMANAGEMENT COMPANY LLP",
         "account_number": "S 17006",
         "access_id": "juangutierrez0496",
         "product_id": "tim_listed_securities",
@@ -5329,7 +4892,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 362,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE",
         "account_number": "82783",
         "access_id": "juangutierrez0496",
         "product_id": "tim_listed_securities",
@@ -5339,7 +4901,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 363,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA - STATE STREET GLOBAL ADVISORS TRUST COMPANY",
         "account_number": "EPR68",
         "access_id": "juangutierrez0496",
         "product_id": "tim_listed_securities",
@@ -5349,7 +4910,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 364,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA.",
         "account_number": "S 97871",
         "access_id": "juangutierrez0496",
         "product_id": "tim_listed_securities",
@@ -5359,7 +4919,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 365,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA - STATE STREETGLOBAL ADVISORS TRUST COMPANY",
         "account_number": "P 92590",
         "access_id": "juangutierrez0496",
         "product_id": "tim_listed_securities",
@@ -5369,7 +4928,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 366,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE",
         "account_number": "P 88529",
         "access_id": "juangutierrez0496",
         "product_id": "tim_listed_securities",
@@ -5379,7 +4937,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 367,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - WELLINGTON MANAGEMENT COMPANY, LLP",
         "account_number": "P 46408",
         "access_id": "juangutierrez0496",
         "product_id": "tim_listed_securities",
@@ -5389,7 +4946,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 368,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - GOLDMAN SACHS ASSET MANAGEMENT, L.P.",
         "account_number": "EMH26",
         "access_id": "juangutierrez0496",
         "product_id": "tim_listed_securities",
@@ -5399,7 +4955,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 369,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA",
         "account_number": "05421",
         "access_id": "juangutierrez0496",
         "product_id": "tim_listed_securities",
@@ -5409,7 +4964,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 370,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - WELLINGTON MANAGEMENT COMPANY, LLP",
         "account_number": "EMH27",
         "access_id": "juangutierrez0496",
         "product_id": "tim_listed_securities",
@@ -5419,7 +4973,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 371,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - BLACKROCK INSTITUTIONAL TRUST COMPANY, N.A. EQUITY",
         "account_number": "EID10",
         "access_id": "juangutierrez0496",
         "product_id": "tim_listed_securities",
@@ -5429,7 +4982,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 372,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - BLACKROCK INSTITUTIONAL TRUST COMPANY, N.A. EQUITY",
         "account_number": "P 79897",
         "access_id": "juangutierrez0496",
         "product_id": "tim_listed_securities",
@@ -5439,7 +4991,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 373,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-WELLINGTONMANAGEMENT COMPANY LLP",
         "account_number": "FDA63",
         "access_id": "juangutierrez0496",
         "product_id": "tim_listed_securities",
@@ -5449,7 +5000,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 374,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-PACIFIC INVESTMENT MANAGEMENT COMANY LLC",
         "account_number": "AIF62",
         "access_id": "juangutierrez0496",
         "product_id": "tim_listed_securities",
@@ -5459,7 +5009,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 375,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "juangutierrez0496",
         "product_id": "tim_listed_securities_inter_account_trade_transfer",
@@ -5469,7 +5018,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 376,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "juangutierrez0496",
         "product_id": "tim_listed_securities_inter_account_trade_transfer",
@@ -5479,7 +5027,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 377,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "juangutierrez0496",
         "product_id": "tim_listed_securities_inter_account_trade_transfer",
@@ -5489,7 +5036,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 378,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "juangutierrez0496",
         "product_id": "tim_listed_securities_receive_free_of_payment",
@@ -5499,7 +5045,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 379,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "juangutierrez0496",
         "product_id": "tim_listed_securities_receive_free_of_payment",
@@ -5509,7 +5054,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 380,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "juangutierrez0496",
         "product_id": "tim_listed_securities_receive_free_of_payment",
@@ -5519,7 +5063,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 381,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "juangutierrez0496",
         "product_id": "tim_cash_advice_to_receive",
@@ -5529,7 +5072,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 382,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "juangutierrez0496",
         "product_id": "tim_cash_advice_to_receive",
@@ -5539,7 +5081,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 383,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "juangutierrez0496",
         "product_id": "tim_listed_securities_deliver_against_payment",
@@ -5549,7 +5090,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 384,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "juangutierrez0496",
         "product_id": "tim_listed_securities_deliver_against_payment",
@@ -5559,7 +5099,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 385,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "juangutierrez0496",
         "product_id": "tim_listed_securities_deliver_against_payment",
@@ -5569,7 +5108,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 386,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "juangutierrez0496",
         "product_id": "tim_cash_payment_order",
@@ -5579,7 +5117,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 387,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "juangutierrez0496",
         "product_id": "tim_cash_payment_order",
@@ -5589,7 +5126,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 388,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "juangutierrez0496",
         "product_id": "tim_foreign_exchange_3rd_party_fx",
@@ -5599,7 +5135,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 389,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "juangutierrez0496",
         "product_id": "tim_foreign_exchange_3rd_party_fx",
@@ -5609,7 +5144,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 390,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "juangutierrez0496",
         "product_id": "tim_foreign_exchange_3rd_party_fx",
@@ -5619,7 +5153,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 391,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "juangutierrez0496",
         "product_id": "tim_foreign_exchange_3rd_party_fx",
@@ -5629,7 +5162,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 392,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "juangutierrez0496",
         "product_id": "import_manager_and_template_manager",
@@ -5639,7 +5171,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 393,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "juangutierrez0496",
         "product_id": "import_manager_and_template_manager",
@@ -5649,7 +5180,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 394,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "juangutierrez0496",
         "product_id": "import_manager_and_template_manager",
@@ -5659,7 +5189,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 395,
         "function_type": "Merchant Services Reporting Functions",
-        "account_name": "",
         "account_number": "",
         "access_id": "juangutierrez0496",
         "product_id": "securities_services_products_views_portfolio_reporting",
@@ -5669,7 +5198,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 396,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-PACIFIC INVESTMENT MANAGEMENT COMPANY LLC",
         "account_number": "P 35946",
         "access_id": "juangutierrez0496",
         "product_id": "tim_cash",
@@ -5679,7 +5207,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 397,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - GOLDMAN SACHS ASSETMANAGEMENT, L.P.",
         "account_number": "P 46407",
         "access_id": "juangutierrez0496",
         "product_id": "tim_cash",
@@ -5689,7 +5216,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 398,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-WELLINGTONMANAGEMENT COMPANY LLP",
         "account_number": "S 17006",
         "access_id": "juangutierrez0496",
         "product_id": "tim_cash",
@@ -5699,7 +5225,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 399,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE",
         "account_number": "82783",
         "access_id": "juangutierrez0496",
         "product_id": "tim_cash",
@@ -5709,7 +5234,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 400,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA - STATE STREET GLOBAL ADVISORS TRUST COMPANY",
         "account_number": "EPR68",
         "access_id": "juangutierrez0496",
         "product_id": "tim_cash",
@@ -5719,7 +5243,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 401,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA - STATE STREETGLOBAL ADVISORS TRUST COMPANY",
         "account_number": "P 92590",
         "access_id": "juangutierrez0496",
         "product_id": "tim_cash",
@@ -5729,7 +5252,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 402,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA.",
         "account_number": "S 97871",
         "access_id": "juangutierrez0496",
         "product_id": "tim_cash",
@@ -5739,7 +5261,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 403,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE",
         "account_number": "P 88529",
         "access_id": "juangutierrez0496",
         "product_id": "tim_cash",
@@ -5749,7 +5270,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 404,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - WELLINGTON MANAGEMENT COMPANY, LLP",
         "account_number": "P 46408",
         "access_id": "juangutierrez0496",
         "product_id": "tim_cash",
@@ -5759,7 +5279,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 405,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - GOLDMAN SACHS ASSET MANAGEMENT, L.P.",
         "account_number": "EMH26",
         "access_id": "juangutierrez0496",
         "product_id": "tim_cash",
@@ -5769,7 +5288,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 406,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - WELLINGTON MANAGEMENT COMPANY, LLP",
         "account_number": "EMH27",
         "access_id": "juangutierrez0496",
         "product_id": "tim_cash",
@@ -5779,7 +5297,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 407,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA",
         "account_number": "05421",
         "access_id": "juangutierrez0496",
         "product_id": "tim_cash",
@@ -5789,7 +5306,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 408,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - BLACKROCK INSTITUTIONAL TRUST COMPANY, N.A. EQUITY",
         "account_number": "EID10",
         "access_id": "juangutierrez0496",
         "product_id": "tim_cash",
@@ -5799,7 +5315,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 409,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-WELLINGTONMANAGEMENT COMPANY LLP",
         "account_number": "FDA63",
         "access_id": "juangutierrez0496",
         "product_id": "tim_cash",
@@ -5809,7 +5324,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 410,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - BLACKROCK INSTITUTIONAL TRUST COMPANY, N.A. EQUITY",
         "account_number": "P 79897",
         "access_id": "juangutierrez0496",
         "product_id": "tim_cash",
@@ -5819,7 +5333,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 411,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-PACIFIC INVESTMENT MANAGEMENT COMANY LLC",
         "account_number": "AIF62",
         "access_id": "juangutierrez0496",
         "product_id": "tim_cash",
@@ -5829,7 +5342,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 412,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "juangutierrez0496",
         "product_id": "tim_cash_inter_account_transfer",
@@ -5839,7 +5351,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 413,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "juangutierrez0496",
         "product_id": "tim_cash_inter_account_transfer",
@@ -5849,7 +5360,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 414,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "juangutierrez0496",
         "product_id": "tim_listed_securities_deliver_free_of_payment",
@@ -5859,7 +5369,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 415,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "juangutierrez0496",
         "product_id": "tim_listed_securities_deliver_free_of_payment",
@@ -5869,7 +5378,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 416,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "juangutierrez0496",
         "product_id": "tim_listed_securities_deliver_free_of_payment",
@@ -5879,7 +5387,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 417,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "juangutierrez0496",
         "product_id": "tim_listed_securities_receive_against_payment",
@@ -5889,7 +5396,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 418,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "juangutierrez0496",
         "product_id": "tim_listed_securities_receive_against_payment",
@@ -5899,7 +5405,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 419,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "juangutierrez0496",
         "product_id": "tim_listed_securities_receive_against_payment",
@@ -5909,7 +5414,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 420,
         "function_type": "Merchant Services Reporting Functions",
-        "account_name": "",
         "account_number": "",
         "access_id": "juangutierrez0496",
         "product_id": "securities_services_products_custody_dashboard",
@@ -5919,7 +5423,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 421,
         "function_type": "",
-        "account_name": "",
         "account_number": "",
         "access_id": "juangutierrez0496",
         "product_id": "securities_services_products",
@@ -5929,7 +5432,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 422,
         "function_type": "",
-        "account_name": "",
         "account_number": "",
         "access_id": "julioalvarez1052",
         "product_id": "administration",
@@ -5939,7 +5441,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 423,
         "function_type": "Manage Account Groups",
-        "account_name": "",
         "account_number": "",
         "access_id": "julioalvarez1052",
         "product_id": "administration",
@@ -5949,7 +5450,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 424,
         "function_type": "Manage Account Groups",
-        "account_name": "",
         "account_number": "",
         "access_id": "julioalvarez1052",
         "product_id": "administration",
@@ -5959,7 +5459,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 425,
         "function_type": "Manage Account Groups",
-        "account_name": "",
         "account_number": "",
         "access_id": "julioalvarez1052",
         "product_id": "administration",
@@ -5969,7 +5468,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 426,
         "function_type": "Manage Account Groups",
-        "account_name": "",
         "account_number": "",
         "access_id": "julioalvarez1052",
         "product_id": "administration",
@@ -5979,7 +5477,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 427,
         "function_type": "Manage Account Groups",
-        "account_name": "",
         "account_number": "",
         "access_id": "julioalvarez1052",
         "product_id": "administration",
@@ -5989,7 +5486,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 428,
         "function_type": "Manage Account Groups",
-        "account_name": "",
         "account_number": "",
         "access_id": "julioalvarez1052",
         "product_id": "administration",
@@ -5999,7 +5495,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 429,
         "function_type": "Manage Administration Reports",
-        "account_name": "",
         "account_number": "",
         "access_id": "julioalvarez1052",
         "product_id": "administration",
@@ -6009,7 +5504,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 430,
         "function_type": "Manage Administration Reports",
-        "account_name": "",
         "account_number": "",
         "access_id": "julioalvarez1052",
         "product_id": "administration",
@@ -6019,7 +5513,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 431,
         "function_type": "Manage Administration Reports",
-        "account_name": "",
         "account_number": "",
         "access_id": "julioalvarez1052",
         "product_id": "administration",
@@ -6029,7 +5522,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 432,
         "function_type": "Manage Administration Reports",
-        "account_name": "",
         "account_number": "",
         "access_id": "julioalvarez1052",
         "product_id": "administration",
@@ -6039,7 +5531,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 433,
         "function_type": "Manage Credentials",
-        "account_name": "",
         "account_number": "",
         "access_id": "julioalvarez1052",
         "product_id": "administration",
@@ -6049,7 +5540,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 434,
         "function_type": "Manage Credentials",
-        "account_name": "",
         "account_number": "",
         "access_id": "julioalvarez1052",
         "product_id": "administration",
@@ -6059,7 +5549,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 435,
         "function_type": "Manage Credentials",
-        "account_name": "",
         "account_number": "",
         "access_id": "julioalvarez1052",
         "product_id": "administration",
@@ -6069,7 +5558,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 436,
         "function_type": "Manage Credentials",
-        "account_name": "",
         "account_number": "",
         "access_id": "julioalvarez1052",
         "product_id": "administration",
@@ -6079,7 +5567,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 437,
         "function_type": "Manage Credentials",
-        "account_name": "",
         "account_number": "",
         "access_id": "julioalvarez1052",
         "product_id": "administration",
@@ -6089,7 +5576,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 438,
         "function_type": "Manage Products",
-        "account_name": "",
         "account_number": "",
         "access_id": "julioalvarez1052",
         "product_id": "administration",
@@ -6099,7 +5585,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 439,
         "function_type": "Manage Products",
-        "account_name": "",
         "account_number": "",
         "access_id": "julioalvarez1052",
         "product_id": "administration",
@@ -6109,7 +5594,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 440,
         "function_type": "Manage Products",
-        "account_name": "",
         "account_number": "",
         "access_id": "julioalvarez1052",
         "product_id": "administration",
@@ -6119,7 +5603,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 441,
         "function_type": "Manage Requests",
-        "account_name": "",
         "account_number": "",
         "access_id": "julioalvarez1052",
         "product_id": "administration",
@@ -6129,7 +5612,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 442,
         "function_type": "Manage Requests",
-        "account_name": "",
         "account_number": "",
         "access_id": "julioalvarez1052",
         "product_id": "administration",
@@ -6139,7 +5621,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 443,
         "function_type": "Manage Users",
-        "account_name": "",
         "account_number": "",
         "access_id": "julioalvarez1052",
         "product_id": "administration",
@@ -6149,7 +5630,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 444,
         "function_type": "Manage Users",
-        "account_name": "",
         "account_number": "",
         "access_id": "julioalvarez1052",
         "product_id": "administration",
@@ -6159,7 +5639,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 445,
         "function_type": "Manage Users",
-        "account_name": "",
         "account_number": "",
         "access_id": "julioalvarez1052",
         "product_id": "administration",
@@ -6169,7 +5648,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 446,
         "function_type": "Manage Users",
-        "account_name": "",
         "account_number": "",
         "access_id": "julioalvarez1052",
         "product_id": "administration",
@@ -6179,7 +5657,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 447,
         "function_type": "Manage Users",
-        "account_name": "",
         "account_number": "",
         "access_id": "julioalvarez1052",
         "product_id": "administration",
@@ -6189,7 +5666,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 448,
         "function_type": "Manage Users",
-        "account_name": "",
         "account_number": "",
         "access_id": "julioalvarez1052",
         "product_id": "administration",
@@ -6199,7 +5675,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 449,
         "function_type": "Other",
-        "account_name": "",
         "account_number": "",
         "access_id": "julioalvarez1052",
         "product_id": "administration",
@@ -6209,7 +5684,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 450,
         "function_type": "Other",
-        "account_name": "",
         "account_number": "",
         "access_id": "julioalvarez1052",
         "product_id": "administration",
@@ -6219,7 +5693,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 451,
         "function_type": "Other",
-        "account_name": "",
         "account_number": "",
         "access_id": "julioalvarez1052",
         "product_id": "administration",
@@ -6229,7 +5702,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 452,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-PACIFIC INVESTMENT MANAGEMENT COMPANY LLC",
         "account_number": "P 35946",
         "access_id": "lacifuentes",
         "product_id": "tim_foreign_exchange",
@@ -6239,7 +5711,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 453,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - GOLDMAN SACHS ASSETMANAGEMENT, L.P.",
         "account_number": "P 46407",
         "access_id": "lacifuentes",
         "product_id": "tim_foreign_exchange",
@@ -6249,7 +5720,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 454,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE",
         "account_number": "82783",
         "access_id": "lacifuentes",
         "product_id": "tim_foreign_exchange",
@@ -6259,7 +5729,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 455,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-WELLINGTONMANAGEMENT COMPANY LLP",
         "account_number": "S 17006",
         "access_id": "lacifuentes",
         "product_id": "tim_foreign_exchange",
@@ -6269,7 +5738,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 456,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA - STATE STREET GLOBAL ADVISORS TRUST COMPANY",
         "account_number": "EPR68",
         "access_id": "lacifuentes",
         "product_id": "tim_foreign_exchange",
@@ -6279,7 +5747,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 457,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA.",
         "account_number": "S 97871",
         "access_id": "lacifuentes",
         "product_id": "tim_foreign_exchange",
@@ -6289,7 +5756,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 458,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA - STATE STREETGLOBAL ADVISORS TRUST COMPANY",
         "account_number": "P 92590",
         "access_id": "lacifuentes",
         "product_id": "tim_foreign_exchange",
@@ -6299,7 +5765,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 459,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE",
         "account_number": "P 88529",
         "access_id": "lacifuentes",
         "product_id": "tim_foreign_exchange",
@@ -6309,7 +5774,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 460,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - WELLINGTON MANAGEMENT COMPANY, LLP",
         "account_number": "P 46408",
         "access_id": "lacifuentes",
         "product_id": "tim_foreign_exchange",
@@ -6319,7 +5783,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 461,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - GOLDMAN SACHS ASSET MANAGEMENT, L.P.",
         "account_number": "EMH26",
         "access_id": "lacifuentes",
         "product_id": "tim_foreign_exchange",
@@ -6329,7 +5792,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 462,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - WELLINGTON MANAGEMENT COMPANY, LLP",
         "account_number": "EMH27",
         "access_id": "lacifuentes",
         "product_id": "tim_foreign_exchange",
@@ -6339,7 +5801,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 463,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA",
         "account_number": "05421",
         "access_id": "lacifuentes",
         "product_id": "tim_foreign_exchange",
@@ -6349,7 +5810,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 464,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - BLACKROCK INSTITUTIONAL TRUST COMPANY, N.A. EQUITY",
         "account_number": "EID10",
         "access_id": "lacifuentes",
         "product_id": "tim_foreign_exchange",
@@ -6359,7 +5819,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 465,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - BLACKROCK INSTITUTIONAL TRUST COMPANY, N.A. EQUITY",
         "account_number": "P 79897",
         "access_id": "lacifuentes",
         "product_id": "tim_foreign_exchange",
@@ -6369,7 +5828,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 466,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-WELLINGTONMANAGEMENT COMPANY LLP",
         "account_number": "FDA63",
         "access_id": "lacifuentes",
         "product_id": "tim_foreign_exchange",
@@ -6379,7 +5837,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 467,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-PACIFIC INVESTMENT MANAGEMENT COMANY LLC",
         "account_number": "AIF62",
         "access_id": "lacifuentes",
         "product_id": "tim_foreign_exchange",
@@ -6389,7 +5846,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 468,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-PACIFIC INVESTMENT MANAGEMENT COMPANY LLC",
         "account_number": "P 35946",
         "access_id": "lacifuentes",
         "product_id": "tim_listed_securities",
@@ -6399,7 +5855,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 469,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - GOLDMAN SACHS ASSETMANAGEMENT, L.P.",
         "account_number": "P 46407",
         "access_id": "lacifuentes",
         "product_id": "tim_listed_securities",
@@ -6409,7 +5864,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 470,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-WELLINGTONMANAGEMENT COMPANY LLP",
         "account_number": "S 17006",
         "access_id": "lacifuentes",
         "product_id": "tim_listed_securities",
@@ -6419,7 +5873,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 471,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE",
         "account_number": "82783",
         "access_id": "lacifuentes",
         "product_id": "tim_listed_securities",
@@ -6429,7 +5882,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 472,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA - STATE STREET GLOBAL ADVISORS TRUST COMPANY",
         "account_number": "EPR68",
         "access_id": "lacifuentes",
         "product_id": "tim_listed_securities",
@@ -6439,7 +5891,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 473,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA.",
         "account_number": "S 97871",
         "access_id": "lacifuentes",
         "product_id": "tim_listed_securities",
@@ -6449,7 +5900,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 474,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA - STATE STREETGLOBAL ADVISORS TRUST COMPANY",
         "account_number": "P 92590",
         "access_id": "lacifuentes",
         "product_id": "tim_listed_securities",
@@ -6459,7 +5909,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 475,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE",
         "account_number": "P 88529",
         "access_id": "lacifuentes",
         "product_id": "tim_listed_securities",
@@ -6469,7 +5918,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 476,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - WELLINGTON MANAGEMENT COMPANY, LLP",
         "account_number": "P 46408",
         "access_id": "lacifuentes",
         "product_id": "tim_listed_securities",
@@ -6479,7 +5927,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 477,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - GOLDMAN SACHS ASSET MANAGEMENT, L.P.",
         "account_number": "EMH26",
         "access_id": "lacifuentes",
         "product_id": "tim_listed_securities",
@@ -6489,7 +5936,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 478,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - WELLINGTON MANAGEMENT COMPANY, LLP",
         "account_number": "EMH27",
         "access_id": "lacifuentes",
         "product_id": "tim_listed_securities",
@@ -6499,7 +5945,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 479,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA",
         "account_number": "05421",
         "access_id": "lacifuentes",
         "product_id": "tim_listed_securities",
@@ -6509,7 +5954,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 480,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - BLACKROCK INSTITUTIONAL TRUST COMPANY, N.A. EQUITY",
         "account_number": "EID10",
         "access_id": "lacifuentes",
         "product_id": "tim_listed_securities",
@@ -6519,7 +5963,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 481,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-WELLINGTONMANAGEMENT COMPANY LLP",
         "account_number": "FDA63",
         "access_id": "lacifuentes",
         "product_id": "tim_listed_securities",
@@ -6529,7 +5972,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 482,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - BLACKROCK INSTITUTIONAL TRUST COMPANY, N.A. EQUITY",
         "account_number": "P 79897",
         "access_id": "lacifuentes",
         "product_id": "tim_listed_securities",
@@ -6539,7 +5981,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 483,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-PACIFIC INVESTMENT MANAGEMENT COMANY LLC",
         "account_number": "AIF62",
         "access_id": "lacifuentes",
         "product_id": "tim_listed_securities",
@@ -6549,7 +5990,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 484,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "lacifuentes",
         "product_id": "tim_listed_securities_inter_account_trade_transfer",
@@ -6559,7 +5999,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 485,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "lacifuentes",
         "product_id": "tim_listed_securities_receive_free_of_payment",
@@ -6569,7 +6008,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 486,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "lacifuentes",
         "product_id": "tim_cash_advice_to_receive",
@@ -6579,7 +6017,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 487,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "lacifuentes",
         "product_id": "tim_listed_securities_deliver_against_payment",
@@ -6589,7 +6026,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 488,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "lacifuentes",
         "product_id": "tim_cash_payment_order",
@@ -6599,7 +6035,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 489,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "lacifuentes",
         "product_id": "tim_foreign_exchange_3rd_party_fx",
@@ -6609,7 +6044,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 490,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "lacifuentes",
         "product_id": "tim_foreign_exchange_3rd_party_fx",
@@ -6619,7 +6053,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 491,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "lacifuentes",
         "product_id": "import_manager_and_template_manager",
@@ -6629,7 +6062,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 492,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "lacifuentes",
         "product_id": "import_manager_and_template_manager",
@@ -6639,7 +6071,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 493,
         "function_type": "Merchant Services Reporting Functions",
-        "account_name": "",
         "account_number": "",
         "access_id": "lacifuentes",
         "product_id": "securities_services_products_views_portfolio_reporting",
@@ -6649,7 +6080,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 494,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-PACIFIC INVESTMENT MANAGEMENT COMPANY LLC",
         "account_number": "P 35946",
         "access_id": "lacifuentes",
         "product_id": "tim_cash",
@@ -6659,7 +6089,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 495,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - GOLDMAN SACHS ASSETMANAGEMENT, L.P.",
         "account_number": "P 46407",
         "access_id": "lacifuentes",
         "product_id": "tim_cash",
@@ -6669,7 +6098,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 496,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-WELLINGTONMANAGEMENT COMPANY LLP",
         "account_number": "S 17006",
         "access_id": "lacifuentes",
         "product_id": "tim_cash",
@@ -6679,7 +6107,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 497,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE",
         "account_number": "82783",
         "access_id": "lacifuentes",
         "product_id": "tim_cash",
@@ -6689,7 +6116,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 498,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA - STATE STREET GLOBAL ADVISORS TRUST COMPANY",
         "account_number": "EPR68",
         "access_id": "lacifuentes",
         "product_id": "tim_cash",
@@ -6699,7 +6125,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 499,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA.",
         "account_number": "S 97871",
         "access_id": "lacifuentes",
         "product_id": "tim_cash",
@@ -6709,7 +6134,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 500,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA - STATE STREETGLOBAL ADVISORS TRUST COMPANY",
         "account_number": "P 92590",
         "access_id": "lacifuentes",
         "product_id": "tim_cash",
@@ -6719,7 +6143,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 501,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE",
         "account_number": "P 88529",
         "access_id": "lacifuentes",
         "product_id": "tim_cash",
@@ -6729,7 +6152,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 502,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - WELLINGTON MANAGEMENT COMPANY, LLP",
         "account_number": "P 46408",
         "access_id": "lacifuentes",
         "product_id": "tim_cash",
@@ -6739,7 +6161,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 503,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - GOLDMAN SACHS ASSET MANAGEMENT, L.P.",
         "account_number": "EMH26",
         "access_id": "lacifuentes",
         "product_id": "tim_cash",
@@ -6749,7 +6170,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 504,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA",
         "account_number": "05421",
         "access_id": "lacifuentes",
         "product_id": "tim_cash",
@@ -6759,7 +6179,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 505,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - WELLINGTON MANAGEMENT COMPANY, LLP",
         "account_number": "EMH27",
         "access_id": "lacifuentes",
         "product_id": "tim_cash",
@@ -6769,7 +6188,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 506,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - BLACKROCK INSTITUTIONAL TRUST COMPANY, N.A. EQUITY",
         "account_number": "EID10",
         "access_id": "lacifuentes",
         "product_id": "tim_cash",
@@ -6779,7 +6197,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 507,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-WELLINGTONMANAGEMENT COMPANY LLP",
         "account_number": "FDA63",
         "access_id": "lacifuentes",
         "product_id": "tim_cash",
@@ -6789,7 +6206,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 508,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - BLACKROCK INSTITUTIONAL TRUST COMPANY, N.A. EQUITY",
         "account_number": "P 79897",
         "access_id": "lacifuentes",
         "product_id": "tim_cash",
@@ -6799,7 +6215,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 509,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-PACIFIC INVESTMENT MANAGEMENT COMANY LLC",
         "account_number": "AIF62",
         "access_id": "lacifuentes",
         "product_id": "tim_cash",
@@ -6809,7 +6224,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 510,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "lacifuentes",
         "product_id": "tim_cash_inter_account_transfer",
@@ -6819,7 +6233,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 511,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "lacifuentes",
         "product_id": "tim_listed_securities_deliver_free_of_payment",
@@ -6829,7 +6242,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 512,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "lacifuentes",
         "product_id": "tim_listed_securities_receive_against_payment",
@@ -6839,7 +6251,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 513,
         "function_type": "Merchant Services Reporting Functions",
-        "account_name": "",
         "account_number": "",
         "access_id": "lacifuentes",
         "product_id": "securities_services_products_custody_dashboard",
@@ -6849,7 +6260,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 514,
         "function_type": "",
-        "account_name": "",
         "account_number": "",
         "access_id": "lacifuentes",
         "product_id": "securities_services_products",
@@ -6859,7 +6269,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 515,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-PACIFIC INVESTMENT MANAGEMENT COMPANY LLC",
         "account_number": "P 35946",
         "access_id": "larincon",
         "product_id": "tim_foreign_exchange",
@@ -6869,7 +6278,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 516,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - GOLDMAN SACHS ASSETMANAGEMENT, L.P.",
         "account_number": "P 46407",
         "access_id": "larincon",
         "product_id": "tim_foreign_exchange",
@@ -6879,7 +6287,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 517,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE",
         "account_number": "82783",
         "access_id": "larincon",
         "product_id": "tim_foreign_exchange",
@@ -6889,7 +6296,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 518,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-WELLINGTONMANAGEMENT COMPANY LLP",
         "account_number": "S 17006",
         "access_id": "larincon",
         "product_id": "tim_foreign_exchange",
@@ -6899,7 +6305,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 519,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA - STATE STREET GLOBAL ADVISORS TRUST COMPANY",
         "account_number": "EPR68",
         "access_id": "larincon",
         "product_id": "tim_foreign_exchange",
@@ -6909,7 +6314,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 520,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA - STATE STREETGLOBAL ADVISORS TRUST COMPANY",
         "account_number": "P 92590",
         "access_id": "larincon",
         "product_id": "tim_foreign_exchange",
@@ -6919,7 +6323,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 521,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA.",
         "account_number": "S 97871",
         "access_id": "larincon",
         "product_id": "tim_foreign_exchange",
@@ -6929,7 +6332,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 522,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE",
         "account_number": "P 88529",
         "access_id": "larincon",
         "product_id": "tim_foreign_exchange",
@@ -6939,7 +6341,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 523,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - WELLINGTON MANAGEMENT COMPANY, LLP",
         "account_number": "P 46408",
         "access_id": "larincon",
         "product_id": "tim_foreign_exchange",
@@ -6949,7 +6350,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 524,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - GOLDMAN SACHS ASSET MANAGEMENT, L.P.",
         "account_number": "EMH26",
         "access_id": "larincon",
         "product_id": "tim_foreign_exchange",
@@ -6959,7 +6359,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 525,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA",
         "account_number": "05421",
         "access_id": "larincon",
         "product_id": "tim_foreign_exchange",
@@ -6969,7 +6368,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 526,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - WELLINGTON MANAGEMENT COMPANY, LLP",
         "account_number": "EMH27",
         "access_id": "larincon",
         "product_id": "tim_foreign_exchange",
@@ -6979,7 +6377,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 527,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - BLACKROCK INSTITUTIONAL TRUST COMPANY, N.A. EQUITY",
         "account_number": "EID10",
         "access_id": "larincon",
         "product_id": "tim_foreign_exchange",
@@ -6989,7 +6386,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 528,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - BLACKROCK INSTITUTIONAL TRUST COMPANY, N.A. EQUITY",
         "account_number": "P 79897",
         "access_id": "larincon",
         "product_id": "tim_foreign_exchange",
@@ -6999,7 +6395,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 529,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-WELLINGTONMANAGEMENT COMPANY LLP",
         "account_number": "FDA63",
         "access_id": "larincon",
         "product_id": "tim_foreign_exchange",
@@ -7009,7 +6404,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 530,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-PACIFIC INVESTMENT MANAGEMENT COMANY LLC",
         "account_number": "AIF62",
         "access_id": "larincon",
         "product_id": "tim_foreign_exchange",
@@ -7019,7 +6413,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 531,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-PACIFIC INVESTMENT MANAGEMENT COMPANY LLC",
         "account_number": "P 35946",
         "access_id": "larincon",
         "product_id": "tim_listed_securities",
@@ -7029,7 +6422,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 532,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - GOLDMAN SACHS ASSETMANAGEMENT, L.P.",
         "account_number": "P 46407",
         "access_id": "larincon",
         "product_id": "tim_listed_securities",
@@ -7039,7 +6431,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 533,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE",
         "account_number": "82783",
         "access_id": "larincon",
         "product_id": "tim_listed_securities",
@@ -7049,7 +6440,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 534,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-WELLINGTONMANAGEMENT COMPANY LLP",
         "account_number": "S 17006",
         "access_id": "larincon",
         "product_id": "tim_listed_securities",
@@ -7059,7 +6449,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 535,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA - STATE STREET GLOBAL ADVISORS TRUST COMPANY",
         "account_number": "EPR68",
         "access_id": "larincon",
         "product_id": "tim_listed_securities",
@@ -7069,7 +6458,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 536,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA - STATE STREETGLOBAL ADVISORS TRUST COMPANY",
         "account_number": "P 92590",
         "access_id": "larincon",
         "product_id": "tim_listed_securities",
@@ -7079,7 +6467,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 537,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA.",
         "account_number": "S 97871",
         "access_id": "larincon",
         "product_id": "tim_listed_securities",
@@ -7089,7 +6476,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 538,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE",
         "account_number": "P 88529",
         "access_id": "larincon",
         "product_id": "tim_listed_securities",
@@ -7099,7 +6485,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 539,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - WELLINGTON MANAGEMENT COMPANY, LLP",
         "account_number": "P 46408",
         "access_id": "larincon",
         "product_id": "tim_listed_securities",
@@ -7109,7 +6494,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 540,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - GOLDMAN SACHS ASSET MANAGEMENT, L.P.",
         "account_number": "EMH26",
         "access_id": "larincon",
         "product_id": "tim_listed_securities",
@@ -7119,7 +6503,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 541,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - WELLINGTON MANAGEMENT COMPANY, LLP",
         "account_number": "EMH27",
         "access_id": "larincon",
         "product_id": "tim_listed_securities",
@@ -7129,7 +6512,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 542,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA",
         "account_number": "05421",
         "access_id": "larincon",
         "product_id": "tim_listed_securities",
@@ -7139,7 +6521,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 543,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - BLACKROCK INSTITUTIONAL TRUST COMPANY, N.A. EQUITY",
         "account_number": "EID10",
         "access_id": "larincon",
         "product_id": "tim_listed_securities",
@@ -7149,7 +6530,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 544,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - BLACKROCK INSTITUTIONAL TRUST COMPANY, N.A. EQUITY",
         "account_number": "P 79897",
         "access_id": "larincon",
         "product_id": "tim_listed_securities",
@@ -7159,7 +6539,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 545,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-WELLINGTONMANAGEMENT COMPANY LLP",
         "account_number": "FDA63",
         "access_id": "larincon",
         "product_id": "tim_listed_securities",
@@ -7169,7 +6548,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 546,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-PACIFIC INVESTMENT MANAGEMENT COMANY LLC",
         "account_number": "AIF62",
         "access_id": "larincon",
         "product_id": "tim_listed_securities",
@@ -7179,7 +6557,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 547,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "larincon",
         "product_id": "tim_listed_securities_inter_account_trade_transfer",
@@ -7189,7 +6566,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 548,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "larincon",
         "product_id": "tim_listed_securities_receive_free_of_payment",
@@ -7199,7 +6575,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 549,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "larincon",
         "product_id": "tim_cash_advice_to_receive",
@@ -7209,7 +6584,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 550,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "larincon",
         "product_id": "tim_listed_securities_deliver_against_payment",
@@ -7219,7 +6593,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 551,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "larincon",
         "product_id": "tim_cash_payment_order",
@@ -7229,7 +6602,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 552,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "larincon",
         "product_id": "tim_foreign_exchange_3rd_party_fx",
@@ -7239,7 +6611,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 553,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "larincon",
         "product_id": "tim_foreign_exchange_3rd_party_fx",
@@ -7249,7 +6620,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 554,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "larincon",
         "product_id": "import_manager_and_template_manager",
@@ -7259,7 +6629,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 555,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "larincon",
         "product_id": "import_manager_and_template_manager",
@@ -7269,7 +6638,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 556,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "larincon",
         "product_id": "import_manager_and_template_manager",
@@ -7279,7 +6647,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 557,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "larincon",
         "product_id": "import_manager_and_template_manager",
@@ -7289,7 +6656,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 558,
         "function_type": "Merchant Services Reporting Functions",
-        "account_name": "",
         "account_number": "",
         "access_id": "larincon",
         "product_id": "securities_services_products_views_portfolio_reporting",
@@ -7299,7 +6665,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 559,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-PACIFIC INVESTMENT MANAGEMENT COMPANY LLC",
         "account_number": "P 35946",
         "access_id": "larincon",
         "product_id": "tim_cash",
@@ -7309,7 +6674,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 560,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - GOLDMAN SACHS ASSETMANAGEMENT, L.P.",
         "account_number": "P 46407",
         "access_id": "larincon",
         "product_id": "tim_cash",
@@ -7319,7 +6683,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 561,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE",
         "account_number": "82783",
         "access_id": "larincon",
         "product_id": "tim_cash",
@@ -7329,7 +6692,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 562,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-WELLINGTONMANAGEMENT COMPANY LLP",
         "account_number": "S 17006",
         "access_id": "larincon",
         "product_id": "tim_cash",
@@ -7339,7 +6701,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 563,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA - STATE STREET GLOBAL ADVISORS TRUST COMPANY",
         "account_number": "EPR68",
         "access_id": "larincon",
         "product_id": "tim_cash",
@@ -7349,7 +6710,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 564,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA.",
         "account_number": "S 97871",
         "access_id": "larincon",
         "product_id": "tim_cash",
@@ -7359,7 +6719,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 565,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA - STATE STREETGLOBAL ADVISORS TRUST COMPANY",
         "account_number": "P 92590",
         "access_id": "larincon",
         "product_id": "tim_cash",
@@ -7369,7 +6728,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 566,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE",
         "account_number": "P 88529",
         "access_id": "larincon",
         "product_id": "tim_cash",
@@ -7379,7 +6737,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 567,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - WELLINGTON MANAGEMENT COMPANY, LLP",
         "account_number": "P 46408",
         "access_id": "larincon",
         "product_id": "tim_cash",
@@ -7389,7 +6746,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 568,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - GOLDMAN SACHS ASSET MANAGEMENT, L.P.",
         "account_number": "EMH26",
         "access_id": "larincon",
         "product_id": "tim_cash",
@@ -7399,7 +6755,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 569,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - WELLINGTON MANAGEMENT COMPANY, LLP",
         "account_number": "EMH27",
         "access_id": "larincon",
         "product_id": "tim_cash",
@@ -7409,7 +6764,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 570,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA",
         "account_number": "05421",
         "access_id": "larincon",
         "product_id": "tim_cash",
@@ -7419,7 +6773,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 571,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - BLACKROCK INSTITUTIONAL TRUST COMPANY, N.A. EQUITY",
         "account_number": "EID10",
         "access_id": "larincon",
         "product_id": "tim_cash",
@@ -7429,7 +6782,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 572,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-WELLINGTONMANAGEMENT COMPANY LLP",
         "account_number": "FDA63",
         "access_id": "larincon",
         "product_id": "tim_cash",
@@ -7439,7 +6791,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 573,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - BLACKROCK INSTITUTIONAL TRUST COMPANY, N.A. EQUITY",
         "account_number": "P 79897",
         "access_id": "larincon",
         "product_id": "tim_cash",
@@ -7449,7 +6800,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 574,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-PACIFIC INVESTMENT MANAGEMENT COMANY LLC",
         "account_number": "AIF62",
         "access_id": "larincon",
         "product_id": "tim_cash",
@@ -7459,7 +6809,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 575,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "larincon",
         "product_id": "tim_cash_inter_account_transfer",
@@ -7469,7 +6818,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 576,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "larincon",
         "product_id": "tim_listed_securities_deliver_free_of_payment",
@@ -7479,7 +6827,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 577,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "larincon",
         "product_id": "tim_listed_securities_receive_against_payment",
@@ -7489,7 +6836,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 578,
         "function_type": "Merchant Services Reporting Functions",
-        "account_name": "",
         "account_number": "",
         "access_id": "larincon",
         "product_id": "securities_services_products_custody_dashboard",
@@ -7499,7 +6845,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 579,
         "function_type": "",
-        "account_name": "",
         "account_number": "",
         "access_id": "larincon",
         "product_id": "securities_services_products",
@@ -7509,7 +6854,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 580,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-PACIFIC INVESTMENT MANAGEMENT COMPANY LLC",
         "account_number": "P 35946",
         "access_id": "lorenagutierrez0120",
         "product_id": "tim_foreign_exchange",
@@ -7519,7 +6863,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 581,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - GOLDMAN SACHS ASSETMANAGEMENT, L.P.",
         "account_number": "P 46407",
         "access_id": "lorenagutierrez0120",
         "product_id": "tim_foreign_exchange",
@@ -7529,7 +6872,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 582,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE",
         "account_number": "82783",
         "access_id": "lorenagutierrez0120",
         "product_id": "tim_foreign_exchange",
@@ -7539,7 +6881,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 583,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-WELLINGTONMANAGEMENT COMPANY LLP",
         "account_number": "S 17006",
         "access_id": "lorenagutierrez0120",
         "product_id": "tim_foreign_exchange",
@@ -7549,7 +6890,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 584,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA - STATE STREET GLOBAL ADVISORS TRUST COMPANY",
         "account_number": "EPR68",
         "access_id": "lorenagutierrez0120",
         "product_id": "tim_foreign_exchange",
@@ -7559,7 +6899,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 585,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA.",
         "account_number": "S 97871",
         "access_id": "lorenagutierrez0120",
         "product_id": "tim_foreign_exchange",
@@ -7569,7 +6908,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 586,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA - STATE STREETGLOBAL ADVISORS TRUST COMPANY",
         "account_number": "P 92590",
         "access_id": "lorenagutierrez0120",
         "product_id": "tim_foreign_exchange",
@@ -7579,7 +6917,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 587,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE",
         "account_number": "P 88529",
         "access_id": "lorenagutierrez0120",
         "product_id": "tim_foreign_exchange",
@@ -7589,7 +6926,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 588,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - WELLINGTON MANAGEMENT COMPANY, LLP",
         "account_number": "P 46408",
         "access_id": "lorenagutierrez0120",
         "product_id": "tim_foreign_exchange",
@@ -7599,7 +6935,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 589,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - GOLDMAN SACHS ASSET MANAGEMENT, L.P.",
         "account_number": "EMH26",
         "access_id": "lorenagutierrez0120",
         "product_id": "tim_foreign_exchange",
@@ -7609,7 +6944,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 590,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - WELLINGTON MANAGEMENT COMPANY, LLP",
         "account_number": "EMH27",
         "access_id": "lorenagutierrez0120",
         "product_id": "tim_foreign_exchange",
@@ -7619,7 +6953,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 591,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA",
         "account_number": "05421",
         "access_id": "lorenagutierrez0120",
         "product_id": "tim_foreign_exchange",
@@ -7629,7 +6962,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 592,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - BLACKROCK INSTITUTIONAL TRUST COMPANY, N.A. EQUITY",
         "account_number": "EID10",
         "access_id": "lorenagutierrez0120",
         "product_id": "tim_foreign_exchange",
@@ -7639,7 +6971,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 593,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-WELLINGTONMANAGEMENT COMPANY LLP",
         "account_number": "FDA63",
         "access_id": "lorenagutierrez0120",
         "product_id": "tim_foreign_exchange",
@@ -7649,7 +6980,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 594,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - BLACKROCK INSTITUTIONAL TRUST COMPANY, N.A. EQUITY",
         "account_number": "P 79897",
         "access_id": "lorenagutierrez0120",
         "product_id": "tim_foreign_exchange",
@@ -7659,7 +6989,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 595,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-PACIFIC INVESTMENT MANAGEMENT COMANY LLC",
         "account_number": "AIF62",
         "access_id": "lorenagutierrez0120",
         "product_id": "tim_foreign_exchange",
@@ -7669,7 +6998,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 596,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-PACIFIC INVESTMENT MANAGEMENT COMPANY LLC",
         "account_number": "P 35946",
         "access_id": "lorenagutierrez0120",
         "product_id": "tim_listed_securities",
@@ -7679,7 +7007,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 597,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - GOLDMAN SACHS ASSETMANAGEMENT, L.P.",
         "account_number": "P 46407",
         "access_id": "lorenagutierrez0120",
         "product_id": "tim_listed_securities",
@@ -7689,7 +7016,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 598,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE",
         "account_number": "82783",
         "access_id": "lorenagutierrez0120",
         "product_id": "tim_listed_securities",
@@ -7699,7 +7025,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 599,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-WELLINGTONMANAGEMENT COMPANY LLP",
         "account_number": "S 17006",
         "access_id": "lorenagutierrez0120",
         "product_id": "tim_listed_securities",
@@ -7709,7 +7034,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 600,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA - STATE STREET GLOBAL ADVISORS TRUST COMPANY",
         "account_number": "EPR68",
         "access_id": "lorenagutierrez0120",
         "product_id": "tim_listed_securities",
@@ -7719,7 +7043,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 601,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA.",
         "account_number": "S 97871",
         "access_id": "lorenagutierrez0120",
         "product_id": "tim_listed_securities",
@@ -7729,7 +7052,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 602,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA - STATE STREETGLOBAL ADVISORS TRUST COMPANY",
         "account_number": "P 92590",
         "access_id": "lorenagutierrez0120",
         "product_id": "tim_listed_securities",
@@ -7739,7 +7061,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 603,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE",
         "account_number": "P 88529",
         "access_id": "lorenagutierrez0120",
         "product_id": "tim_listed_securities",
@@ -7749,7 +7070,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 604,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - WELLINGTON MANAGEMENT COMPANY, LLP",
         "account_number": "P 46408",
         "access_id": "lorenagutierrez0120",
         "product_id": "tim_listed_securities",
@@ -7759,7 +7079,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 605,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - GOLDMAN SACHS ASSET MANAGEMENT, L.P.",
         "account_number": "EMH26",
         "access_id": "lorenagutierrez0120",
         "product_id": "tim_listed_securities",
@@ -7769,7 +7088,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 606,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - WELLINGTON MANAGEMENT COMPANY, LLP",
         "account_number": "EMH27",
         "access_id": "lorenagutierrez0120",
         "product_id": "tim_listed_securities",
@@ -7779,7 +7097,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 607,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA",
         "account_number": "05421",
         "access_id": "lorenagutierrez0120",
         "product_id": "tim_listed_securities",
@@ -7789,7 +7106,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 608,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - BLACKROCK INSTITUTIONAL TRUST COMPANY, N.A. EQUITY",
         "account_number": "EID10",
         "access_id": "lorenagutierrez0120",
         "product_id": "tim_listed_securities",
@@ -7799,7 +7115,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 609,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - BLACKROCK INSTITUTIONAL TRUST COMPANY, N.A. EQUITY",
         "account_number": "P 79897",
         "access_id": "lorenagutierrez0120",
         "product_id": "tim_listed_securities",
@@ -7809,7 +7124,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 610,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-WELLINGTONMANAGEMENT COMPANY LLP",
         "account_number": "FDA63",
         "access_id": "lorenagutierrez0120",
         "product_id": "tim_listed_securities",
@@ -7819,7 +7133,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 611,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-PACIFIC INVESTMENT MANAGEMENT COMANY LLC",
         "account_number": "AIF62",
         "access_id": "lorenagutierrez0120",
         "product_id": "tim_listed_securities",
@@ -7829,7 +7142,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 612,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "lorenagutierrez0120",
         "product_id": "tim_listed_securities_inter_account_trade_transfer",
@@ -7839,7 +7151,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 613,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "lorenagutierrez0120",
         "product_id": "tim_listed_securities_inter_account_trade_transfer",
@@ -7849,7 +7160,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 614,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "lorenagutierrez0120",
         "product_id": "tim_listed_securities_inter_account_trade_transfer",
@@ -7859,7 +7169,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 615,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "lorenagutierrez0120",
         "product_id": "tim_listed_securities_receive_free_of_payment",
@@ -7869,7 +7178,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 616,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "lorenagutierrez0120",
         "product_id": "tim_listed_securities_receive_free_of_payment",
@@ -7879,7 +7187,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 617,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "lorenagutierrez0120",
         "product_id": "tim_listed_securities_receive_free_of_payment",
@@ -7889,7 +7196,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 618,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "lorenagutierrez0120",
         "product_id": "tim_cash_advice_to_receive",
@@ -7899,7 +7205,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 619,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "lorenagutierrez0120",
         "product_id": "tim_cash_advice_to_receive",
@@ -7909,7 +7214,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 620,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "lorenagutierrez0120",
         "product_id": "tim_listed_securities_deliver_against_payment",
@@ -7919,7 +7223,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 621,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "lorenagutierrez0120",
         "product_id": "tim_listed_securities_deliver_against_payment",
@@ -7929,7 +7232,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 622,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "lorenagutierrez0120",
         "product_id": "tim_listed_securities_deliver_against_payment",
@@ -7939,7 +7241,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 623,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "lorenagutierrez0120",
         "product_id": "tim_cash_payment_order",
@@ -7949,7 +7250,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 624,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "lorenagutierrez0120",
         "product_id": "tim_cash_payment_order",
@@ -7959,7 +7259,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 625,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "lorenagutierrez0120",
         "product_id": "tim_foreign_exchange_3rd_party_fx",
@@ -7969,7 +7268,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 626,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "lorenagutierrez0120",
         "product_id": "tim_foreign_exchange_3rd_party_fx",
@@ -7979,7 +7277,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 627,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "lorenagutierrez0120",
         "product_id": "tim_foreign_exchange_3rd_party_fx",
@@ -7989,7 +7286,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 628,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "lorenagutierrez0120",
         "product_id": "tim_foreign_exchange_3rd_party_fx",
@@ -7999,7 +7295,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 629,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "lorenagutierrez0120",
         "product_id": "import_manager_and_template_manager",
@@ -8009,7 +7304,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 630,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "lorenagutierrez0120",
         "product_id": "import_manager_and_template_manager",
@@ -8019,7 +7313,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 631,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "lorenagutierrez0120",
         "product_id": "import_manager_and_template_manager",
@@ -8029,7 +7322,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 632,
         "function_type": "Merchant Services Reporting Functions",
-        "account_name": "",
         "account_number": "",
         "access_id": "lorenagutierrez0120",
         "product_id": "securities_services_products_views_portfolio_reporting",
@@ -8039,7 +7331,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 633,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-PACIFIC INVESTMENT MANAGEMENT COMPANY LLC",
         "account_number": "P 35946",
         "access_id": "lorenagutierrez0120",
         "product_id": "tim_cash",
@@ -8049,7 +7340,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 634,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - GOLDMAN SACHS ASSETMANAGEMENT, L.P.",
         "account_number": "P 46407",
         "access_id": "lorenagutierrez0120",
         "product_id": "tim_cash",
@@ -8059,7 +7349,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 635,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-WELLINGTONMANAGEMENT COMPANY LLP",
         "account_number": "S 17006",
         "access_id": "lorenagutierrez0120",
         "product_id": "tim_cash",
@@ -8069,7 +7358,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 636,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE",
         "account_number": "82783",
         "access_id": "lorenagutierrez0120",
         "product_id": "tim_cash",
@@ -8079,7 +7367,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 637,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA - STATE STREET GLOBAL ADVISORS TRUST COMPANY",
         "account_number": "EPR68",
         "access_id": "lorenagutierrez0120",
         "product_id": "tim_cash",
@@ -8089,7 +7376,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 638,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA.",
         "account_number": "S 97871",
         "access_id": "lorenagutierrez0120",
         "product_id": "tim_cash",
@@ -8099,7 +7385,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 639,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA - STATE STREETGLOBAL ADVISORS TRUST COMPANY",
         "account_number": "P 92590",
         "access_id": "lorenagutierrez0120",
         "product_id": "tim_cash",
@@ -8109,7 +7394,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 640,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE",
         "account_number": "P 88529",
         "access_id": "lorenagutierrez0120",
         "product_id": "tim_cash",
@@ -8119,7 +7403,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 641,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - WELLINGTON MANAGEMENT COMPANY, LLP",
         "account_number": "P 46408",
         "access_id": "lorenagutierrez0120",
         "product_id": "tim_cash",
@@ -8129,7 +7412,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 642,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - GOLDMAN SACHS ASSET MANAGEMENT, L.P.",
         "account_number": "EMH26",
         "access_id": "lorenagutierrez0120",
         "product_id": "tim_cash",
@@ -8139,7 +7421,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 643,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA",
         "account_number": "05421",
         "access_id": "lorenagutierrez0120",
         "product_id": "tim_cash",
@@ -8149,7 +7430,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 644,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - WELLINGTON MANAGEMENT COMPANY, LLP",
         "account_number": "EMH27",
         "access_id": "lorenagutierrez0120",
         "product_id": "tim_cash",
@@ -8159,7 +7439,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 645,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - BLACKROCK INSTITUTIONAL TRUST COMPANY, N.A. EQUITY",
         "account_number": "EID10",
         "access_id": "lorenagutierrez0120",
         "product_id": "tim_cash",
@@ -8169,7 +7448,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 646,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - BLACKROCK INSTITUTIONAL TRUST COMPANY, N.A. EQUITY",
         "account_number": "P 79897",
         "access_id": "lorenagutierrez0120",
         "product_id": "tim_cash",
@@ -8179,7 +7457,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 647,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-WELLINGTONMANAGEMENT COMPANY LLP",
         "account_number": "FDA63",
         "access_id": "lorenagutierrez0120",
         "product_id": "tim_cash",
@@ -8189,7 +7466,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 648,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-PACIFIC INVESTMENT MANAGEMENT COMANY LLC",
         "account_number": "AIF62",
         "access_id": "lorenagutierrez0120",
         "product_id": "tim_cash",
@@ -8199,7 +7475,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 649,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "lorenagutierrez0120",
         "product_id": "tim_cash_inter_account_transfer",
@@ -8209,7 +7484,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 650,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "lorenagutierrez0120",
         "product_id": "tim_cash_inter_account_transfer",
@@ -8219,7 +7493,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 651,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "lorenagutierrez0120",
         "product_id": "tim_listed_securities_deliver_free_of_payment",
@@ -8229,7 +7502,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 652,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "lorenagutierrez0120",
         "product_id": "tim_listed_securities_deliver_free_of_payment",
@@ -8239,7 +7511,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 653,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "lorenagutierrez0120",
         "product_id": "tim_listed_securities_deliver_free_of_payment",
@@ -8249,7 +7520,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 654,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "lorenagutierrez0120",
         "product_id": "tim_listed_securities_receive_against_payment",
@@ -8259,7 +7529,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 655,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "lorenagutierrez0120",
         "product_id": "tim_listed_securities_receive_against_payment",
@@ -8269,7 +7538,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 656,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "lorenagutierrez0120",
         "product_id": "tim_listed_securities_receive_against_payment",
@@ -8279,7 +7547,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 657,
         "function_type": "Merchant Services Reporting Functions",
-        "account_name": "",
         "account_number": "",
         "access_id": "lorenagutierrez0120",
         "product_id": "securities_services_products_custody_dashboard",
@@ -8289,7 +7556,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 658,
         "function_type": "",
-        "account_name": "",
         "account_number": "",
         "access_id": "lorenagutierrez0120",
         "product_id": "securities_services_products",
@@ -8299,7 +7565,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 659,
         "function_type": "Merchant Services Reporting Functions",
-        "account_name": "",
         "account_number": "",
         "access_id": "martbarreto",
         "product_id": "securities_services_products_views_portfolio_reporting",
@@ -8309,7 +7574,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 660,
         "function_type": "Merchant Services Reporting Functions",
-        "account_name": "",
         "account_number": "",
         "access_id": "martbarreto",
         "product_id": "securities_services_products_custody_dashboard",
@@ -8319,7 +7583,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 661,
         "function_type": "",
-        "account_name": "",
         "account_number": "",
         "access_id": "martbarreto",
         "product_id": "securities_services_products",
@@ -8329,7 +7592,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 662,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - GOLDMAN SACHS ASSETMANAGEMENT, L.P.",
         "account_number": "P 46407",
         "access_id": "nathalortiz",
         "product_id": "tim_foreign_exchange",
@@ -8339,7 +7601,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 663,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-WELLINGTONMANAGEMENT COMPANY LLP",
         "account_number": "S 17006",
         "access_id": "nathalortiz",
         "product_id": "tim_foreign_exchange",
@@ -8349,7 +7610,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 664,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE",
         "account_number": "82783",
         "access_id": "nathalortiz",
         "product_id": "tim_foreign_exchange",
@@ -8359,7 +7619,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 665,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA - STATE STREET GLOBAL ADVISORS TRUST COMPANY",
         "account_number": "EPR68",
         "access_id": "nathalortiz",
         "product_id": "tim_foreign_exchange",
@@ -8369,7 +7628,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 666,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA - STATE STREETGLOBAL ADVISORS TRUST COMPANY",
         "account_number": "P 92590",
         "access_id": "nathalortiz",
         "product_id": "tim_foreign_exchange",
@@ -8379,7 +7637,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 667,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA.",
         "account_number": "S 97871",
         "access_id": "nathalortiz",
         "product_id": "tim_foreign_exchange",
@@ -8389,7 +7646,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 668,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE",
         "account_number": "P 88529",
         "access_id": "nathalortiz",
         "product_id": "tim_foreign_exchange",
@@ -8399,7 +7655,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 669,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - WELLINGTON MANAGEMENT COMPANY, LLP",
         "account_number": "P 46408",
         "access_id": "nathalortiz",
         "product_id": "tim_foreign_exchange",
@@ -8409,7 +7664,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 670,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - GOLDMAN SACHS ASSET MANAGEMENT, L.P.",
         "account_number": "EMH26",
         "access_id": "nathalortiz",
         "product_id": "tim_foreign_exchange",
@@ -8419,7 +7673,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 671,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - WELLINGTON MANAGEMENT COMPANY, LLP",
         "account_number": "EMH27",
         "access_id": "nathalortiz",
         "product_id": "tim_foreign_exchange",
@@ -8429,7 +7682,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 672,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA",
         "account_number": "05421",
         "access_id": "nathalortiz",
         "product_id": "tim_foreign_exchange",
@@ -8439,7 +7691,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 673,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - BLACKROCK INSTITUTIONAL TRUST COMPANY, N.A. EQUITY",
         "account_number": "EID10",
         "access_id": "nathalortiz",
         "product_id": "tim_foreign_exchange",
@@ -8449,7 +7700,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 674,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - BLACKROCK INSTITUTIONAL TRUST COMPANY, N.A. EQUITY",
         "account_number": "P 79897",
         "access_id": "nathalortiz",
         "product_id": "tim_foreign_exchange",
@@ -8459,7 +7709,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 675,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-WELLINGTONMANAGEMENT COMPANY LLP",
         "account_number": "FDA63",
         "access_id": "nathalortiz",
         "product_id": "tim_foreign_exchange",
@@ -8469,7 +7718,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 676,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-PACIFIC INVESTMENT MANAGEMENT COMPANY LLC",
         "account_number": "P 35946",
         "access_id": "nathalortiz",
         "product_id": "tim_listed_securities",
@@ -8479,7 +7727,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 677,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - GOLDMAN SACHS ASSETMANAGEMENT, L.P.",
         "account_number": "P 46407",
         "access_id": "nathalortiz",
         "product_id": "tim_listed_securities",
@@ -8489,7 +7736,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 678,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-WELLINGTONMANAGEMENT COMPANY LLP",
         "account_number": "S 17006",
         "access_id": "nathalortiz",
         "product_id": "tim_listed_securities",
@@ -8499,7 +7745,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 679,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE",
         "account_number": "82783",
         "access_id": "nathalortiz",
         "product_id": "tim_listed_securities",
@@ -8509,7 +7754,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 680,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA - STATE STREET GLOBAL ADVISORS TRUST COMPANY",
         "account_number": "EPR68",
         "access_id": "nathalortiz",
         "product_id": "tim_listed_securities",
@@ -8519,7 +7763,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 681,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA - STATE STREETGLOBAL ADVISORS TRUST COMPANY",
         "account_number": "P 92590",
         "access_id": "nathalortiz",
         "product_id": "tim_listed_securities",
@@ -8529,7 +7772,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 682,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA.",
         "account_number": "S 97871",
         "access_id": "nathalortiz",
         "product_id": "tim_listed_securities",
@@ -8539,7 +7781,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 683,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE",
         "account_number": "P 88529",
         "access_id": "nathalortiz",
         "product_id": "tim_listed_securities",
@@ -8549,7 +7790,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 684,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - WELLINGTON MANAGEMENT COMPANY, LLP",
         "account_number": "P 46408",
         "access_id": "nathalortiz",
         "product_id": "tim_listed_securities",
@@ -8559,7 +7799,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 685,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - GOLDMAN SACHS ASSET MANAGEMENT, L.P.",
         "account_number": "EMH26",
         "access_id": "nathalortiz",
         "product_id": "tim_listed_securities",
@@ -8569,7 +7808,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 686,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA",
         "account_number": "05421",
         "access_id": "nathalortiz",
         "product_id": "tim_listed_securities",
@@ -8579,7 +7817,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 687,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - WELLINGTON MANAGEMENT COMPANY, LLP",
         "account_number": "EMH27",
         "access_id": "nathalortiz",
         "product_id": "tim_listed_securities",
@@ -8589,7 +7826,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 688,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - BLACKROCK INSTITUTIONAL TRUST COMPANY, N.A. EQUITY",
         "account_number": "EID10",
         "access_id": "nathalortiz",
         "product_id": "tim_listed_securities",
@@ -8599,7 +7835,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 689,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-WELLINGTONMANAGEMENT COMPANY LLP",
         "account_number": "FDA63",
         "access_id": "nathalortiz",
         "product_id": "tim_listed_securities",
@@ -8609,7 +7844,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 690,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - BLACKROCK INSTITUTIONAL TRUST COMPANY, N.A. EQUITY",
         "account_number": "P 79897",
         "access_id": "nathalortiz",
         "product_id": "tim_listed_securities",
@@ -8619,7 +7853,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 691,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-PACIFIC INVESTMENT MANAGEMENT COMANY LLC",
         "account_number": "AIF62",
         "access_id": "nathalortiz",
         "product_id": "tim_listed_securities",
@@ -8629,7 +7862,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 692,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "nathalortiz",
         "product_id": "tim_listed_securities_inter_account_trade_transfer",
@@ -8639,7 +7871,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 693,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "nathalortiz",
         "product_id": "tim_listed_securities_receive_free_of_payment",
@@ -8649,7 +7880,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 694,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "nathalortiz",
         "product_id": "tim_cash_advice_to_receive",
@@ -8659,7 +7889,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 695,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "nathalortiz",
         "product_id": "tim_listed_securities_deliver_against_payment",
@@ -8669,7 +7898,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 696,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "nathalortiz",
         "product_id": "tim_cash_payment_order",
@@ -8679,7 +7907,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 697,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "nathalortiz",
         "product_id": "tim_foreign_exchange_3rd_party_fx",
@@ -8689,7 +7916,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 698,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "nathalortiz",
         "product_id": "tim_foreign_exchange_3rd_party_fx",
@@ -8699,7 +7925,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 699,
         "function_type": "",
-        "account_name": "",
         "account_number": "",
         "access_id": "nathalortiz",
         "product_id": "import_manager_and_template_manager",
@@ -8709,7 +7934,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 700,
         "function_type": "Merchant Services Reporting Functions",
-        "account_name": "",
         "account_number": "",
         "access_id": "nathalortiz",
         "product_id": "securities_services_products_views_portfolio_reporting",
@@ -8719,7 +7943,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 701,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-PACIFIC INVESTMENT MANAGEMENT COMPANY LLC",
         "account_number": "P 35946",
         "access_id": "nathalortiz",
         "product_id": "tim_cash",
@@ -8729,7 +7952,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 702,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - GOLDMAN SACHS ASSETMANAGEMENT, L.P.",
         "account_number": "P 46407",
         "access_id": "nathalortiz",
         "product_id": "tim_cash",
@@ -8739,7 +7961,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 703,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE",
         "account_number": "82783",
         "access_id": "nathalortiz",
         "product_id": "tim_cash",
@@ -8749,7 +7970,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 704,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-WELLINGTONMANAGEMENT COMPANY LLP",
         "account_number": "S 17006",
         "access_id": "nathalortiz",
         "product_id": "tim_cash",
@@ -8759,7 +7979,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 705,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA - STATE STREET GLOBAL ADVISORS TRUST COMPANY",
         "account_number": "EPR68",
         "access_id": "nathalortiz",
         "product_id": "tim_cash",
@@ -8769,7 +7988,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 706,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA.",
         "account_number": "S 97871",
         "access_id": "nathalortiz",
         "product_id": "tim_cash",
@@ -8779,7 +7997,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 707,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA - STATE STREETGLOBAL ADVISORS TRUST COMPANY",
         "account_number": "P 92590",
         "access_id": "nathalortiz",
         "product_id": "tim_cash",
@@ -8789,7 +8006,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 708,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE",
         "account_number": "P 88529",
         "access_id": "nathalortiz",
         "product_id": "tim_cash",
@@ -8799,7 +8015,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 709,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - WELLINGTON MANAGEMENT COMPANY, LLP",
         "account_number": "P 46408",
         "access_id": "nathalortiz",
         "product_id": "tim_cash",
@@ -8809,7 +8024,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 710,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - GOLDMAN SACHS ASSET MANAGEMENT, L.P.",
         "account_number": "EMH26",
         "access_id": "nathalortiz",
         "product_id": "tim_cash",
@@ -8819,7 +8033,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 711,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - WELLINGTON MANAGEMENT COMPANY, LLP",
         "account_number": "EMH27",
         "access_id": "nathalortiz",
         "product_id": "tim_cash",
@@ -8829,7 +8042,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 712,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA",
         "account_number": "05421",
         "access_id": "nathalortiz",
         "product_id": "tim_cash",
@@ -8839,7 +8051,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 713,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - BLACKROCK INSTITUTIONAL TRUST COMPANY, N.A. EQUITY",
         "account_number": "EID10",
         "access_id": "nathalortiz",
         "product_id": "tim_cash",
@@ -8849,7 +8060,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 714,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-WELLINGTONMANAGEMENT COMPANY LLP",
         "account_number": "FDA63",
         "access_id": "nathalortiz",
         "product_id": "tim_cash",
@@ -8859,7 +8069,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 715,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "FIDEICOMISO FAE - BLACKROCK INSTITUTIONAL TRUST COMPANY, N.A. EQUITY",
         "account_number": "P 79897",
         "access_id": "nathalortiz",
         "product_id": "tim_cash",
@@ -8869,7 +8078,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 716,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "BANCO DE LA REPUBLICA-PACIFIC INVESTMENT MANAGEMENT COMANY LLC",
         "account_number": "AIF62",
         "access_id": "nathalortiz",
         "product_id": "tim_cash",
@@ -8879,7 +8087,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 717,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "nathalortiz",
         "product_id": "tim_cash_inter_account_transfer",
@@ -8889,7 +8096,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 718,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "nathalortiz",
         "product_id": "tim_listed_securities_deliver_free_of_payment",
@@ -8899,7 +8105,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 719,
         "function_type": "TIM - Transaction Intiation Manager",
-        "account_name": "",
         "account_number": "",
         "access_id": "nathalortiz",
         "product_id": "tim_listed_securities_receive_against_payment",
@@ -8909,7 +8114,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 720,
         "function_type": "Merchant Services Reporting Functions",
-        "account_name": "",
         "account_number": "",
         "access_id": "nathalortiz",
         "product_id": "securities_services_products_custody_dashboard",
@@ -8919,7 +8123,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 721,
         "function_type": "",
-        "account_name": "",
         "account_number": "",
         "access_id": "nathalortiz",
         "product_id": "securities_services_products",
@@ -8929,7 +8132,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 722,
         "function_type": "Merchant Services Reporting Functions",
-        "account_name": "",
         "account_number": "",
         "access_id": "vibenavides",
         "product_id": "securities_services_products_views_portfolio_reporting",
@@ -8939,7 +8141,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 723,
         "function_type": "",
-        "account_name": "",
         "account_number": "",
         "access_id": "vibenavides",
         "product_id": "administration",
@@ -8949,7 +8150,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 724,
         "function_type": "Manage Account Groups",
-        "account_name": "",
         "account_number": "",
         "access_id": "vibenavides",
         "product_id": "administration",
@@ -8959,7 +8159,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 725,
         "function_type": "Manage Account Groups",
-        "account_name": "",
         "account_number": "",
         "access_id": "vibenavides",
         "product_id": "administration",
@@ -8969,7 +8168,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 726,
         "function_type": "Manage Account Groups",
-        "account_name": "",
         "account_number": "",
         "access_id": "vibenavides",
         "product_id": "administration",
@@ -8979,7 +8177,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 727,
         "function_type": "Manage Account Groups",
-        "account_name": "",
         "account_number": "",
         "access_id": "vibenavides",
         "product_id": "administration",
@@ -8989,7 +8186,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 728,
         "function_type": "Manage Account Groups",
-        "account_name": "",
         "account_number": "",
         "access_id": "vibenavides",
         "product_id": "administration",
@@ -8999,7 +8195,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 729,
         "function_type": "Manage Account Groups",
-        "account_name": "",
         "account_number": "",
         "access_id": "vibenavides",
         "product_id": "administration",
@@ -9009,7 +8204,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 730,
         "function_type": "Manage Administration Reports",
-        "account_name": "",
         "account_number": "",
         "access_id": "vibenavides",
         "product_id": "administration",
@@ -9019,7 +8213,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 731,
         "function_type": "Manage Administration Reports",
-        "account_name": "",
         "account_number": "",
         "access_id": "vibenavides",
         "product_id": "administration",
@@ -9029,7 +8222,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 732,
         "function_type": "Manage Administration Reports",
-        "account_name": "",
         "account_number": "",
         "access_id": "vibenavides",
         "product_id": "administration",
@@ -9039,7 +8231,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 733,
         "function_type": "Manage Administration Reports",
-        "account_name": "",
         "account_number": "",
         "access_id": "vibenavides",
         "product_id": "administration",
@@ -9049,7 +8240,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 734,
         "function_type": "Manage Credentials",
-        "account_name": "",
         "account_number": "",
         "access_id": "vibenavides",
         "product_id": "administration",
@@ -9059,7 +8249,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 735,
         "function_type": "Manage Credentials",
-        "account_name": "",
         "account_number": "",
         "access_id": "vibenavides",
         "product_id": "administration",
@@ -9069,7 +8258,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 736,
         "function_type": "Manage Credentials",
-        "account_name": "",
         "account_number": "",
         "access_id": "vibenavides",
         "product_id": "administration",
@@ -9079,7 +8267,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 737,
         "function_type": "Manage Credentials",
-        "account_name": "",
         "account_number": "",
         "access_id": "vibenavides",
         "product_id": "administration",
@@ -9089,7 +8276,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 738,
         "function_type": "Manage Credentials",
-        "account_name": "",
         "account_number": "",
         "access_id": "vibenavides",
         "product_id": "administration",
@@ -9099,7 +8285,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 739,
         "function_type": "Manage Products",
-        "account_name": "",
         "account_number": "",
         "access_id": "vibenavides",
         "product_id": "administration",
@@ -9109,7 +8294,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 740,
         "function_type": "Manage Products",
-        "account_name": "",
         "account_number": "",
         "access_id": "vibenavides",
         "product_id": "administration",
@@ -9119,7 +8303,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 741,
         "function_type": "Manage Products",
-        "account_name": "",
         "account_number": "",
         "access_id": "vibenavides",
         "product_id": "administration",
@@ -9129,7 +8312,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 742,
         "function_type": "Manage Requests",
-        "account_name": "",
         "account_number": "",
         "access_id": "vibenavides",
         "product_id": "administration",
@@ -9139,7 +8321,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 743,
         "function_type": "Manage Requests",
-        "account_name": "",
         "account_number": "",
         "access_id": "vibenavides",
         "product_id": "administration",
@@ -9149,7 +8330,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 744,
         "function_type": "Manage Users",
-        "account_name": "",
         "account_number": "",
         "access_id": "vibenavides",
         "product_id": "administration",
@@ -9159,7 +8339,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 745,
         "function_type": "Manage Users",
-        "account_name": "",
         "account_number": "",
         "access_id": "vibenavides",
         "product_id": "administration",
@@ -9169,7 +8348,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 746,
         "function_type": "Manage Users",
-        "account_name": "",
         "account_number": "",
         "access_id": "vibenavides",
         "product_id": "administration",
@@ -9179,7 +8357,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 747,
         "function_type": "Manage Users",
-        "account_name": "",
         "account_number": "",
         "access_id": "vibenavides",
         "product_id": "administration",
@@ -9189,7 +8366,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 748,
         "function_type": "Manage Users",
-        "account_name": "",
         "account_number": "",
         "access_id": "vibenavides",
         "product_id": "administration",
@@ -9199,7 +8375,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 749,
         "function_type": "Manage Users",
-        "account_name": "",
         "account_number": "",
         "access_id": "vibenavides",
         "product_id": "administration",
@@ -9209,7 +8384,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 750,
         "function_type": "Other",
-        "account_name": "",
         "account_number": "",
         "access_id": "vibenavides",
         "product_id": "administration",
@@ -9219,7 +8393,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 751,
         "function_type": "Other",
-        "account_name": "",
         "account_number": "",
         "access_id": "vibenavides",
         "product_id": "administration",
@@ -9229,7 +8402,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 752,
         "function_type": "Other",
-        "account_name": "",
         "account_number": "",
         "access_id": "vibenavides",
         "product_id": "administration",
@@ -9239,7 +8411,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 753,
         "function_type": "",
-        "account_name": "",
         "account_number": "",
         "access_id": "vibenavides",
         "product_id": "corporate_action_manager",
@@ -9249,7 +8420,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 754,
         "function_type": "CFS - Corporate Action Instruction",
-        "account_name": "BANCOVEW",
         "account_number": "",
         "access_id": "vibenavides",
         "product_id": "corporate_action_manager_corporate_instruction",
@@ -9259,7 +8429,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 755,
         "function_type": "CFS - Corporate Action Instruction",
-        "account_name": "BANCOVEW",
         "account_number": "",
         "access_id": "vibenavides",
         "product_id": "corporate_action_manager_instruction_without_event",
@@ -9269,7 +8438,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 756,
         "function_type": "Merchant Services Reporting Functions",
-        "account_name": "",
         "account_number": "",
         "access_id": "vibenavides",
         "product_id": "securities_services_products_custody_dashboard",
@@ -9279,7 +8447,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 757,
         "function_type": "",
-        "account_name": "",
         "account_number": "",
         "access_id": "vibenavides",
         "product_id": "securities_services_products",
@@ -9289,7 +8456,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 758,
         "function_type": "Merchant Services Reporting Functions",
-        "account_name": "",
         "account_number": "",
         "access_id": "xiomgalvis",
         "product_id": "securities_services_products_views_portfolio_reporting",
@@ -9299,7 +8465,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 759,
         "function_type": "Merchant Services Reporting Functions",
-        "account_name": "",
         "account_number": "",
         "access_id": "xiomgalvis",
         "product_id": "securities_services_products_custody_dashboard",
@@ -9309,7 +8474,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 760,
         "function_type": "",
-        "account_name": "",
         "account_number": "",
         "access_id": "xiomgalvis",
         "product_id": "securities_services_products",
@@ -9319,7 +8483,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 761,
         "function_type": "",
-        "account_name": "",
         "account_number": "",
         "access_id": "yureyes",
         "product_id": "administration",
@@ -9329,7 +8492,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 762,
         "function_type": "Manage Account Groups",
-        "account_name": "",
         "account_number": "",
         "access_id": "yureyes",
         "product_id": "administration",
@@ -9339,7 +8501,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 763,
         "function_type": "Manage Account Groups",
-        "account_name": "",
         "account_number": "",
         "access_id": "yureyes",
         "product_id": "administration",
@@ -9349,7 +8510,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 764,
         "function_type": "Manage Account Groups",
-        "account_name": "",
         "account_number": "",
         "access_id": "yureyes",
         "product_id": "administration",
@@ -9359,7 +8519,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 765,
         "function_type": "Manage Account Groups",
-        "account_name": "",
         "account_number": "",
         "access_id": "yureyes",
         "product_id": "administration",
@@ -9369,7 +8528,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 766,
         "function_type": "Manage Account Groups",
-        "account_name": "",
         "account_number": "",
         "access_id": "yureyes",
         "product_id": "administration",
@@ -9379,7 +8537,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 767,
         "function_type": "Manage Account Groups",
-        "account_name": "",
         "account_number": "",
         "access_id": "yureyes",
         "product_id": "administration",
@@ -9389,7 +8546,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 768,
         "function_type": "Manage Administration Reports",
-        "account_name": "",
         "account_number": "",
         "access_id": "yureyes",
         "product_id": "administration",
@@ -9399,7 +8555,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 769,
         "function_type": "Manage Administration Reports",
-        "account_name": "",
         "account_number": "",
         "access_id": "yureyes",
         "product_id": "administration",
@@ -9409,7 +8564,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 770,
         "function_type": "Manage Administration Reports",
-        "account_name": "",
         "account_number": "",
         "access_id": "yureyes",
         "product_id": "administration",
@@ -9419,7 +8573,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 771,
         "function_type": "Manage Administration Reports",
-        "account_name": "",
         "account_number": "",
         "access_id": "yureyes",
         "product_id": "administration",
@@ -9429,7 +8582,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 772,
         "function_type": "Manage Credentials",
-        "account_name": "",
         "account_number": "",
         "access_id": "yureyes",
         "product_id": "administration",
@@ -9439,7 +8591,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 773,
         "function_type": "Manage Credentials",
-        "account_name": "",
         "account_number": "",
         "access_id": "yureyes",
         "product_id": "administration",
@@ -9449,7 +8600,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 774,
         "function_type": "Manage Credentials",
-        "account_name": "",
         "account_number": "",
         "access_id": "yureyes",
         "product_id": "administration",
@@ -9459,7 +8609,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 775,
         "function_type": "Manage Credentials",
-        "account_name": "",
         "account_number": "",
         "access_id": "yureyes",
         "product_id": "administration",
@@ -9469,7 +8618,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 776,
         "function_type": "Manage Credentials",
-        "account_name": "",
         "account_number": "",
         "access_id": "yureyes",
         "product_id": "administration",
@@ -9479,7 +8627,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 777,
         "function_type": "Manage Products",
-        "account_name": "",
         "account_number": "",
         "access_id": "yureyes",
         "product_id": "administration",
@@ -9489,7 +8636,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 778,
         "function_type": "Manage Products",
-        "account_name": "",
         "account_number": "",
         "access_id": "yureyes",
         "product_id": "administration",
@@ -9499,7 +8645,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 779,
         "function_type": "Manage Products",
-        "account_name": "",
         "account_number": "",
         "access_id": "yureyes",
         "product_id": "administration",
@@ -9509,7 +8654,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 780,
         "function_type": "Manage Requests",
-        "account_name": "",
         "account_number": "",
         "access_id": "yureyes",
         "product_id": "administration",
@@ -9519,7 +8663,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 781,
         "function_type": "Manage Requests",
-        "account_name": "",
         "account_number": "",
         "access_id": "yureyes",
         "product_id": "administration",
@@ -9529,7 +8672,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 782,
         "function_type": "Manage Users",
-        "account_name": "",
         "account_number": "",
         "access_id": "yureyes",
         "product_id": "administration",
@@ -9539,7 +8681,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 783,
         "function_type": "Manage Users",
-        "account_name": "",
         "account_number": "",
         "access_id": "yureyes",
         "product_id": "administration",
@@ -9549,7 +8690,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 784,
         "function_type": "Manage Users",
-        "account_name": "",
         "account_number": "",
         "access_id": "yureyes",
         "product_id": "administration",
@@ -9559,7 +8699,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 785,
         "function_type": "Manage Users",
-        "account_name": "",
         "account_number": "",
         "access_id": "yureyes",
         "product_id": "administration",
@@ -9569,7 +8708,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 786,
         "function_type": "Manage Users",
-        "account_name": "",
         "account_number": "",
         "access_id": "yureyes",
         "product_id": "administration",
@@ -9579,7 +8717,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 787,
         "function_type": "Manage Users",
-        "account_name": "",
         "account_number": "",
         "access_id": "yureyes",
         "product_id": "administration",
@@ -9589,7 +8726,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 788,
         "function_type": "Other",
-        "account_name": "",
         "account_number": "",
         "access_id": "yureyes",
         "product_id": "administration",
@@ -9599,7 +8735,6 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 789,
         "function_type": "Other",
-        "account_name": "",
         "account_number": "",
         "access_id": "yureyes",
         "product_id": "administration",
@@ -9609,10 +8744,10 @@ export const USER_ENTITLEMENTS: UserEntitlementType[] = [
     {
         "id": 790,
         "function_type": "Other",
-        "account_name": "",
         "account_number": "",
         "access_id": "yureyes",
         "product_id": "administration",
         "function_id": "view_client",
         ...controlDateHelper
-    } ]; 
+    }
+]; 
