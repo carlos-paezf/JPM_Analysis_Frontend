@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { MainComponent } from './pages/main/main.component';
 import { NotFoundComponent } from '../shared/components/not-found/not-found.component';
+import { MainComponent } from './pages/main/main.component';
 
 const routes: Routes = [
     {
@@ -31,10 +31,6 @@ const routes: Routes = [
             {
                 path: 'company-users',
                 loadChildren: () => import( './modules/company-users/company-users.module' ).then( m => m.CompanyUsersModule )
-            },
-            {
-                path: 'functions',
-                loadChildren: () => import( './modules/functions/functions.module' ).then( m => m.FunctionsModule )
             },
             {
                 path: 'products',
