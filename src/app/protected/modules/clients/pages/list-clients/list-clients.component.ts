@@ -23,8 +23,8 @@ export class ListClientsComponent extends InfoTableBaseComponent<ClientType> imp
         { columnDef: 'deleted_at', header: 'Fecha de Desactivación', cell: ( row ) => row.deleted_at },
     ];
 
-    public deleteAccount!: Function;
-    public reactivateAccount!: Function;
+    public deleteClient!: Function;
+    public reactivateClient!: Function;
 
     constructor ( private _clientsService: ClientsService ) {
         super();
@@ -42,7 +42,7 @@ export class ListClientsComponent extends InfoTableBaseComponent<ClientType> imp
                 this.isEmptyTable = ( response.data.length <= 0 );
                 this.isLoadingResults = false;
             } );
-        // this.deleteAccount = this._clientsService.deleteAccount;
-        // this.reactivateAccount = this._clientsService.reactivateAccount;
+        // this.deleteClient = this._clientsService.deleteClient;
+        // this.reactivateClient = this._clientsService.reactivateClient;
     };
 }

@@ -123,7 +123,7 @@ export class AdminCompanyUserComponent extends BaseDetailClass<CompanyUserType> 
     onSubmit () {
         if ( !this.isAdminUser ) return this._toastrNotificationService.error( {
             title: 'Error',
-            message: 'No cuentas con permisos para actualizar el perfil'
+            message: 'No cuentas con permisos para actualizar el company user'
         } );
 
         if ( !this.form.valid ) return this._toastrNotificationService.warning( {
@@ -131,18 +131,18 @@ export class AdminCompanyUserComponent extends BaseDetailClass<CompanyUserType> 
             message: 'Por favor, confirma que la información sea valida'
         } );
 
-        const isConfirmedUpdate = window.confirm( `¿Confirma la actualización en la información del usuario ${ this.data!.user_name }?` );
+        const isConfirmedUpdate = window.confirm( `¿Confirma la actualización en la información del company user ${ this.data!.user_name }?` );
 
         if ( !isConfirmedUpdate ) return this._toastrNotificationService.info( {
             title: 'Actualización Cancelada',
-            message: 'Se canceló la actualización del usuario'
+            message: 'Se canceló la actualización del company user'
         } );
 
         this._companyUsersService.updateCompanyUser( this.id, this.form.value );
 
         this._toastrNotificationService.success( {
             title: 'Actualización exitosa',
-            message: 'La información del usuario ha sido actualizada correctamente'
+            message: 'La información del company user ha sido actualizada correctamente'
         } );
 
         this.submitted = true;

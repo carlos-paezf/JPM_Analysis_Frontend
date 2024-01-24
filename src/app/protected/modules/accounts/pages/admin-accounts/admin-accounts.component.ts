@@ -91,7 +91,7 @@ export class AdminAccountsComponent extends BaseDetailClass<AccountType> impleme
     onSubmit () {
         if ( !this.isAdminUser ) return this._toastrNotificationService.error( {
             title: 'Error',
-            message: 'No cuentas con permisos para actualizar el perfil'
+            message: 'No cuentas con permisos para actualizar la cuenta'
         } );
 
         if ( !this.form.valid ) return this._toastrNotificationService.warning( {
