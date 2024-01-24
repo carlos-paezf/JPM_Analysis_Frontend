@@ -58,8 +58,8 @@ export const APP_MODULES_PANELS: ModulesPanelsType[] = [
                 routeLink: 'accounts'
             },
             {
-                label: 'Funciones',
-                routeLink: 'functions'
+                label: 'Clientes',
+                routeLink: 'clients'
             }
         ]
     },
