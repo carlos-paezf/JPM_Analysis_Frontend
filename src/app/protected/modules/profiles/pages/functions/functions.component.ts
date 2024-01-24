@@ -112,6 +112,11 @@ export class FunctionsComponent extends BaseDetailClass<ProfileFunctionType[]> i
     }
 
 
+    /**
+     * The onSubmit function marks all form fields as touched, creates a function using the provided
+     * function name and profiles, resets the form, sets the profiles value to an empty array, and
+     * hides the form.
+     */
     onSubmit (): void {
         this.form.markAllAsTouched();
 
