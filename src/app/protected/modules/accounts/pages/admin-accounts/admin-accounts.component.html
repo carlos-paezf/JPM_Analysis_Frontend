@@ -1,0 +1,62 @@
+<h2>Información detallada de la cuenta "{{ id }}"</h2>
+
+<ng-container *ngIf="isLoading || !data; else accountInfo">
+    <div class="loading__section">
+        <mat-spinner *ngIf="isLoading"></mat-spinner>
+
+        <app-support-image *ngIf="!data && !isLoading" [imgSrc]="imgSrc" [sourceSrcset]="sourceSrcset"
+            alt="Curiosity People"
+            message="No se ha encontrado la cuenta solicitada. Por favor, verifica que la cuenta aún existe en la lista de cuentas"></app-support-image>
+    </div>
+</ng-container>
+
+<ng-template #accountInfo>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <section>
+            <h4>Datos básicos</h4>
+            <div class="form-group">
+                <div class="form-control">
+                    <div class="label">
+                        <mat-icon class="opacity_icon" fontIcon="person"></mat-icon>
+                        <label for="account_name">Nombre de cuenta</label>
+                    </div>
+                    <input matInput formControlName="account_name" id="account_name" [disabled]="true">
+                </div>
+
+                <div class="form-control">
+                    <div class="label">
+                        <mat-icon class="opacity_icon" fontIcon="person"></mat-icon>
+                        <label for="account_number">Número de cuenta</label>
+                    </div>
+                    <input matInput formControlName="account_number" id="account_number">
+                </div>
+
+                <div class="form-control">
+                    <div class="label">
+                        <mat-icon class="opacity_icon" fontIcon="mail"></mat-icon>
+                        <label for="account_type">Tipo de cuenta</label>
+                    </div>
+                    <input matInput formControlName="account_type" id="account_type">
+                </div>
+
+                <div class="form-control">
+                    <div class="label">
+                        <mat-icon class="opacity_icon" fontIcon="assignment_ind"></mat-icon>
+                        <label for="bank_currency">Bank Currency</label>
+                    </div>
+                    <input matInput formControlName="bank_currency" id="bank_currency">
+                </div>
+            </div>
+        </section>
+
+        <app-control-dates-form [createdAt]="data!.created_at" [updatedAt]="data!.updated_at"
+            [deletedAt]="data?.deleted_at" />
+
+        <ng-container *ngIf="isAdminUser">
+            <button mat-raised-button color="primary" [disabled]="!isDataChanged">
+                Actualizar Cuenta
+            </button>
+        </ng-container>
+    </form>
+</ng-template>
+<!-- </app-dialog-section> -->
