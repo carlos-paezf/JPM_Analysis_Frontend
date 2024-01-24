@@ -59,19 +59,19 @@
                 <td mat-cell *matCellDef="let row" [attr.colspan]="columnsToDisplayWithExpand.length">
                     <div class="element-detail" [@detailExpand]="row == expandedRow ? 'expanded' : 'collapsed'">
                         <button mat-fab extended color="primary"
-                            (click)="handleRedirectDetail(row.id || row.access_id)">
+                            (click)="handleRedirectDetail(row.id || row.access_id || row.account_number)">
                             <mat-icon>edit</mat-icon>
                             Ver/Editar información
                         </button>
 
                         <button *ngIf="deleteFunction !== undefined && !row.deleted_at" mat-fab extended color="warn"
-                            (click)="deleteItem(row.id || row.access_id)">
+                            (click)="deleteItem(row.id || row.access_id || row.account_number)">
                             <mat-icon>delete</mat-icon>
                             Desactivar item
                         </button>
 
                         <button *ngIf="reactivateFunction !== undefined && row.deleted_at" mat-fab extended
-                            (click)=" reactivateItem(row.id || row.access_id)">
+                            (click)=" reactivateItem(row.id || row.access_id || row.account_number)">
                             <mat-icon>check</mat-icon>
                             Reactivar item
                         </button>
