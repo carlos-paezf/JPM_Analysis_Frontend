@@ -1,6 +1,6 @@
+import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 
-import { Location } from '@angular/common';
 import { HttpStatusService } from '../../../shared/services/http-status.service';
 
 
