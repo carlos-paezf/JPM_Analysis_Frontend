@@ -1,0 +1,46 @@
+<h2>Información detallada del producto "{{ data?.sub_product ?? data?.product_name ?? id }}"</h2>
+
+<ng-container *ngIf="isLoading || !data; else productInfo">
+    <div class="loading__section">
+        <mat-spinner *ngIf="isLoading"></mat-spinner>
+
+        <app-support-image *ngIf="!data && !isLoading" [imgSrc]="imgSrc" [sourceSrcset]="sourceSrcset"
+            alt="Curiosity People"
+            message="No se ha encontrado el producto solicitado. Por favor, verifica que el producto aún existe en la lista de productos"></app-support-image>
+    </div>
+</ng-container>
+
+<ng-template #productInfo>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <section>
+            <h4>Datos básicos</h4>
+            <div class="form-group">
+                <div class="form-control">
+                    <div class="label">
+                        <mat-icon class="opacity_icon" fontIcon="person"></mat-icon>
+                        <label for="product_name">Nombre del producto</label>
+                    </div>
+                    <input matInput formControlName="product_name" id="product_name" [disabled]="true">
+                </div>
+
+                <div class="form-control">
+                    <div class="label">
+                        <mat-icon class="opacity_icon" fontIcon="person"></mat-icon>
+                        <label for="sub_product">Sub Producto</label>
+                    </div>
+                    <input matInput formControlName="sub_product" id="sub_product">
+                </div>
+            </div>
+        </section>
+
+        <app-control-dates-form [createdAt]="data!.created_at" [updatedAt]="data!.updated_at"
+            [deletedAt]="data?.deleted_at" />
+
+        <ng-container *ngIf="isAdminUser">
+            <button mat-raised-button color="primary" [disabled]="!isDataChanged">
+                Actualizar Producto
+            </button>
+        </ng-container>
+    </form>
+</ng-template>
+<!-- </app-dialog-section> -->
