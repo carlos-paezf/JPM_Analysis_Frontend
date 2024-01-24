@@ -1,0 +1,16 @@
+<h2>Listado de Clientes</h2>
+
+<p>A continuación se listan las clientes que se muestran en el listado del último reporte cargado</p>
+
+<section>
+    <ng-container *ngIf="isLoadingResults || isEmptyTable; else tableComponent">
+        <app-table-loading [isLoadingResults]="isLoadingResults" [isEmptyTable]="isEmptyTable"></app-table-loading>
+    </ng-container>
+
+    <ng-template #tableComponent>
+        <app-table-base [displayedColumns]="displayedColumns" [data]="data" [columns]="columns" baseUrl="clients"
+            [deleteFunction]="deleteAccount" [reactivateFunction]="reactivateAccount"></app-table-base>
+    </ng-template>
+</section>
+
+<router-outlet></router-outlet>
