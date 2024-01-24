@@ -1,14 +1,14 @@
 import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { FormArray, FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 
 import { BaseDetailClass } from '../../../../../shared/classes/base-detail.class';
 import { AuthUsersService } from '../../../../../shared/services/auth-users.service';
 import { ToastrNotificationService } from '../../../../../shared/services/toastr-notification.service';
 import { FormBaseType, FunctionType, ProfileType } from '../../../../../shared/types';
-import { ProfilesService } from '../../services/profiles.service';
 import { FunctionsService } from '../../services/functions.service';
+import { ProfilesService } from '../../services/profiles.service';
 
 
 @Component( {
