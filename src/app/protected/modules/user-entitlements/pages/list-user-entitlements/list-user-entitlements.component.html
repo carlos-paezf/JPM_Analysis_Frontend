@@ -1,0 +1,17 @@
+<h2>Listado de Títulos de Usuarios</h2>
+
+<p>A continuación se listan los títulos de usuarios que se muestran en el listado del último reporte cargado</p>
+
+<section>
+    <ng-container *ngIf="isLoadingResults || isEmptyTable; else tableComponent">
+        <app-table-loading [isLoadingResults]="isLoadingResults" [isEmptyTable]="isEmptyTable"></app-table-loading>
+    </ng-container>
+
+    <ng-template #tableComponent>
+        <app-table-base [displayedColumns]="displayedColumns" [data]="data" [columns]="columns"
+            baseUrl="user-entitlements" [deleteFunction]="deleteUserEntitlement"
+            [reactivateFunction]="reactivateUserEntitlement"></app-table-base>
+    </ng-template>
+</section>
+
+<router-outlet></router-outlet>
