@@ -1,1 +1,70 @@
-<p>admin-user-entitlements works!</p>
+<h2>Información detallada del título "{{ id }}"</h2>
+
+<ng-container *ngIf="isLoading || !data; else userEntitlementInfo">
+    <div class="loading__section">
+        <mat-spinner *ngIf="isLoading"></mat-spinner>
+
+        <app-support-image *ngIf="!data && !isLoading" [imgSrc]="imgSrc" [sourceSrcset]="sourceSrcset"
+            alt="Curiosity People"
+            message="No se ha encontrado el título solicitado. Por favor, verifica que el titulo aún existe en la lista de títulos"></app-support-image>
+    </div>
+</ng-container>
+
+<ng-template #userEntitlementInfo>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <section>
+            <h4>Datos básicos</h4>
+            <div class="form-group">
+                <div class="form-control">
+                    <div class="label">
+                        <mat-icon class="opacity_icon" fontIcon="person"></mat-icon>
+                        <label for="access_id">Access Id</label>
+                    </div>
+                    <input matInput formControlName="access_id" id="access_id" [disabled]="true">
+                </div>
+
+                <div class="form-control">
+                    <div class="label">
+                        <mat-icon class="opacity_icon" fontIcon="person"></mat-icon>
+                        <label for="product_id">Product Id</label>
+                    </div>
+                    <input matInput formControlName="product_id" id="product_id">
+                </div>
+
+                <div class="form-control">
+                    <div class="label">
+                        <mat-icon class="opacity_icon" fontIcon="mail"></mat-icon>
+                        <label for="function_id">Function Id</label>
+                    </div>
+                    <input matInput formControlName="function_id" id="function_id">
+                </div>
+
+                <div class="form-control">
+                    <div class="label">
+                        <mat-icon class="opacity_icon" fontIcon="assignment_ind"></mat-icon>
+                        <label for="function_type">Function Type</label>
+                    </div>
+                    <input matInput formControlName="function_type" id="function_type">
+                </div>
+
+                <div class="form-control">
+                    <div class="label">
+                        <mat-icon class="opacity_icon" fontIcon="assignment_ind"></mat-icon>
+                        <label for="account_number">Account number</label>
+                    </div>
+                    <input matInput formControlName="account_number" id="account_number">
+                </div>
+            </div>
+        </section>
+
+        <app-control-dates-form [createdAt]="data!.created_at" [updatedAt]="data!.updated_at"
+            [deletedAt]="data?.deleted_at" />
+
+        <ng-container *ngIf="isAdminUser">
+            <button mat-raised-button color="primary" [disabled]="!isDataChanged">
+                Actualizar título
+            </button>
+        </ng-container>
+    </form>
+</ng-template>
+<!-- </app-dialog-section> -->
