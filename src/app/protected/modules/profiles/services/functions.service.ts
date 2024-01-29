@@ -3,6 +3,7 @@ import { Observable, delay, of } from 'rxjs';
 
 import { FUNCTIONS, PROFILES_FUNCTIONS } from '../../../../shared/mocks';
 import { FunctionType, ProfileFunctionType, ProfileType, ResponseSheetsType } from '../../../../shared/types';
+import { FunctionEagerLoadingType } from '../../../../shared/types/jpm-types.type';
 
 
 @Injectable( {
@@ -20,6 +21,23 @@ export class FunctionsService {
 
         return of( response ).pipe( delay( Math.random() * 1000 ) );
 
+    }
+
+    public getFunctionById ( id: string ): Observable<FunctionEagerLoadingType | null> {
+        const functionData = FUNCTIONS.find( func => func.id === id );
+
+        if ( !functionData ) return of( null ).pipe( delay( Math.random() * 1000 ) );
+
+        const response: FunctionEagerLoadingType = {
+            ...FUNCTIONS.find( func => func.id === id )!,
+            profiles: []
+        };
+
+        response.profiles = PROFILES_FUNCTIONS
+            .filter( e => e.function_id === id )
+            .map( e => e.profile_id );
+
+        return of( response ).pipe( delay( Math.random() * 1000 ) );
     }
 
     public getProfilesFunctions (): Observable<ResponseSheetsType<ProfileFunctionType>> {
@@ -86,6 +104,9 @@ export class FunctionsService {
             const element = profilesFunctions[ index ];
             PROFILES_FUNCTIONS[ index ] = element;
         }
+
+        return of( true );
+
     }
 
     public createFunction ( functionName: string, profiles: ProfileType[] ) {
@@ -105,5 +126,29 @@ export class FunctionsService {
                 profile_id: p.id
             };
         }
+
+        return of( true );
+    }
+
+    public updateFunction ( functionId: string, functionName: string, profiles: ProfileType[] ) {
+        const index = FUNCTIONS.findIndex( func => func.id === functionId );
+
+        if ( index !== -1 ) {
+            FUNCTIONS[ index ] = {
+                ...FUNCTIONS[ index ],
+                function_name: functionName,
+                updated_at: new Date()
+            };
+        }
+
+        for ( const p of profiles ) {
+            PROFILES_FUNCTIONS[ PROFILES_FUNCTIONS.length ] = {
+                id: PROFILES_FUNCTIONS.length,
+                function_id: functionId,
+                profile_id: p.id
+            };
+        }
+
+        return of( true );
     }
 }
