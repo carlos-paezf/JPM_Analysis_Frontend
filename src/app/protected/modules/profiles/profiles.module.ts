@@ -10,6 +10,7 @@ import { ListProfilesComponent } from './pages/list-profiles/list-profiles.compo
 import { UsersByProfilesComponent } from './pages/users-by-profiles/users-by-profiles.component';
 import { ProfilesRoutingModule } from './profiles-routing.module';
 import { UsersByProfileTableComponent } from './components/users-by-profile-table/users-by-profile-table.component';
+import { FunctionFormComponent } from './components/function-form/function-form.component';
 
 
 @NgModule( {
@@ -18,7 +19,8 @@ import { UsersByProfileTableComponent } from './components/users-by-profile-tabl
         AdminProfilesComponent,
         UsersByProfilesComponent,
         FunctionsComponent,
-        UsersByProfileTableComponent
+        UsersByProfileTableComponent,
+        FunctionFormComponent
     ],
     imports: [
         CommonModule,

@@ -34,6 +34,12 @@ const routes: Routes = [
         data: { title: 'Funciones' }
     },
     {
+        path: 'functions/:id',
+        component: FunctionsComponent,
+        pathMatch: 'full',
+        data: { title: 'Funciones' }
+    },
+    {
         path: '', redirectTo: 'list-profiles', pathMatch: 'full'
     },
     {
