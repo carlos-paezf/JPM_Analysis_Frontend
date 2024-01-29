@@ -14,6 +14,11 @@ export type FunctionType = ControlDateType & {
     function_name: string;
 };
 
+export type FunctionEagerLoadingType =
+    FunctionType & {
+        profiles: string[];
+    };
+
 export type ProductType = ControlDateType & {
     id: string;
     product_name: string;
