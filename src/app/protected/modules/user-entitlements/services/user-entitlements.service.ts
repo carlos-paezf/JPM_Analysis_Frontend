@@ -20,7 +20,7 @@ export class UserEntitlementsService {
         return of( response ).pipe( delay( Math.random() * 1000 ) );
     }
 
-    public getUserEntitlementById ( id: string | number ): Observable<UserEntitlementType | null> {
+    public getUserEntitlementById ( id: number ): Observable<UserEntitlementType | null> {
         const response = USER_ENTITLEMENTS.find( userEntitlement => userEntitlement.id === id ) || null;
 
         return of( response ).pipe( delay( Math.random() * 1000 ) );
