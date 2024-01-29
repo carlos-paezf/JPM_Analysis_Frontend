@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { forkJoin } from 'rxjs';
 
+import { ActivatedRoute, Router } from '@angular/router';
 import { BaseDetailClass } from '../../../../../shared/classes/base-detail.class';
-import { FormBaseType, FunctionType, ProfileFunctionType, ProfileType } from '../../../../../shared/types';
+import { FunctionType, ProfileFunctionType, ProfileType } from '../../../../../shared/types';
 import { FunctionsService } from '../../services/functions.service';
 import { ProfilesService } from '../../services/profiles.service';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 
 @Component( {
@@ -13,7 +13,7 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
     templateUrl: './functions.component.html',
     styleUrls: [ './functions.component.scss' ]
 } )
-export class FunctionsComponent extends BaseDetailClass<ProfileFunctionType[]> implements FormBaseType, OnInit {
+export class FunctionsComponent extends BaseDetailClass<ProfileFunctionType[]> implements OnInit {
     public override sourceSrcset = "../../../../assets/images/Curiosity people-amico.png";
     public override imgSrc = "../../../../assets/images/Curiosity people-amico.svg";
 
@@ -22,11 +22,9 @@ export class FunctionsComponent extends BaseDetailClass<ProfileFunctionType[]> i
 
     public showForm: boolean = false;
 
-    public form!: FormGroup<any>;
-    public submitted: boolean = true;
-
     constructor (
-        private readonly _formBuilder: FormBuilder,
+        private readonly _activateRoute: ActivatedRoute,
+        private readonly _router: Router,
         private readonly _profilesService: ProfilesService,
         private readonly _functionsService: FunctionsService,
     ) {
@@ -38,40 +36,33 @@ export class FunctionsComponent extends BaseDetailClass<ProfileFunctionType[]> i
      * different variables.
      */
     ngOnInit (): void {
-        forkJoin(
-            [
-                this._profilesService.getProfiles(),
-                this._functionsService.getFunctions(),
-                this._functionsService.getProfilesFunctions(),
-            ]
-        ).subscribe( {
-            next: ( [ profilesResponse, functionsResponse, profilesFunctionsResponse ] ) => {
-                this.profiles = profilesResponse.data;
-                this.functions = functionsResponse.data;
-                this.data = profilesFunctionsResponse.data;
-            },
-            complete: () => {
-                this.isLoading = false;
-            },
-            error: ( error ) => {
-                // TODO: Reportar al servicio de manejo de errores del servidor
-                throw new Error( 'Method not implemented.' );
-            }
-        } );
-        this.formActions();
-    }
+        this._activateRoute.params.subscribe( params => {
+            this.id = params[ 'id' ];
+            this.isLoading = true;
 
-
-    /**
-     * The function creates a form with two form controls, one for a function name and one for an array
-     * of profiles.
-     */
-    formActions () {
-        this.form = new FormGroup( {
-            function_name: new FormControl<string>( '', [ Validators.required ] ),
-            profiles: new FormControl<ProfileType[]>( [], [ Validators.required, Validators.minLength( 1 ) ] )
+            forkJoin(
+                [
+                    this._profilesService.getProfiles(),
+                    this._functionsService.getFunctions(),
+                    this._functionsService.getProfilesFunctions(),
+                ]
+            ).subscribe( {
+                next: ( [ profilesResponse, functionsResponse, profilesFunctionsResponse ] ) => {
+                    this.profiles = profilesResponse.data;
+                    this.functions = functionsResponse.data;
+                    this.data = profilesFunctionsResponse.data;
+                },
+                complete: () => {
+                    this.isLoading = false;
+                },
+                error: ( error ) => {
+                    // TODO: Reportar al servicio de manejo de errores del servidor
+                    throw new Error( 'Method not implemented.' );
+                }
+            } );
         } );
     }
+
 
     /**
      * The function checks if a profile with a specific profileId and functionId exists in the data and
@@ -95,36 +86,8 @@ export class FunctionsComponent extends BaseDetailClass<ProfileFunctionType[]> i
         return this.showForm = !this.showForm;
     }
 
-    /**
-     * The function toggles a profile in an array of profiles in a form.
-     * @param {ProfileType} profile - The `profile` parameter is of type `ProfileType` and represents
-     * the profile object that needs to be toggled.
-     */
-    toggleProfile ( profile: ProfileType ) {
-        const oldProfiles: ProfileType[] = this.form.get( 'profiles' )?.value;
-
-        const newProfiles: ProfileType[] =
-            oldProfiles.find( p => p.id === profile.id )
-                ? oldProfiles.filter( p => p.id !== profile.id )
-                : [ profile, ...oldProfiles ];
-
-        this.form.get( 'profiles' )?.setValue( newProfiles );
-    }
-
-
-    /**
-     * The onSubmit function marks all form fields as touched, creates a function using the provided
-     * function name and profiles, resets the form, sets the profiles value to an empty array, and
-     * hides the form.
-     */
-    onSubmit (): void {
-        this.form.markAllAsTouched();
-
-        this._functionsService.createFunction( this.form.get( 'function_name' )!.value, this.form.get( 'profiles' )!.value );
-
-        this.form.reset();
-        this.form.get( 'profiles' )?.setValue( [] );
-
-        this.showForm = false;
+    onClick ( func: FunctionType ) {
+        this._router.navigate( [ `profiles/functions/${ func.id }` ] );
+        this.showForm = true;
     }
 }

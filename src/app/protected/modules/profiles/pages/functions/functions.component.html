@@ -4,37 +4,11 @@
 
 <section class="section__form">
     <button mat-raised-button color="accent" (click)="toggleShowForm()">
-        {{ showForm ? 'Ocultar formulario' : 'Añadir nueva función'}}
+        {{ showForm ? 'Ocultar formulario' : 'Abrir formulario'}}
     </button>
 
     <ng-container *ngIf="showForm">
-        <form [formGroup]="form" (ngSubmit)="onSubmit()">
-            <div class="form-group">
-                <div class="form-control">
-                    <div class="label">
-                        <mat-icon class="opacity_icon" fontIcon="functions"></mat-icon>
-                        <label for="function_name">Nombre de la función:</label>
-                    </div>
-                    <input matInput formControlName="function_name" id="function_name">
-                </div>
-
-                <div class="form-control">
-                    <div class="label">
-                        <mat-icon class="opacity_icon" fontIcon="person"></mat-icon>
-                        <label for="profile_name">Perfiles asociados:</label>
-                    </div>
-                    <ul>
-                        <li *ngFor="let profile of profiles">
-                            <mat-checkbox (change)="toggleProfile(profile)">{{ profile.profile_name }}</mat-checkbox>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <button mat-raised-button color="primary" [disabled]="form.status === 'INVALID'">
-                Actualizar Función
-            </button>
-        </form>
+        <app-function-form [functionId]="id" />
     </ng-container>
 </section>
 
@@ -57,7 +31,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let function of functions">
+            <tr *ngFor="let function of functions" (click)="onClick(function)">
                 <th>{{ function.function_name }}</th>
                 <td *ngFor="let profile of profiles">{{ getProfileFunction(profile.id, function.id) }}</td>
             </tr>
