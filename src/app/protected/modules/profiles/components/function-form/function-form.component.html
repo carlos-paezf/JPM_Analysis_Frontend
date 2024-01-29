@@ -1,0 +1,42 @@
+<ng-container *ngIf="isLoading || (functionId && !functionData); else functionForm">
+    <div class="loading__section">
+        <mat-spinner *ngIf="isLoading"></mat-spinner>
+
+        <p *ngIf="functionId && !functionData && !isLoading">
+            No se ha encontrado la función solicitada. Por favor, verifica que la función aún existe en la lista de
+            funciones
+        </p>
+    </div>
+</ng-container>
+
+
+<ng-template #functionForm>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <div class="form-control">
+                <div class="label">
+                    <mat-icon class="opacity_icon" fontIcon="functions"></mat-icon>
+                    <label for="function_name">Nombre de la función:</label>
+                </div>
+                <input matInput formControlName="function_name" id="function_name">
+            </div>
+
+            <div class="form-control">
+                <div class="label">
+                    <mat-icon class="opacity_icon" fontIcon="person"></mat-icon>
+                    <label for="profile_name">Perfiles asociados:</label>
+                </div>
+                <ul>
+                    <li *ngFor="let profile of profiles">
+                        <mat-checkbox (change)="toggleProfile(profile)"
+                            [checked]="checked(profile)">{{ profile.profile_name }}</mat-checkbox>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <button mat-raised-button color="primary" [disabled]="form.status === 'INVALID'">
+            Actualizar Función
+        </button>
+    </form>
+</ng-template>
