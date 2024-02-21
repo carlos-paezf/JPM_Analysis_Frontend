@@ -1,12 +1,14 @@
-import { Component, Input, OnChanges, OnInit, Output } from '@angular/core';
+import { Component, Input, OnChanges, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { forkJoin, of } from 'rxjs';
+
+import { ToastrNotificationService } from '../../../../../shared/services/toastr-notification.service';
 import { ProfileType } from '../../../../../shared/types';
 import { FunctionEagerLoadingType } from '../../../../../shared/types/jpm-types.type';
 import { FunctionsService } from '../../services/functions.service';
 import { ProfilesService } from '../../services/profiles.service';
-import { forkJoin, of, switchMap } from 'rxjs';
-import { Router } from '@angular/router';
-import { ToastrNotificationService } from '../../../../../shared/services/toastr-notification.service';
+
 
 @Component( {
     selector: 'app-function-form',
