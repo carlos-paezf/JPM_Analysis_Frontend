@@ -16,5 +16,5 @@ export class SupportImageComponent {
     @Input() public sourceSrcset!: string;
     @Input() public imgSrc!: string;
     @Input() public alt!: string;
-    @Input() public message!: string;
+    @Input() public message?: string = "No se ha encontrado la información solicitada. Por favor, valida que la información se encuentra en la lista correspondiente";
 }
