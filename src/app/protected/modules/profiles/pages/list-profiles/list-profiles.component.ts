@@ -39,6 +39,5 @@ export class ListProfilesComponent extends InfoTableBaseComponent<ProfileType> i
                 this.isEmptyTable = ( response.data.length <= 0 );
                 this.isLoadingResults = false;
             } );
-        this.deleteProfile = this._profilesService.deleteProfile;
     }
 }
