@@ -9,6 +9,7 @@ export {
     CompanyUserType,
     AccountType,
     ClientType,
+    ClientEagerLoadingType,
     UserEntitlementType,
     JPMDataAppType
 } from './jpm-types.type';
