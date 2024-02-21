@@ -27,7 +27,8 @@
                         sortActionDescription="Sort by User Name">
                         {{ column.header }}
                     </th>
-                    <td mat-cell *matCellDef="let row" class="user-link">
+                    <td mat-cell *matCellDef="let row" class="user-link"
+                        [style]=" row.deleted_at && 'background-color: var(--secondary-light)'">
                         {{ column.cell(row) }}
                     </td>
                 </ng-container>
@@ -39,6 +40,7 @@
                     </th>
                     <!-- <td mat-cell *matCellDef="let row" (click)="handleRedirectDetail(row.id)"> -->
                     <td mat-cell *matCellDef="let row"
+                        [style]=" row.deleted_at && 'background-color: var(--secondary-light)'"
                         (click)="(expandedRow = expandedRow === row ? null : row); $event.stopPropagation()">
                         {{ column.cell(row) | transformCellValue }}
                     </td>
@@ -47,7 +49,8 @@
 
             <ng-container matColumnDef="expand">
                 <th mat-header-cell *matHeaderCellDef aria-label="row actions">&nbsp;</th>
-                <td mat-cell *matCellDef="let row">
+                <td mat-cell *matCellDef="let row"
+                    [style]=" row.deleted_at && 'background-color: var(--secondary-light)'">
                     <!-- <button mat-icon-button aria-label="expand row" (click)="(expandedRow = expandedRow === row ? null : row); $event.stopPropagation()"> -->
                     <button mat-icon-button aria-label="expand row">
                         <mat-icon>{{ expandedRow === row ? "keyboard_arrow_up" : "keyboard_arrow_down" }}</mat-icon>
