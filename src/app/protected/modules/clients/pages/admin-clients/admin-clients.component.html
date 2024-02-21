@@ -1,0 +1,65 @@
+<h2>Información detallada del cliente "{{ id }}"</h2>
+
+<ng-container *ngIf="isLoading || !data; else accountInfo">
+    <div class="loading__section">
+        <mat-spinner *ngIf="isLoading"></mat-spinner>
+
+        <app-support-image *ngIf="!data && !isLoading" [imgSrc]="imgSrc" [sourceSrcset]="sourceSrcset"
+            alt="Curiosity People"></app-support-image>
+    </div>
+</ng-container>
+
+<ng-template #accountInfo>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <section>
+            <h4>Datos básicos</h4>
+            <div class="form-group">
+                <div class="form-control">
+                    <div class="label">
+                        <mat-icon class="opacity_icon" fontIcon="person"></mat-icon>
+                        <label for="product">Producto</label>
+                    </div>
+
+                    <mat-select formControlName="product" placeholder="Seleccionar Producto" #singleSelect>
+                        <mat-option>
+                            <ngx-mat-select-search formControlName="productSearch" placeholderLabel="Buscar producto"
+                                (ngModelChange)="filterProducts($event)"></ngx-mat-select-search>
+                        </mat-option>
+                        <mat-option *ngFor="let product of searchProducts" [value]="product">
+                            {{product.product_name}}{{product.sub_product && (' - ' + product.sub_product)}}
+                        </mat-option>
+                    </mat-select>
+                </div>
+
+                <div class="form-control">
+                    <div class="label">
+                        <mat-icon class="opacity_icon" fontIcon="person"></mat-icon>
+                        <label for="account">Número de cuenta</label>
+                    </div>
+
+                    <mat-select formControlName="account" placeholder="Seleccionar Cuenta" #singleSelect
+                        panelWidth="100">
+                        <mat-option>
+                            <ngx-mat-select-search formControlName="accountSearch" placeholderLabel="Buscar producto"
+                                (ngModelChange)="filterAccounts($event)"></ngx-mat-select-search>
+                        </mat-option>
+                        <mat-option *ngFor="let account of searchAccounts" [value]="account">
+                            {{account.account_number}} -
+                            {{account.account_name.slice(0, 50)}}{{ (account.account_number.length + account.account_name.length >= 50) ? '...' : ''}}
+                        </mat-option>
+                    </mat-select>
+                </div>
+            </div>
+        </section>
+
+        <app-control-dates-form [createdAt]="data!.created_at" [updatedAt]="data!.updated_at"
+            [deletedAt]="data?.deleted_at" />
+
+        <ng-container *ngIf="isAdminUser">
+            <button mat-raised-button color="primary" [disabled]="!isDataChanged">
+                Actualizar Cuenta
+            </button>
+        </ng-container>
+    </form>
+</ng-template>
+<!-- </app-dialog-section> -->
