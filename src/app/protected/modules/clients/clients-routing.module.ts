@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { NotFoundComponent } from '../../../shared/components/not-found/not-found.component';
 import { ListClientsComponent } from './pages/list-clients/list-clients.component';
+import { AdminClientsComponent } from './pages/admin-clients/admin-clients.component';
 
 const routes: Routes = [
     {
@@ -10,12 +11,12 @@ const routes: Routes = [
         data: { title: 'JPM Lista de Cuentas' },
         pathMatch: 'full'
     },
-    // {
-    //     path: 'admin/:number/:name',
-    //     component: AdminAccountsComponent,
-    //     pathMatch: 'full',
-    //     data: { title: 'JPM Detalle de Cuenta' }
-    // },
+    {
+        path: 'admin/:id',
+        component: AdminClientsComponent,
+        pathMatch: 'full',
+        data: { title: 'JPM Detalle de Cuenta' }
+    },
     {
         path: '', redirectTo: 'list-clients', pathMatch: 'full'
     },

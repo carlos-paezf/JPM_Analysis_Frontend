@@ -6,11 +6,13 @@ import { MaterialDesignModule } from '../../../material-design/material-design.m
 import { SharedModule } from '../../../shared/shared.module';
 import { ClientsRoutingModule } from './clients-routing.module';
 import { ListClientsComponent } from './pages/list-clients/list-clients.component';
+import { AdminClientsComponent } from './pages/admin-clients/admin-clients.component';
 
 
 @NgModule( {
     declarations: [
-        ListClientsComponent
+        ListClientsComponent,
+        AdminClientsComponent
     ],
     imports: [
         CommonModule,
