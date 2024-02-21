@@ -141,12 +141,23 @@ export class FunctionsService {
             };
         }
 
+        const newProfilesFunctions = PROFILES_FUNCTIONS.filter( pf => pf.function_id !== functionId );
+
         for ( const p of profiles ) {
-            PROFILES_FUNCTIONS[ PROFILES_FUNCTIONS.length ] = {
+            newProfilesFunctions[ newProfilesFunctions.length ] = {
                 id: PROFILES_FUNCTIONS.length,
-                function_id: functionId,
-                profile_id: p.id
+                profile_id: p.id,
+                function_id: functionId
             };
+        }
+
+        const len = PROFILES_FUNCTIONS.length;
+        for ( let index = 0; index < len; index++ ) {
+            PROFILES_FUNCTIONS.pop();
+        }
+
+        for ( let index = 0; index < newProfilesFunctions.length; index++ ) {
+            PROFILES_FUNCTIONS.push( newProfilesFunctions[ index ] );
         }
 
         return of( true );
