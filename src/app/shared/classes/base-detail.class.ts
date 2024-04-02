@@ -9,6 +9,4 @@ export abstract class BaseDetailClass<T> {
     public id!: string;
     public data: T | null = null;
     public isLoading: boolean = true;
-    public abstract sourceSrcset: string;
-    public abstract imgSrc: string;
 }
