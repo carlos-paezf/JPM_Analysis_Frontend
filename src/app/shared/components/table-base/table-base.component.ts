@@ -50,7 +50,7 @@ export class TableBaseComponent implements OnInit, AfterViewInit {
     @Input() public displayedColumns: string[] = [];
     @Input() public data: any[] = [];
     @Input() public columns: ColumnTableType<any>[] = [];
-    @Input() public stickyColumn: string = 'user_name';
+    @Input() public stickyColumn: string = 'userName';
     @Input() public baseUrl!: string;
     @Input() public deleteFunction!: Function;
     @Input() public reactivateFunction!: Function;
@@ -141,12 +141,12 @@ export class TableBaseComponent implements OnInit, AfterViewInit {
      * @param {string} idUser - The idUser parameter is a string that represents the unique identifier
      * of a user.
      */
-    handleRedirectUser ( access_id: string, userName: string ) {
+    handleRedirectUser ( accessId: string, userName: string ) {
         const redirectionAccepted = window.confirm( `¿Desea abrir la vista detallada del usuario ${ userName }?` );
 
         if ( !redirectionAccepted ) return;
 
-        this._router.navigateByUrl( `company-users/admin/${ access_id }` );
+        this._router.navigateByUrl( `company-users/admin/${ accessId }` );
     }
 
     /**
@@ -173,14 +173,13 @@ export class TableBaseComponent implements OnInit, AfterViewInit {
     /**
      * The function prompts the user to confirm the deletion of an item with a given ID, and if
      * confirmed, it calls a delete function and reloads the data.
-     * @param {unknown} id - The id parameter is the identifier of the item that you want to delete.
+     * @param {string} id - The id parameter is the identifier of the item that you want to delete.
      * @returns the result of the `reloadData()` function if the user confirms the deletion, otherwise
      * it returns nothing.
      */
-    deleteItem ( id: unknown ) {
+    deleteItem ( id: string ) {
         if ( window.confirm( `¿Está seguro de eliminar el item con llave "${ id }"?` ) ) {
             this.deleteFunction( id );
-            return this.reloadData();
         }
         return;
     }
@@ -189,14 +188,13 @@ export class TableBaseComponent implements OnInit, AfterViewInit {
     /**
      * The function `reactivateItem` prompts the user to confirm reactivating an item with a given ID,
      * and if confirmed, calls a `reactivateFunction` and reloads data.
-     * @param {unknown} id - The id parameter is the unique identifier of the item that needs to be
+     * @param {string} id - The id parameter is the unique identifier of the item that needs to be
      * reactivated.
      * @returns The function `reactivateItem` returns the result of calling the `reloadData` function.
      */
-    reactivateItem ( id: unknown ) {
+    reactivateItem ( id: string ) {
         if ( window.confirm( `¿Está seguro de reactivar el item con la llave "${ id }"?` ) ) {
             this.reactivateFunction( id );
-            return this.reloadData();
         }
         return;
     }
