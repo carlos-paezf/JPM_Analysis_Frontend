@@ -1,4 +1,3 @@
-import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 
 import { HttpStatusService } from '../../../shared/services/http-status.service';
@@ -16,12 +15,14 @@ import { HttpStatusService } from '../../../shared/services/http-status.service'
     styleUrls: [ './main.component.scss' ],
 } )
 export class MainComponent implements OnInit {
+    public sourceSrcset = "../../../../assets/images/Curiosity people-amico.png";
+    public imgSrc = "../../../../assets/images/Curiosity people-amico.svg";
+
     public notFoundError: boolean = false;
     public forbiddenError: boolean = false;
     public internalServerError: boolean = false;
 
     constructor (
-        private readonly _location: Location,
         private readonly _httpStatusService: HttpStatusService,
     ) { }
 
@@ -41,21 +42,5 @@ export class MainComponent implements OnInit {
         this._httpStatusService.currentStatusNotFoundError.subscribe( status => this.notFoundError = status );
         this._httpStatusService.currentStatusForbiddenError.subscribe( status => this.forbiddenError = status );
         this._httpStatusService.currentStatusInternalServerError.subscribe( status => this.internalServerError = status );
-    }
-
-    /**
-     * The "goBack" function uses the "_location" object to navigate back to the previous page.
-     * @returns the result of calling the `back()` method on the `_location` object.
-     */
-    goBack () {
-        return this._location.back();
-    }
-
-    /**
-     * The function goForward() is used to navigate forward in the browser's history.
-     * @returns The forward location.
-     */
-    goForward () {
-        return this._location.forward();
     }
 }

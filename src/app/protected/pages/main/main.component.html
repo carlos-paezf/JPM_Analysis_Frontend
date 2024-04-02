@@ -21,6 +21,9 @@
                     </button>
                 </div> -->
 
+                <app-support-image *ngIf="notFoundError" [imgSrc]="imgSrc" [sourceSrcset]="sourceSrcset"
+                    alt="Curiosity People"></app-support-image>
+
                 <app-internal-server-error *ngIf="internalServerError"></app-internal-server-error>
 
                 <router-outlet *customIf="!internalServerError && !forbiddenError && !notFoundError"></router-outlet>
