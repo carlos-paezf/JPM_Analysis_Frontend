@@ -1,4 +1,6 @@
 <section>
+    <h1>Elemento no encontrado</h1>
+
     <picture>
         <source (srcset)="sourceSrcset">
         <img [src]="imgSrc" [alt]="alt">
@@ -6,4 +8,14 @@
     </picture>
 
     <p>{{ message }}</p>
+
+    <div class="actions">
+        <button mat-fab extended color="accent" aria-label="Back History" (click)="goBack()">
+            <mat-icon>chevron_left</mat-icon>Regresar
+        </button>
+
+        <button mat-fab extended color="accent" aria-label="Forward History" (click)="goHome()">
+            <mat-icon>home</mat-icon>Ir al inicio
+        </button>
+    </div>
 </section>
