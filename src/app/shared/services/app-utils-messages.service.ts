@@ -69,7 +69,7 @@ export class AppUtilsMessagesService {
         console.error( 'Error updating account:', error );
         this._toastrNotificationService.error( {
             title: 'Error',
-            message: 'Hubo un error al actualizar el registro. Por favor, inténtalo de nuevo más tarde.'
+            message: 'Ocurrió un error al ejecutar la consulta. Por favor, inténtalo de nuevo más tarde.'
         } );
     }
 }
