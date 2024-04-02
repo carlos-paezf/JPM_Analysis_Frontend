@@ -1,6 +1,7 @@
 import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, catchError, throwError } from 'rxjs';
+import { HttpStatusService } from 'src/app/shared/services/http-status.service';
 
 /**
  * @author cpaezfer
@@ -9,7 +10,7 @@ import { Observable, catchError, throwError } from 'rxjs';
     providedIn: 'root'
 } )
 export class ErrorHandlingInterceptorService implements HttpInterceptor {
-    constructor () { }
+    constructor ( private readonly _httpStatusService: HttpStatusService ) { }
 
     /**
      * The intercept function intercepts HTTP requests and handles any errors that 
@@ -25,6 +26,23 @@ export class ErrorHandlingInterceptorService implements HttpInterceptor {
             .pipe(
                 catchError( err => {
                     const error = err.error.message || err.status;
+
+                    switch ( err.status ) {
+                        case 401:
+                            this._httpStatusService.reportUnauthorizedError();
+                            break;
+                        case 403:
+                            this._httpStatusService.reportForbiddenError();
+                            break;
+                        case 404:
+                            this._httpStatusService.reportNotFoundError();
+                            break;
+                        case 500:
+                            this._httpStatusService.reportInternalServerError();
+                            break;
+                        default:
+                            break;
+                    }
 
                     return throwError( () => new Error( error ) );
                 } )
