@@ -1,17 +1,19 @@
 export type ControlDateType = {
-    created_at: Date;
-    updated_at: Date;
-    deleted_at: Date | null;
+    createdAt: Date;
+    updatedAt: Date;
+    deletedAt: Date | null;
 };
 
-export type ProfileType = ControlDateType & {
+export type ProfileType = {
     id: string;
-    profile_name: string;
+    profileName: string;
+    createdAt: Date;
+    updatedAt: Date;
 };
 
 export type FunctionType = ControlDateType & {
     id: string;
-    function_name: string;
+    functionName: string;
 };
 
 export type FunctionEagerLoadingType =
@@ -21,14 +23,14 @@ export type FunctionEagerLoadingType =
 
 export type ProductType = ControlDateType & {
     id: string;
-    product_name: string;
-    sub_product: string | null;
+    productName: string;
+    subProduct: string | null;
 };
 
 export type ProfileFunctionType = {
-    id: number;
-    profile_id: string;
-    function_id: string;
+    id: string;
+    profileId: string;
+    functionId: string;
 };
 
 export type ProfileFunctionEagerLoadingType =
@@ -39,55 +41,61 @@ export type ProfileFunctionEagerLoadingType =
     };
 
 export type CompanyUserType = ControlDateType & {
-    access_id: string;
-    user_name: string;
-    user_status: boolean;
-    user_type: "SA1" | "SA2" | "SAviewer" | "End User" | "SAOther";
-    employee_id: string | null;
-    email_address: string;
-    user_location: string | null;
-    user_country: string;
-    user_logon_type: "RSA Token" | "Password";
-    user_last_logon_dt: Date | null;
-    user_logon_status: string;
-    user_group_membership: string | null;
-    user_role: string | null;
-    profile_id: string;
+    accessId: string;
+    userName: string;
+    userStatus: boolean;
+    userType: "SA1" | "SA2" | "SAviewer" | "End User" | "SAOther";
+    employeeId: string | null;
+    emailAddress: string;
+    userLocation: string | null;
+    userCountry: string;
+    userLogonType: "RSA Token" | "Password";
+    userLastLogonDt: Date | null;
+    userLogonStatus: string;
+    userGroupMembership: string | null;
+    userRole: string | null;
+    profileId: string;
 };
 
 export type AccountType = ControlDateType & {
-    account_number: string;
-    account_name: string;
-    account_type: string;
-    bank_currency: string | null;
+    accountNumber: string;
+    accountName: string;
+    accountType: string;
+    bankCurrency: string | null;
 };
 
-export type ClientType = ControlDateType & {
-    id: number;
-    product_id: string;
-    account_number: string;
+
+export type AccountEagerType = AccountType & {
+    userEntitlements: UserEntitlementType[];
+    productsAccounts: ProductAccountType[];
 };
 
-export type ClientEagerLoadingType =
-    ClientType
+export type ProductAccountType = ControlDateType & {
+    id: string;
+    productId: string;
+    accountNumber: string;
+};
+
+export type ProductAccountEagerType =
+    ProductAccountType
     & {
         product: ProductType;
         account: AccountType;
     };
 
 export type UserEntitlementType = ControlDateType & {
-    id: number;
-    access_id: string;
-    product_id: string;
-    function_type: string;
-    function_id: string;
-    account_number: string;
+    id: string;
+    accessId: string;
+    productId: string;
+    functionType: string;
+    functionId: string;
+    accountNumber: string;
 };
 
-export type UserEntitlementEagerLoadingType =
+export type UserEntitlementEagerType =
     UserEntitlementType
     & {
-        company_user: CompanyUserType;
+        companyUser: CompanyUserType;
         product: ProductType;
         function: FunctionType;
         account: AccountType;
@@ -96,10 +104,10 @@ export type UserEntitlementEagerLoadingType =
 export type JPMDataAppType = {
     profiles: ProfileType[];
     functions: FunctionType[];
-    profiles_functions: ProfileFunctionType[];
+    profilesFunctions: ProfileFunctionType[];
     products: ProductType[];
-    company_users: CompanyUserType[];
+    companyUsers: CompanyUserType[];
     accounts: AccountType[];
-    clients: ClientType[];
-    user_entitlement: UserEntitlementType[];
+    productsAccounts: ProductAccountType[];
+    userEntitlement: UserEntitlementType[];
 };
