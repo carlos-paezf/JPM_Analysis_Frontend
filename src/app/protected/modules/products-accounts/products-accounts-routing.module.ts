@@ -1,24 +1,24 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { NotFoundComponent } from '../../../shared/components/not-found/not-found.component';
-import { ListClientsComponent } from './pages/list-clients/list-clients.component';
-import { AdminClientsComponent } from './pages/admin-clients/admin-clients.component';
+import { ListProductsAccountsComponent } from './pages/list-products-accounts/list-products-accounts.component';
+import { AdminProductsAccountsComponent } from './pages/admin-products-accounts/admin-products-accounts.component';
 
 const routes: Routes = [
     {
-        path: 'list-clients',
-        component: ListClientsComponent,
+        path: 'list-products-accounts',
+        component: ListProductsAccountsComponent,
         data: { title: 'JPM Lista de Cuentas' },
         pathMatch: 'full'
     },
     {
         path: 'admin/:id',
-        component: AdminClientsComponent,
+        component: AdminProductsAccountsComponent,
         pathMatch: 'full',
         data: { title: 'JPM Detalle de Cuenta' }
     },
     {
-        path: '', redirectTo: 'list-clients', pathMatch: 'full'
+        path: '', redirectTo: 'list-products-accounts', pathMatch: 'full'
     },
     {
         path: '**', component: NotFoundComponent,
@@ -30,4 +30,4 @@ const routes: Routes = [
     imports: [ RouterModule.forChild( routes ) ],
     exports: [ RouterModule ]
 } )
-export class ClientsRoutingModule { }
+export class ProductsAccountsRoutingModule { }

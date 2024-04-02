@@ -2,26 +2,23 @@ import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
+import { forkJoin } from 'rxjs';
 
 import { BaseDetailClass } from '../../../../../shared/classes/base-detail.class';
 import { AuthUsersService } from '../../../../../shared/services/auth-users.service';
 import { ToastrNotificationService } from '../../../../../shared/services/toastr-notification.service';
-import { AccountType, ClientType, FormBaseType, ProductType } from '../../../../../shared/types';
-import { ClientsService } from '../../services/clients.service';
-import { ProductsService } from '../../../products/services/products.service';
+import { AccountType, FormBaseType, ProductAccountType, ProductType } from '../../../../../shared/types';
 import { AccountsService } from '../../../accounts/services/accounts.service';
-import { forkJoin } from 'rxjs';
+import { ProductsService } from '../../../products/services/products.service';
+import { ProductsAccountsService } from '../../services/products-accounts.service';
 
 
 @Component( {
-    selector: 'app-admin-clients',
-    templateUrl: './admin-clients.component.html',
-    styleUrls: [ './admin-clients.component.scss' ]
+    selector: 'app-admin-products-accounts',
+    templateUrl: './admin-products-accounts.component.html',
+    styleUrls: [ './admin-products-accounts.component.scss' ]
 } )
-export class AdminClientsComponent extends BaseDetailClass<ClientType> implements FormBaseType, OnInit {
-    public override sourceSrcset = "../../../../assets/images/Curiosity people-amico.png";
-    public override imgSrc = "../../../../assets/images/Curiosity people-amico.svg";
-
+export class AdminProductsAccountsComponent extends BaseDetailClass<ProductAccountType> implements FormBaseType, OnInit {
     public form!: FormGroup<any>;
     public submitted!: boolean;
 
@@ -38,7 +35,7 @@ export class AdminClientsComponent extends BaseDetailClass<ClientType> implement
         private readonly _formBuilder: FormBuilder,
         private readonly _location: Location,
         private readonly _toastrNotificationService: ToastrNotificationService,
-        private readonly _clientsService: ClientsService,
+        private readonly _clientsService: ProductsAccountsService,
         private readonly _authUserService: AuthUsersService,
         private readonly _accountsService: AccountsService,
         private readonly _productsService: ProductsService,
@@ -55,9 +52,9 @@ export class AdminClientsComponent extends BaseDetailClass<ClientType> implement
 
             forkJoin(
                 [
-                    this._clientsService.getClientById( Number( this.id ) ),
+                    this._clientsService.getProductAccountById( this.id ),
                     this._productsService.getProducts(),
-                    this._accountsService.getAccounts(),
+                    this._accountsService.getAll(),
                 ]
             ).subscribe( {
                 next: ( [ clientResponse, productsResponse, accountsResponse ] ) => {
@@ -83,8 +80,8 @@ export class AdminClientsComponent extends BaseDetailClass<ClientType> implement
         if ( !this.data ) return;
 
         this.form = this._formBuilder.group( {
-            product: [ this.getProduct( this.data.product_id ) ],
-            account: [ this.getAccount( this.data.account_number ) ],
+            product: [ this.getProduct( this.data.productId ) ],
+            account: [ this.getAccount( this.data.accountNumber ) ],
             productSearch: [ '' ],
             accountSearch: [ '' ]
         } );
@@ -114,12 +111,12 @@ export class AdminClientsComponent extends BaseDetailClass<ClientType> implement
      * The `filterProducts` function filters products based on the input text matching product names or
      * sub-products.
      * @param {string}  - The `filterProducts` function takes a string input `` and
-     * filters the `products` array based on whether the `product_name` or `sub_product` of each
+     * filters the `products` array based on whether the `productName` or `subProduct` of each
      * product includes the `` string (case-insensitive).
      */
     filterProducts ( $textInput: string ) {
         this.searchProducts = this.products.filter(
-            product => [ product.product_name, product.sub_product ].some(
+            product => [ product.productName, product.subProduct ].some(
                 attribute => attribute?.toLowerCase().includes( $textInput.toLowerCase() )
             )
         );
@@ -137,7 +134,7 @@ export class AdminClientsComponent extends BaseDetailClass<ClientType> implement
      * matches the `accountNumber` provided as a parameter.
      */
     getAccount ( accountNumber: string ) {
-        return this.accounts.find( account => account.account_number === accountNumber );
+        return this.accounts.find( account => account.accountNumber === accountNumber );
     }
 
 
@@ -145,13 +142,13 @@ export class AdminClientsComponent extends BaseDetailClass<ClientType> implement
      * The `filterAccounts` function filters accounts based on a search input by checking if the
      * account name or number includes the input text in a case-insensitive manner.
      * @param {string}  - The `filterAccounts` function takes a string input `` and
-     * filters the `accounts` array based on whether the `account_name` or `account_number` includes
+     * filters the `accounts` array based on whether the `accountName` or `accountNumber` includes
      * the `` value (case-insensitive). The filtered accounts are stored in the
      * `searchAccounts` array.
      */
     filterAccounts ( $textInput: string ) {
         this.searchAccounts = this.accounts.filter(
-            account => [ account.account_name, account.account_number ].some(
+            account => [ account.accountName, account.accountNumber ].some(
                 attribute => attribute?.toLowerCase().includes( $textInput.toLowerCase() )
             )
         );
@@ -176,11 +173,11 @@ export class AdminClientsComponent extends BaseDetailClass<ClientType> implement
             message: 'Se canceló la actualización del cliente'
         } );
 
-        this._clientsService.updateClient(
-            Number( this.id ),
+        this._clientsService.updateProductAccount(
+            this.id,
             {
-                product_id: ( this.form.get( 'product' )!.value as ProductType ).id,
-                account_number: ( this.form.get( 'account' )!.value as AccountType ).account_number
+                productId: ( this.form.get( 'product' )!.value as ProductType ).id,
+                accountNumber: ( this.form.get( 'account' )!.value as AccountType ).accountNumber
             }
         );
 

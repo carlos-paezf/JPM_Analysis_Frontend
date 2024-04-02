@@ -1,15 +1,12 @@
 <h2>Información detallada del cliente "{{ id }}"</h2>
 
-<ng-container *ngIf="isLoading || !data; else accountInfo">
+<ng-container *ngIf="isLoading || !data; else productAccountInfo">
     <div class="loading__section">
         <mat-spinner *ngIf="isLoading"></mat-spinner>
-
-        <app-support-image *ngIf="!data && !isLoading" [imgSrc]="imgSrc" [sourceSrcset]="sourceSrcset"
-            alt="Curiosity People"></app-support-image>
     </div>
 </ng-container>
 
-<ng-template #accountInfo>
+<ng-template #productAccountInfo>
     <form [formGroup]="form" (ngSubmit)="onSubmit()">
         <section>
             <h4>Datos básicos</h4>
@@ -26,7 +23,7 @@
                                 (ngModelChange)="filterProducts($event)"></ngx-mat-select-search>
                         </mat-option>
                         <mat-option *ngFor="let product of searchProducts" [value]="product">
-                            {{product.product_name}}{{product.sub_product && (' - ' + product.sub_product)}}
+                            {{product.productName}}{{product.subProduct && (' - ' + product.subProduct)}}
                         </mat-option>
                     </mat-select>
                 </div>
@@ -44,16 +41,16 @@
                                 (ngModelChange)="filterAccounts($event)"></ngx-mat-select-search>
                         </mat-option>
                         <mat-option *ngFor="let account of searchAccounts" [value]="account">
-                            {{account.account_number}} -
-                            {{account.account_name.slice(0, 50)}}{{ (account.account_number.length + account.account_name.length >= 50) ? '...' : ''}}
+                            {{account.accountNumber}} -
+                            {{account.accountName.slice(0, 50)}}{{ (account.accountNumber.length + account.accountName.length >= 50) ? '...' : ''}}
                         </mat-option>
                     </mat-select>
                 </div>
             </div>
         </section>
 
-        <app-control-dates-form [createdAt]="data!.created_at" [updatedAt]="data!.updated_at"
-            [deletedAt]="data?.deleted_at" />
+        <app-control-dates-form [createdAt]="data!.createdAt" [updatedAt]="data!.updatedAt"
+            [deletedAt]="data?.deletedAt" />
 
         <ng-container *ngIf="isAdminUser">
             <button mat-raised-button color="primary" [disabled]="!isDataChanged">
