@@ -1,12 +1,12 @@
 import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 
+import { AppUtilsMessagesService } from 'src/app/shared/services/app-utils-messages.service';
 import { BaseDetailClass } from '../../../../../shared/classes/base-detail.class';
 import { AuthUsersService } from '../../../../../shared/services/auth-users.service';
-import { ToastrNotificationService } from '../../../../../shared/services/toastr-notification.service';
-import { AccountType, FormBaseType } from '../../../../../shared/types';
+import { AccountEagerType, FormBaseType } from '../../../../../shared/types';
 import { AccountsService } from '../../services/accounts.service';
 
 
@@ -15,10 +15,7 @@ import { AccountsService } from '../../services/accounts.service';
     templateUrl: './admin-accounts.component.html',
     styleUrls: [ './admin-accounts.component.scss' ]
 } )
-export class AdminAccountsComponent extends BaseDetailClass<AccountType> implements FormBaseType, OnInit {
-    public override sourceSrcset = "../../../../assets/images/Curiosity people-amico.png";
-    public override imgSrc = "../../../../assets/images/Curiosity people-amico.svg";
-
+export class AdminAccountsComponent extends BaseDetailClass<AccountEagerType> implements FormBaseType, OnInit {
     public form!: FormGroup;
     public submitted: boolean = false;
 
@@ -29,7 +26,7 @@ export class AdminAccountsComponent extends BaseDetailClass<AccountType> impleme
         private readonly _activateRoute: ActivatedRoute,
         private readonly _formBuilder: FormBuilder,
         private readonly _location: Location,
-        private readonly _toastrNotificationService: ToastrNotificationService,
+        private readonly _appUtilMessagesServices: AppUtilsMessagesService,
         private readonly _accountsService: AccountsService,
         private readonly _authUserService: AuthUsersService,
     ) {
@@ -47,11 +44,17 @@ export class AdminAccountsComponent extends BaseDetailClass<AccountType> impleme
             this.id = params[ 'id' ];
             this.isLoading = true;
 
-            this._accountsService.getAccountById( this.id )
-                .subscribe( response => {
-                    this.data = response;
-                    this.isLoading = false;
-                    this.formActions();
+            this._accountsService.getById( this.id )
+                .subscribe( {
+                    next: response => {
+                        this.data = response;
+                        this.isLoading = false;
+                        this.formActions();
+                    },
+                    error: ( error ) => {
+                        this.data = null;
+                        this.isLoading = false;
+                    },
                 } );
         } );
     }
@@ -66,19 +69,19 @@ export class AdminAccountsComponent extends BaseDetailClass<AccountType> impleme
         if ( !this.data ) return;
 
         this.form = this._formBuilder.group( {
-            account_name: [ this.data.account_name ],
-            account_number: [ this.data.account_number ],
-            account_type: [ this.data.account_type ],
-            bank_currency: [ this.data.bank_currency ],
-            createdAt: [ { value: this.data.created_at, disabled: true } ],
-            updatedAt: [ { value: this.data.updated_at, disabled: true } ],
-            deletedAt: [ { value: this.data.deleted_at, disabled: true } ],
+            accountNumber: [ { value: this.data.accountNumber, disabled: true }, Validators.required ],
+            accountName: [ this.data.accountName, Validators.required ],
+            accountType: [ this.data.accountType, Validators.required ],
+            bankCurrency: [ this.data.bankCurrency ],
+            createdAt: [ { value: this.data.createdAt, disabled: true } ],
+            updatedAt: [ { value: this.data.updatedAt, disabled: true } ],
+            deletedAt: [ { value: this.data.deletedAt, disabled: true } ],
         } );
 
         this.isAdminUser || this.form.disable();
 
-        this.form.valueChanges.subscribe( _ => {
-            this.isDataChanged = true;
+        this.form.valueChanges.subscribe( {
+            next: () => { this.isDataChanged = true; }
         } );
     }
 
@@ -89,32 +92,27 @@ export class AdminAccountsComponent extends BaseDetailClass<AccountType> impleme
      * @returns the result of the `_location.back()` method.
      */
     onSubmit () {
-        if ( !this.isAdminUser ) return this._toastrNotificationService.error( {
-            title: 'Error',
-            message: 'No cuentas con permisos para actualizar la cuenta'
-        } );
+        if ( !this.isAdminUser ) return this._appUtilMessagesServices.showNoPermissionError();
 
-        if ( !this.form.valid ) return this._toastrNotificationService.warning( {
-            title: 'Actualización fallida',
-            message: 'Por favor, confirma que la información sea valida'
-        } );
+        if ( !this.form.valid ) return this._appUtilMessagesServices.showValidationError();
 
-        const isConfirmedUpdate = window.confirm( `¿Confirma la actualización en la información de la cuenta ${ this.data!.account_number }?` );
+        const isConfirmedUpdate = window.confirm( `¿Confirma la actualización en la información de la cuenta ${ this.data!.accountNumber }?` );
 
-        if ( !isConfirmedUpdate ) return this._toastrNotificationService.info( {
-            title: 'Actualización Cancelada',
-            message: 'Se canceló la actualización de la cuenta'
-        } );
+        if ( !isConfirmedUpdate ) return this._appUtilMessagesServices.showUpdateCancelledMessage();
 
-        this._accountsService.updateAccount( this.id, this.form.value );
-
-        this._toastrNotificationService.success( {
-            title: 'Actualización exitosa',
-            message: 'La información de la cuenta ha sido actualizada correctamente'
-        } );
-
-        this.submitted = true;
-
-        return this._location.back();
+        this._accountsService.update(
+            this.id,
+            { accountNumber: this.data!.accountNumber, ...this.form.value }
+        )
+            .subscribe(
+                {
+                    next: () => {
+                        this._appUtilMessagesServices.showUpdateSuccessMessage();
+                        this.submitted = true;
+                        // return this._location.back();
+                    },
+                    error: ( error ) => this._appUtilMessagesServices.showUpdateErrorMessage( error )
+                }
+            );
     }
 }

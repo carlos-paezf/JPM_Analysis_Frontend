@@ -3,9 +3,6 @@
 <ng-container *ngIf="isLoading || !data; else accountInfo">
     <div class="loading__section">
         <mat-spinner *ngIf="isLoading"></mat-spinner>
-
-        <app-support-image *ngIf="!data && !isLoading" [imgSrc]="imgSrc" [sourceSrcset]="sourceSrcset"
-            alt="Curiosity People"></app-support-image>
     </div>
 </ng-container>
 
@@ -17,39 +14,39 @@
                 <div class="form-control">
                     <div class="label">
                         <mat-icon class="opacity_icon" fontIcon="person"></mat-icon>
-                        <label for="account_name">Nombre de cuenta</label>
+                        <label for="accountNumber">Número de cuenta</label>
                     </div>
-                    <input matInput formControlName="account_name" id="account_name" [disabled]="true">
+                    <input matInput formControlName="accountNumber" id="accountNumber">
                 </div>
 
                 <div class="form-control">
                     <div class="label">
                         <mat-icon class="opacity_icon" fontIcon="person"></mat-icon>
-                        <label for="account_number">Número de cuenta</label>
+                        <label for="accountName">Nombre de cuenta</label>
                     </div>
-                    <input matInput formControlName="account_number" id="account_number">
+                    <input matInput formControlName="accountName" id="accountName">
                 </div>
 
                 <div class="form-control">
                     <div class="label">
                         <mat-icon class="opacity_icon" fontIcon="mail"></mat-icon>
-                        <label for="account_type">Tipo de cuenta</label>
+                        <label for="accountType">Tipo de cuenta</label>
                     </div>
-                    <input matInput formControlName="account_type" id="account_type">
+                    <input matInput formControlName="accountType" id="accountType">
                 </div>
 
                 <div class="form-control">
                     <div class="label">
                         <mat-icon class="opacity_icon" fontIcon="assignment_ind"></mat-icon>
-                        <label for="bank_currency">Bank Currency</label>
+                        <label for="bankCurrency">Bank Currency</label>
                     </div>
-                    <input matInput formControlName="bank_currency" id="bank_currency">
+                    <input matInput formControlName="bankCurrency" id="bankCurrency">
                 </div>
             </div>
         </section>
 
-        <app-control-dates-form [createdAt]="data!.created_at" [updatedAt]="data!.updated_at"
-            [deletedAt]="data?.deleted_at" />
+        <app-control-dates-form [createdAt]="data!.createdAt" [updatedAt]="data!.updatedAt"
+            [deletedAt]="data?.deletedAt" />
 
         <ng-container *ngIf="isAdminUser">
             <button mat-raised-button color="primary" [disabled]="!isDataChanged">
@@ -57,5 +54,8 @@
             </button>
         </ng-container>
     </form>
+
+    <pre>{{data | json}}</pre>
 </ng-template>
+
 <!-- </app-dialog-section> -->
