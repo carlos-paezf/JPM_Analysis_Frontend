@@ -24,9 +24,6 @@ import { CompanyUsersService } from '../../services/company-users.service';
     styleUrls: [ './admin-company-user.component.scss' ]
 } )
 export class AdminCompanyUserComponent extends BaseDetailClass<CompanyUserType> implements FormBaseType, OnInit {
-    public override sourceSrcset = "../../../../assets/images/Curiosity people-amico.png";
-    public override imgSrc = "../../../../assets/images/Curiosity people-amico.svg";
-
     public form!: FormGroup;
     public submitted: boolean = false;
 
@@ -56,7 +53,7 @@ export class AdminCompanyUserComponent extends BaseDetailClass<CompanyUserType> 
         this._setProfilesInfo();
 
         this._activateRoute.params.subscribe( params => {
-            this.id = params[ 'access_id' ];
+            this.id = params[ 'accessId' ];
             this.isLoading = true;
 
             this._companyUsersService.getCompanyUserByAccessId( this.id )
@@ -89,23 +86,23 @@ export class AdminCompanyUserComponent extends BaseDetailClass<CompanyUserType> 
         if ( !this.data ) return;
 
         this.form = this._formBuilder.group( {
-            access_id: [ this.data.access_id ],
-            user_name: [ this.data.user_name ],
-            user_status: [ this.data.user_status ],
-            user_type: [ this.data.user_type ],
-            employee_id: [ this.data.employee_id ],
-            email_address: [ this.data.email_address ],
-            user_location: [ this.data.user_location ],
-            user_country: [ this.data.user_country ],
-            user_logon_type: [ this.data.user_logon_type ],
-            user_last_logon_dt: [ this.data.user_last_logon_dt ],
-            user_logon_status: [ this.data.user_logon_status ],
-            user_group_membership: [ this.data.user_group_membership ],
-            user_role: [ this.data.user_role ],
-            profile_id: [ this.data.profile_id ],
-            createdAt: [ { value: this.data.created_at, disabled: true } ],
-            updatedAt: [ { value: this.data.updated_at, disabled: true } ],
-            deletedAt: [ { value: this.data.deleted_at, disabled: true } ],
+            accessId: [ this.data.accessId ],
+            userName: [ this.data.userName ],
+            userStatus: [ this.data.userStatus ],
+            userType: [ this.data.userType ],
+            employeeId: [ this.data.employeeId ],
+            emailAddress: [ this.data.emailAddress ],
+            userLocation: [ this.data.userLocation ],
+            userCountry: [ this.data.userCountry ],
+            userLogonType: [ this.data.userLogonType ],
+            userLastLogonDt: [ this.data.userLastLogonDt ],
+            userLogonStatus: [ this.data.userLogonStatus ],
+            userGroupMembership: [ this.data.userGroupMembership ],
+            userRole: [ this.data.userRole ],
+            profileId: [ this.data.profileId ],
+            createdAt: [ { value: this.data.createdAt, disabled: true } ],
+            updatedAt: [ { value: this.data.updatedAt, disabled: true } ],
+            deletedAt: [ { value: this.data.deletedAt, disabled: true } ],
         } );
 
         this.isAdminUser || this.form.disable();
@@ -131,7 +128,7 @@ export class AdminCompanyUserComponent extends BaseDetailClass<CompanyUserType> 
             message: 'Por favor, confirma que la información sea valida'
         } );
 
-        const isConfirmedUpdate = window.confirm( `¿Confirma la actualización en la información del company user ${ this.data!.user_name }?` );
+        const isConfirmedUpdate = window.confirm( `¿Confirma la actualización en la información del company user ${ this.data!.userName }?` );
 
         if ( !isConfirmedUpdate ) return this._toastrNotificationService.info( {
             title: 'Actualización Cancelada',
