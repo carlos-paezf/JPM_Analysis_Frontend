@@ -28,13 +28,32 @@ export class SupportImageComponent {
     ) { }
 
 
+    /**
+     * The `goBack` function removes any not found error status and navigates back to the previous
+     * location.
+     * @returns The `this._location.back()` function is being returned.
+     */
     goBack () {
         this._httpStatusService.removeNotFoundError();
         return this._location.back();
     }
 
+
+    /**
+     * The `goHome` function removes any not found error status and redirects the user to the home
+     * page.
+     */
     goHome () {
         this._httpStatusService.removeNotFoundError();
         window.location.href = "/";
+    }
+
+
+    /**
+     * The `reload` function removes any "Not Found" error messages and reloads the current window.
+     */
+    reload () {
+        this._httpStatusService.removeNotFoundError();
+        window.location.reload();
     }
 }
