@@ -14,8 +14,8 @@ import { ProfilesService } from '../../services/profiles.service';
     styleUrls: [ './functions.component.scss' ]
 } )
 export class FunctionsComponent extends BaseDetailClass<ProfileFunctionType[]> implements OnInit {
-    public override sourceSrcset = "../../../../assets/images/Curiosity people-amico.png";
-    public override imgSrc = "../../../../assets/images/Curiosity people-amico.svg";
+    public sourceSrcset = "../../../../assets/images/Curiosity people-amico.png";
+    public imgSrc = "../../../../assets/images/Curiosity people-amico.svg";
 
     public profiles: ProfileType[] = [];
     public functions: FunctionType[] = [];
@@ -75,7 +75,7 @@ export class FunctionsComponent extends BaseDetailClass<ProfileFunctionType[]> i
      * null if there is no match.
      */
     getProfileFunction ( profileId: string, functionId: string ) {
-        return this.data!.some( e => e.profile_id === profileId && e.function_id === functionId ) ? "✔" : null;
+        return this.data!.some( e => e.profileId === profileId && e.functionId === functionId ) ? "✔" : null;
     }
 
     /**

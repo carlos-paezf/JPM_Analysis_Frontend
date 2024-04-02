@@ -10,28 +10,28 @@ import { CompanyUsersService } from '../../../company-users/services/company-use
 } )
 export class UsersByProfileTableComponent extends InfoTableBaseComponent<CompanyUserType> implements OnInit {
     public override displayedColumns: string[] = [
-        'user_name',
-        'user_status',
-        'email_address',
-        'user_logon_type',
-        'profile_id',
-        'updated_at',
+        'userName',
+        'userStatus',
+        'emailAddress',
+        'userLogonType',
+        'profileId',
+        'updatedAt',
     ];
 
     public override columns: ColumnTableType<CompanyUserType>[] = [
-        { columnDef: 'user_name', header: 'User Name', cell: ( row ) => row.user_name },
-        { columnDef: 'user_status', header: 'Status', cell: ( row ) => row.user_status },
-        { columnDef: 'user_type', header: 'Type', cell: ( row ) => row.user_type },
-        { columnDef: 'employee_id', header: 'Employee ID', cell: ( row ) => row.employee_id },
-        { columnDef: 'email_address', header: 'Email Address', cell: ( row ) => row.email_address },
-        { columnDef: 'user_location', header: 'Location', cell: ( row ) => row.user_location },
-        { columnDef: 'user_country', header: 'Country', cell: ( row ) => row.user_country },
-        { columnDef: 'user_logon_type', header: 'Logon Type', cell: ( row ) => row.user_logon_type },
-        { columnDef: 'user_last_logon_dt', header: 'Last Logon Date', cell: ( row ) => row.user_last_logon_dt },
-        { columnDef: 'user_group_membership', header: 'Group Membership', cell: ( row ) => row.user_group_membership },
-        { columnDef: 'user_role', header: 'Role', cell: ( row ) => row.user_role },
-        { columnDef: 'profile_id', header: 'Profile', cell: ( row ) => row.profile_id },
-        { columnDef: 'updated_at', header: 'Última Actualización', cell: ( row ) => row.updated_at },
+        { columnDef: 'userName', header: 'User Name', cell: ( row ) => row.userName },
+        { columnDef: 'userStatus', header: 'Status', cell: ( row ) => row.userStatus },
+        { columnDef: 'userType', header: 'Type', cell: ( row ) => row.userType },
+        { columnDef: 'employeeId', header: 'Employee ID', cell: ( row ) => row.employeeId },
+        { columnDef: 'emailAddress', header: 'Email Address', cell: ( row ) => row.emailAddress },
+        { columnDef: 'userLocation', header: 'Location', cell: ( row ) => row.userLocation },
+        { columnDef: 'userCountry', header: 'Country', cell: ( row ) => row.userCountry },
+        { columnDef: 'userLogonType', header: 'Logon Type', cell: ( row ) => row.userLogonType },
+        { columnDef: 'userLastLogonDt', header: 'Last Logon Date', cell: ( row ) => row.userLastLogonDt },
+        { columnDef: 'userGroupMembership', header: 'Group Membership', cell: ( row ) => row.userGroupMembership },
+        { columnDef: 'userRole', header: 'Role', cell: ( row ) => row.userRole },
+        { columnDef: 'profileId', header: 'Profile', cell: ( row ) => row.profileId },
+        { columnDef: 'updatedAt', header: 'Última Actualización', cell: ( row ) => row.updatedAt },
     ];
 
     @Input() profileId!: string;

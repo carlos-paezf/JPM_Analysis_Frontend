@@ -62,7 +62,7 @@ export class FunctionFormComponent implements OnChanges {
      */
     formActions () {
         this.form = new FormGroup( {
-            function_name: new FormControl<string>( this.functionData?.function_name ?? '', [ Validators.required ] ),
+            functionName: new FormControl<string>( this.functionData?.functionName ?? '', [ Validators.required ] ),
             profiles: new FormControl<ProfileType[]>( [], [ Validators.required, Validators.minLength( 1 ) ] )
         } );
 
@@ -115,14 +115,14 @@ export class FunctionFormComponent implements OnChanges {
         this.form.markAllAsTouched();
 
         if ( !this.functionId ) {
-            this._functionsService.createFunction( this.form.get( 'function_name' )!.value, this.form.get( 'profiles' )!.value );
+            this._functionsService.createFunction( this.form.get( 'functionName' )!.value, this.form.get( 'profiles' )!.value );
             this._toastrNotificationService.success( {
                 title: 'Función creada',
                 message: 'La función ha sido creada con éxito'
             } );
         } else {
             if ( window.confirm( '¿Está seguro de actualizar la función?' ) ) {
-                this._functionsService.updateFunction( this.functionId, this.form.get( 'function_name' )!.value, this.form.get( 'profiles' )!.value );
+                this._functionsService.updateFunction( this.functionId, this.form.get( 'functionName' )!.value, this.form.get( 'profiles' )!.value );
                 this._toastrNotificationService.info( {
                     title: 'Función actualizada',
                     message: 'La función ha sido actualizada con éxito'

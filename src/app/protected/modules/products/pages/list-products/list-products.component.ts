@@ -10,17 +10,17 @@ import { ProductsService } from '../../services/products.service';
 } )
 export class ListProductsComponent extends InfoTableBaseComponent<ProductType> implements OnInit {
     public override displayedColumns: string[] = [
-        'product_name',
-        'sub_product',
-        'updated_at',
-        'deleted_at',
+        'productName',
+        'subProduct',
+        'updatedAt',
+        'deletedAt',
     ];
 
     public override columns: ColumnTableType<ProductType>[] = [
-        { columnDef: 'product_name', header: 'Nombre del producto', cell: ( row ) => row.product_name },
-        { columnDef: 'sub_product', header: 'Sub-Producto', cell: ( row ) => row.sub_product },
-        { columnDef: 'updated_at', header: 'Última Actualización', cell: ( row ) => row.updated_at },
-        { columnDef: 'deleted_at', header: 'Fecha de Desactivación', cell: ( row ) => row.deleted_at },
+        { columnDef: 'productName', header: 'Nombre del producto', cell: ( row ) => row.productName },
+        { columnDef: 'subProduct', header: 'Sub-Producto', cell: ( row ) => row.subProduct },
+        { columnDef: 'updatedAt', header: 'Última Actualización', cell: ( row ) => row.updatedAt },
+        { columnDef: 'deletedAt', header: 'Fecha de Desactivación', cell: ( row ) => row.deletedAt },
     ];
 
     public deleteProduct!: Function;

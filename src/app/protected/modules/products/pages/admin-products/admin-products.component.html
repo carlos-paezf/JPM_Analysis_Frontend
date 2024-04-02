@@ -1,11 +1,8 @@
-<h2>Información detallada del producto "{{ data?.sub_product ?? data?.product_name ?? id }}"</h2>
+<h2>Información detallada del producto "{{ data?.subProduct ?? data?.productName ?? id }}"</h2>
 
 <ng-container *ngIf="isLoading || !data; else productInfo">
     <div class="loading__section">
         <mat-spinner *ngIf="isLoading"></mat-spinner>
-
-        <app-support-image *ngIf="!data && !isLoading" [imgSrc]="imgSrc" [sourceSrcset]="sourceSrcset"
-            alt="Curiosity People"></app-support-image>
     </div>
 </ng-container>
 
@@ -17,23 +14,23 @@
                 <div class="form-control">
                     <div class="label">
                         <mat-icon class="opacity_icon" fontIcon="person"></mat-icon>
-                        <label for="product_name">Nombre del producto</label>
+                        <label for="productName">Nombre del producto</label>
                     </div>
-                    <input matInput formControlName="product_name" id="product_name" [disabled]="true">
+                    <input matInput formControlName="productName" id="productName" [disabled]="true">
                 </div>
 
                 <div class="form-control">
                     <div class="label">
                         <mat-icon class="opacity_icon" fontIcon="person"></mat-icon>
-                        <label for="sub_product">Sub Producto</label>
+                        <label for="subProduct">Sub Producto</label>
                     </div>
-                    <input matInput formControlName="sub_product" id="sub_product">
+                    <input matInput formControlName="subProduct" id="subProduct">
                 </div>
             </div>
         </section>
 
-        <app-control-dates-form [createdAt]="data!.created_at" [updatedAt]="data!.updated_at"
-            [deletedAt]="data?.deleted_at" />
+        <app-control-dates-form [createdAt]="data!.createdAt" [updatedAt]="data!.updatedAt"
+            [deletedAt]="data?.deletedAt" />
 
         <ng-container *ngIf="isAdminUser">
             <button mat-raised-button color="primary" [disabled]="!isDataChanged">

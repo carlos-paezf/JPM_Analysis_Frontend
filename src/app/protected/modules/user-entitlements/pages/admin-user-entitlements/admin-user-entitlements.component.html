@@ -3,9 +3,6 @@
 <ng-container *ngIf="isLoading || !data; else userEntitlementInfo">
     <div class="loading__section">
         <mat-spinner *ngIf="isLoading"></mat-spinner>
-
-        <app-support-image *ngIf="!data && !isLoading" [imgSrc]="imgSrc" [sourceSrcset]="sourceSrcset"
-            alt="Curiosity People"></app-support-image>
     </div>
 </ng-container>
 
@@ -17,47 +14,47 @@
                 <div class="form-control">
                     <div class="label">
                         <mat-icon class="opacity_icon" fontIcon="person"></mat-icon>
-                        <label for="access_id">Access Id</label>
+                        <label for="accessId">Access Id</label>
                     </div>
-                    <input matInput formControlName="access_id" id="access_id" [disabled]="true">
+                    <input matInput formControlName="accessId" id="accessId" [disabled]="true">
                 </div>
 
                 <div class="form-control">
                     <div class="label">
                         <mat-icon class="opacity_icon" fontIcon="person"></mat-icon>
-                        <label for="product_id">Product Id</label>
+                        <label for="productId">Product Id</label>
                     </div>
-                    <input matInput formControlName="product_id" id="product_id">
+                    <input matInput formControlName="productId" id="productId">
                 </div>
 
                 <div class="form-control">
                     <div class="label">
                         <mat-icon class="opacity_icon" fontIcon="mail"></mat-icon>
-                        <label for="function_id">Function Id</label>
+                        <label for="functionId">Function Id</label>
                     </div>
-                    <input matInput formControlName="function_id" id="function_id">
+                    <input matInput formControlName="functionId" id="functionId">
                 </div>
 
                 <div class="form-control">
                     <div class="label">
                         <mat-icon class="opacity_icon" fontIcon="assignment_ind"></mat-icon>
-                        <label for="function_type">Function Type</label>
+                        <label for="functionType">Function Type</label>
                     </div>
-                    <input matInput formControlName="function_type" id="function_type">
+                    <input matInput formControlName="functionType" id="functionType">
                 </div>
 
                 <div class="form-control">
                     <div class="label">
                         <mat-icon class="opacity_icon" fontIcon="assignment_ind"></mat-icon>
-                        <label for="account_number">Account number</label>
+                        <label for="accountNumber">Account number</label>
                     </div>
-                    <input matInput formControlName="account_number" id="account_number">
+                    <input matInput formControlName="accountNumber" id="accountNumber">
                 </div>
             </div>
         </section>
 
-        <app-control-dates-form [createdAt]="data!.created_at" [updatedAt]="data!.updated_at"
-            [deletedAt]="data?.deleted_at" />
+        <app-control-dates-form [createdAt]="data!.createdAt" [updatedAt]="data!.updatedAt"
+            [deletedAt]="data?.deletedAt" />
 
         <ng-container *ngIf="isAdminUser">
             <button mat-raised-button color="primary" [disabled]="!isDataChanged">

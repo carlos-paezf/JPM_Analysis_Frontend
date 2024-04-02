@@ -34,8 +34,8 @@ export class FunctionsService {
         };
 
         response.profiles = PROFILES_FUNCTIONS
-            .filter( e => e.function_id === id )
-            .map( e => e.profile_id );
+            .filter( e => e.functionId === id )
+            .map( e => e.profileId );
 
         return of( response ).pipe( delay( Math.random() * 1000 ) );
     }
@@ -53,8 +53,8 @@ export class FunctionsService {
         const data: FunctionType[] = [];
 
         for ( const e of PROFILES_FUNCTIONS ) {
-            if ( e.profile_id === profileId ) {
-                const func = FUNCTIONS.find( ( fx ) => fx.id === e.function_id );
+            if ( e.profileId === profileId ) {
+                const func = FUNCTIONS.find( ( fx ) => fx.id === e.functionId );
                 func && data.push( func );
             }
         }
@@ -71,14 +71,14 @@ export class FunctionsService {
         const data: FunctionType[] = [];
 
         for ( const e of PROFILES_FUNCTIONS ) {
-            if ( e.profile_id === profileId ) {
-                const func = FUNCTIONS.find( ( fx ) => fx.id === e.function_id );
+            if ( e.profileId === profileId ) {
+                const func = FUNCTIONS.find( ( fx ) => fx.id === e.functionId );
                 func && data.push( func );
             }
         }
 
         const nData: FunctionType[] = FUNCTIONS.filter( x => {
-            return !data.some( ( y ) => y.id === x.id && y.function_name === x.function_name );
+            return !data.some( ( y ) => y.id === x.id && y.functionName === x.functionName );
         } );
 
         const response: ResponseSheetsType<FunctionType> = {
@@ -90,13 +90,13 @@ export class FunctionsService {
     }
 
     public updateProfileFunctions ( profileId: string, functions: FunctionType[] ) {
-        const profilesFunctions: ProfileFunctionType[] = PROFILES_FUNCTIONS.filter( ( x ) => x.profile_id !== profileId );
+        const profilesFunctions: ProfileFunctionType[] = PROFILES_FUNCTIONS.filter( ( x ) => x.profileId !== profileId );
 
         for ( const fun of functions ) {
             profilesFunctions.push( {
-                id: profilesFunctions.length + 1,
-                function_id: fun.id,
-                profile_id: profileId
+                id: `${ fun.id }_${ profileId }`,
+                functionId: fun.id,
+                profileId: profileId
             } );
         }
 
@@ -113,17 +113,17 @@ export class FunctionsService {
         const functionID = functionName.trim().toLowerCase().replace( ' - ', '_' ).replace( ', ', '_' ).replace( ' ', '_' ).replace( '\ufeff', '' ).replace( '(', '' ).replace( ')', '' );
         FUNCTIONS[ FUNCTIONS.length ] = {
             id: functionID,
-            function_name: functionName,
-            created_at: new Date(),
-            updated_at: new Date(),
-            deleted_at: null
+            functionName: functionName,
+            createdAt: new Date(),
+            updatedAt: new Date(),
+            deletedAt: null
         };
 
         for ( const p of profiles ) {
             PROFILES_FUNCTIONS[ PROFILES_FUNCTIONS.length ] = {
-                id: PROFILES_FUNCTIONS.length,
-                function_id: functionID,
-                profile_id: p.id
+                id: `${ functionID }_${ p.id }`,
+                functionId: functionID,
+                profileId: p.id
             };
         }
 
@@ -136,18 +136,18 @@ export class FunctionsService {
         if ( index !== -1 ) {
             FUNCTIONS[ index ] = {
                 ...FUNCTIONS[ index ],
-                function_name: functionName,
-                updated_at: new Date()
+                functionName: functionName,
+                updatedAt: new Date()
             };
         }
 
-        const newProfilesFunctions = PROFILES_FUNCTIONS.filter( pf => pf.function_id !== functionId );
+        const newProfilesFunctions = PROFILES_FUNCTIONS.filter( pf => pf.functionId !== functionId );
 
         for ( const p of profiles ) {
             newProfilesFunctions[ newProfilesFunctions.length ] = {
-                id: PROFILES_FUNCTIONS.length,
-                profile_id: p.id,
-                function_id: functionId
+                id: `${ functionId }_${ p.id }`,
+                profileId: p.id,
+                functionId: functionId
             };
         }
 

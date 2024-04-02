@@ -16,20 +16,20 @@
             <div class="form-control">
                 <div class="label">
                     <mat-icon class="opacity_icon" fontIcon="functions"></mat-icon>
-                    <label for="function_name">Nombre de la función:</label>
+                    <label for="functionName">Nombre de la función:</label>
                 </div>
-                <input matInput formControlName="function_name" id="function_name">
+                <input matInput formControlName="functionName" id="functionName">
             </div>
 
             <div class="form-control">
                 <div class="label">
                     <mat-icon class="opacity_icon" fontIcon="person"></mat-icon>
-                    <label for="profile_name">Perfiles asociados:</label>
+                    <label for="profileName">Perfiles asociados:</label>
                 </div>
                 <ul>
                     <li *ngFor="let profile of profiles">
                         <mat-checkbox (change)="toggleProfile(profile)"
-                            [checked]="checked(profile)">{{ profile.profile_name }}</mat-checkbox>
+                            [checked]="checked(profile)">{{ profile.profileName }}</mat-checkbox>
                     </li>
                 </ul>
             </div>

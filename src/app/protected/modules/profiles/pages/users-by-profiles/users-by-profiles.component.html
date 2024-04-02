@@ -17,10 +17,10 @@
             <mat-expansion-panel *ngFor="let profile of profilesData">
                 <mat-expansion-panel-header>
                     <mat-panel-title>
-                        {{ profile.profile_name }}
+                        {{ profile.profileName }}
                     </mat-panel-title>
                     <mat-panel-description>
-                        Última actualización: {{profile.updated_at | date}}
+                        Última actualización: {{profile.updatedAt | date}}
                     </mat-panel-description>
                 </mat-expansion-panel-header>
 

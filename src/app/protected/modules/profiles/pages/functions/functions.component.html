@@ -26,12 +26,12 @@
         <thead>
             <tr>
                 <th>Función - Perfil</th>
-                <th *ngFor="let profile of profiles">{{ profile.profile_name }}</th>
+                <th *ngFor="let profile of profiles">{{ profile.profileName }}</th>
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let function of functions" (click)="onClick(function)">
-                <th>{{ function.function_name }}</th>
+                <th>{{ function.functionName }}</th>
                 <td *ngFor="let profile of profiles">{{ getProfileFunction(profile.id, function.id) }}</td>
             </tr>
         </tbody>

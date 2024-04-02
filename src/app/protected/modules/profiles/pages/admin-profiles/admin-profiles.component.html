@@ -3,9 +3,6 @@
 <ng-container *ngIf="isLoading || !data; else profileInfo">
     <div class="loading__section">
         <mat-spinner *ngIf="isLoading"></mat-spinner>
-
-        <app-support-image *ngIf="!data && !isLoading" [imgSrc]="imgSrc" [sourceSrcset]="sourceSrcset"
-            alt="Curiosity People"></app-support-image>
     </div>
 </ng-container>
 
@@ -25,9 +22,9 @@
                 <div class="form-control">
                     <div class="label">
                         <mat-icon class="opacity_icon" fontIcon="person"></mat-icon>
-                        <label for="profile_name">Profile Name:</label>
+                        <label for="profileName">Profile Name:</label>
                     </div>
-                    <input matInput formControlName="profile_name" id="profile_name">
+                    <input matInput formControlName="profileName" id="profileName">
                 </div>
             </div>
         </section>
@@ -51,7 +48,7 @@
                                 </li>
                                 <li *ngFor="let func of associatedFunctions">
                                     <mat-checkbox
-                                        (change)="toggleFunctionsRemove(func)">{{ func.function_name }}</mat-checkbox>
+                                        (change)="toggleFunctionsRemove(func)">{{ func.functionName }}</mat-checkbox>
                                 </li>
                             </ul>
                         </div>
@@ -71,7 +68,7 @@
                                 </li>
                                 <li *ngFor="let func of availableFunctions">
                                     <mat-checkbox
-                                        (change)="toggleFunctionsAdd(func)">{{ func.function_name }}</mat-checkbox>
+                                        (change)="toggleFunctionsAdd(func)">{{ func.functionName }}</mat-checkbox>
                                 </li>
                             </ul>
                         </div>
@@ -81,8 +78,7 @@
             </div>
         </section>
 
-        <app-control-dates-form [createdAt]="data!.created_at" [updatedAt]="data!.updated_at"
-            [deletedAt]="data?.deleted_at" />
+        <app-control-dates-form [createdAt]="data!.createdAt" [updatedAt]="data!.updatedAt" [deletedAt]="null" />
 
         <ng-container *ngIf="isAdminUser">
             <button mat-raised-button color="primary" [disabled]="!isDataChanged">

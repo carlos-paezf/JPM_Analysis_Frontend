@@ -20,7 +20,7 @@ export class UserEntitlementsService {
         return of( response ).pipe( delay( Math.random() * 1000 ) );
     }
 
-    public getUserEntitlementById ( id: number ): Observable<UserEntitlementType | null> {
+    public getUserEntitlementById ( id: string ): Observable<UserEntitlementType | null> {
         const response = USER_ENTITLEMENTS.find( userEntitlement => userEntitlement.id === id ) || null;
 
         return of( response ).pipe( delay( Math.random() * 1000 ) );
@@ -30,27 +30,27 @@ export class UserEntitlementsService {
         const index = USER_ENTITLEMENTS.findIndex( userEntitlement => userEntitlement.id === id );
 
         if ( index !== -1 ) {
-            USER_ENTITLEMENTS[ index ] = { ...updatedData, id: USER_ENTITLEMENTS[ index ].id, updated_at: new Date() };
+            USER_ENTITLEMENTS[ index ] = { ...updatedData, id: USER_ENTITLEMENTS[ index ].id, updatedAt: new Date() };
         }
 
         return of( true );
     }
 
-    public deleteUserEntitlement ( id: number ): Observable<boolean> {
+    public deleteUserEntitlement ( id: string ): Observable<boolean> {
         const index = USER_ENTITLEMENTS.findIndex( userEntitlement => userEntitlement.id === id );
 
         if ( index !== -1 ) {
-            USER_ENTITLEMENTS[ index ] = { ...USER_ENTITLEMENTS[ index ], deleted_at: new Date() };
+            USER_ENTITLEMENTS[ index ] = { ...USER_ENTITLEMENTS[ index ], deletedAt: new Date() };
         }
 
         return of( true );
     }
 
-    public reactivateUserEntitlement ( id: number ): Observable<boolean> {
+    public reactivateUserEntitlement ( id: string ): Observable<boolean> {
         const index = USER_ENTITLEMENTS.findIndex( userEntitlement => userEntitlement.id === id );
 
         if ( index !== -1 ) {
-            USER_ENTITLEMENTS[ index ] = { ...USER_ENTITLEMENTS[ index ], deleted_at: null };
+            USER_ENTITLEMENTS[ index ] = { ...USER_ENTITLEMENTS[ index ], deletedAt: null };
         }
 
         return of( true );

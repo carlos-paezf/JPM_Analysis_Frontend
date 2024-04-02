@@ -27,7 +27,7 @@ export class ProductsService {
         const index = PRODUCTS.findIndex( product => product.id === id );
 
         if ( index !== -1 ) {
-            PRODUCTS[ index ] = { ...updatedData, id: PRODUCTS[ index ].id, updated_at: new Date() };
+            PRODUCTS[ index ] = { ...updatedData, id: PRODUCTS[ index ].id, updatedAt: new Date() };
         }
 
         return of( true );
@@ -37,7 +37,7 @@ export class ProductsService {
         const index = PRODUCTS.findIndex( product => product.id === id );
 
         if ( index !== -1 ) {
-            PRODUCTS[ index ] = { ...PRODUCTS[ index ], deleted_at: new Date() };
+            PRODUCTS[ index ] = { ...PRODUCTS[ index ], deletedAt: new Date() };
         }
 
         return of( true );
@@ -47,7 +47,7 @@ export class ProductsService {
         const index = PRODUCTS.findIndex( product => product.id === id );
 
         if ( index !== -1 ) {
-            PRODUCTS[ index ] = { ...PRODUCTS[ index ], deleted_at: null };
+            PRODUCTS[ index ] = { ...PRODUCTS[ index ], deletedAt: null };
         }
 
         return of( true );

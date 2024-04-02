@@ -19,9 +19,6 @@ import { AccountsService } from '../../../accounts/services/accounts.service';
     styleUrls: [ './admin-user-entitlements.component.scss' ]
 } )
 export class AdminUserEntitlementsComponent extends BaseDetailClass<UserEntitlementType> implements FormBaseType, OnInit {
-    public override sourceSrcset = "../../../../assets/images/Curiosity people-amico.png";
-    public override imgSrc = "../../../../assets/images/Curiosity people-amico.svg";
-
     public form!: FormGroup;
     public submitted: boolean = false;
 
@@ -61,11 +58,11 @@ export class AdminUserEntitlementsComponent extends BaseDetailClass<UserEntitlem
 
             forkJoin(
                 [
-                    this._userEntitlementsService.getUserEntitlementById( Number( this.id ) ),
+                    this._userEntitlementsService.getUserEntitlementById( this.id ),
                     this._companyUsersService.getCompanyUsers(),
                     this._productsService.getProducts(),
                     this._functionsService.getFunctions(),
-                    this._accountsService.getAccounts()
+                    this._accountsService.getAll()
                 ]
             ).subscribe( {
                 next: ( [ userEntitlementsResponse, companyUsersResponse, productsResponse, functionsResponse, accountsResponse ] ) => {
@@ -98,14 +95,14 @@ export class AdminUserEntitlementsComponent extends BaseDetailClass<UserEntitlem
         if ( !this.data ) return;
 
         this.form = this._formBuilder.group( {
-            access_id: [ this.data.access_id ],
-            product_id: [ this.data.product_id ],
-            function_id: [ this.data.function_id ],
-            function_type: [ this.data.function_type ],
-            account_number: [ this.data.account_number ],
-            createdAt: [ { value: this.data.created_at, disabled: true } ],
-            updatedAt: [ { value: this.data.updated_at, disabled: true } ],
-            deletedAt: [ { value: this.data.deleted_at, disabled: true } ],
+            accessId: [ this.data.accessId ],
+            productId: [ this.data.productId ],
+            functionId: [ this.data.functionId ],
+            functionType: [ this.data.functionType ],
+            accountNumber: [ this.data.accountNumber ],
+            createdAt: [ { value: this.data.createdAt, disabled: true } ],
+            updatedAt: [ { value: this.data.updatedAt, disabled: true } ],
+            deletedAt: [ { value: this.data.deletedAt, disabled: true } ],
         } );
 
         this.isAdminUser || this.form.disable();
@@ -132,7 +129,7 @@ export class AdminUserEntitlementsComponent extends BaseDetailClass<UserEntitlem
             message: 'Por favor, confirma que la información sea valida'
         } );
 
-        const isConfirmedUpdate = window.confirm( `¿Confirma la actualización en la información del user entitlement ${ this.data!.account_number }?` );
+        const isConfirmedUpdate = window.confirm( `¿Confirma la actualización en la información del user entitlement ${ this.data!.accountNumber }?` );
 
         if ( !isConfirmedUpdate ) return this._toastrNotificationService.info( {
             title: 'Actualización Cancelada',

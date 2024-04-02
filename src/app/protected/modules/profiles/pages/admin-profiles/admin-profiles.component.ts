@@ -17,9 +17,6 @@ import { ProfilesService } from '../../services/profiles.service';
     styleUrls: [ './admin-profiles.component.scss' ]
 } )
 export class AdminProfilesComponent extends BaseDetailClass<ProfileType> implements FormBaseType, OnInit {
-    public override sourceSrcset = "../../../../assets/images/Curiosity people-amico.png";
-    public override imgSrc = "../../../../assets/images/Curiosity people-amico.svg";
-
     public form!: FormGroup<any>;
     public submitted: boolean = false;
 
@@ -74,10 +71,9 @@ export class AdminProfilesComponent extends BaseDetailClass<ProfileType> impleme
 
         this.form = this._formBuilder.group( {
             id: [ this.data.id ],
-            profile_name: [ this.data.profile_name ],
-            createdAt: [ { value: this.data.created_at, disabled: true } ],
-            updatedAt: [ { value: this.data.updated_at, disabled: true } ],
-            deletedAt: [ { value: this.data.deleted_at, disabled: true } ],
+            profileName: [ this.data.profileName ],
+            createdAt: [ { value: this.data.createdAt, disabled: true } ],
+            updatedAt: [ { value: this.data.updatedAt, disabled: true } ],
         } );
 
         this.isAdminUser || this.form.disable();
@@ -155,7 +151,7 @@ export class AdminProfilesComponent extends BaseDetailClass<ProfileType> impleme
             message: 'Por favor, confirma que la información sea valida'
         } );
 
-        const isConfirmedUpdate = window.confirm( `¿Confirma la actualización en la información del perfil ${ this.data!.profile_name }?` );
+        const isConfirmedUpdate = window.confirm( `¿Confirma la actualización en la información del perfil ${ this.data!.profileName }?` );
 
         if ( !isConfirmedUpdate ) return this._toastrNotificationService.info( {
             title: 'Actualización Cancelada',

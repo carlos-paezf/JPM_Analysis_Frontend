@@ -10,23 +10,23 @@ import { UserEntitlementsService } from '../../services/user-entitlements.servic
 } )
 export class ListUserEntitlementsComponent extends InfoTableBaseComponent<UserEntitlementType> implements OnInit {
     public override displayedColumns: string[] = [
-        'access_id',
-        'product_id',
-        'function_type',
-        'function_id',
-        'account_number',
-        'updated_at',
-        'deleted_at',
+        'accessId',
+        'productId',
+        'functionType',
+        'functionId',
+        'accountNumber',
+        'updatedAt',
+        'deletedAt',
     ];
 
     public override columns: ColumnTableType<UserEntitlementType>[] = [
-        { columnDef: 'access_id', header: 'Access ID', cell: ( row ) => row.access_id },
-        { columnDef: 'product_id', header: 'Product ID', cell: ( row ) => row.product_id },
-        { columnDef: 'function_type', header: 'Function Type', cell: ( row ) => row.function_type },
-        { columnDef: 'function_id', header: 'Function ID', cell: ( row ) => row.function_id },
-        { columnDef: 'account_number', header: 'Account Number', cell: ( row ) => row.account_number },
-        { columnDef: 'updated_at', header: 'Última Actualización', cell: ( row ) => row.updated_at },
-        { columnDef: 'deleted_at', header: 'Fecha de Desactivación', cell: ( row ) => row.deleted_at },
+        { columnDef: 'accessId', header: 'Access ID', cell: ( row ) => row.accessId },
+        { columnDef: 'productId', header: 'Product ID', cell: ( row ) => row.productId },
+        { columnDef: 'functionType', header: 'Function Type', cell: ( row ) => row.functionType },
+        { columnDef: 'functionId', header: 'Function ID', cell: ( row ) => row.functionId },
+        { columnDef: 'accountNumber', header: 'Account Number', cell: ( row ) => row.accountNumber },
+        { columnDef: 'updatedAt', header: 'Última Actualización', cell: ( row ) => row.updatedAt },
+        { columnDef: 'deletedAt', header: 'Fecha de Desactivación', cell: ( row ) => row.deletedAt },
     ];
 
     public deleteUserEntitlement!: Function;

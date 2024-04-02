@@ -29,7 +29,7 @@ export class ProfilesService {
     }
 
     public getCompanyUsersByProfileId ( id: string ): Observable<ResponseSheetsType<CompanyUserType> | null> {
-        const companyUsers = COMPANY_USERS.filter( user => user.profile_id === id );
+        const companyUsers = COMPANY_USERS.filter( user => user.profileId === id );
 
         const response: ResponseSheetsType<CompanyUserType> = {
             data: companyUsers,
@@ -46,17 +46,7 @@ export class ProfilesService {
 
         if ( index !== -1 ) {
             // PROFILES[ index ] = { ...updatedData, id: PROFILES[ index ].id };
-            PROFILES[ index ] = { ...PROFILES[ index ], ...updatedData, updated_at: new Date() };
-        }
-
-        return of( true );
-    }
-
-    public deleteProfile ( id: string ): Observable<boolean> {
-        const index = PROFILES.findIndex( profile => profile.id === id );
-
-        if ( index !== -1 ) {
-            PROFILES[ index ] = { ...PROFILES[ index ], deleted_at: new Date() };
+            PROFILES[ index ] = { ...PROFILES[ index ], ...updatedData, updatedAt: new Date() };
         }
 
         return of( true );

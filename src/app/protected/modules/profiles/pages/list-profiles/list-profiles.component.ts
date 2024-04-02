@@ -12,18 +12,16 @@ import { ProfilesService } from '../../services/profiles.service';
 export class ListProfilesComponent extends InfoTableBaseComponent<ProfileType> implements OnInit {
     public override displayedColumns: string[] = [
         'id',
-        'profile_name',
-        // 'created_at',
-        'updated_at',
-        'deleted_at',
+        'profileName',
+        'createdAt',
+        'updatedAt',
     ];
 
     public override columns: ColumnTableType<ProfileType>[] = [
         { columnDef: 'id', header: 'ID', cell: ( row ) => row.id },
-        { columnDef: 'profile_name', header: 'Nombre de Perfil', cell: ( row ) => row.profile_name },
-        { columnDef: 'created_at', header: 'Fecha de creación', cell: ( row ) => row.created_at },
-        { columnDef: 'updated_at', header: 'Fecha de última actualización', cell: ( row ) => row.updated_at },
-        { columnDef: 'deleted_at', header: 'Fecha de desactivación', cell: ( row ) => row.deleted_at },
+        { columnDef: 'profileName', header: 'Nombre de Perfil', cell: ( row ) => row.profileName },
+        { columnDef: 'createdAt', header: 'Fecha de creación', cell: ( row ) => row.createdAt },
+        { columnDef: 'updatedAt', header: 'Fecha de última actualización', cell: ( row ) => row.updatedAt },
     ];
 
     public deleteProfile!: Function;
