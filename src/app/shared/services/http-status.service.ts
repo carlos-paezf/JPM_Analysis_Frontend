@@ -10,13 +10,29 @@ import { BehaviorSubject } from 'rxjs';
     providedIn: 'root'
 } )
 export class HttpStatusService {
+    private _unauthorizedErrorEmitter = new BehaviorSubject<boolean>( false );
     private _forbiddenErrorEmitter = new BehaviorSubject<boolean>( false );
     private _notFoundErrorEmitter = new BehaviorSubject<boolean>( false );
     private _internalServerErrorEmitter = new BehaviorSubject<boolean>( false );
 
+    public currentStatusUnauthorizedError = this._unauthorizedErrorEmitter.asObservable();
     public currentStatusForbiddenError = this._forbiddenErrorEmitter.asObservable();
     public currentStatusNotFoundError = this._notFoundErrorEmitter.asObservable();
     public currentStatusInternalServerError = this._internalServerErrorEmitter.asObservable();
+
+    /**
+     * This function emits an event to report a Unauthorized error.
+     */
+    reportUnauthorizedError () {
+        this._unauthorizedErrorEmitter.next( true );
+    }
+
+    /**
+     * The function removes the Unauthorized error by emitting a false value.
+     */
+    removeUnauthorizedError () {
+        this._unauthorizedErrorEmitter.next( false );
+    }
 
     /**
      * This function emits an event to report a forbidden error.
