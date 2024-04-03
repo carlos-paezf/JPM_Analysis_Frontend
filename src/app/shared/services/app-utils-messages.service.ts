@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { ToastrNotificationService } from 'src/app/shared/services/toastr-notification.service';
+
+import { ToastrNotificationService } from './toastr-notification.service';
 
 
 @Injectable( {
@@ -44,6 +45,17 @@ export class AppUtilsMessagesService {
         } );
     }
 
+
+    /**
+     * The function `showCreatedSuccessMessage` displays a success message for a successful record
+     * create.
+     */
+    showCreatedSuccessMessage (): void {
+        this._toastrNotificationService.success( {
+            title: 'Creación exitosa',
+            message: 'La información del registro ha sido creada correctamente'
+        } );
+    }
 
     /**
      * The function `showUpdateSuccessMessage` displays a success message for a successful record
