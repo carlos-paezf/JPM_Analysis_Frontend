@@ -22,7 +22,7 @@ import { ToastrNotificationService } from '../../../../../shared/services/toastr
 } )
 export class FormComponent extends CustomValidators implements FormBaseType, OnInit {
     public fileControl = new FormControl<File | null>( null, [ Validators.required ] );
-    public fileTypeControl = new FormControl( FileTypeEnum.analysis, [ Validators.required ] );
+    public fileTypeControl = new FormControl( FileTypeEnum.compare, [ Validators.required ] );
     public observationsControl = new FormControl<string | null>( null );
 
     public form!: FormGroup;
@@ -53,7 +53,7 @@ export class FormComponent extends CustomValidators implements FormBaseType, OnI
      * `fileTypeControl` is falsy.
      */
     getFileTypeValue (): FileTypeEnum {
-        return this.fileTypeControl.value || FileTypeEnum.analysis;
+        return this.fileTypeControl.value || FileTypeEnum.compare;
     }
 
     /**
