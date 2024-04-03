@@ -65,7 +65,7 @@
                             Ver/Editar información
                         </button>
 
-                        <button *ngIf="deleteFunction !== undefined && !row.deletedAt" mat-fab extended color="warn"
+                        <button *ngIf="deactivateFunction !== undefined && !row.deletedAt" mat-fab extended color="warn"
                             (click)="deleteItem(row.id || row.accessId || row.accountNumber); reloadData()">
                             <mat-icon>delete</mat-icon>
                             Desactivar item

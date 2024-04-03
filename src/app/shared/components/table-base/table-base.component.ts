@@ -52,7 +52,7 @@ export class TableBaseComponent implements OnInit, AfterViewInit {
     @Input() public columns: ColumnTableType<any>[] = [];
     @Input() public stickyColumn: string = 'userName';
     @Input() public baseUrl!: string;
-    @Input() public deleteFunction!: Function;
+    @Input() public deactivateFunction!: Function;
     @Input() public reactivateFunction!: Function;
 
     public expandedRow: any | null;
@@ -179,7 +179,7 @@ export class TableBaseComponent implements OnInit, AfterViewInit {
      */
     deleteItem ( id: string ) {
         if ( window.confirm( `¿Está seguro de eliminar el item con llave "${ id }"?` ) ) {
-            this.deleteFunction( id );
+            this.deactivateFunction( id );
         }
         return;
     }
