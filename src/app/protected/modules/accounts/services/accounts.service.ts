@@ -1,7 +1,7 @@
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
 
-import { BaseServiceWithSoftDelete } from 'src/app/shared/classes/base-service.class';
+import { BaseServiceWithSoftDelete } from '../../../../shared/classes/base-service.class';
 import { AccountEagerType, AccountType } from '../../../../shared/types';
 
 
