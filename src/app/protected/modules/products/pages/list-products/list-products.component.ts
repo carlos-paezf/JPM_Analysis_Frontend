@@ -1,14 +1,20 @@
-import { Component, OnInit } from '@angular/core';
-import { ColumnTableType, ProductType } from '../../../../../shared/types';
-import { InfoTableBaseComponent } from '../../../../../shared/classes/sheet-base-component.class';
+import { Component } from '@angular/core';
+
+import { ListEntityBase } from '../../../../../shared/classes/list-entity-base.class';
+import { AppUtilsMessagesService } from '../../../../../shared/services/app-utils-messages.service';
+import { ColumnTableType, ProductEagerType, ProductType } from '../../../../../shared/types';
 import { ProductsService } from '../../services/products.service';
 
+
+/**
+ * @author cpaezfer
+ */
 @Component( {
     selector: 'app-list-products',
     templateUrl: './list-products.component.html',
     styleUrls: [ './list-products.component.scss' ]
 } )
-export class ListProductsComponent extends InfoTableBaseComponent<ProductType> implements OnInit {
+export class ListProductsComponent extends ListEntityBase<ProductType, ProductEagerType> {
     public override displayedColumns: string[] = [
         'productName',
         'subProduct',
@@ -23,26 +29,10 @@ export class ListProductsComponent extends InfoTableBaseComponent<ProductType> i
         { columnDef: 'deletedAt', header: 'Fecha de Desactivación', cell: ( row ) => row.deletedAt },
     ];
 
-    public deleteProduct!: Function;
-    public reactivateProduct!: Function;
-
-    constructor ( private _productsService: ProductsService ) {
-        super();
-    }
-
-    /**
-     * The ngOnInit function retrieves users data from a service and assigns it to the component's data
-     * property, while also updating the component's isLoadingResults and isEmptyTable properties
-     * accordingly.
-     */
-    ngOnInit (): void {
-        this._productsService.getProducts()
-            .subscribe( ( response ) => {
-                this.data = response.data;
-                this.isEmptyTable = ( response.data.length <= 0 );
-                this.isLoadingResults = false;
-            } );
-        this.deleteProduct = this._productsService.deleteProduct;
-        this.reactivateProduct = this._productsService.reactivateProduct;
+    constructor (
+        _appUtilsMessagesService: AppUtilsMessagesService,
+        _productsService: ProductsService
+    ) {
+        super( _appUtilsMessagesService, _productsService );
     }
 }
