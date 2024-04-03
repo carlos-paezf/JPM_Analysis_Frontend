@@ -1,7 +1,8 @@
 import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, catchError, throwError } from 'rxjs';
-import { HttpStatusService } from 'src/app/shared/services/http-status.service';
+
+import { HttpStatusService } from '../services/http-status.service';
 
 /**
  * @author cpaezfer
