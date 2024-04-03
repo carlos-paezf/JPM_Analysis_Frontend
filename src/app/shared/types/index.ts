@@ -3,6 +3,7 @@ import { FormGroup } from "@angular/forms";
 export {
     AccountEagerType,
     AccountType,
+    CompanyUserEagerType,
     CompanyUserType,
     ControlDateType,
     FunctionType,
@@ -10,6 +11,7 @@ export {
     ProductAccountEagerType,
     ProductAccountType,
     ProductType,
+    ProfileEagerType,
     ProfileFunctionType,
     ProfileType,
     UserEntitlementType,

@@ -97,7 +97,7 @@ export const SIDENAV_ITEMS: SidenavLinkType[] = [
         requiresAdmin: false
     },
     {
-        label: 'Clientes',
+        label: 'Productos - Cuentas',
         icon: 'account_balance_wallet',
         routeLink: 'clients',
         requiresAdmin: false

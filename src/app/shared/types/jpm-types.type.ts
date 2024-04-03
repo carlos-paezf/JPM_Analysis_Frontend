@@ -4,6 +4,7 @@ export type ControlDateType = {
     deletedAt: Date | null;
 };
 
+
 export type ProfileType = {
     id: string;
     profileName: string;
@@ -11,15 +12,24 @@ export type ProfileType = {
     updatedAt: Date;
 };
 
+
+export type ProfileEagerType = ProfileType & {
+    companyUsers: CompanyUserType[];
+    profilesFunctions: ProfileFunctionType[];
+};
+
+
 export type FunctionType = ControlDateType & {
     id: string;
     functionName: string;
 };
 
+
 export type FunctionEagerLoadingType =
     FunctionType & {
         profiles: string[];
     };
+
 
 export type ProductType = ControlDateType & {
     id: string;
@@ -27,11 +37,13 @@ export type ProductType = ControlDateType & {
     subProduct: string | null;
 };
 
+
 export type ProfileFunctionType = {
     id: string;
     profileId: string;
     functionId: string;
 };
+
 
 export type ProfileFunctionEagerLoadingType =
     ProfileFunctionType
@@ -39,6 +51,7 @@ export type ProfileFunctionEagerLoadingType =
         profile: ProfileType;
         function: FunctionType;
     };
+
 
 export type CompanyUserType = ControlDateType & {
     accessId: string;
@@ -57,6 +70,13 @@ export type CompanyUserType = ControlDateType & {
     profileId: string;
 };
 
+
+export type CompanyUserEagerType = CompanyUserType & {
+    profile: ProfileType;
+    userEntitlements: UserEntitlementType;
+};
+
+
 export type AccountType = ControlDateType & {
     accountNumber: string;
     accountName: string;
@@ -65,10 +85,12 @@ export type AccountType = ControlDateType & {
 };
 
 
+
 export type AccountEagerType = AccountType & {
     userEntitlements: UserEntitlementType[];
     productsAccounts: ProductAccountType[];
 };
+
 
 export type ProductAccountType = ControlDateType & {
     id: string;
@@ -76,12 +98,14 @@ export type ProductAccountType = ControlDateType & {
     accountNumber: string;
 };
 
+
 export type ProductAccountEagerType =
     ProductAccountType
     & {
         product: ProductType;
         account: AccountType;
     };
+
 
 export type UserEntitlementType = ControlDateType & {
     id: string;
@@ -92,6 +116,7 @@ export type UserEntitlementType = ControlDateType & {
     accountNumber: string;
 };
 
+
 export type UserEntitlementEagerType =
     UserEntitlementType
     & {
@@ -100,6 +125,7 @@ export type UserEntitlementEagerType =
         function: FunctionType;
         account: AccountType;
     };
+
 
 export type JPMDataAppType = {
     profiles: ProfileType[];
@@ -111,3 +137,4 @@ export type JPMDataAppType = {
     productsAccounts: ProductAccountType[];
     userEntitlement: UserEntitlementType[];
 };
+
