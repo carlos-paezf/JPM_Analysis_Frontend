@@ -1,7 +1,8 @@
 import { Location } from '@angular/common';
 import { Component, Input } from '@angular/core';
 
-import { HttpStatusService } from 'src/app/shared/services/http-status.service';
+import { HttpStatusService } from '../../services/http-status.service';
+
 
 /**
  * The SupportImageComponent class is a TypeScript component that represents 
