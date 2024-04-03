@@ -1,16 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
-import { InfoTableBaseComponent } from '../../../../../shared/classes/sheet-base-component.class';
-import { ColumnTableType, CompanyUserType } from '../../../../../shared/types';
+import { ListEntityBase } from '../../../../../shared/classes/list-entity-base.class';
+import { AppUtilsMessagesService } from '../../../../../shared/services/app-utils-messages.service';
+import { ColumnTableType, CompanyUserEagerType, CompanyUserType } from '../../../../../shared/types';
 import { CompanyUsersService } from '../../services/company-users.service';
 
 
+/**
+ * @author cpaezfer
+ */
 @Component( {
     selector: 'app-company-users-list',
     templateUrl: './list-company-user.component.html',
     styleUrls: [ './list-company-user.component.scss' ]
 } )
-export class ListCompanyUserComponent extends InfoTableBaseComponent<CompanyUserType> implements OnInit {
+export class ListCompanyUserComponent extends ListEntityBase<CompanyUserType, CompanyUserEagerType> {
     public override displayedColumns: string[] = [
         'userName',
         'profileId',
@@ -45,26 +49,10 @@ export class ListCompanyUserComponent extends InfoTableBaseComponent<CompanyUser
         { columnDef: 'deletedAt', header: 'Fecha de Desactivación', cell: ( row ) => row.deletedAt },
     ];
 
-    public deleteCompanyUser!: Function;
-    public reactivateCompanyUser!: Function;
-
-    constructor ( private _companyUsersService: CompanyUsersService ) {
-        super();
-    }
-
-    /**
-     * The ngOnInit function retrieves users data from a service and assigns it to the component's data
-     * property, while also updating the component's isLoadingResults and isEmptyTable properties
-     * accordingly.
-     */
-    ngOnInit (): void {
-        this._companyUsersService.getCompanyUsers()
-            .subscribe( ( response ) => {
-                this.data = response.data;
-                this.isEmptyTable = ( response.data.length <= 0 );
-                this.isLoadingResults = false;
-            } );
-        this.deleteCompanyUser = this._companyUsersService.deleteCompanyUser;
-        this.reactivateCompanyUser = this._companyUsersService.reactivateCompanyUser;
+    constructor (
+        _appUtilsMessagesService: AppUtilsMessagesService,
+        _companyUsersService: CompanyUsersService
+    ) {
+        super( _appUtilsMessagesService, _companyUsersService );
     }
 }

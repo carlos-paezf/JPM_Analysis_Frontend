@@ -9,7 +9,7 @@
 
     <ng-template #tableComponent>
         <app-table-base [displayedColumns]="displayedColumns" [data]="data" [columns]="columns" baseUrl="company-users"
-            [deleteFunction]="deleteCompanyUser" [reactivateFunction]="reactivateCompanyUser"></app-table-base>
+            [deactivateFunction]="deactivateItem" [reactivateFunction]="reactivateItem"></app-table-base>
     </ng-template>
 </section>
 
