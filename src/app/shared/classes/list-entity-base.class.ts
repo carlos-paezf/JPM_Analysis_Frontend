@@ -35,7 +35,6 @@ export abstract class ListEntityBase<Model, ModelEager> extends InfoTableBaseCom
                     this.data = response.data;
                     this.isEmptyTable = response.totalResults <= 0;
                     this.isLoadingResults = false;
-                    console.log( { data: this.data } );
                 },
                 error: ( error ) => {
                     this.isLoadingResults = false;
