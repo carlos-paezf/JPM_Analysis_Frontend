@@ -1,5 +1,5 @@
 // Possible uses for an uploaded file
-export enum FileTypeEnum {
+export enum FileActionTypeEnum {
     load = 'load',
     compare = 'compare'
 }
