@@ -1,0 +1,28 @@
+.cards__panel,
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards__panel {
+    flex-direction: row;
+    gap: 1rem;
+    width: 100%;
+    flex-wrap: wrap;
+    margin: 2rem 0;
+
+    .card {
+        background: rgb(28, 50, 98);
+        width: 210px;
+        height: 175px;
+        color: white;
+        border-radius: 4px;
+        flex-direction: column;
+        margin-bottom: 2px;
+
+        span {
+            font-size: 15.5px;
+        }
+    }
+}

@@ -1,0 +1,6 @@
+<div class="cards__panel">
+    <div class="card" *ngFor="let result of results" [ngStyle]="{'border-bottom': 'solid .75rem ' + result.color }">
+        <h1 class="counter" [attr.data-target]="result.value">{{result.value}}</h1>
+        <span>{{result.name}}</span>
+    </div>
+</div>
