@@ -1,5 +1,5 @@
 import { HttpClient } from "@angular/common/http";
-import { Observable, Subject, map } from "rxjs";
+import { Observable, Subject, map, tap } from "rxjs";
 
 import { environment } from "src/environments/environment";
 import { ResponseSheetsType } from '../types/index';
@@ -8,6 +8,7 @@ import { ResponseSheetsType } from '../types/index';
 export interface IBaseService<Model, ModelEager> {
     getAll (): Observable<ResponseSheetsType<Model>>;
     getById ( id: string ): Observable<ModelEager | null>;
+    post ( data: Model ): Observable<Model>;
     update ( id: string, data: Model ): Observable<Model>;
 }
 
@@ -74,6 +75,20 @@ export abstract class BaseService<Model, ModelEager> implements IBaseService<Mod
 
 
     /**
+     * The function `post` sends a POST request with data to a specified URL and returns an Observable
+     * of the response data.
+     * @param {Model} data - The `data` parameter in the `post` method represents the model object that
+     * you want to send in the HTTP POST request. This model object will typically contain the data
+     * that you want to send to the server.
+     * @returns An Observable of type Model is being returned.
+     */
+    post ( data: Model ): Observable<Model> {
+        return this._http.post<Model>( `${ this._baseUrl }`, data )
+            .pipe( tap( () => this._updateSubject.next() ) );
+    }
+
+
+    /**
      * The `update` function sends a PUT request to update a model with the specified ID using the
      * provided data.
      * @param {string} id - The `id` parameter is a string that represents the unique identifier of the
@@ -86,7 +101,8 @@ export abstract class BaseService<Model, ModelEager> implements IBaseService<Mod
      * @returns An Observable of type Model is being returned.
      */
     update ( id: string, data: Model ): Observable<Model> {
-        return this._http.put<Model>( `${ this._baseUrl }/update/${ id }`, data );
+        return this._http.put<Model>( `${ this._baseUrl }/update/${ id }`, data )
+            .pipe( tap( () => this._updateSubject.next() ) );
     }
 
 
@@ -175,5 +191,38 @@ export abstract class BaseServiceWithHardDelete<Model, ModelEager> extends BaseS
     hardDelete ( id: string ): Observable<boolean> {
         return this._http.delete<any>( `${ this._baseUrl }/delete/${ id }`, {} )
             .pipe( map( () => true ) );
+    }
+}
+
+
+export abstract class BaseServiceWithBulkMethods<Model, ModelEager> extends BaseServiceWithHardDelete<Model, ModelEager> implements IBulkPostService<Model>, IBulkHardDeleteService<Model> {
+
+    constructor ( _http: HttpClient, _path: string ) {
+        super( _http, _path );
+    }
+
+
+    /**
+     * The function `bulkPost` sends a POST request to a specified endpoint with an array of models and
+     * returns an Observable of the response array.
+     * @param {Model[]} collectionBody - The `collectionBody` parameter in the `bulkPost` function is
+     * an array of `Model` objects. This array contains the data that will be sent in the POST request
+     * to the specified endpoint (`${ this._baseUrl }/bulk-post`).
+     * @returns The `bulkPost` method is returning an Observable of an array of Model objects.
+     */
+    bulkPost ( collectionBody: Model[] ): Observable<Model[]> {
+        return this._http.post<any>( `${ this._baseUrl }/bulk-post`, collectionBody );
+    }
+
+
+    /**
+     * The `bulkDelete` function sends a POST request to delete multiple items using an array of
+     * primary keys.
+     * @param {string[]} pks - An array of strings representing the primary keys of the items to be
+     * deleted in bulk.
+     * @returns The `bulkDelete` method is returning an Observable of type number.
+     */
+    bulkDelete ( pks: string[] ): Observable<number> {
+        return this._http.delete<any>( `${ this._baseUrl }/bulk-delete`, { body: pks } );
     }
 }
