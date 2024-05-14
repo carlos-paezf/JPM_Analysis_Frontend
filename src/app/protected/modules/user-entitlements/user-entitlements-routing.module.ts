@@ -7,7 +7,7 @@ import { NotFoundComponent } from '../../../shared/components/not-found/not-foun
 
 const routes: Routes = [
     {
-        path: 'list-user-entitlements',
+        path: 'list-users-entitlements',
         component: ListUserEntitlementsComponent,
         data: { title: 'JPM Lista de Títulos' },
         pathMatch: 'full'
@@ -19,7 +19,7 @@ const routes: Routes = [
         data: { title: 'JPM Detalle de Título' }
     },
     {
-        path: '', redirectTo: 'list-user-entitlements', pathMatch: 'full'
+        path: '', redirectTo: 'list-users-entitlements', pathMatch: 'full'
     },
     {
         path: '**', component: NotFoundComponent,
