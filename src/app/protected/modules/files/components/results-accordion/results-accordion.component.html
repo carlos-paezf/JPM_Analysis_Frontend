@@ -1,0 +1,81 @@
+<section [id]="sectionId">
+    <h3>{{ sectionName }}</h3>
+
+    <div class="action-buttons">
+        <button mat-flat-button color="primary" (click)="accordion.openAll()">Expand All</button>
+        <button mat-flat-button color="accent" (click)="accordion.closeAll()">Collapse All</button>
+    </div>
+
+
+    <mat-accordion multi>
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Nuevos registros
+                </mat-panel-title>
+                <mat-panel-description>
+                    Total: {{ result.countNewEntities }}
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+
+            <ng-container *ngIf="!result.countNewEntities; else newEntities">
+                <em>Sin nuevas entidades en el reporte de esta sección</em>
+            </ng-container>
+
+            <ng-template #newEntities>
+                <app-entity-table [entityName]="sectionName" *ngFor="let newEntity of result.newEntities; let i = index"
+                    panelTitle="Nueva entidad" className="add" [entity]="newEntity" [commonColumns]="commonColumns"
+                    [keys]="keys" [index]="i + 1" />
+            </ng-template>
+        </mat-expansion-panel>
+
+
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Registros con diferencias
+                </mat-panel-title>
+                <mat-panel-description>
+                    Total: {{ result.countEntitiesWithDifferences }}
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+
+            <ng-container *ngIf="!result.countEntitiesWithDifferences; else entitiesWithDifferences">
+                <em>Sin entidades con diferencias en el reporte de esta sección</em>
+            </ng-container>
+
+            <ng-template #entitiesWithDifferences>
+
+                <app-entity-comparison-table [entityName]="sectionName"
+                    *ngFor="let entityWithDifferences of result.entitiesWithDifferences; let i = index"
+                    [entityWithDifferences]="entityWithDifferences" [commonColumns]="commonColumns" [keys]="keys" />
+            </ng-template>
+        </mat-expansion-panel>
+
+
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Registros a eliminar
+                </mat-panel-title>
+                <mat-panel-description>
+                    Total: {{ result.countToDeleteEntities }}
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+
+            <ng-container *ngIf="!result.countToDeleteEntities; else toDeleteEntities">
+                <em>Sin entidades para retirar en el reporte de esta sección</em>
+            </ng-container>
+
+            <ng-template #toDeleteEntities>
+                <!-- <pre>{{ result.toDeleteEntities| json}}</pre> -->
+                <app-entity-table [entityName]="sectionName"
+                    *ngFor="let entity of result.toDeleteEntities; let i = index" panelTitle="Entidad a eliminar"
+                    className="delete" [entity]="entity" [commonColumns]="commonColumns" [keys]="keys"
+                    [index]="i + 1" />
+            </ng-template>
+        </mat-expansion-panel>
+    </mat-accordion>
+</section>
+
+<hr />
