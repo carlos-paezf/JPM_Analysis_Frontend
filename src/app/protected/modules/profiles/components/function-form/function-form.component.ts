@@ -3,10 +3,11 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { forkJoin, of } from 'rxjs';
 
-import { ToastrNotificationService } from '../../../../../shared/services/toastr-notification.service';
+import { AppUtilsMessagesService } from '../../../../../shared/services/app-utils-messages.service';
 import { ProfileType } from '../../../../../shared/types';
-import { FunctionEagerLoadingType } from '../../../../../shared/types/jpm-types.type';
+import { FunctionEagerType, FunctionType, ProfileFunctionType } from '../../../../../shared/types/jpm-types.type';
 import { FunctionsService } from '../../services/functions.service';
+import { ProfilesFunctionsService } from '../../services/profiles-functions.service';
 import { ProfilesService } from '../../services/profiles.service';
 
 
@@ -22,36 +23,37 @@ export class FunctionFormComponent implements OnChanges {
     public isLoading: boolean = true;
     public form!: FormGroup<any>;
     public profiles: ProfileType[] = [];
-    public functionData: FunctionEagerLoadingType | null = null;
+    public functionData: FunctionEagerType | null = null;
+    private _originalProfilesFunctions: ProfileFunctionType[] = [];
 
     constructor (
         private readonly _router: Router,
-        private readonly _toastrNotificationService: ToastrNotificationService,
         private readonly _profilesService: ProfilesService,
         private readonly _functionsService: FunctionsService,
+        private readonly _profilesFunctionService: ProfilesFunctionsService,
+        private readonly _appUtilsMessagesService: AppUtilsMessagesService
     ) { }
 
     ngOnChanges (): void {
         this.isLoading = true;
         forkJoin(
             [
-                this._profilesService.getProfiles(),
+                this._profilesService.getAll(),
                 this.functionId
-                    ? this._functionsService.getFunctionById( this.functionId )
+                    ? this._functionsService.getById( this.functionId )
                     : of( null )
             ]
         ).subscribe( {
             next: ( [ profilesResponse, functionsResponse ] ) => {
                 this.profiles = profilesResponse.data;
                 this.functionData = functionsResponse;
-            },
-            complete: () => {
+                this._originalProfilesFunctions = [ ...( this.functionData?.profilesFunctions ?? [] ) ];
                 this.formActions();
                 this.isLoading = false;
             },
             error: ( error ) => {
-                // TODO: Reportar al servicio de manejo de errores del servidor
-                throw new Error( 'Method not implemented.' );
+                this._appUtilsMessagesService.showQueryErrorMessage( error );
+                this.isLoading = false;
             }
         } );
     }
@@ -91,8 +93,8 @@ export class FunctionFormComponent implements OnChanges {
      * The function loads associated profiles and toggles them based on the function data.
      */
     loadAssociatedProfiles () {
-        this.functionData?.profiles.forEach( e => {
-            this.toggleProfile( this.profiles.find( x => x.id === e )! );
+        this.functionData?.profilesFunctions.forEach( profileFunction => {
+            this.toggleProfile( this.profiles.find( profile => profile.id === profileFunction.profileId )! );
         } );
     }
 
@@ -103,7 +105,28 @@ export class FunctionFormComponent implements OnChanges {
      * @returns a boolean value.
      */
     checked ( profile: ProfileType ) {
-        return ( this.form.get( 'profiles' )!.value as ProfileType[] ).some( p => p.id === profile.id );
+        return ( this.form.get( 'profiles' )!.value as ProfileType[] )
+            .some( p => p.id === profile.id );
+    }
+
+
+    deleteFunction (): void {
+        this._functionsService.deactivate( this.functionId! )
+            .subscribe( {
+                next: () => {
+                    this._appUtilsMessagesService.showUpdateSuccessMessage();
+                }
+            } );
+    }
+
+
+    restoreFunction (): void {
+        this._functionsService.reactivate( this.functionId! )
+            .subscribe( {
+                next: () => {
+                    this._appUtilsMessagesService.showUpdateSuccessMessage();
+                }
+            } );
     }
 
 
@@ -114,27 +137,9 @@ export class FunctionFormComponent implements OnChanges {
     onSubmit (): void {
         this.form.markAllAsTouched();
 
-        if ( !this.functionId ) {
-            this._functionsService.createFunction( this.form.get( 'functionName' )!.value, this.form.get( 'profiles' )!.value );
-            this._toastrNotificationService.success( {
-                title: 'Función creada',
-                message: 'La función ha sido creada con éxito'
-            } );
-        } else {
-            if ( window.confirm( '¿Está seguro de actualizar la función?' ) ) {
-                this._functionsService.updateFunction( this.functionId, this.form.get( 'functionName' )!.value, this.form.get( 'profiles' )!.value );
-                this._toastrNotificationService.info( {
-                    title: 'Función actualizada',
-                    message: 'La función ha sido actualizada con éxito'
-                } );
-            } else {
-                this._toastrNotificationService.warning( {
-                    title: 'Actualización cancelada',
-                    message: 'Se ha cancelado la actualización de la función'
-                } );
-            }
-        }
-
+        this.functionId
+            ? this._updateFunction()
+            : this._createFunction();
 
         this.form.reset();
         this.form.get( 'profiles' )?.setValue( [] );
@@ -142,5 +147,56 @@ export class FunctionFormComponent implements OnChanges {
         this._router.navigate( [ 'profiles/functions' ] );
 
         this.showForm = false;
+    }
+
+
+    /**
+     * The _updateFunction method updates a function and associated profiles after confirming with the
+     * user.
+     */
+    private _updateFunction () {
+        if ( window.confirm( '¿Está seguro de actualizar la función?' ) ) {
+            forkJoin(
+                [
+                    this._functionsService.update(
+                        this.functionId!,
+                        { id: this.functionId!, functionName: this.form.get( 'functionName' )!.value } as FunctionType
+                    ),
+                    this._profilesFunctionService.updateProfilesByFunctionId(
+                        this.functionId!,
+                        this._originalProfilesFunctions,
+                        this.form.get( 'profiles' )!.value
+                    )
+                ]
+            ).subscribe( {
+                next: () => {
+                    this._appUtilsMessagesService.showUpdateSuccessMessage();
+                },
+                error: ( error ) => {
+                    this._appUtilsMessagesService.showQueryErrorMessage( error );
+                }
+            } );
+        } else {
+            this._appUtilsMessagesService.showUpdateCancelledMessage();
+        }
+    }
+
+
+    /**
+     * The _createFunction method creates a new function using data from a form and profiles, and
+     * displays success or error messages accordingly.
+     */
+    private _createFunction () {
+        this._functionsService.createFunction(
+            this.form.get( 'functionName' )!.value,
+            this.form.get( 'profiles' )!.value
+        ).subscribe( {
+            next: () => {
+                this._appUtilsMessagesService.showUpdateSuccessMessage();
+            },
+            error: ( error ) => {
+                this._appUtilsMessagesService.showQueryErrorMessage( error );
+            }
+        } );
     }
 }

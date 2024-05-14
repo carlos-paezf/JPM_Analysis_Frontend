@@ -33,10 +33,30 @@
                     </li>
                 </ul>
             </div>
+
+            <div class="form-control" *ngIf="functionData?.deletedAt">
+                <div class="label">
+                    <mat-icon class="opacity_icon" fontIcon="edit_calendar"></mat-icon>
+                    <label for="deletedAt">Fecha de eliminación:</label>
+                </div>
+                <input matInput [value]="functionData?.deletedAt" id="deletedAt" [disabled]="true">
+            </div>
         </div>
 
-        <button mat-raised-button color="primary" [disabled]="form.status === 'INVALID'">
-            Actualizar Función
-        </button>
+        <div class="actions">
+            <button mat-raised-button color="primary" [disabled]="form.status === 'INVALID'">
+                {{functionId ? "Actualizar Función": "Crear Función"}}
+            </button>
+
+            <button mat-raised-button type="button" color="accent" *ngIf="functionId && !functionData?.deletedAt"
+                (click)="deleteFunction()">
+                Eliminar Función
+            </button>
+
+            <button mat-raised-button type="button" *ngIf="functionId && functionData?.deletedAt"
+                (click)="restoreFunction()">
+                Restaurar Función
+            </button>
+        </div>
     </form>
 </ng-template>
