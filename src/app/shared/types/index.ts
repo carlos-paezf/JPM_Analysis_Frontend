@@ -1,22 +1,36 @@
 import { FormGroup } from "@angular/forms";
 
+export { AppUserType } from './app-user.type';
 export {
     AccountEagerType,
     AccountType,
+    ApproveChangesType,
+    ChangesStructureType,
     CompanyUserEagerType,
     CompanyUserType,
+    CompareSeedResponseType,
     ControlDateType,
+    DiffExcelVsDatabaseType,
+    EntitiesToChangesType,
+    EntityWithDifferencesType,
+    FileDataType,
+    FunctionEagerType,
     FunctionType,
-    JPMDataAppType,
+    PostSeedResponseType,
     ProductAccountEagerType,
     ProductAccountType,
+    ProductEagerType,
     ProductType,
     ProfileEagerType,
+    ProfileFunctionEagerType,
     ProfileFunctionType,
     ProfileType,
+    ReportHistoryType,
+    UploadFileResponseType,
+    UploadFileType,
+    UserEntitlementEagerType,
     UserEntitlementType,
 } from './jpm-types.type';
-export { AppUserType } from './app-user.type';
 
 
 export type ColumnTableType<T> = {
@@ -41,6 +55,7 @@ export type PanelLinkType = {
 export type ModulesPanelsType = {
     title: string;
     panels: PanelLinkType[];
+    requireData: boolean;
 };
 
 

@@ -1,3 +1,16 @@
+import { FileActionTypeEnum } from "../../protected/constants";
+
+
+export type ReportHistoryType = {
+    id: string;
+    appUserId?: string;
+    reportName: string;
+    reportComments: string;
+    reportUploadDate: Date;
+    runReportDate?: Date;
+};
+
+
 export type ControlDateType = {
     createdAt: Date;
     updatedAt: Date;
@@ -25,16 +38,22 @@ export type FunctionType = ControlDateType & {
 };
 
 
-export type FunctionEagerLoadingType =
-    FunctionType & {
-        profiles: string[];
-    };
+export type FunctionEagerType = FunctionType & {
+    profilesFunctions: ProfileFunctionType[];
+    usersEntitlements: UserEntitlementType[];
+};
 
 
 export type ProductType = ControlDateType & {
     id: string;
     productName: string;
     subProduct: string | null;
+};
+
+
+export type ProductEagerType = ProductType & {
+    productsAccounts: ProductAccountType[];
+    userEntitlements: UserEntitlementType[];
 };
 
 
@@ -45,12 +64,10 @@ export type ProfileFunctionType = {
 };
 
 
-export type ProfileFunctionEagerLoadingType =
-    ProfileFunctionType
-    & {
-        profile: ProfileType;
-        function: FunctionType;
-    };
+export type ProfileFunctionEagerType = ProfileFunctionType & {
+    profile: ProfileType;
+    function: FunctionType;
+};
 
 
 export type CompanyUserType = ControlDateType & {
@@ -99,12 +116,10 @@ export type ProductAccountType = ControlDateType & {
 };
 
 
-export type ProductAccountEagerType =
-    ProductAccountType
-    & {
-        product: ProductType;
-        account: AccountType;
-    };
+export type ProductAccountEagerType = ProductAccountType & {
+    product: ProductType | null;
+    account: AccountType | null;
+};
 
 
 export type UserEntitlementType = ControlDateType & {
@@ -117,24 +132,101 @@ export type UserEntitlementType = ControlDateType & {
 };
 
 
-export type UserEntitlementEagerType =
-    UserEntitlementType
-    & {
-        companyUser: CompanyUserType;
-        product: ProductType;
-        function: FunctionType;
-        account: AccountType;
-    };
-
-
-export type JPMDataAppType = {
-    profiles: ProfileType[];
-    functions: FunctionType[];
-    profilesFunctions: ProfileFunctionType[];
-    products: ProductType[];
-    companyUsers: CompanyUserType[];
-    accounts: AccountType[];
-    productsAccounts: ProductAccountType[];
-    userEntitlement: UserEntitlementType[];
+export type UserEntitlementEagerType = UserEntitlementType & {
+    companyUser: CompanyUserType;
+    product: ProductType;
+    function: FunctionType;
+    account: AccountType;
 };
 
+
+export type UploadFileType = {
+    file: File;
+    observations: string;
+    action: FileActionTypeEnum;
+};
+
+export type ApproveChangesType = {
+    fileName: string;
+    observations?: string;
+    runReportDate?: Date;
+};
+
+
+export type UploadFileResponseType = {
+    action: FileActionTypeEnum;
+    result: PostSeedResponseType | CompareSeedResponseType;
+};
+
+
+export type FileDataType = {
+    runReportDate?: Date;
+    fileName: string;
+};
+
+
+export type PostSeedResponseType = FileDataType & {
+    accounts: AccountType[];
+    companyUsers: CompanyUserType[],
+    functions: FunctionType[],
+    products: ProductType[],
+    productsAccounts: ProductAccountType[],
+    profiles: ProfileType[],
+    profilesFunctions: ProfileFunctionType[],
+    usersEntitlements: UserEntitlementType[];
+};
+
+
+export type CompareSeedResponseType = FileDataType & {
+    totalRowsInDatabase: number;
+    totalRowsInExcel: number;
+    totalNewEntities: number;
+    totalToDeleteEntities: number;
+    totalEntitiesWithDifferences: number;
+    accountsReport: DiffExcelVsDatabaseType<AccountType>;
+    companyUsersReport: DiffExcelVsDatabaseType<CompanyUserType>;
+    functionsReport: DiffExcelVsDatabaseType<FunctionType>;
+    productsReport: DiffExcelVsDatabaseType<ProductType>;
+    productsAccountsReport: DiffExcelVsDatabaseType<ProductAccountType>;
+    profilesReport: DiffExcelVsDatabaseType<ProfileType>;
+    profilesFunctionsReport: DiffExcelVsDatabaseType<ProfileFunctionType>;
+    usersEntitlementsReport: DiffExcelVsDatabaseType<UserEntitlementType>;
+    observations?: string;
+};
+
+
+export type DiffExcelVsDatabaseType<Model> = {
+    countRowsInDatabase: number;
+    countRowsInExcel: number;
+    newEntities: Model[];
+    toDeleteEntities: Model[];
+    entitiesWithDifferences: EntityWithDifferencesType<Model>[];
+    countNewEntities: number;
+    countToDeleteEntities: number;
+    countEntitiesWithDifferences: number;
+};
+
+
+export type EntityWithDifferencesType<Model> = {
+    excelEntity: Model;
+    databaseEntity: Model;
+};
+
+
+export type ChangesStructureType<Model> = {
+    newEntities: Model[];
+    toChangesEntities: Model[];
+    toDeleteEntities: string[];
+};
+
+
+export type EntitiesToChangesType = {
+    accounts: ChangesStructureType<AccountType>;
+    companyUsers: ChangesStructureType<CompanyUserType>;
+    functions: ChangesStructureType<FunctionType>;
+    products: ChangesStructureType<ProductType>;
+    productsAccounts: ChangesStructureType<ProductAccountType>;
+    profiles: ChangesStructureType<ProfileType>;
+    profilesFunctions: ChangesStructureType<ProfileFunctionType>;
+    usersEntitlements: ChangesStructureType<UserEntitlementType>;
+};
