@@ -1,11 +1,48 @@
-<h2>Módulos de la aplicación</h2>
+<div>
+    <h2>Módulos de la aplicación</h2>
+
+    <!-- <ng-container *ngIf="!lastReportData; else reportDate">
+        <div class="report-file-data">
+            <p>Aún no se ha cargado ningún reporte</p>
+        </div>
+    </ng-container>
+
+    <ng-template #reportDate>
+        <div class="report-file-data">
+            <p>Nombre del último reporte cargado: <code>{{ lastReportData!.reportName}}</code></p>
+            <p>Fecha de último cargue global de data: <code>{{ lastReportData!.reportUploadDate| date : 'long' }}</code>
+            </p>
+            <p>Fecha de generación del reporte: <code>{{ lastReportData!.runReportDate | date : 'long' }}</code></p>
+        </div>
+    </ng-template> -->
+</div>
+
 
 <div class="dashboard__panels" *ngFor="let module of appModulesPanels">
-    <h3>{{ module.title }}</h3>
-    <div class="sub__panels">
-        <span class="panel" *ngFor="let panel of module.panels" [routerLink]="'../' + panel.routeLink">
-            {{ panel.label }}
-        </span>
-    </div>
-    <hr />
+    <ng-container *ngIf="(module.requireData && lastReportData) || !module.requireData">
+        <h3>{{ module.title }}</h3>
+
+        <div class="sub__panels">
+            <span class="panel" *ngFor="let panel of module.panels" [routerLink]="'../' + panel.routeLink">
+                {{ panel.label }}
+            </span>
+        </div>
+        <hr />
+    </ng-container>
 </div>
+
+
+<ng-container *ngIf="!lastReportData; else reportDate">
+    <div class="report-file-data">
+        <p>Aún no se ha cargado ningún reporte</p>
+    </div>
+</ng-container>
+
+<ng-template #reportDate>
+    <div class="report-file-data">
+        <p>Nombre del último reporte cargado: <code>{{ lastReportData!.reportName}}</code></p>
+        <p>Fecha de último cargue global de data: <code>{{ lastReportData!.reportUploadDate| date : 'long' }}</code>
+        </p>
+        <p>Fecha de generación del reporte: <code>{{ lastReportData!.runReportDate | date : 'long' }}</code></p>
+    </div>
+</ng-template>
