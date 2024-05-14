@@ -1,6 +1,6 @@
-<h2>Listado de Clientes</h2>
+<h2>Listado de Productos - Cuentas</h2>
 
-<p>A continuación se listan las clientes que se muestran en el listado del último reporte cargado</p>
+<p>A continuación se listan las Productos - Cuentas que se muestran en el listado del último reporte cargado</p>
 
 <section>
     <ng-container *ngIf="isLoadingResults || isEmptyTable; else tableComponent">
@@ -8,8 +8,9 @@
     </ng-container>
 
     <ng-template #tableComponent>
-        <app-table-base [displayedColumns]="displayedColumns" [data]="data" [columns]="columns" baseUrl="clients"
-            [deleteFunction]="deleteClient" [reactivateFunction]="reactivateClient"></app-table-base>
+        <app-table-base [displayedColumns]="displayedColumns" [data]="data" [columns]="columns"
+            baseUrl="products-accounts" [deactivateFunction]="deactivateItem"
+            [reactivateFunction]="reactivateItem"></app-table-base>
     </ng-template>
 </section>
 
