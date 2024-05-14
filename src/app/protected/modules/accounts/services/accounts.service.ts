@@ -5,6 +5,9 @@ import { BaseServiceWithSoftDelete } from '../../../../shared/classes/base-servi
 import { AccountEagerType, AccountType } from '../../../../shared/types';
 
 
+/**
+ * @author cpaezfer
+ */
 @Injectable( {
     providedIn: 'root'
 } )
