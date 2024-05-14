@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable, catchError, throwError } from 'rxjs';
 
 import { HttpStatusService } from '../services/http-status.service';
+import { ToastrNotificationService } from 'src/app/shared/services/toastr-notification.service';
 
 /**
  * @author cpaezfer
@@ -11,7 +12,10 @@ import { HttpStatusService } from '../services/http-status.service';
     providedIn: 'root'
 } )
 export class ErrorHandlingInterceptorService implements HttpInterceptor {
-    constructor ( private readonly _httpStatusService: HttpStatusService ) { }
+    constructor (
+        private readonly _httpStatusService: HttpStatusService,
+        private readonly _toastrNotificationService: ToastrNotificationService
+    ) { }
 
     /**
      * The intercept function intercepts HTTP requests and handles any errors that 
@@ -37,6 +41,12 @@ export class ErrorHandlingInterceptorService implements HttpInterceptor {
                             break;
                         case 404:
                             this._httpStatusService.reportNotFoundError();
+                            break;
+                        case 409:
+                            this._toastrNotificationService.warning( {
+                                title: "Elemento en conflicto",
+                                message: "Ya existe un elemento en la base de datos con propiedades similares"
+                            } );
                             break;
                         case 500:
                             this._httpStatusService.reportInternalServerError();
