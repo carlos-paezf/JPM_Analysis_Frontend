@@ -1,0 +1,31 @@
+<div class="panel">
+    <details>
+        <summary>
+            <ul>
+                <li class="titleName">
+                    <span [class]="className"></span>
+                    {{ panelTitle }} #{{ index | number: '2.0-0' }}
+                </li>
+            </ul>
+        </summary>
+
+        <div class="content">
+            <table class="comparison__table">
+                <thead>
+                    <tr>
+                        <th>Columna</th>
+                        <th>{{ entityName }} (Base de datos)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <ng-container *ngFor="let key of keys">
+                        <tr>
+                            <td>{{commonColumns[key]}}</td>
+                            <td> {{ entity[key] }}</td>
+                        </tr>
+                    </ng-container>
+                </tbody>
+            </table>
+        </div>
+    </details>
+</div>
