@@ -1,0 +1,50 @@
+<h2>Resultados de la comparación</h2>
+
+
+<ng-container *ngIf="!results || results === undefined; else resultsResume">
+    <div class="alert alert-info" role="alert">
+        <span>
+            Por favor regresa a la página <a [routerLink]="[ '../../file-upload' ]">Cargue de reportes</a>
+            y realiza una petición de comparación.
+        </span>
+    </div>
+</ng-container>
+
+
+<ng-template #resultsResume>
+    <div>
+        <div class="report-file-data">
+            <p>Nombre del reporte usado para la comparación: <code>{{ results!.fileName}}</code></p>
+            <p>Fecha de generación del reporte: <code>{{ results!.runReportDate | date : 'long' }}</code></p>
+        </div>
+
+        <h3>Estadísticas generales</h3>
+        <app-number-card [results]="dataNumberCardChart" />
+
+        <h3>Estadísticas especificas</h3>
+        <app-statistics-table [results]="results!" />
+
+        <app-results-accordion sectionName="Cuentas" [result]="results!.accountsReport" sectionId="accounts"
+            [commonColumns]="commonColumns['account']" />
+        <app-results-accordion sectionName="Company Users" [result]="results!.companyUsersReport"
+            sectionId="company_users" [commonColumns]="commonColumns['companyUser']" />
+        <app-results-accordion sectionName="Funciones" [result]="results!.functionsReport" sectionId="functions"
+            [commonColumns]="commonColumns['function']" />
+        <app-results-accordion sectionName="Perfiles" [result]="results!.profilesReport" sectionId="profiles"
+            [commonColumns]="commonColumns['profile']" />
+        <app-results-accordion sectionName="Perfiles - Funciones" [result]="results!.profilesFunctionsReport"
+            sectionId="profiles_functions" [commonColumns]="commonColumns['profileFunction']" />
+        <app-results-accordion sectionName="Productos" [result]="results!.productsReport" sectionId="products"
+            [commonColumns]="commonColumns['product']" />
+        <app-results-accordion sectionName="Productos - Cuentas" [result]="results!.productsAccountsReport"
+            sectionId="products_accounts" [commonColumns]="commonColumns['productAccount']" />
+        <app-results-accordion sectionName="Títulos de Usuarios" [result]="results!.usersEntitlementsReport"
+            sectionId="users_entitlements" [commonColumns]="commonColumns['userEntitlement']" />
+    </div>
+
+    <div class="actions">
+        <button type="submit" mat-flat-button color="primary" (click)="approveChanges()"
+            [disabled]="results?.totalNewEntities === 0 && results?.totalEntitiesWithDifferences === 0 && results?.totalToDeleteEntities === 0">Aprobar
+            cambios</button>
+    </div>
+</ng-template>

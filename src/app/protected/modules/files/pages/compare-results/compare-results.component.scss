@@ -1,0 +1,30 @@
+.alert.alert-info {
+    display: flex;
+    flex-direction: column;
+    background-color: #f6e2bfb2;
+    padding: 1rem;
+    border-radius: 3px;
+    border-left: solid 0.5rem #e2a63ef7;
+
+    span {
+        font-size: larger;
+    }
+
+    a {
+        color: var(--secondary);
+        text-decoration: underline;
+    }
+}
+
+
+.actions {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    width: 100%;
+
+    button {
+        width: 250px;
+    }
+}
