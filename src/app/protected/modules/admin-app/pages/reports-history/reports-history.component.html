@@ -1,0 +1,18 @@
+<h2>Historial de reportes cargados</h2>
+
+<p>
+    A continuación se listan los nombres de archivos y fechas de los reportes cargados para comparación o reemplazo
+    total de datos
+</p>
+
+
+<section>
+    <ng-container *ngIf="isLoadingResults || isEmptyTable; else tableComponent">
+        <app-table-loading [isLoadingResults]="isLoadingResults" [isEmptyTable]="isEmptyTable"></app-table-loading>
+    </ng-container>
+
+    <ng-template #tableComponent>
+        <app-table-base [displayedColumns]="displayedColumns" [data]="data" [columns]="columns"
+            baseUrl=""></app-table-base>
+    </ng-template>
+</section>
