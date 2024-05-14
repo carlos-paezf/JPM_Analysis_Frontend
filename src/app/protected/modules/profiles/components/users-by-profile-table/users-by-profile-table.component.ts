@@ -1,7 +1,10 @@
 import { Component, Input, OnInit } from '@angular/core';
+
 import { InfoTableBaseComponent } from '../../../../../shared/classes/sheet-base-component.class';
+import { AppUtilsMessagesService } from '../../../../../shared/services/app-utils-messages.service';
 import { ColumnTableType, CompanyUserType } from '../../../../../shared/types';
-import { CompanyUsersService } from '../../../company-users/services/company-users.service';
+import { ProfilesService } from '../../services/profiles.service';
+
 
 @Component( {
     selector: 'app-users-by-profile-table',
@@ -36,7 +39,10 @@ export class UsersByProfileTableComponent extends InfoTableBaseComponent<Company
 
     @Input() profileId!: string;
 
-    constructor ( private _companyUsersService: CompanyUsersService ) {
+    constructor (
+        private _appUtilsMessages: AppUtilsMessagesService,
+        private _profilesService: ProfilesService
+    ) {
         super();
     }
 
@@ -46,11 +52,14 @@ export class UsersByProfileTableComponent extends InfoTableBaseComponent<Company
      * accordingly.
      */
     ngOnInit (): void {
-        this._companyUsersService.getCompanyUsersByProfileId( this.profileId )
-            .subscribe( ( response ) => {
-                this.data = response.data;
-                this.isEmptyTable = ( response.data.length <= 0 );
-                this.isLoadingResults = false;
+        this._profilesService.getById( this.profileId )
+            .subscribe( {
+                next: ( response ) => {
+                    this.data = response === null ? [] : response.companyUsers;
+                    this.isEmptyTable = ( this.data.length <= 0 );
+                    this.isLoadingResults = false;
+                },
+                error: ( error ) => { this._appUtilsMessages.showQueryErrorMessage( error ); }
             } );
     }
 }
