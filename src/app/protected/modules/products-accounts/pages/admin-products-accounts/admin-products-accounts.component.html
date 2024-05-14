@@ -23,7 +23,9 @@
                                 (ngModelChange)="filterProducts($event)"></ngx-mat-select-search>
                         </mat-option>
                         <mat-option *ngFor="let product of searchProducts" [value]="product">
-                            {{product.productName}}{{product.subProduct && (' - ' + product.subProduct)}}
+                            {{ product.id 
+                                ? product.productName + (product.subProduct ? (' - ' + product.subProduct) : '') 
+                                : 'Sin producto asociado' }}
                         </mat-option>
                     </mat-select>
                 </div>
@@ -41,8 +43,7 @@
                                 (ngModelChange)="filterAccounts($event)"></ngx-mat-select-search>
                         </mat-option>
                         <mat-option *ngFor="let account of searchAccounts" [value]="account">
-                            {{account.accountNumber}} -
-                            {{account.accountName.slice(0, 50)}}{{ (account.accountNumber.length + account.accountName.length >= 50) ? '...' : ''}}
+                            {{ account.accountNumber ? account.accountNumber + ' - ' + account.accountName : 'Sin cuenta asociada' }}
                         </mat-option>
                     </mat-select>
                 </div>

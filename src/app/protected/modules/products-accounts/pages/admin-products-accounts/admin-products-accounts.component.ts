@@ -5,8 +5,8 @@ import { ActivatedRoute } from '@angular/router';
 import { forkJoin } from 'rxjs';
 
 import { BaseDetailClass } from '../../../../../shared/classes/base-detail.class';
+import { AppUtilsMessagesService } from '../../../../../shared/services/app-utils-messages.service';
 import { AuthUsersService } from '../../../../../shared/services/auth-users.service';
-import { ToastrNotificationService } from '../../../../../shared/services/toastr-notification.service';
 import { AccountType, FormBaseType, ProductAccountType, ProductType } from '../../../../../shared/types';
 import { AccountsService } from '../../../accounts/services/accounts.service';
 import { ProductsService } from '../../../products/services/products.service';
@@ -34,8 +34,8 @@ export class AdminProductsAccountsComponent extends BaseDetailClass<ProductAccou
         private readonly _activateRoute: ActivatedRoute,
         private readonly _formBuilder: FormBuilder,
         private readonly _location: Location,
-        private readonly _toastrNotificationService: ToastrNotificationService,
-        private readonly _clientsService: ProductsAccountsService,
+        private readonly _appUtilsMessagesService: AppUtilsMessagesService,
+        private readonly _productsAccountsService: ProductsAccountsService,
         private readonly _authUserService: AuthUsersService,
         private readonly _accountsService: AccountsService,
         private readonly _productsService: ProductsService,
@@ -52,25 +52,23 @@ export class AdminProductsAccountsComponent extends BaseDetailClass<ProductAccou
 
             forkJoin(
                 [
-                    this._clientsService.getProductAccountById( this.id ),
-                    this._productsService.getProducts(),
+                    this._productsAccountsService.getById( this.id ),
+                    this._productsService.getAll(),
                     this._accountsService.getAll(),
                 ]
             ).subscribe( {
                 next: ( [ clientResponse, productsResponse, accountsResponse ] ) => {
                     this.data = clientResponse;
                     this.products = productsResponse.data;
-                    this.searchProducts = [ ...this.products ];
+                    this.searchProducts = [ {} as ProductType, ...this.products ];
                     this.accounts = accountsResponse.data;
-                    this.searchAccounts = [ ...this.accounts ];
-                },
-                complete: () => {
+                    this.searchAccounts = [ {} as AccountType, ...this.accounts ];
                     this.formActions();
                     this.isLoading = false;
                 },
                 error: ( error ) => {
-                    // TODO: Reportar al servicio de manejo de errores del servidor
-                    throw new Error( 'Method not implemented.' );
+                    this.isLoading = false;
+                    this._appUtilsMessagesService.showQueryErrorMessage( error );
                 }
             } );
         } );
@@ -80,8 +78,8 @@ export class AdminProductsAccountsComponent extends BaseDetailClass<ProductAccou
         if ( !this.data ) return;
 
         this.form = this._formBuilder.group( {
-            product: [ this.getProduct( this.data.productId ) ],
-            account: [ this.getAccount( this.data.accountNumber ) ],
+            product: [ this._getProduct( this.data.productId ) ],
+            account: [ this._getAccount( this.data.accountNumber ) ],
             productSearch: [ '' ],
             accountSearch: [ '' ]
         } );
@@ -102,8 +100,8 @@ export class AdminProductsAccountsComponent extends BaseDetailClass<ProductAccou
      * @returns The getProduct function is returning the product object from the products array that
      * matches the given productId.
      */
-    getProduct ( productId: string ) {
-        return this.products.find( product => product.id === productId );
+    private _getProduct ( productId: string ): ProductType {
+        return this.products.find( product => product.id === productId ) ?? this.searchProducts[ 0 ];
     }
 
 
@@ -133,15 +131,15 @@ export class AdminProductsAccountsComponent extends BaseDetailClass<ProductAccou
      * @returns The `getAccount` function is returning an account object from the `accounts` array that
      * matches the `accountNumber` provided as a parameter.
      */
-    getAccount ( accountNumber: string ) {
-        return this.accounts.find( account => account.accountNumber === accountNumber );
+    private _getAccount ( accountNumber: string ): AccountType {
+        return this.accounts.find( account => account.accountNumber === accountNumber ) ?? this.searchAccounts[ 0 ];
     }
 
 
     /**
      * The `filterAccounts` function filters accounts based on a search input by checking if the
      * account name or number includes the input text in a case-insensitive manner.
-     * @param {string}  - The `filterAccounts` function takes a string input `` and
+     * @param {string} $textInput - The `filterAccounts` function takes a string input `` and
      * filters the `accounts` array based on whether the `accountName` or `accountNumber` includes
      * the `` value (case-insensitive). The filtered accounts are stored in the
      * `searchAccounts` array.
@@ -155,39 +153,53 @@ export class AdminProductsAccountsComponent extends BaseDetailClass<ProductAccou
     }
 
 
+    /**
+     * The onSubmit function checks for permissions, validates form data, confirms update with user,
+     * and then updates product or account information accordingly.
+     * @returns In the onSubmit() method, various messages are being shown based on different
+     * conditions. If the user is not an admin, a "No Permission" error message is shown. If the form
+     * is not valid, a "Validation Error" message is shown. If the user cancels the update
+     * confirmation, an "Update Cancelled" message is shown. If there are validation errors related to
+     * product and account fields
+     */
     onSubmit (): void {
-        if ( !this.isAdminUser ) return this._toastrNotificationService.error( {
-            title: 'Error',
-            message: 'No cuentas con permisos para actualizar el cliente'
-        } );
+        if ( !this.isAdminUser ) return this._appUtilsMessagesService.showNoPermissionError();
 
-        if ( !this.form.valid ) return this._toastrNotificationService.warning( {
-            title: 'Actualización fallida',
-            message: 'Por favor, confirma que la información sea valida'
-        } );
+        if ( !this.form.valid ) return this._appUtilsMessagesService.showValidationError();
 
         const isConfirmedUpdate = window.confirm( `¿Confirma la actualización en la información del cliente?` );
 
-        if ( !isConfirmedUpdate ) return this._toastrNotificationService.info( {
-            title: 'Actualización Cancelada',
-            message: 'Se canceló la actualización del cliente'
-        } );
+        if ( !isConfirmedUpdate ) return this._appUtilsMessagesService.showUpdateCancelledMessage();
 
-        this._clientsService.updateProductAccount(
+        if ( ( !this.form.get( 'product' )!.value && !this.form.get( 'account' )!.value )
+            || ( !this.form.get( 'product' )!.value && !( this.form.get( 'account' )!.value as AccountType ).accountNumber )
+            || ( !this.form.get( 'account' )!.value && !( this.form.get( 'product' )!.value as ProductType ).id )
+            || ( !( this.form.get( 'product' )!.value as ProductType ).id
+                && !( this.form.get( 'account' )!.value as AccountType ).accountNumber )
+        )
+            return this._appUtilsMessagesService.showValidationError();
+
+
+        this._productsAccountsService.update(
             this.id,
             {
-                productId: ( this.form.get( 'product' )!.value as ProductType ).id,
-                accountNumber: ( this.form.get( 'account' )!.value as AccountType ).accountNumber
+                id: this.id,
+                productId: this.form.get( 'product' )?.value
+                    ? ( this.form.get( 'product' )!.value as ProductType ).id
+                    : null,
+                accountNumber: this.form.get( 'account' )?.value
+                    ? ( this.form.get( 'account' )!.value as AccountType ).accountNumber
+                    : null
+            } as ProductAccountType
+        ).subscribe(
+            {
+                next: () => {
+                    this._appUtilsMessagesService.showUpdateSuccessMessage();
+                    this.submitted = true;
+                    return this._location.back();
+                },
+                error: ( error ) => { this._appUtilsMessagesService.showQueryErrorMessage( error ); }
             }
         );
-
-        this._toastrNotificationService.success( {
-            title: 'Actualización exitosa',
-            message: 'La información del cliente ha sido actualizada correctamente'
-        } );
-
-        this.submitted = true;
-
-        return this._location.back();
     }
 }
