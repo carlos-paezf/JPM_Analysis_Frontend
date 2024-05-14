@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
 import { NotFoundComponent } from '../shared/components/not-found/not-found.component';
 import { MainComponent } from './pages/main/main.component';
+
 
 const routes: Routes = [
     {
@@ -21,10 +23,6 @@ const routes: Routes = [
                 loadChildren: () => import( './modules/accounts/accounts.module' ).then( m => m.AccountsModule )
             },
             {
-                path: 'actions',
-                loadChildren: () => import( './modules/actions/actions.module' ).then( m => m.ActionsModule )
-            },
-            {
                 path: 'products-accounts',
                 loadChildren: () => import( './modules/products-accounts/products-accounts.module' ).then( m => m.ProductsAccountsModule )
             },
@@ -41,8 +39,12 @@ const routes: Routes = [
                 loadChildren: () => import( './modules/profiles/profiles.module' ).then( m => m.ProfilesModule )
             },
             {
-                path: 'user-entitlements',
+                path: 'users-entitlements',
                 loadChildren: () => import( './modules/user-entitlements/user-entitlements.module' ).then( m => m.UserEntitlementsModule )
+            },
+            {
+                path: 'admin-app',
+                loadChildren: () => import( './modules/admin-app/admin-app.module' ).then( m => m.AdminAppModule )
             },
             {
                 path: '', redirectTo: 'dashboard', pathMatch: 'full'
@@ -53,6 +55,7 @@ const routes: Routes = [
         ]
     },
 ];
+
 
 @NgModule( {
     imports: [ RouterModule.forChild( routes ) ],
