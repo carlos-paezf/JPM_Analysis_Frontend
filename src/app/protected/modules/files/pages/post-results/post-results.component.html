@@ -1,0 +1,68 @@
+<h2>Resultados del cargue</h2>
+
+
+<ng-container *ngIf="!results; else resultsResume">
+    <div class="alert alert-info" role="alert">
+        <span>
+            Por favor regresa a la página <a [routerLink]="[ '../../file-upload' ]">Cargue de reportes</a>
+            y realiza una petición de reemplazo de información.
+        </span>
+    </div>
+</ng-container>
+
+
+<ng-template #resultsResume>
+
+    <div class="report-file-data">
+        <p>Nombre del archivo cargado: <code>{{ results!.fileName}}</code></p>
+        <p>Fecha de generación del reporte: <code>{{ results!.runReportDate | date : 'long' }}</code></p>
+    </div>
+
+    <p>
+        Al dar click en cada módulo listado en la tabla, podrá navegar a su respectivo punto de gestión dentro del sitio
+    </p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Módulo</th>
+                <th>Número de registros guardados</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td (click)="redirectTo('accounts')">Cuentas</td>
+                <td>{{results?.accounts?.length}}</td>
+            </tr>
+            <tr>
+                <td (click)="redirectTo('company-users')">Company Users</td>
+                <td>{{results?.companyUsers?.length}}</td>
+            </tr>
+            <tr>
+                <td (click)="redirectTo('profiles/functions')">Funciones</td>
+                <td>{{results?.functions?.length}}</td>
+            </tr>
+            <tr>
+                <td (click)="redirectTo('products')">Productos</td>
+                <td>{{results?.products?.length}}</td>
+            </tr>
+            <tr>
+                <td (click)="redirectTo('products-accounts')">Productos - Cuentas</td>
+                <td>{{results?.productsAccounts?.length}}</td>
+            </tr>
+            <tr>
+                <td (click)="redirectTo('profiles')">Perfiles</td>
+                <td>{{results?.profiles?.length}}</td>
+            </tr>
+            <tr>
+                <td (click)="redirectTo('profiles')">Perfiles - Funciones</td>
+                <td>{{results?.profilesFunctions?.length}}</td>
+            </tr>
+            <tr>
+                <td (click)="redirectTo('users-entitlements')">Títulos de Usuarios</td>
+                <td>{{results?.usersEntitlements?.length}}</td>
+            </tr>
+        </tbody>
+    </table>
+</ng-template>
