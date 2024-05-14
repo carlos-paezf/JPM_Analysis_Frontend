@@ -4,6 +4,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 
 import { BaseDetailClass } from '../../../../../shared/classes/base-detail.class';
+import { AppUtilsMessagesService } from '../../../../../shared/services/app-utils-messages.service';
 import { AuthUsersService } from '../../../../../shared/services/auth-users.service';
 import { ToastrNotificationService } from '../../../../../shared/services/toastr-notification.service';
 import { FormBaseType, ProductType } from '../../../../../shared/types';
@@ -29,6 +30,7 @@ export class AdminProductsComponent extends BaseDetailClass<ProductType> impleme
         private readonly _toastrNotificationService: ToastrNotificationService,
         private readonly _productsService: ProductsService,
         private readonly _authUserService: AuthUsersService,
+        private readonly _appUtilMessagesService: AppUtilsMessagesService
     ) {
         super();
     }
@@ -44,7 +46,7 @@ export class AdminProductsComponent extends BaseDetailClass<ProductType> impleme
             this.id = params[ 'id' ];
             this.isLoading = true;
 
-            this._productsService.getProductById( this.id )
+            this._productsService.getById( this.id )
                 .subscribe( response => {
                     this.data = response;
                     this.isLoading = false;
@@ -84,32 +86,30 @@ export class AdminProductsComponent extends BaseDetailClass<ProductType> impleme
      * @returns the result of the `_location.back()` method.
      */
     onSubmit () {
-        if ( !this.isAdminUser ) return this._toastrNotificationService.error( {
-            title: 'Error',
-            message: 'No cuentas con permisos para actualizar el producto'
-        } );
+        if ( !this.isAdminUser ) return this._appUtilMessagesService.showNoPermissionError();
 
-        if ( !this.form.valid ) return this._toastrNotificationService.warning( {
-            title: 'Actualización fallida',
-            message: 'Por favor, confirma que la información sea valida'
-        } );
+        if ( !this.form.valid ) return this._appUtilMessagesService.showValidationError();
 
         const isConfirmedUpdate = window.confirm( `¿Confirma la actualización en la información del producto ${ this.data!.subProduct ?? this.data!.productName }?` );
 
-        if ( !isConfirmedUpdate ) return this._toastrNotificationService.info( {
-            title: 'Actualización Cancelada',
-            message: 'Se canceló la actualización del producto'
-        } );
+        if ( !isConfirmedUpdate ) return this._appUtilMessagesService.showUpdateCancelledMessage();
 
-        this._productsService.updateProduct( this.id, this.form.value );
-
-        this._toastrNotificationService.success( {
-            title: 'Actualización exitosa',
-            message: 'La información del producto ha sido actualizada correctamente'
-        } );
-
-        this.submitted = true;
-
-        return this._location.back();
+        this._productsService.update(
+            this.id,
+            {
+                id: this.id,
+                productName: this.form.get( "productName" )!.value,
+                subProduct: this.form.get( "subProduct" )?.value
+            } as ProductType
+        ).subscribe(
+            {
+                next: () => {
+                    this._appUtilMessagesService.showUpdateSuccessMessage();
+                    this.submitted = true;
+                    this._location.back();
+                },
+                error: ( error ) => this._appUtilMessagesService.showQueryErrorMessage( error )
+            }
+        );
     }
 }
