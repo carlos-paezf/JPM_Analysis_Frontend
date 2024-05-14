@@ -12,6 +12,7 @@ import { InputFileComponent } from './components/input-file/input-file.component
 import { InternalServerErrorComponent } from './components/internal-server-error/internal-server-error.component';
 import { LoadingComponent } from './components/loading/loading.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { NumberCardComponent } from './components/number-card/number-card.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { SupportImageComponent } from './components/support-image/support-image.component';
 import { TableBaseComponent } from './components/table-base/table-base.component';
@@ -43,13 +44,14 @@ import { TransformCellValuePipe } from './pipes/transform-cell-value.pipe';
         TableBaseComponent,
         TableLoadingComponent,
         TransformCellValuePipe,
+        NumberCardComponent,
     ],
     imports: [
         CommonModule,
         MaterialDesignModule,
         CdkDrag,
         CdkDropList,
-        RouterModule,
+        RouterModule
     ],
     exports: [
         ControlDatesFormComponent,
@@ -68,6 +70,7 @@ import { TransformCellValuePipe } from './pipes/transform-cell-value.pipe';
         TableBaseComponent,
         TableLoadingComponent,
         TransformCellValuePipe,
+        NumberCardComponent,
     ]
 } )
 export class SharedModule { }
