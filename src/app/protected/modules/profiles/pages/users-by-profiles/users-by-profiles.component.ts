@@ -20,7 +20,7 @@ export class UsersByProfilesComponent implements OnInit {
     constructor ( private _profilesService: ProfilesService ) { }
 
     ngOnInit (): void {
-        this._profilesService.getProfiles()
+        this._profilesService.getAll()
             .subscribe( ( response ) => {
                 this.profilesData = response.data;
                 this.isEmptyResults = ( response.data.length <= 0 );

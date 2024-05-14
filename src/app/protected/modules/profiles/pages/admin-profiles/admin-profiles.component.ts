@@ -1,13 +1,13 @@
-import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
+import { forkJoin } from 'rxjs';
 
 import { BaseDetailClass } from '../../../../../shared/classes/base-detail.class';
+import { AppUtilsMessagesService } from '../../../../../shared/services/app-utils-messages.service';
 import { AuthUsersService } from '../../../../../shared/services/auth-users.service';
-import { ToastrNotificationService } from '../../../../../shared/services/toastr-notification.service';
 import { FormBaseType, FunctionType, ProfileType } from '../../../../../shared/types';
-import { FunctionsService } from '../../services/functions.service';
+import { ProfilesFunctionsService } from '../../services/profiles-functions.service';
 import { ProfilesService } from '../../services/profiles.service';
 
 
@@ -23,6 +23,7 @@ export class AdminProfilesComponent extends BaseDetailClass<ProfileType> impleme
     public isDataChanged: boolean = false;
     public isAdminUser: boolean = false;
 
+    private _originalAssociatedFunctions: FunctionType[] = [];
     public associatedFunctions: FunctionType[] = [];
     public availableFunctions: FunctionType[] = [];
     public functionsToRemove: FunctionType[] = [];
@@ -31,15 +32,19 @@ export class AdminProfilesComponent extends BaseDetailClass<ProfileType> impleme
     constructor (
         private readonly _activateRoute: ActivatedRoute,
         private readonly _formBuilder: FormBuilder,
-        private readonly _location: Location,
-        private readonly _toastrNotificationService: ToastrNotificationService,
+        private readonly _appUtilsMessagesService: AppUtilsMessagesService,
         private readonly _authUserService: AuthUsersService,
         private readonly _profilesService: ProfilesService,
-        private readonly _functionsService: FunctionsService
+        private readonly _profilesFunctionsService: ProfilesFunctionsService
     ) {
         super();
     }
 
+
+    /**
+     * This function initializes data and retrieves profiles and functions information based on the
+     * provided ID.
+     */
     ngOnInit (): void {
         this.isAdminUser = this._authUserService.getIsAdminAppUser();
 
@@ -47,39 +52,51 @@ export class AdminProfilesComponent extends BaseDetailClass<ProfileType> impleme
             this.id = params[ 'id' ];
             this.isLoading = true;
 
-            this._functionsService.getFunctionsNotAssociatedWithProfile( this.id )
-                .subscribe( response => {
-                    this.availableFunctions = response.data;
-                } );
-
-            this._functionsService.getFunctionsByProfileId( this.id )
-                .subscribe( response => {
-                    this.associatedFunctions = response.data;
-                } );
-
-            this._profilesService.getProfileById( this.id )
-                .subscribe( response => {
-                    this.data = response;
+            forkJoin(
+                [
+                    this._profilesFunctionsService.getFunctionsNotAssociatedWithProfile( this.id ),
+                    this._profilesFunctionsService.getFunctionsByProfileId( this.id ),
+                    this._profilesService.getById( this.id )
+                ]
+            ).subscribe( {
+                next: ( [ functionResponse, profilesFunctionResponse, profilesResponse ] ) => {
+                    this.availableFunctions = functionResponse.data;
+                    this.associatedFunctions = profilesFunctionResponse.data;
+                    this._originalAssociatedFunctions = [ ...profilesFunctionResponse.data ];
+                    this.data = profilesResponse;
                     this.isLoading = false;
                     this.formActions();
-                } );
+                },
+                error: ( error ) => {
+                    this._appUtilsMessagesService.showQueryErrorMessage( error );
+                }
+            } );
         } );
     }
 
+
+    /**
+     * The function `formActions` creates a form with specific fields and handles changes to the form
+     * values.
+     * @returns If the `data` property is falsy (null, undefined, etc.), the function `formActions`
+     * will return early and not execute the rest of the code inside the function.
+     */
     formActions () {
         if ( !this.data ) return;
 
         this.form = this._formBuilder.group( {
-            id: [ this.data.id ],
-            profileName: [ this.data.profileName ],
+            id: [ { value: this.data.id, disabled: true }, Validators.required ],
+            profileName: [ this.data.profileName, Validators.required ],
             createdAt: [ { value: this.data.createdAt, disabled: true } ],
             updatedAt: [ { value: this.data.updatedAt, disabled: true } ],
         } );
 
         this.isAdminUser || this.form.disable();
 
-        this.form.valueChanges.subscribe( _ => {
-            this.isDataChanged = true;
+        this.form.valueChanges.subscribe( {
+            next: () => {
+                this.isDataChanged = true;
+            }
         } );
     }
 
@@ -140,33 +157,44 @@ export class AdminProfilesComponent extends BaseDetailClass<ProfileType> impleme
     }
 
 
+    /**
+     * The onSubmit function in TypeScript checks for admin user permissions, validates a form,
+     * confirms an update, and then updates profile information and associated functions.
+     * @returns If the `isAdminUser` check fails, the method will return a call to
+     * `this._appUtilsMessagesService.showNoPermissionError()`. If the form is not valid, it will
+     * return a call to `this._appUtilsMessagesService.showValidationError()`. If the user cancels the
+     * update confirmation, it will return a call to
+     * `this._appUtilsMessagesService.showUpdateCancelledMessage()
+     */
     onSubmit (): void {
-        if ( !this.isAdminUser ) return this._toastrNotificationService.error( {
-            title: 'Error',
-            message: 'No cuentas con permisos para actualizar el perfil'
-        } );
+        if ( !this.isAdminUser ) return this._appUtilsMessagesService.showNoPermissionError();
 
-        if ( !this.form.valid ) return this._toastrNotificationService.warning( {
-            title: 'Actualización fallida',
-            message: 'Por favor, confirma que la información sea valida'
-        } );
+        if ( !this.form.valid ) return this._appUtilsMessagesService.showValidationError();
 
         const isConfirmedUpdate = window.confirm( `¿Confirma la actualización en la información del perfil ${ this.data!.profileName }?` );
 
-        if ( !isConfirmedUpdate ) return this._toastrNotificationService.info( {
-            title: 'Actualización Cancelada',
-            message: 'Se canceló la actualización del perfil'
+        if ( !isConfirmedUpdate ) return this._appUtilsMessagesService.showUpdateCancelledMessage();
+
+        forkJoin(
+            [
+                this._profilesService.update(
+                    this.id,
+                    { id: this.id, ...this.form.value },
+                ),
+                this._profilesFunctionsService.updateFunctionsByProfileId(
+                    this.id,
+                    this._originalAssociatedFunctions,
+                    this.associatedFunctions
+                )
+            ]
+        ).subscribe( {
+            next: () => {
+                this._appUtilsMessagesService.showUpdateSuccessMessage();
+                this.submitted = true;
+            },
+            error: ( error ) => {
+                this._appUtilsMessagesService.showQueryErrorMessage( error );
+            }
         } );
-
-        this._profilesService.updateProfile( this.id, this.form.value, this.associatedFunctions );
-
-        this._toastrNotificationService.success( {
-            title: 'Actualización exitosa',
-            message: 'La información del perfil ha sido actualizada correctamente'
-        } );
-
-        this.submitted = true;
-
-        return this._location.back();
     }
 }

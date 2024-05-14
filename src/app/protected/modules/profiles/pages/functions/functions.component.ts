@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { forkJoin } from 'rxjs';
 
-import { ActivatedRoute, Router } from '@angular/router';
 import { BaseDetailClass } from '../../../../../shared/classes/base-detail.class';
+import { AppUtilsMessagesService } from '../../../../../shared/services/app-utils-messages.service';
 import { FunctionType, ProfileFunctionType, ProfileType } from '../../../../../shared/types';
 import { FunctionsService } from '../../services/functions.service';
+import { ProfilesFunctionsService } from '../../services/profiles-functions.service';
 import { ProfilesService } from '../../services/profiles.service';
 
 
@@ -20,13 +22,15 @@ export class FunctionsComponent extends BaseDetailClass<ProfileFunctionType[]> i
     public profiles: ProfileType[] = [];
     public functions: FunctionType[] = [];
 
-    public showForm: boolean = false;
+    public showForm: boolean = true;
 
     constructor (
         private readonly _activateRoute: ActivatedRoute,
         private readonly _router: Router,
+        private readonly _appUtilsMessages: AppUtilsMessagesService,
         private readonly _profilesService: ProfilesService,
         private readonly _functionsService: FunctionsService,
+        private readonly _profilesFunctionService: ProfilesFunctionsService
     ) {
         super();
     }
@@ -42,22 +46,20 @@ export class FunctionsComponent extends BaseDetailClass<ProfileFunctionType[]> i
 
             forkJoin(
                 [
-                    this._profilesService.getProfiles(),
-                    this._functionsService.getFunctions(),
-                    this._functionsService.getProfilesFunctions(),
+                    this._profilesService.getAll(),
+                    this._functionsService.getAll(),
+                    this._profilesFunctionService.getAll(),
                 ]
             ).subscribe( {
                 next: ( [ profilesResponse, functionsResponse, profilesFunctionsResponse ] ) => {
                     this.profiles = profilesResponse.data;
                     this.functions = functionsResponse.data;
                     this.data = profilesFunctionsResponse.data;
-                },
-                complete: () => {
                     this.isLoading = false;
                 },
                 error: ( error ) => {
-                    // TODO: Reportar al servicio de manejo de errores del servidor
-                    throw new Error( 'Method not implemented.' );
+                    this.isLoading = false;
+                    this._appUtilsMessages.showQueryErrorMessage( error );
                 }
             } );
         } );
@@ -78,6 +80,7 @@ export class FunctionsComponent extends BaseDetailClass<ProfileFunctionType[]> i
         return this.data!.some( e => e.profileId === profileId && e.functionId === functionId ) ? "✔" : null;
     }
 
+
     /**
      * The function toggles the value of the showForm variable.
      * @returns The value of `this.showForm` after it has been toggled.
@@ -86,8 +89,9 @@ export class FunctionsComponent extends BaseDetailClass<ProfileFunctionType[]> i
         return this.showForm = !this.showForm;
     }
 
+
     onClick ( func: FunctionType ) {
-        this._router.navigate( [ `profiles/functions/${ func.id }` ] );
         this.showForm = true;
+        this._router.navigate( [ `profiles/functions/${ func.id }` ] );
     }
 }

@@ -31,7 +31,7 @@ export class ListProfilesComponent extends InfoTableBaseComponent<ProfileType> i
     }
 
     ngOnInit (): void {
-        this._profilesService.getProfiles()
+        this._profilesService.getAll()
             .subscribe( ( response ) => {
                 this.data = response.data;
                 this.isEmptyTable = ( response.data.length <= 0 );

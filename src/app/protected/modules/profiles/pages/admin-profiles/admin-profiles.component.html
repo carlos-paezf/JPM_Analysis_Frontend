@@ -16,7 +16,7 @@
                         <mat-icon class="opacity_icon" fontIcon="person"></mat-icon>
                         <label for="id">Profile Id:</label>
                     </div>
-                    <input matInput formControlName="id" id="id" [disabled]="true">
+                    <input matInput formControlName="id" id="id">
                 </div>
 
                 <div class="form-control">
@@ -87,6 +87,5 @@
         </ng-container>
     </form>
 
-
-
+    <pre>{{data | json}}</pre>
 </ng-template>

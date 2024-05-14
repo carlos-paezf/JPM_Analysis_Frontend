@@ -31,7 +31,7 @@
         </thead>
         <tbody>
             <tr *ngFor="let function of functions" (click)="onClick(function)">
-                <th>{{ function.functionName }}</th>
+                <th [class]="function.deletedAt ? 'deleted-function' : ''">{{ function.functionName }}</th>
                 <td *ngFor="let profile of profiles">{{ getProfileFunction(profile.id, function.id) }}</td>
             </tr>
         </tbody>
