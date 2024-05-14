@@ -1,14 +1,13 @@
-import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 
 import { BaseDetailClass } from '../../../../../shared/classes/base-detail.class';
+import { AppUtilsMessagesService } from '../../../../../shared/services/app-utils-messages.service';
 import { AuthUsersService } from '../../../../../shared/services/auth-users.service';
-import { ToastrNotificationService } from '../../../../../shared/services/toastr-notification.service';
-import { CompanyUserType, FormBaseType, ProfileType } from '../../../../../shared/types';
-import { ProfilesService } from '../../../profiles/services/profiles.service';
+import { CompanyUserEagerType, FormBaseType, ProfileType } from '../../../../../shared/types';
 import { CompanyUsersService } from '../../services/company-users.service';
+import { ProfilesService } from '../../../profiles/services/profiles.service';
 
 
 /**
@@ -23,7 +22,7 @@ import { CompanyUsersService } from '../../services/company-users.service';
     templateUrl: './admin-company-user.component.html',
     styleUrls: [ './admin-company-user.component.scss' ]
 } )
-export class AdminCompanyUserComponent extends BaseDetailClass<CompanyUserType> implements FormBaseType, OnInit {
+export class AdminCompanyUserComponent extends BaseDetailClass<CompanyUserEagerType> implements FormBaseType, OnInit {
     public form!: FormGroup;
     public submitted: boolean = false;
 
@@ -35,11 +34,10 @@ export class AdminCompanyUserComponent extends BaseDetailClass<CompanyUserType> 
     constructor (
         private readonly _activateRoute: ActivatedRoute,
         private readonly _formBuilder: FormBuilder,
-        private readonly _location: Location,
-        private readonly _toastrNotificationService: ToastrNotificationService,
         private readonly _companyUsersService: CompanyUsersService,
         private readonly _authUserService: AuthUsersService,
-        private readonly _profileService: ProfilesService
+        private readonly _profilesService: ProfilesService,
+        private readonly _appUtilMessagesService: AppUtilsMessagesService
     ) {
         super();
     }
@@ -56,11 +54,17 @@ export class AdminCompanyUserComponent extends BaseDetailClass<CompanyUserType> 
             this.id = params[ 'accessId' ];
             this.isLoading = true;
 
-            this._companyUsersService.getCompanyUserByAccessId( this.id )
-                .subscribe( response => {
-                    this.data = response;
-                    this.isLoading = false;
-                    this.formActions();
+            this._companyUsersService.getById( this.id )
+                .subscribe( {
+                    next: response => {
+                        this.data = response;
+                        this.isLoading = false;
+                        this.formActions();
+                    },
+                    error: ( error ) => {
+                        this.data = null;
+                        this.isLoading = false;
+                    }
                 } );
         } );
     }
@@ -70,7 +74,7 @@ export class AdminCompanyUserComponent extends BaseDetailClass<CompanyUserType> 
      * the `profilesInfo` variable.
      */
     private _setProfilesInfo () {
-        this._profileService.getProfiles().subscribe( value => {
+        this._profilesService.getAll().subscribe( value => {
             this.profilesInfo = value.data;
         } );
     }
@@ -86,20 +90,20 @@ export class AdminCompanyUserComponent extends BaseDetailClass<CompanyUserType> 
         if ( !this.data ) return;
 
         this.form = this._formBuilder.group( {
-            accessId: [ this.data.accessId ],
-            userName: [ this.data.userName ],
-            userStatus: [ this.data.userStatus ],
-            userType: [ this.data.userType ],
+            accessId: [ { value: this.data.accessId, disabled: true }, Validators.required ],
+            userName: [ this.data.userName, Validators.required ],
+            userStatus: [ this.data.userStatus, Validators.required ],
+            userType: [ this.data.userType, Validators.required ],
             employeeId: [ this.data.employeeId ],
-            emailAddress: [ this.data.emailAddress ],
+            emailAddress: [ this.data.emailAddress, Validators.required ],
             userLocation: [ this.data.userLocation ],
-            userCountry: [ this.data.userCountry ],
-            userLogonType: [ this.data.userLogonType ],
+            userCountry: [ this.data.userCountry, Validators.required ],
+            userLogonType: [ this.data.userLogonType, Validators.required ],
             userLastLogonDt: [ this.data.userLastLogonDt ],
-            userLogonStatus: [ this.data.userLogonStatus ],
+            userLogonStatus: [ this.data.userLogonStatus, Validators.required ],
             userGroupMembership: [ this.data.userGroupMembership ],
             userRole: [ this.data.userRole ],
-            profileId: [ this.data.profileId ],
+            profileId: [ this.data.profileId, Validators.required ],
             createdAt: [ { value: this.data.createdAt, disabled: true } ],
             updatedAt: [ { value: this.data.updatedAt, disabled: true } ],
             deletedAt: [ { value: this.data.deletedAt, disabled: true } ],
@@ -107,8 +111,8 @@ export class AdminCompanyUserComponent extends BaseDetailClass<CompanyUserType> 
 
         this.isAdminUser || this.form.disable();
 
-        this.form.valueChanges.subscribe( _ => {
-            this.isDataChanged = true;
+        this.form.valueChanges.subscribe( {
+            next: () => { this.isDataChanged = true; }
         } );
     }
 
@@ -118,32 +122,26 @@ export class AdminCompanyUserComponent extends BaseDetailClass<CompanyUserType> 
      * @returns a toastr notification object.
      */
     onSubmit () {
-        if ( !this.isAdminUser ) return this._toastrNotificationService.error( {
-            title: 'Error',
-            message: 'No cuentas con permisos para actualizar el company user'
-        } );
+        if ( !this.isAdminUser ) return this._appUtilMessagesService.showNoPermissionError();
 
-        if ( !this.form.valid ) return this._toastrNotificationService.warning( {
-            title: 'Actualización fallida',
-            message: 'Por favor, confirma que la información sea valida'
-        } );
+        if ( !this.form.valid ) return this._appUtilMessagesService.showValidationError();
 
         const isConfirmedUpdate = window.confirm( `¿Confirma la actualización en la información del company user ${ this.data!.userName }?` );
 
-        if ( !isConfirmedUpdate ) return this._toastrNotificationService.info( {
-            title: 'Actualización Cancelada',
-            message: 'Se canceló la actualización del company user'
-        } );
+        if ( !isConfirmedUpdate ) return this._appUtilMessagesService.showUpdateCancelledMessage();
 
-        this._companyUsersService.updateCompanyUser( this.id, this.form.value );
-
-        this._toastrNotificationService.success( {
-            title: 'Actualización exitosa',
-            message: 'La información del company user ha sido actualizada correctamente'
-        } );
-
-        this.submitted = true;
-
-        return this._location.back();
+        this._companyUsersService.update(
+            this.id,
+            { accessId: this.data!.accessId, ...this.form.value }
+        ).subscribe(
+            {
+                next: () => {
+                    this._appUtilMessagesService.showUpdateSuccessMessage();
+                    this.submitted = true;
+                    // return this._location.back();
+                },
+                error: ( error ) => this._appUtilMessagesService.showQueryErrorMessage( error )
+            }
+        );
     }
 }

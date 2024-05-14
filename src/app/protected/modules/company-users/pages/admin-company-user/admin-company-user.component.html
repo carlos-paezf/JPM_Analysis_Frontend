@@ -16,7 +16,7 @@
                         <mat-icon class="opacity_icon" fontIcon="person"></mat-icon>
                         <label for="accessId">Access Id</label>
                     </div>
-                    <input matInput formControlName="accessId" id="accessId" [disabled]="true">
+                    <input matInput formControlName="accessId" id="accessId">
                 </div>
 
                 <div class="form-control">
@@ -161,5 +161,7 @@
             </button>
         </ng-container>
     </form>
+
+    <pre>{{data | json}}</pre>
 </ng-template>
 <!-- </app-dialog-section> -->
