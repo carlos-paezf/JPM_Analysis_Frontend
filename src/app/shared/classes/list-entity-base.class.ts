@@ -38,7 +38,7 @@ export abstract class ListEntityBase<Model, ModelEager> extends InfoTableBaseCom
                 },
                 error: ( error ) => {
                     this.isLoadingResults = false;
-                    this._appUtilsMessagesService.showUpdateErrorMessage( error );
+                    this._appUtilsMessagesService.showQueryErrorMessage( error );
                 }
             }
         );
@@ -73,7 +73,7 @@ export abstract class ListEntityBase<Model, ModelEager> extends InfoTableBaseCom
                 this._service.notifyUpdate();
             },
             error: ( error: any ) => {
-                this._appUtilsMessagesService.showUpdateErrorMessage( error );
+                this._appUtilsMessagesService.showQueryErrorMessage( error );
             }
         };
     }

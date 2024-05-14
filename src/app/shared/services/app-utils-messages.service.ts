@@ -77,8 +77,8 @@ export class AppUtilsMessagesService {
      * information is then logged to the console using `console.error` and displayed to the user as a
      * notification using the `_toastrNotificationService.error
      */
-    showUpdateErrorMessage ( error: any ): void {
-        console.error( 'Error updating account:', error );
+    showQueryErrorMessage ( error: any ): void {
+        console.log( error );
         this._toastrNotificationService.error( {
             title: 'Error',
             message: 'Ocurrió un error al ejecutar la consulta. Por favor, inténtalo de nuevo más tarde.'
