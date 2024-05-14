@@ -18,7 +18,8 @@
                     "builder": "@angular-devkit/build-angular:browser",
                     "options": {
                         "allowedCommonJsDependencies": [
-                            "moment"
+                            "moment",
+                            "rfdc"
                         ],
                         "outputPath": "dist/frontend-v2",
                         "index": "src/index.html",
