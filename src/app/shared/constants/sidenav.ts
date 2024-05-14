@@ -61,9 +61,9 @@ export const SIDENAV_ITEMS: SidenavLinkType[] = [
         requiresAdmin: false
     },
     {
-        label: 'Títulos de Usuarios',
-        icon: 'list',
-        routeLink: 'user-entitlements',
+        label: 'Cuentas',
+        icon: 'account_balance_wallet',
+        routeLink: 'accounts',
         requiresAdmin: false
     },
     {
@@ -91,15 +91,15 @@ export const SIDENAV_ITEMS: SidenavLinkType[] = [
         requiresAdmin: false
     },
     {
-        label: 'Cuentas',
+        label: 'Productos - Cuentas',
         icon: 'account_balance_wallet',
-        routeLink: 'accounts',
+        routeLink: 'products-accounts',
         requiresAdmin: false
     },
     {
-        label: 'Productos - Cuentas',
-        icon: 'account_balance_wallet',
-        routeLink: 'clients',
+        label: 'Títulos de Usuarios',
+        icon: 'list',
+        routeLink: 'users-entitlements',
         requiresAdmin: false
     },
     {
@@ -109,18 +109,23 @@ export const SIDENAV_ITEMS: SidenavLinkType[] = [
         requiresAdmin: false
     },
     {
-        label: 'Usuarios de la aplicación',
+        label: 'Administración de la aplicación',
         icon: 'desktop_windows',
         openTab: false,
         children: [
             {
+                label: 'Historial de reportes',
+                routeLink: 'admin-app/reports-history',
+                requiresAdmin: false,
+            },
+            {
                 label: 'Usuarios de la APP',
-                routeLink: 'app-users/app-users-list',
+                routeLink: 'admin-app/app-users-list',
                 requiresAdmin: false
             },
             {
                 label: 'Crear Usuario APP',
-                routeLink: 'app-users/create-app-user',
+                routeLink: 'admin-app/create-app-user',
                 requiresAdmin: true
             }
         ],
