@@ -1,14 +1,17 @@
-import { Component, OnInit } from '@angular/core';
-import { InfoTableBaseComponent } from '../../../../../shared/classes/sheet-base-component.class';
-import { ColumnTableType, UserEntitlementType } from '../../../../../shared/types';
+import { Component } from '@angular/core';
+
+import { ListEntityBase } from '../../../../../shared/classes/list-entity-base.class';
+import { AppUtilsMessagesService } from '../../../../../shared/services/app-utils-messages.service';
+import { ColumnTableType, UserEntitlementEagerType, UserEntitlementType } from '../../../../../shared/types';
 import { UserEntitlementsService } from '../../services/user-entitlements.service';
+
 
 @Component( {
     selector: 'app-list-user-entitlements',
     templateUrl: './list-user-entitlements.component.html',
     styleUrls: [ './list-user-entitlements.component.scss' ]
 } )
-export class ListUserEntitlementsComponent extends InfoTableBaseComponent<UserEntitlementType> implements OnInit {
+export class ListUserEntitlementsComponent extends ListEntityBase<UserEntitlementType, UserEntitlementEagerType> {
     public override displayedColumns: string[] = [
         'accessId',
         'productId',
@@ -29,26 +32,10 @@ export class ListUserEntitlementsComponent extends InfoTableBaseComponent<UserEn
         { columnDef: 'deletedAt', header: 'Fecha de Desactivación', cell: ( row ) => row.deletedAt },
     ];
 
-    public deleteUserEntitlement!: Function;
-    public reactivateUserEntitlement!: Function;
-
-    constructor ( private _userEntitlementsService: UserEntitlementsService ) {
-        super();
-    }
-
-    /**
-     * The ngOnInit function retrieves users data from a service and assigns it to the component's data
-     * property, while also updating the component's isLoadingResults and isEmptyTable properties
-     * accordingly.
-     */
-    ngOnInit (): void {
-        this._userEntitlementsService.getUserEntitlements()
-            .subscribe( ( response ) => {
-                this.data = response.data;
-                this.isEmptyTable = ( response.data.length <= 0 );
-                this.isLoadingResults = false;
-            } );
-        this.deleteUserEntitlement = this._userEntitlementsService.deleteUserEntitlement;
-        this.reactivateUserEntitlement = this._userEntitlementsService.reactivateUserEntitlement;
+    constructor (
+        _appUtilsMessagesService: AppUtilsMessagesService,
+        _userEntitlementsService: UserEntitlementsService
+    ) {
+        super( _appUtilsMessagesService, _userEntitlementsService );
     }
 }

@@ -9,8 +9,8 @@
 
     <ng-template #tableComponent>
         <app-table-base [displayedColumns]="displayedColumns" [data]="data" [columns]="columns"
-            baseUrl="user-entitlements" [deleteFunction]="deleteUserEntitlement"
-            [reactivateFunction]="reactivateUserEntitlement"></app-table-base>
+            baseUrl="users-entitlements" [deactivateFunction]="deactivateItem"
+            [reactivateFunction]="reactivateItem"></app-table-base>
     </ng-template>
 </section>
 
