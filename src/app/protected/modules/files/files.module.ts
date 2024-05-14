@@ -4,13 +4,25 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { MaterialDesignModule } from '../../../material-design/material-design.module';
 import { SharedModule } from '../../../shared/shared.module';
-import { FormComponent } from './components/form/form.component';
+import { CompareResultsComponent } from './pages/compare-results/compare-results.component';
+import { EntityComparisonTableComponent } from './components/entity-comparison-table/entity-comparison-table.component';
+import { EntityTableComponent } from './components/entity-table/entity-table.component';
+import { FormComponent } from './pages/form/form.component';
+import { PostResultsComponent } from './pages/post-results/post-results.component';
+import { ResultsAccordionComponent } from './components/results-accordion/results-accordion.component';
 import { FilesRoutingModule } from './files-routing.module';
+import { StatisticsTableComponent } from './components/statistics-table/statistics-table.component';
 
 
 @NgModule( {
     declarations: [
-        FormComponent
+        FormComponent,
+        CompareResultsComponent,
+        PostResultsComponent,
+        ResultsAccordionComponent,
+        EntityComparisonTableComponent,
+        EntityTableComponent,
+        StatisticsTableComponent
     ],
     imports: [
         CommonModule,
