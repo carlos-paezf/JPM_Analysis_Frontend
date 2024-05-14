@@ -1,10 +1,9 @@
-import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 
-import { AppUtilsMessagesService } from 'src/app/shared/services/app-utils-messages.service';
 import { BaseDetailClass } from '../../../../../shared/classes/base-detail.class';
+import { AppUtilsMessagesService } from '../../../../../shared/services/app-utils-messages.service';
 import { AuthUsersService } from '../../../../../shared/services/auth-users.service';
 import { AccountEagerType, FormBaseType } from '../../../../../shared/types';
 import { AccountsService } from '../../services/accounts.service';
@@ -25,8 +24,7 @@ export class AdminAccountsComponent extends BaseDetailClass<AccountEagerType> im
     constructor (
         private readonly _activateRoute: ActivatedRoute,
         private readonly _formBuilder: FormBuilder,
-        private readonly _location: Location,
-        private readonly _appUtilMessagesServices: AppUtilsMessagesService,
+        private readonly _appUtilsMessagesService: AppUtilsMessagesService,
         private readonly _accountsService: AccountsService,
         private readonly _authUserService: AuthUsersService,
     ) {
@@ -92,27 +90,26 @@ export class AdminAccountsComponent extends BaseDetailClass<AccountEagerType> im
      * @returns the result of the `_location.back()` method.
      */
     onSubmit () {
-        if ( !this.isAdminUser ) return this._appUtilMessagesServices.showNoPermissionError();
+        if ( !this.isAdminUser ) return this._appUtilsMessagesService.showNoPermissionError();
 
-        if ( !this.form.valid ) return this._appUtilMessagesServices.showValidationError();
+        if ( !this.form.valid ) return this._appUtilsMessagesService.showValidationError();
 
         const isConfirmedUpdate = window.confirm( `¿Confirma la actualización en la información de la cuenta ${ this.data!.accountNumber }?` );
 
-        if ( !isConfirmedUpdate ) return this._appUtilMessagesServices.showUpdateCancelledMessage();
+        if ( !isConfirmedUpdate ) return this._appUtilsMessagesService.showUpdateCancelledMessage();
 
         this._accountsService.update(
             this.id,
             { accountNumber: this.data!.accountNumber, ...this.form.value }
-        )
-            .subscribe(
-                {
-                    next: () => {
-                        this._appUtilMessagesServices.showUpdateSuccessMessage();
-                        this.submitted = true;
-                        // return this._location.back();
-                    },
-                    error: ( error ) => this._appUtilMessagesServices.showUpdateErrorMessage( error )
-                }
-            );
+        ).subscribe(
+            {
+                next: () => {
+                    this._appUtilsMessagesService.showUpdateSuccessMessage();
+                    this.submitted = true;
+                    // return this._location.back();
+                },
+                error: ( error ) => this._appUtilsMessagesService.showQueryErrorMessage( error )
+            }
+        );
     }
 }
