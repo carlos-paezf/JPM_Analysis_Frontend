@@ -1,0 +1,47 @@
+<div class="panel">
+    <details>
+        <summary>
+            <ul>
+                <li class="titleName">
+                    <span class="add"></span>
+                    <span>Adiciones: {{totalAdds}}</span>
+                </li>
+                <li class="titleValue">
+                    <span class="update"></span>
+                    <span>Modificaciones: {{totalUpdates}}</span>
+                </li>
+                <li class="titleValue">
+                    <span class="delete"></span>
+                    <span>Eliminaciones: {{totalDeletes}}</span>
+                </li>
+            </ul>
+        </summary>
+
+        <div class="content">
+            <table class="comparison__table">
+                <thead>
+                    <tr>
+                        <th>Columna</th>
+                        <th>{{ entityName }} (Base de datos)</th>
+                        <th>{{ entityName }} (Excel)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <ng-container *ngFor="let key of keys">
+                        <tr>
+                            <td>{{commonColumns[key]}}</td>
+                            <td [style.background-color]="isDifferent(entityWithDifferences.databaseEntity[key], entityWithDifferences.excelEntity[key])"
+                                [style.font-weight]="isDifferent(entityWithDifferences.databaseEntity[key], entityWithDifferences.excelEntity[key]) !== null ? 'bold' : 'normal'">
+                                {{ entityWithDifferences.databaseEntity[key] }}
+                            </td>
+                            <td [style.background-color]="isDifferent(entityWithDifferences.databaseEntity[key], entityWithDifferences.excelEntity[key])"
+                                [style.font-weight]="isDifferent(entityWithDifferences.databaseEntity[key], entityWithDifferences.excelEntity[key]) !== null ? 'bold' : 'normal'">
+                                {{ entityWithDifferences.excelEntity[key] }}
+                            </td>
+                        </tr>
+                    </ng-container>
+                </tbody>
+            </table>
+        </div>
+    </details>
+</div>
