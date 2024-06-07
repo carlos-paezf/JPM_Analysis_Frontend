@@ -6,7 +6,7 @@
                 <mat-icon class="opacity_icon" fontIcon="event_available"></mat-icon>
                 <label for="createdAt">Fecha de creación:</label>
             </div>
-            <input matInput [value]="createdAt" id="createdAt" [disabled]="true">
+            <input matInput [value]="formatDate(createdAt)" id="createdAt" [disabled]="true">
         </div>
 
         <div class="form-control">
@@ -14,7 +14,7 @@
                 <mat-icon class="opacity_icon" fontIcon="edit_calendar"></mat-icon>
                 <label for="updatedAt">Fecha de última actualización:</label>
             </div>
-            <input matInput [value]="updatedAt" id="updatedAt" [disabled]="true">
+            <input matInput [value]="formatDate(updatedAt)" id="updatedAt" [disabled]="true">
         </div>
 
 
@@ -23,7 +23,7 @@
                 <mat-icon class="opacity_icon" fontIcon="edit_calendar"></mat-icon>
                 <label for="deletedAt">Fecha de eliminación:</label>
             </div>
-            <input matInput [value]="deletedAt" id="deletedAt" [disabled]="true">
+            <input matInput [value]="formatDate(deletedAt)" id="deletedAt" [disabled]="true">
         </div>
     </div>
 </section>
