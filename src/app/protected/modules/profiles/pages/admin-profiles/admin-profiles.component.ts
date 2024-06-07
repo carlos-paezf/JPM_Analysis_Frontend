@@ -112,6 +112,8 @@ export class AdminProfilesComponent extends BaseDetailClass<ProfileType> impleme
         } else {
             this.functionsToRemove.push( func );
         }
+
+        this.form.markAllAsTouched();
     }
 
 
@@ -126,6 +128,8 @@ export class AdminProfilesComponent extends BaseDetailClass<ProfileType> impleme
         } else {
             this.functionsToAdd.push( func );
         }
+
+        this.form.markAllAsTouched();
     }
 
 
