@@ -39,6 +39,10 @@
                 <button mat-raised-button color="primary" [disabled]="!isDataChanged">
                     Actualizar Producto
                 </button>
+                <button type="button" (click)="onRestartForm()" mat-raised-button color="accent"
+                    [disabled]="!isDataChanged">
+                    Restaurar Formulario
+                </button>
             </section>
         </ng-container>
     </form>

@@ -18,6 +18,7 @@ import { ProfilesService } from '../../services/profiles.service';
 } )
 export class AdminProfilesComponent extends BaseDetailClass<ProfileType> implements FormBaseType, OnInit {
     public form!: FormGroup<any>;
+    public initialFormValues!: FormGroup<any>;
     public submitted: boolean = false;
 
     public isDataChanged: boolean = false;
@@ -98,6 +99,8 @@ export class AdminProfilesComponent extends BaseDetailClass<ProfileType> impleme
                 this.isDataChanged = true;
             }
         } );
+
+        this.initialFormValues = this.form.getRawValue();
     }
 
 
@@ -200,5 +203,13 @@ export class AdminProfilesComponent extends BaseDetailClass<ProfileType> impleme
                 this._appUtilsMessagesService.showQueryErrorMessage( error );
             }
         } );
+    }
+
+
+    /**
+     * The `onRestartForm` function resets the form to its initial values in TypeScript.
+     */
+    onRestartForm (): void {
+        this.form.reset( this.initialFormValues );
     }
 }

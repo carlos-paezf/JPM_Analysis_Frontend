@@ -24,6 +24,7 @@ import { AppUtilsMessagesService } from 'src/app/shared/services/app-utils-messa
 export class AdminUserEntitlementsComponent extends BaseDetailClass<UserEntitlementType> implements FormBaseType, OnInit {
     public form!: FormGroup;
     public submitted: boolean = false;
+    public initialFormValues!: FormGroup<any>;
 
     public isDataChanged: boolean = false;
     public isAdminUser: boolean = false;
@@ -54,6 +55,7 @@ export class AdminUserEntitlementsComponent extends BaseDetailClass<UserEntitlem
     ) {
         super();
     }
+
 
     /**
      * The ngOnInit function initializes the component by checking if the user is an admin, setting
@@ -136,6 +138,8 @@ export class AdminUserEntitlementsComponent extends BaseDetailClass<UserEntitlem
         this.form.valueChanges.subscribe( _ => {
             this.isDataChanged = true;
         } );
+
+        this.initialFormValues = this.form.getRawValue();
     }
 
 
@@ -183,6 +187,14 @@ export class AdminUserEntitlementsComponent extends BaseDetailClass<UserEntitlem
         this.submitted = true;
 
         return this._location.back();
+    }
+
+
+    /**
+     * The `onRestartForm` function resets the form to its initial values in TypeScript.
+     */
+    onRestartForm (): void {
+        this.form.reset( this.initialFormValues );
     }
 
 

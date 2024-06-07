@@ -25,6 +25,7 @@ import { ProfilesService } from '../../../profiles/services/profiles.service';
 export class AdminCompanyUserComponent extends BaseDetailClass<CompanyUserEagerType> implements FormBaseType, OnInit {
     public form!: FormGroup;
     public submitted: boolean = false;
+    public initialFormValues!: FormGroup<any>;
 
     public isDataChanged: boolean = false;
     public isAdminUser: boolean = false;
@@ -114,6 +115,8 @@ export class AdminCompanyUserComponent extends BaseDetailClass<CompanyUserEagerT
         this.form.valueChanges.subscribe( {
             next: () => { this.isDataChanged = true; }
         } );
+
+        this.initialFormValues = this.form.getRawValue();
     }
 
     /**
@@ -143,5 +146,12 @@ export class AdminCompanyUserComponent extends BaseDetailClass<CompanyUserEagerT
                 error: ( error ) => this._appUtilMessagesService.showQueryErrorMessage( error )
             }
         );
+    }
+
+    /**
+     * The `onRestartForm` function resets the form to its initial values in TypeScript.
+     */
+    onRestartForm (): void {
+        this.form.reset( this.initialFormValues );
     }
 }

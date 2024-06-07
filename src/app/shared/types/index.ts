@@ -71,6 +71,8 @@ export type SidenavLinkType = {
 
 export type FormBaseType = {
     form: FormGroup;
+    initialFormValues: FormGroup;
     submitted: boolean;
     onSubmit (): void;
+    onRestartForm (): void;
 };

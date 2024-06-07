@@ -20,6 +20,7 @@ import { ProductsAccountsService } from '../../services/products-accounts.servic
 } )
 export class AdminProductsAccountsComponent extends BaseDetailClass<ProductAccountType> implements FormBaseType, OnInit {
     public form!: FormGroup<any>;
+    public initialFormValues!: FormGroup<any>;
     public submitted!: boolean;
 
     public isDataChanged: boolean = false;
@@ -42,6 +43,7 @@ export class AdminProductsAccountsComponent extends BaseDetailClass<ProductAccou
     ) {
         super();
     }
+
 
     ngOnInit (): void {
         this.isAdminUser = this._authUserService.getIsAdminAppUser();
@@ -89,6 +91,8 @@ export class AdminProductsAccountsComponent extends BaseDetailClass<ProductAccou
         this.form.valueChanges.subscribe( _ => {
             this.isDataChanged = true;
         } );
+
+        this.initialFormValues = this.form.getRawValue();
     }
 
 
@@ -201,5 +205,12 @@ export class AdminProductsAccountsComponent extends BaseDetailClass<ProductAccou
                 error: ( error ) => { this._appUtilsMessagesService.showQueryErrorMessage( error ); }
             }
         );
+    }
+
+    /**
+     * The `onRestartForm` function resets the form to its initial values in TypeScript.
+     */
+    onRestartForm (): void {
+        this.form.reset( this.initialFormValues );
     }
 }

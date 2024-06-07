@@ -16,6 +16,7 @@ import { AccountsService } from '../../services/accounts.service';
 } )
 export class AdminAccountsComponent extends BaseDetailClass<AccountEagerType> implements FormBaseType, OnInit {
     public form!: FormGroup;
+    public initialFormValues!: FormGroup<any>;
     public submitted: boolean = false;
 
     public isDataChanged: boolean = false;
@@ -81,6 +82,8 @@ export class AdminAccountsComponent extends BaseDetailClass<AccountEagerType> im
         this.form.valueChanges.subscribe( {
             next: () => { this.isDataChanged = true; }
         } );
+
+        this.initialFormValues = this.form.getRawValue();
     }
 
 
@@ -111,5 +114,12 @@ export class AdminAccountsComponent extends BaseDetailClass<AccountEagerType> im
                 error: ( error ) => this._appUtilsMessagesService.showQueryErrorMessage( error )
             }
         );
+    }
+
+    /**
+     * The `onRestartForm` function resets a form to its initial values in TypeScript.
+     */
+    onRestartForm (): void {
+        this.form.reset( this.initialFormValues );
     }
 }

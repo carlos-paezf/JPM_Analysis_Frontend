@@ -23,6 +23,7 @@ import { UploadFileService } from '../../services/upload-file.service';
 } )
 export class FormComponent extends CustomValidators implements FormBaseType, OnInit {
     public form!: FormGroup;
+    public initialFormValues!: FormGroup<any>;
     public submitted: boolean = false;
 
 
@@ -103,6 +104,14 @@ export class FormComponent extends CustomValidators implements FormBaseType, OnI
                 }
             }
         );
+    }
+
+
+    /**
+     * The `onRestartForm` function resets the form to its initial values in TypeScript.
+     */
+    onRestartForm (): void {
+        this.form.reset( this.initialFormValues );
     }
 
 

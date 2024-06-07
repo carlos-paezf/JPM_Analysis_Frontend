@@ -21,6 +21,7 @@ import { AuthUsersService } from '../../../shared/services/auth-users.service';
 } )
 export class LoginComponent extends CustomValidators implements FormBaseType, OnInit {
     public form!: FormGroup;
+    public initialFormValues!: FormGroup<any>;
     public submitted: boolean = false;
 
     public isInputPassword: boolean = true;
@@ -39,6 +40,8 @@ export class LoginComponent extends CustomValidators implements FormBaseType, On
             username: [ '', [ Validators.required, Validators.minLength( 6 ) ] ],
             password: [ '', [ Validators.required, Validators.minLength( 8 ) ] ]
         } );
+
+        this.initialFormValues = this.form;
     }
 
     /**
@@ -66,6 +69,13 @@ export class LoginComponent extends CustomValidators implements FormBaseType, On
             title: 'Inicio de Sesión',
             message: 'Has iniciado sesión exitosamente'
         } );
+    }
+
+    /**
+     * The `onRestartForm` function resets the form to its initial values in TypeScript.
+     */
+    onRestartForm (): void {
+        this.form.reset( this.initialFormValues );
     }
 
     /**
