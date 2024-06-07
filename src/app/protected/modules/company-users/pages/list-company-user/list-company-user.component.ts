@@ -17,6 +17,7 @@ import { CompanyUsersService } from '../../services/company-users.service';
 export class ListCompanyUserComponent extends ListEntityBase<CompanyUserType, CompanyUserEagerType> {
     public override displayedColumns: string[] = [
         'userName',
+        'accessId',
         'profileId',
         'userType',
         'emailAddress',
@@ -34,6 +35,7 @@ export class ListCompanyUserComponent extends ListEntityBase<CompanyUserType, Co
 
     public override columns: ColumnTableType<CompanyUserType>[] = [
         { columnDef: 'userName', header: 'User Name', cell: ( row ) => row.userName },
+        { columnDef: 'accessId', header: 'Access Id', cell: ( row ) => row.accessId },
         { columnDef: 'userStatus', header: 'Status', cell: ( row ) => row.userStatus },
         { columnDef: 'userType', header: 'Type', cell: ( row ) => row.userType },
         { columnDef: 'employeeId', header: 'Employee ID', cell: ( row ) => row.employeeId },
