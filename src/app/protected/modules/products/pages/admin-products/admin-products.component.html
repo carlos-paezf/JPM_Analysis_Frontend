@@ -8,34 +8,38 @@
 
 <ng-template #productInfo>
     <form [formGroup]="form" (ngSubmit)="onSubmit()">
-        <section>
-            <h4>Datos básicos</h4>
-            <div class="form-group">
-                <div class="form-control">
-                    <div class="label">
-                        <mat-icon class="opacity_icon" fontIcon="person"></mat-icon>
-                        <label for="productName">Nombre del producto</label>
+        <div class="form__data">
+            <section>
+                <h4>Datos básicos</h4>
+                <div class="form-group">
+                    <div class="form-control">
+                        <div class="label">
+                            <mat-icon class="opacity_icon" fontIcon="person"></mat-icon>
+                            <label for="productName">Nombre del producto</label>
+                        </div>
+                        <input matInput formControlName="productName" id="productName" [disabled]="true">
                     </div>
-                    <input matInput formControlName="productName" id="productName" [disabled]="true">
-                </div>
 
-                <div class="form-control">
-                    <div class="label">
-                        <mat-icon class="opacity_icon" fontIcon="person"></mat-icon>
-                        <label for="subProduct">Sub Producto</label>
+                    <div class="form-control">
+                        <div class="label">
+                            <mat-icon class="opacity_icon" fontIcon="person"></mat-icon>
+                            <label for="subProduct">Sub Producto</label>
+                        </div>
+                        <input matInput formControlName="subProduct" id="subProduct">
                     </div>
-                    <input matInput formControlName="subProduct" id="subProduct">
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <app-control-dates-form [createdAt]="data!.createdAt" [updatedAt]="data!.updatedAt"
-            [deletedAt]="data?.deletedAt" />
+            <app-control-dates-form [createdAt]="data!.createdAt" [updatedAt]="data!.updatedAt"
+                [deletedAt]="data?.deletedAt" />
+        </div>
 
         <ng-container *ngIf="isAdminUser">
-            <button mat-raised-button color="primary" [disabled]="!isDataChanged">
-                Actualizar Producto
-            </button>
+            <section class="form__actions">
+                <button mat-raised-button color="primary" [disabled]="!isDataChanged">
+                    Actualizar Producto
+                </button>
+            </section>
         </ng-container>
     </form>
 </ng-template>

@@ -8,99 +8,105 @@
 
 <ng-template #userEntitlementInfo>
     <form [formGroup]="form" (ngSubmit)="onSubmit()">
-        <section>
-            <h4>Datos básicos</h4>
+        <div class="form__data">
+            <section>
+                <h4>Datos básicos</h4>
 
-            <div class="form-group">
-                <div class="form-control">
-                    <div class="label">
-                        <mat-icon class="opacity_icon" fontIcon="person"></mat-icon>
-                        <label for="companyUser">Access Id</label>
+                <div class="form-group">
+                    <div class="form-control">
+                        <div class="label">
+                            <mat-icon class="opacity_icon" fontIcon="person"></mat-icon>
+                            <label for="companyUser">Access Id</label>
+                        </div>
+
+                        <mat-select formControlName="companyUser" placeholder="Seleccionar Company User" #singleSelect>
+                            <mat-option>
+                                <ngx-mat-select-search formControlName="companyUserSearch"
+                                    placeholderLabel="Buscar company user"
+                                    (ngModelChange)="filterCompanyUsers($event)"></ngx-mat-select-search>
+                            </mat-option>
+                            <mat-option *ngFor="let companyUser of searchCompanyUsers" [value]="companyUser">
+                                {{companyUser.accessId ? companyUser.accessId + " - " + companyUser.userName : "Sin usuario asociado"}}
+                            </mat-option>
+                        </mat-select>
                     </div>
 
-                    <mat-select formControlName="companyUser" placeholder="Seleccionar Company User" #singleSelect>
-                        <mat-option>
-                            <ngx-mat-select-search formControlName="companyUserSearch"
-                                placeholderLabel="Buscar company user"
-                                (ngModelChange)="filterCompanyUsers($event)"></ngx-mat-select-search>
-                        </mat-option>
-                        <mat-option *ngFor="let companyUser of searchCompanyUsers" [value]="companyUser">
-                            {{companyUser.accessId ? companyUser.accessId + " - " + companyUser.userName : "Sin usuario asociado"}}
-                        </mat-option>
-                    </mat-select>
-                </div>
-
-                <div class="form-control">
-                    <div class="label">
-                        <mat-icon class="opacity_icon" fontIcon="assignment_ind"></mat-icon>
-                        <label for="account">Account number</label>
+                    <div class="form-control">
+                        <div class="label">
+                            <mat-icon class="opacity_icon" fontIcon="assignment_ind"></mat-icon>
+                            <label for="account">Account number</label>
+                        </div>
+                        <mat-select formControlName="account" placeholder="Seleccionar Cuenta" #singleSelect>
+                            <mat-option>
+                                <ngx-mat-select-search formControlName="accountSearch" placeholderLabel="Buscar cuenta"
+                                    (ngModelChange)="filterAccounts($event)"></ngx-mat-select-search>
+                            </mat-option>
+                            <mat-option *ngFor="let account of searchAccounts" [value]="account">
+                                {{ account.accountNumber ? account.accountNumber + ' - ' + account.accountName : 'Sin cuenta asociada' }}
+                            </mat-option>
+                        </mat-select>
                     </div>
-                    <mat-select formControlName="account" placeholder="Seleccionar Cuenta" #singleSelect>
-                        <mat-option>
-                            <ngx-mat-select-search formControlName="accountSearch" placeholderLabel="Buscar cuenta"
-                                (ngModelChange)="filterAccounts($event)"></ngx-mat-select-search>
-                        </mat-option>
-                        <mat-option *ngFor="let account of searchAccounts" [value]="account">
-                            {{ account.accountNumber ? account.accountNumber + ' - ' + account.accountName : 'Sin cuenta asociada' }}
-                        </mat-option>
-                    </mat-select>
-                </div>
 
-                <div class="form-control">
-                    <div class="label">
-                        <mat-icon class="opacity_icon" fontIcon="person"></mat-icon>
-                        <label for="product">Product Id</label>
+                    <div class="form-control">
+                        <div class="label">
+                            <mat-icon class="opacity_icon" fontIcon="person"></mat-icon>
+                            <label for="product">Product Id</label>
+                        </div>
+                        <!-- <input matInput formControlName="productId" id="productId"> -->
+
+                        <mat-select formControlName="product" placeholder="Seleccionar Producto" #singleSelect>
+                            <mat-option>
+                                <ngx-mat-select-search formControlName="productSearch"
+                                    placeholderLabel="Buscar producto"
+                                    (ngModelChange)="filterProducts($event)"></ngx-mat-select-search>
+                            </mat-option>
+                            <mat-option *ngFor="let product of searchProducts" [value]="product">
+                                {{ product.id 
+                                            ? product.productName + (product.subProduct ? (' - ' + product.subProduct) : '') 
+                                            : 'Sin producto asociado' }}
+                            </mat-option>
+                        </mat-select>
                     </div>
-                    <!-- <input matInput formControlName="productId" id="productId"> -->
 
-                    <mat-select formControlName="product" placeholder="Seleccionar Producto" #singleSelect>
-                        <mat-option>
-                            <ngx-mat-select-search formControlName="productSearch" placeholderLabel="Buscar producto"
-                                (ngModelChange)="filterProducts($event)"></ngx-mat-select-search>
-                        </mat-option>
-                        <mat-option *ngFor="let product of searchProducts" [value]="product">
-                            {{ product.id 
-                                ? product.productName + (product.subProduct ? (' - ' + product.subProduct) : '') 
-                                : 'Sin producto asociado' }}
-                        </mat-option>
-                    </mat-select>
-                </div>
+                    <div class="form-control">
+                        <div class="label">
+                            <mat-icon class="opacity_icon" fontIcon="mail"></mat-icon>
+                            <label for="function">Function Id</label>
+                        </div>
+                        <!-- <input matInput formControlName="functionId" id="functionId"> -->
 
-                <div class="form-control">
-                    <div class="label">
-                        <mat-icon class="opacity_icon" fontIcon="mail"></mat-icon>
-                        <label for="function">Function Id</label>
+                        <mat-select formControlName="function" placeholder="Seleccionar Función" #singleSelect>
+                            <mat-option>
+                                <ngx-mat-select-search formControlName="functionSearch"
+                                    placeholderLabel="Buscar función"
+                                    (ngModelChange)="filterFunctions($event)"></ngx-mat-select-search>
+                            </mat-option>
+                            <mat-option *ngFor="let function of searchFunctions" [value]="function">
+                                {{function.id ? function.functionName : 'Sin función asociada'}}
+                            </mat-option>
+                        </mat-select>
                     </div>
-                    <!-- <input matInput formControlName="functionId" id="functionId"> -->
 
-                    <mat-select formControlName="function" placeholder="Seleccionar Función" #singleSelect>
-                        <mat-option>
-                            <ngx-mat-select-search formControlName="functionSearch" placeholderLabel="Buscar función"
-                                (ngModelChange)="filterFunctions($event)"></ngx-mat-select-search>
-                        </mat-option>
-                        <mat-option *ngFor="let function of searchFunctions" [value]="function">
-                            {{function.id ? function.functionName : 'Sin función asociada'}}
-                        </mat-option>
-                    </mat-select>
-                </div>
-
-                <div class="form-control">
-                    <div class="label">
-                        <mat-icon class="opacity_icon" fontIcon="assignment_ind"></mat-icon>
-                        <label for="functionType">Function Type</label>
+                    <div class="form-control">
+                        <div class="label">
+                            <mat-icon class="opacity_icon" fontIcon="assignment_ind"></mat-icon>
+                            <label for="functionType">Function Type</label>
+                        </div>
+                        <input matInput formControlName="functionType" id="functionType">
                     </div>
-                    <input matInput formControlName="functionType" id="functionType">
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <app-control-dates-form [createdAt]="data!.createdAt" [updatedAt]="data!.updatedAt"
-            [deletedAt]="data?.deletedAt" />
+            <app-control-dates-form [createdAt]="data!.createdAt" [updatedAt]="data!.updatedAt"
+                [deletedAt]="data?.deletedAt" />
+        </div>
 
         <ng-container *ngIf="isAdminUser">
-            <button mat-raised-button color="primary" [disabled]="!isDataChanged">
-                Actualizar título
-            </button>
+            <section class="form__actions">
+                <button mat-raised-button color="primary" [disabled]="!isDataChanged">
+                    Actualizar título
+                </button>
+            </section>
         </ng-container>
     </form>
 

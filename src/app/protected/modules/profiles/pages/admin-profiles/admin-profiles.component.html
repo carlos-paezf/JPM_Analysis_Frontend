@@ -8,82 +8,86 @@
 
 <ng-template #profileInfo>
     <form [formGroup]="form" (ngSubmit)="onSubmit()">
-        <section>
-            <h4>Datos del perfil</h4>
-            <div class="form-group">
-                <div class="form-control">
-                    <div class="label">
-                        <mat-icon class="opacity_icon" fontIcon="person"></mat-icon>
-                        <label for="id">Profile Id:</label>
-                    </div>
-                    <input matInput formControlName="id" id="id">
-                </div>
-
-                <div class="form-control">
-                    <div class="label">
-                        <mat-icon class="opacity_icon" fontIcon="person"></mat-icon>
-                        <label for="profileName">Profile Name:</label>
-                    </div>
-                    <input matInput formControlName="profileName" id="profileName">
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h4>Funciones relacionadas al perfil</h4>
-
-            <div class="form-group extended">
-                <div class="form-control">
-                    <div class="label">
-                        <mat-icon class="opacity_icon" fontIcon="functions"></mat-icon>
-                        <label for="functions">Funciones:</label>
+        <div class="form__data">
+            <section>
+                <h4>Datos del perfil</h4>
+                <div class="form-group">
+                    <div class="form-control">
+                        <div class="label">
+                            <mat-icon class="opacity_icon" fontIcon="person"></mat-icon>
+                            <label for="id">Profile Id:</label>
+                        </div>
+                        <input matInput formControlName="id" id="id">
                     </div>
 
-                    <div class="functions">
-                        <div class="list__functions">
-                            <span>Funciones asociadas</span>
-                            <ul>
-                                <li *ngIf="associatedFunctions.length === 0">
-                                    Sin funciones asociadas al perfil
-                                </li>
-                                <li *ngFor="let func of associatedFunctions">
-                                    <mat-checkbox
-                                        (change)="toggleFunctionsRemove(func)">{{ func.functionName }}</mat-checkbox>
-                                </li>
-                            </ul>
+                    <div class="form-control">
+                        <div class="label">
+                            <mat-icon class="opacity_icon" fontIcon="person"></mat-icon>
+                            <label for="profileName">Profile Name:</label>
                         </div>
-
-                        <div class="functions__actions">
-                            <button type="button" mat-raised-button color="warn" (click)="removeFunctions()"
-                                [disabled]="!functionsToRemove.length">Remover</button>
-                            <button type="button" mat-raised-button color="primary" (click)="addFunctions()"
-                                [disabled]="!functionsToAdd.length">Añadir</button>
-                        </div>
-
-                        <div class="list__functions">
-                            <span>Funciones disponibles</span>
-                            <ul>
-                                <li *ngIf="availableFunctions.length === 0">
-                                    Sin funciones disponibles para asociar
-                                </li>
-                                <li *ngFor="let func of availableFunctions">
-                                    <mat-checkbox
-                                        (change)="toggleFunctionsAdd(func)">{{ func.functionName }}</mat-checkbox>
-                                </li>
-                            </ul>
-                        </div>
-
+                        <input matInput formControlName="profileName" id="profileName">
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <app-control-dates-form [createdAt]="data!.createdAt" [updatedAt]="data!.updatedAt" [deletedAt]="null" />
+            <section>
+                <h4>Funciones relacionadas al perfil</h4>
+
+                <div class="form-group extended">
+                    <div class="form-control">
+                        <div class="label">
+                            <mat-icon class="opacity_icon" fontIcon="functions"></mat-icon>
+                            <label for="functions">Funciones:</label>
+                        </div>
+
+                        <div class="functions">
+                            <div class="list__functions">
+                                <span>Funciones asociadas</span>
+                                <ul>
+                                    <li *ngIf="associatedFunctions.length === 0">
+                                        Sin funciones asociadas al perfil
+                                    </li>
+                                    <li *ngFor="let func of associatedFunctions">
+                                        <mat-checkbox
+                                            (change)="toggleFunctionsRemove(func)">{{ func.functionName }}</mat-checkbox>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="functions__actions">
+                                <button type="button" mat-raised-button color="warn" (click)="removeFunctions()"
+                                    [disabled]="!functionsToRemove.length">Remover</button>
+                                <button type="button" mat-raised-button color="primary" (click)="addFunctions()"
+                                    [disabled]="!functionsToAdd.length">Añadir</button>
+                            </div>
+
+                            <div class="list__functions">
+                                <span>Funciones disponibles</span>
+                                <ul>
+                                    <li *ngIf="availableFunctions.length === 0">
+                                        Sin funciones disponibles para asociar
+                                    </li>
+                                    <li *ngFor="let func of availableFunctions">
+                                        <mat-checkbox
+                                            (change)="toggleFunctionsAdd(func)">{{ func.functionName }}</mat-checkbox>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <app-control-dates-form [createdAt]="data!.createdAt" [updatedAt]="data!.updatedAt" [deletedAt]="null" />
+        </div>
 
         <ng-container *ngIf="isAdminUser">
-            <button mat-raised-button color="primary" [disabled]="!isDataChanged">
-                Actualizar Perfil
-            </button>
+            <section class="form__actions">
+                <button mat-raised-button color="primary" [disabled]="!isDataChanged">
+                    Actualizar Perfil
+                </button>
+            </section>
         </ng-container>
     </form>
 
