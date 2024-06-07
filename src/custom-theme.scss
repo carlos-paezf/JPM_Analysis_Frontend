@@ -80,3 +80,12 @@ $frontend-theme: mat.define-light-theme((color: (primary: $frontend-primary,
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include mat.all-component-themes($frontend-theme);
+
+input:disabled,
+.mat-form-field input:disabled,
+.mat-mdc-input-element {
+    user-select: none !important;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
