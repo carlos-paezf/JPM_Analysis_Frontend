@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
 import { NotFoundComponent } from '../../../shared/components/not-found/not-found.component';
-import { ListProductsAccountsComponent } from './pages/list-products-accounts/list-products-accounts.component';
+import { leaveActiveFormGuard } from '../../../shared/guards/leave-active-form.guard';
 import { AdminProductsAccountsComponent } from './pages/admin-products-accounts/admin-products-accounts.component';
+import { ListProductsAccountsComponent } from './pages/list-products-accounts/list-products-accounts.component';
+
 
 const routes: Routes = [
     {
@@ -14,6 +17,7 @@ const routes: Routes = [
     {
         path: 'admin/:id',
         component: AdminProductsAccountsComponent,
+        canDeactivate: [ leaveActiveFormGuard ],
         pathMatch: 'full',
         data: { title: 'JPM Detalle de Cuenta' }
     },

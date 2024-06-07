@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ListUserEntitlementsComponent } from './pages/list-user-entitlements/list-user-entitlements.component';
-import { AdminUserEntitlementsComponent } from './pages/admin-user-entitlements/admin-user-entitlements.component';
+
 import { NotFoundComponent } from '../../../shared/components/not-found/not-found.component';
+import { leaveActiveFormGuard } from '../../../shared/guards/leave-active-form.guard';
+import { AdminUserEntitlementsComponent } from './pages/admin-user-entitlements/admin-user-entitlements.component';
+import { ListUserEntitlementsComponent } from './pages/list-user-entitlements/list-user-entitlements.component';
 
 
 const routes: Routes = [
@@ -15,6 +17,7 @@ const routes: Routes = [
     {
         path: 'admin/:id',
         component: AdminUserEntitlementsComponent,
+        canDeactivate: [ leaveActiveFormGuard ],
         pathMatch: 'full',
         data: { title: 'JPM Detalle de Título' }
     },

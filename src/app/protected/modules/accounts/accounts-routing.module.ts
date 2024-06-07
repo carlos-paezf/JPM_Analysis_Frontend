@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { NotFoundComponent } from '../../../shared/components/not-found/not-found.component';
+import { leaveActiveFormGuard } from '../../../shared/guards/leave-active-form.guard';
 import { AdminAccountsComponent } from './pages/admin-accounts/admin-accounts.component';
 import { ListAccountsComponent } from './pages/list-accounts/list-accounts.component';
 
@@ -16,6 +17,7 @@ const routes: Routes = [
     {
         path: 'admin/:id',
         component: AdminAccountsComponent,
+        canDeactivate: [ leaveActiveFormGuard ],
         pathMatch: 'full',
         data: { title: 'JPM Detalle de Cuenta' }
     },

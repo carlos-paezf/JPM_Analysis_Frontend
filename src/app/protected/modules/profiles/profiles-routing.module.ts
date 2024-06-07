@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { NotFoundComponent } from '../../../shared/components/not-found/not-found.component';
+import { leaveActiveFormGuard } from '../../../shared/guards/leave-active-form.guard';
 import { AdminProfilesComponent } from './pages/admin-profiles/admin-profiles.component';
 import { FunctionsComponent } from './pages/functions/functions.component';
 import { ListProfilesComponent } from './pages/list-profiles/list-profiles.component';
@@ -18,6 +19,7 @@ const routes: Routes = [
     {
         path: 'admin/:id',
         component: AdminProfilesComponent,
+        canDeactivate: [ leaveActiveFormGuard ],
         pathMatch: 'full',
         data: { title: 'JPM Detalle de Usuario' }
     },
@@ -35,6 +37,7 @@ const routes: Routes = [
     },
     {
         path: 'functions/:id',
+        canDeactivate: [ leaveActiveFormGuard ],
         component: FunctionsComponent,
         pathMatch: 'full',
         data: { title: 'Funciones' }
