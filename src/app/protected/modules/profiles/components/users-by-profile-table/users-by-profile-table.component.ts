@@ -14,8 +14,8 @@ import { ProfilesService } from '../../services/profiles.service';
 export class UsersByProfileTableComponent extends InfoTableBaseComponent<CompanyUserType> implements OnInit {
     public override displayedColumns: string[] = [
         'userName',
+        'accessId',
         'userStatus',
-        'emailAddress',
         'userLogonType',
         'profileId',
         'updatedAt',
@@ -23,6 +23,7 @@ export class UsersByProfileTableComponent extends InfoTableBaseComponent<Company
 
     public override columns: ColumnTableType<CompanyUserType>[] = [
         { columnDef: 'userName', header: 'User Name', cell: ( row ) => row.userName },
+        { columnDef: 'accessId', header: 'Access Id', cell: ( row ) => row.accessId },
         { columnDef: 'userStatus', header: 'Status', cell: ( row ) => row.userStatus },
         { columnDef: 'userType', header: 'Type', cell: ( row ) => row.userType },
         { columnDef: 'employeeId', header: 'Employee ID', cell: ( row ) => row.employeeId },
