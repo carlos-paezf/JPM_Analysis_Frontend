@@ -39,7 +39,7 @@
                     <mat-icon class="opacity_icon" fontIcon="edit_calendar"></mat-icon>
                     <label for="deletedAt">Fecha de eliminación:</label>
                 </div>
-                <input matInput [value]="functionData?.deletedAt" id="deletedAt" [disabled]="true">
+                <input matInput [value]="formatDate(functionData?.deletedAt)" id="deletedAt" [disabled]="true">
             </div>
         </div>
 
