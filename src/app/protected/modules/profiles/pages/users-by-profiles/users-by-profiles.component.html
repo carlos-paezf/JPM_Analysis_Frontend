@@ -17,7 +17,7 @@
             <mat-expansion-panel *ngFor="let profile of profilesData">
                 <mat-expansion-panel-header>
                     <mat-panel-title>
-                        {{ profile.profileName }}
+                        <strong>{{ profile.profileName }}</strong>
                     </mat-panel-title>
                     <mat-panel-description>
                         Última actualización: {{profile.updatedAt | date}}
