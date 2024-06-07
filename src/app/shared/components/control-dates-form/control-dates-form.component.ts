@@ -21,5 +21,6 @@ export class ControlDatesFormComponent {
      */
     public formatDate ( date: Date | null ) {
         return date && new Date( date ).toString();
+        // return date && DateFormat.getColombianTime( new Date( date ) );
     }
 }
