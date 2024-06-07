@@ -186,10 +186,17 @@ form {
     display: flex;
     justify-content: center;
     align-items: center;
+    align-content: center;
+    gap: 1rem;
     flex-wrap: wrap;
     max-height: 72.5vh;
     position: sticky;
     top: 0;
+    padding-right: 1rem;
+
+    button {
+        width: 100%;
+    }
 }
 
 @media (max-width: 1200px) {
