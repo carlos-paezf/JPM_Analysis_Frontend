@@ -6,7 +6,7 @@ export const APP_MODULES_PANELS: ModulesPanelsType[] = [
         title: 'Archivos',
         panels: [
             {
-                label: 'Carga de archivos',
+                label: 'Cargar reporte de usuarios JPM',
                 routeLink: 'file-upload'
             }
         ],

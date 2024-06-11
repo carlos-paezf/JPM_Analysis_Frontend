@@ -20,7 +20,7 @@ export const SIDENAV_ITEMS: SidenavLinkType[] = [
         requiresAdmin: false
     },
     {
-        label: 'Cargar archivo con reporte',
+        label: 'Cargar reporte de usuarios JPM',
         icon: 'upload_file',
         routeLink: 'file-upload',
         requiresAdmin: false
