@@ -13,10 +13,10 @@ import { ProductsAccountsService } from '../../services/products-accounts.servic
 } )
 export class ListProductsAccountsComponent extends InfoTableBaseComponent<ProductAccountEagerType> implements OnInit {
     public override displayedColumns: string[] = [
-        'accountNumber',
-        'accountName',
         'productName',
         'subProduct',
+        'accountNumber',
+        'accountName',
         'updatedAt',
         'deletedAt',
     ];
