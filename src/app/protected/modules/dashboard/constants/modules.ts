@@ -13,6 +13,16 @@ export const APP_MODULES_PANELS: ModulesPanelsType[] = [
         requireData: false
     },
     {
+        title: 'Usuarios de la compañía',
+        panels: [
+            {
+                label: 'Usuarios de la compañía',
+                routeLink: 'company-users'
+            }
+        ],
+        requireData: true
+    },
+    {
         title: 'Perfiles',
         panels: [
             {
@@ -20,7 +30,7 @@ export const APP_MODULES_PANELS: ModulesPanelsType[] = [
                 routeLink: 'profiles'
             },
             {
-                label: 'Usuarios por perfil',
+                label: 'Relación de Perfiles - Usuarios',
                 routeLink: 'profiles/users-by-profiles'
             },
             {
@@ -31,35 +41,25 @@ export const APP_MODULES_PANELS: ModulesPanelsType[] = [
         requireData: true
     },
     {
-        title: 'Company Users',
+        title: 'Productos JPM',
         panels: [
             {
-                label: 'Usuarios de la compañía',
-                routeLink: 'company-users'
-            }
-        ],
-        requireData: true
-    },
-    {
-        title: 'JPM Products',
-        panels: [
+                label: 'Productos',
+                routeLink: 'products'
+            },
             {
                 label: 'Cuentas',
                 routeLink: 'accounts'
             },
             {
-                label: 'Productos JPM',
-                routeLink: 'products'
-            },
-            {
-                label: 'Productos - Cuentas',
+                label: 'Relación de Productos - Cuentas',
                 routeLink: 'products-accounts'
             }
         ],
         requireData: true
     },
     {
-        title: 'Users Entitlements',
+        title: 'Títulos de usuarios',
         panels: [
             {
                 label: 'Títulos de los usuarios',
@@ -76,12 +76,12 @@ export const APP_MODULES_PANELS: ModulesPanelsType[] = [
                 routeLink: 'admin-app/reports-history'
             },
             {
-                label: 'Crear nuevo usuario de la aplicación',
-                routeLink: 'admin-app/create-app-user'
-            },
-            {
                 label: 'Listado de usuarios de la aplicación',
                 routeLink: 'admin-app/list-app-user'
+            },
+            {
+                label: 'Crear nuevo usuario de la aplicación',
+                routeLink: 'admin-app/create-app-user'
             }
         ],
         requireData: false

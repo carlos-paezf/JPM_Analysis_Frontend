@@ -15,7 +15,7 @@
                     <div class="form-control">
                         <div class="label">
                             <mat-icon class="opacity_icon" fontIcon="person"></mat-icon>
-                            <label for="accessId">Access Id</label>
+                            <label for="accessId">Id de Acceso</label>
                         </div>
                         <input matInput formControlName="accessId" id="accessId">
                     </div>
@@ -23,7 +23,7 @@
                     <div class="form-control">
                         <div class="label">
                             <mat-icon class="opacity_icon" fontIcon="person"></mat-icon>
-                            <label for="userName">Name</label>
+                            <label for="userName">Nombre</label>
                         </div>
                         <input matInput formControlName="userName" id="userName">
                     </div>
@@ -31,7 +31,7 @@
                     <div class="form-control">
                         <div class="label">
                             <mat-icon class="opacity_icon" fontIcon="mail"></mat-icon>
-                            <label for="emailAddress">Email Address</label>
+                            <label for="emailAddress">Dirección de Correo</label>
                         </div>
                         <input matInput formControlName="emailAddress" id="emailAddress">
                     </div>
@@ -39,19 +39,30 @@
                     <div class="form-control">
                         <div class="label">
                             <mat-icon class="opacity_icon" fontIcon="assignment_ind"></mat-icon>
-                            <label for="userType">Type</label>
+                            <label for="userType">Tipo de usuario</label>
                         </div>
                         <input matInput formControlName="userType" id="userType">
                     </div>
 
                     <div class="form-control">
                         <div class="label">
+                            <mat-icon class="opacity_icon" fontIcon="admin_panel_settings"></mat-icon>
+                            <label for="profileId">Perfil</label>
+                        </div>
+                        <mat-select formControlName="profileId" id="profileId" class="form__select">
+                            <mat-option *ngFor="let profile of profilesInfo"
+                                [value]="profile.id">{{ profile.profileName }}</mat-option>
+                        </mat-select>
+                    </div>
+
+                    <div class="form-control">
+                        <div class="label">
                             <mat-icon class="opacity_icon" fontIcon="verified_user"></mat-icon>
-                            <label for="userStatus">Status</label>
+                            <label for="userStatus">Estado</label>
                         </div>
                         <mat-slide-toggle color="accent" formControlName="userStatus" labelPosition="before"
                             id="userStatus">
-                            Activo:
+                            ¿El usuario está activo? {{ userStatus ? 'SI' : 'NO' }}:
                         </mat-slide-toggle>
                     </div>
                 </div>
@@ -63,7 +74,7 @@
                     <div class="form-control">
                         <div class="label">
                             <mat-icon class="opacity_icon" fontIcon="person_pin_circle"></mat-icon>
-                            <label for="userLocation">Location</label>
+                            <label for="userLocation">Ubicación</label>
                         </div>
                         <input matInput formControlName="userLocation" id="userLocation">
                     </div>
@@ -71,7 +82,7 @@
                     <div class="form-control">
                         <div class="label">
                             <mat-icon class="opacity_icon" fontIcon="public"></mat-icon>
-                            <label for="userCountry">Country</label>
+                            <label for="userCountry">País</label>
                         </div>
                         <input matInput formControlName="userCountry" id="userCountry">
                     </div>
@@ -84,23 +95,15 @@
                     <div class="form-control">
                         <div class="label">
                             <mat-icon class="opacity_icon" fontIcon="badge"></mat-icon>
-                            <label for="userLogonType">Logon Type</label>
+                            <label for="userLogonType">Tipo de ingreso</label>
                         </div>
                         <input matInput formControlName="userLogonType" id="userLogonType">
                     </div>
 
                     <div class="form-control">
                         <div class="label">
-                            <mat-icon class="opacity_icon" fontIcon="badge"></mat-icon>
-                            <label for="userLogonStatus">Logon Status</label>
-                        </div>
-                        <input matInput formControlName="userLogonStatus" id="userLogonStatus">
-                    </div>
-
-                    <div class="form-control">
-                        <div class="label">
                             <mat-icon class="opacity_icon" fontIcon="event_available"></mat-icon>
-                            <label for="userLastLogonDt">Last Logon Date</label>
+                            <label for="userLastLogonDt">Última fecha de ingreso</label>
                         </div>
                         <input matInput formControlName="userLastLogonDt" id="userLastLogonDt">
                         <!-- <mat-form-field disabled>
@@ -110,23 +113,19 @@
                         <mat-datepicker #userLastLogonDtPicker></mat-datepicker>
                     </mat-form-field> -->
                     </div>
+                    <div class="form-control">
+                        <div class="label">
+                            <mat-icon class="opacity_icon" fontIcon="badge"></mat-icon>
+                            <label for="userLogonStatus">Estado de ingreso</label>
+                        </div>
+                        <input matInput formControlName="userLogonStatus" id="userLogonStatus">
+                    </div>
                 </div>
             </section>
 
-            <section>
+            <!-- <section>
                 <h4>TODO: No sé que poner</h4>
                 <div class="form-group">
-                    <div class="form-control">
-                        <div class="label">
-                            <mat-icon class="opacity_icon" fontIcon="admin_panel_settings"></mat-icon>
-                            <label for="profileId">Profile</label>
-                        </div>
-                        <mat-select formControlName="profileId" id="profileId" class="form__select">
-                            <mat-option *ngFor="let profile of profilesInfo"
-                                [value]="profile.id">{{ profile.profileName }}</mat-option>
-                        </mat-select>
-                    </div>
-
                     <div class="form-control">
                         <div class="label">
                             <mat-icon class="opacity_icon" fontIcon="badge"></mat-icon>
@@ -151,7 +150,7 @@
                         <input matInput formControlName="employeeId" id="employeeId">
                     </div>
                 </div>
-            </section>
+            </section> -->
 
             <app-control-dates-form [createdAt]="data!.createdAt" [updatedAt]="data!.updatedAt"
                 [deletedAt]="data?.deletedAt" />
@@ -160,7 +159,7 @@
         <ng-container *ngIf="isAdminUser">
             <section class="form__actions">
                 <button mat-raised-button color="primary" [disabled]="!isDataChanged">
-                    Actualizar Company User
+                    Actualizar Usuario de la Compañía
                 </button>
                 <button type="button" (click)="onRestartForm()" mat-raised-button color="accent"
                     [disabled]="!isDataChanged">

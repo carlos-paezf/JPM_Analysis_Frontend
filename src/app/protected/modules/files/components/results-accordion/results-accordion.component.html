@@ -19,12 +19,12 @@
             </mat-expansion-panel-header>
 
             <ng-container *ngIf="!result.countNewEntities; else newEntities">
-                <em>Sin nuevas entidades en el reporte de esta sección</em>
+                <em>Sin nuevos registros en el reporte de esta sección</em>
             </ng-container>
 
             <ng-template #newEntities>
                 <app-entity-table [entityName]="sectionName" *ngFor="let newEntity of result.newEntities; let i = index"
-                    panelTitle="Nueva entidad" className="add" [entity]="newEntity" [commonColumns]="commonColumns"
+                    panelTitle="Nuevo registro" className="add" [entity]="newEntity" [commonColumns]="commonColumns"
                     [keys]="keys" [index]="i + 1" />
             </ng-template>
         </mat-expansion-panel>
@@ -41,7 +41,7 @@
             </mat-expansion-panel-header>
 
             <ng-container *ngIf="!result.countEntitiesWithDifferences; else entitiesWithDifferences">
-                <em>Sin entidades con diferencias en el reporte de esta sección</em>
+                <em>Sin registros con diferencias en el reporte de esta sección</em>
             </ng-container>
 
             <ng-template #entitiesWithDifferences>
@@ -64,13 +64,13 @@
             </mat-expansion-panel-header>
 
             <ng-container *ngIf="!result.countToDeleteEntities; else toDeleteEntities">
-                <em>Sin entidades para retirar en el reporte de esta sección</em>
+                <em>Sin registros para retirar en el reporte de esta sección</em>
             </ng-container>
 
             <ng-template #toDeleteEntities>
                 <!-- <pre>{{ result.toDeleteEntities| json}}</pre> -->
                 <app-entity-table [entityName]="sectionName"
-                    *ngFor="let entity of result.toDeleteEntities; let i = index" panelTitle="Entidad a eliminar"
+                    *ngFor="let entity of result.toDeleteEntities; let i = index" panelTitle="Registro a eliminar"
                     className="delete" [entity]="entity" [commonColumns]="commonColumns" [keys]="keys"
                     [index]="i + 1" />
             </ng-template>
