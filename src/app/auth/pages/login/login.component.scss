@@ -8,7 +8,9 @@
 
 form {
     min-width: var(--phone-width);
+    display: inline;
 }
+
 
 .form-group {
     display: flex;
