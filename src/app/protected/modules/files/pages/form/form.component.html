@@ -1,4 +1,4 @@
-<h2>Carga de Reportes de JPM</h2>
+<h2>Cargar reporte de usuarios JPM</h2>
 
 
 <form [formGroup]="form" enctype="multipart/form-data" (ngSubmit)="onSubmit()">
@@ -12,8 +12,10 @@
     <div class="form-group-control">
         <label for="action">Tipo de archivo:</label>
         <mat-radio-group formControlName="action" style="display: flex; flex-direction: column;">
-            <mat-radio-button value="load">Archivo de carga base</mat-radio-button>
-            <mat-radio-button value="compare">Archivo con reporte a comparar</mat-radio-button>
+            <mat-radio-button value="compare">Archivo con reporte a comparar (Reporte para comparación con la base de
+                datos de la aplicación)</mat-radio-button>
+            <mat-radio-button value="load">Archivo de carga base (Archivo semilla de datos para poblar la
+                aplicación)</mat-radio-button>
         </mat-radio-group>
     </div>
 

@@ -100,8 +100,8 @@ export class AdminCompanyUserComponent extends BaseDetailClass<CompanyUserEagerT
             userLocation: [ this.data.userLocation ],
             userCountry: [ this.data.userCountry, Validators.required ],
             userLogonType: [ this.data.userLogonType, Validators.required ],
-            userLastLogonDt: [ this.data.userLastLogonDt ],
-            userLogonStatus: [ this.data.userLogonStatus, Validators.required ],
+            userLastLogonDt: [ { value: this.formatDate( this.data.userLastLogonDt ), disabled: true } ],
+            userLogonStatus: [ { value: this.data.userLogonStatus, disabled: true }, Validators.required ],
             userGroupMembership: [ this.data.userGroupMembership ],
             userRole: [ this.data.userRole ],
             profileId: [ this.data.profileId, Validators.required ],
@@ -119,6 +119,29 @@ export class AdminCompanyUserComponent extends BaseDetailClass<CompanyUserEagerT
         this.initialFormValues = this.form.getRawValue();
     }
 
+
+    /**
+     * This function retrieves the value of the "userStatus" field from a form.
+     * @returns the value of the "userStatus" field from a form.
+     */
+    get userStatus () {
+        return this.form.get( "userStatus" )!.value;
+    }
+
+
+    /**
+     * The function `formatDate` takes a Date object or null as input and returns a string
+     * representation of the date if it is not null.
+     * @param {Date | null} date - The `date` parameter in the `formatDate` function is of type `Date`
+     * or `null`, meaning it can either be a valid date object or `null`.
+     * @returns The function `formatDate` is returning the string representation of the input date if
+     * it is not null. If the input date is null, the function will return null.
+     */
+    public formatDate ( date: Date | null ) {
+        return date && new Date( date ).toString();
+    }
+
+
     /**
      * The onSubmit function checks if the user is an admin, validates the profile form, updates the
      * profile, and displays success or error messages.
@@ -135,7 +158,11 @@ export class AdminCompanyUserComponent extends BaseDetailClass<CompanyUserEagerT
 
         this._companyUsersService.update(
             this.id,
-            { accessId: this.data!.accessId, ...this.form.value }
+            {
+                accessId: this.data!.accessId,
+                userLogonStatus: this.data!.userLogonStatus, userLastLogonDt: this.data?.userLastLogonDt,
+                ...this.form.value
+            }
         ).subscribe(
             {
                 next: () => {
