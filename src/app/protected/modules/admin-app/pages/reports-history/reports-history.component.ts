@@ -15,7 +15,7 @@ export class ReportsHistoryComponent extends InfoTableBaseComponent<ReportHistor
         "runReportDate",
         "reportUploadDate",
         "reportComments",
-        // "appUserId",
+        "appUserId",
     ];
     public override columns: ColumnTableType<ReportHistoryType>[] = [
         { columnDef: 'reportName', header: 'Nombre', cell: ( row ) => row.reportName },
