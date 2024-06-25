@@ -99,7 +99,7 @@ export class AdminCompanyUserComponent extends BaseDetailClass<CompanyUserEagerT
             emailAddress: [ this.data.emailAddress, Validators.required ],
             userLocation: [ this.data.userLocation ],
             userCountry: [ this.data.userCountry, Validators.required ],
-            userLogonType: [ this.data.userLogonType, Validators.required ],
+            userLogonType: [ { value: this.data.userLogonType, disabled: true } ],
             userLastLogonDt: [ { value: this.formatDate( this.data.userLastLogonDt ), disabled: true } ],
             userLogonStatus: [ { value: this.data.userLogonStatus, disabled: true }, Validators.required ],
             userGroupMembership: [ this.data.userGroupMembership ],
@@ -159,7 +159,7 @@ export class AdminCompanyUserComponent extends BaseDetailClass<CompanyUserEagerT
         this._companyUsersService.update(
             this.id,
             {
-                accessId: this.data!.accessId,
+                accessId: this.data!.accessId, userLogonType: this.data!.userLogonType,
                 userLogonStatus: this.data!.userLogonStatus, userLastLogonDt: this.data?.userLastLogonDt,
                 ...this.form.value
             }
