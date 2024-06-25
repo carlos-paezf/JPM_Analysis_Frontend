@@ -86,8 +86,11 @@ export class AdminProfilesComponent extends BaseDetailClass<ProfileType> impleme
         if ( !this.data ) return;
 
         this.form = this._formBuilder.group( {
-            id: [ { value: this.data.id, disabled: true }, Validators.required ],
+            // Required properties
             profileName: [ this.data.profileName, Validators.required ],
+            // Disabled properties
+            id: [ { value: this.data.id, disabled: true }, Validators.required ],
+            // Control Date properties
             createdAt: [ { value: this.data.createdAt, disabled: true } ],
             updatedAt: [ { value: this.data.updatedAt, disabled: true } ],
         } );

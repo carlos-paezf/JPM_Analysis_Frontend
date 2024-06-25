@@ -18,6 +18,8 @@
                             <label for="id">Profile Id:</label>
                         </div>
                         <input matInput formControlName="id" id="id">
+                        <span error-msg [message]="controlError(form, 'id')"
+                            [invalid]="isInvalidField(form, 'id')"></span>
                     </div>
 
                     <div class="form-control">
@@ -26,6 +28,8 @@
                             <label for="profileName">Profile Name:</label>
                         </div>
                         <input matInput formControlName="profileName" id="profileName">
+                        <span error-msg [message]="controlError(form, 'profileName')"
+                            [invalid]="isInvalidField(form, 'profileName')"></span>
                     </div>
                 </div>
             </section>

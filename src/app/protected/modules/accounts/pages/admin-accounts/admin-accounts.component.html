@@ -18,6 +18,8 @@
                             <label for="accountNumber">Número de cuenta</label>
                         </div>
                         <input matInput formControlName="accountNumber" id="accountNumber">
+                        <span error-msg [message]="controlError(form, 'accountNumber')"
+                            [invalid]="isInvalidField(form, 'accountNumber')"></span>
                     </div>
 
                     <div class="form-control">
@@ -26,6 +28,8 @@
                             <label for="accountName">Nombre de cuenta</label>
                         </div>
                         <input matInput formControlName="accountName" id="accountName">
+                        <span error-msg [message]="controlError(form, 'accountName')"
+                            [invalid]="isInvalidField(form, 'accountName')"></span>
                     </div>
 
                     <div class="form-control">
@@ -34,6 +38,8 @@
                             <label for="accountType">Tipo de cuenta</label>
                         </div>
                         <input matInput formControlName="accountType" id="accountType">
+                        <span error-msg [message]="controlError(form, 'accountType')"
+                            [invalid]="isInvalidField(form, 'accountType')"></span>
                     </div>
 
                     <div class="form-control">
@@ -42,6 +48,8 @@
                             <label for="bankCurrency">Moneda bancaria (Bank Currency)</label>
                         </div>
                         <input matInput formControlName="bankCurrency" id="bankCurrency">
+                        <span error-msg [message]="controlError(form, 'bankCurrency')"
+                            [invalid]="isInvalidField(form, 'bankCurrency')"></span>
                     </div>
                 </div>
             </section>

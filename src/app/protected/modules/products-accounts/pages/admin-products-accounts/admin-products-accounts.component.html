@@ -30,6 +30,8 @@
                                             : 'Sin producto asociado' }}
                             </mat-option>
                         </mat-select>
+                        <span error-msg [message]="controlError(form, 'product')"
+                            [invalid]="isInvalidField(form, 'product')"></span>
                     </div>
 
                     <div class="form-control">
@@ -49,6 +51,8 @@
                                 {{ account.accountNumber ? account.accountNumber + ' - ' + account.accountName : 'Sin cuenta asociada' }}
                             </mat-option>
                         </mat-select>
+                        <span error-msg [message]="controlError(form, 'account')"
+                            [invalid]="isInvalidField(form, 'account')"></span>
                     </div>
                 </div>
             </section>

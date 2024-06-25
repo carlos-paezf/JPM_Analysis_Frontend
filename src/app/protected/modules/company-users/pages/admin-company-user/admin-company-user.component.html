@@ -18,6 +18,8 @@
                             <label for="accessId">Id de Acceso</label>
                         </div>
                         <input matInput formControlName="accessId" id="accessId">
+                        <span error-msg [message]="controlError(form, 'accessId')"
+                            [invalid]="isInvalidField(form, 'accessId')"></span>
                     </div>
 
                     <div class="form-control">
@@ -26,6 +28,8 @@
                             <label for="userName">Nombre</label>
                         </div>
                         <input matInput formControlName="userName" id="userName">
+                        <span error-msg [message]="controlError(form, 'userName')"
+                            [invalid]="isInvalidField(form, 'userName')"></span>
                     </div>
 
                     <div class="form-control">
@@ -34,6 +38,8 @@
                             <label for="emailAddress">Dirección de Correo</label>
                         </div>
                         <input matInput formControlName="emailAddress" id="emailAddress">
+                        <span error-msg [message]="controlError(form, 'emailAddress')"
+                            [invalid]="isInvalidField(form, 'emailAddress')"></span>
                     </div>
 
                     <div class="form-control">
@@ -42,6 +48,8 @@
                             <label for="userType">Tipo de usuario</label>
                         </div>
                         <input matInput formControlName="userType" id="userType">
+                        <span error-msg [message]="controlError(form, 'userType')"
+                            [invalid]="isInvalidField(form, 'userType')"></span>
                     </div>
 
                     <div class="form-control">
@@ -53,6 +61,8 @@
                             <mat-option *ngFor="let profile of profilesInfo"
                                 [value]="profile.id">{{ profile.profileName }}</mat-option>
                         </mat-select>
+                        <span error-msg [message]="controlError(form, 'profileId')"
+                            [invalid]="isInvalidField(form, 'profileId')"></span>
                     </div>
 
                     <div class="form-control">
@@ -64,6 +74,8 @@
                             id="userStatus">
                             ¿El usuario está activo? {{ userStatus ? 'SI' : 'NO' }}:
                         </mat-slide-toggle>
+                        <span error-msg [message]="controlError(form, 'userStatus')"
+                            [invalid]="isInvalidField(form, 'userStatus')"></span>
                     </div>
                 </div>
             </section>
@@ -73,18 +85,22 @@
                 <div class="form-group">
                     <div class="form-control">
                         <div class="label">
-                            <mat-icon class="opacity_icon" fontIcon="person_pin_circle"></mat-icon>
-                            <label for="userLocation">Ubicación</label>
-                        </div>
-                        <input matInput formControlName="userLocation" id="userLocation">
-                    </div>
-
-                    <div class="form-control">
-                        <div class="label">
                             <mat-icon class="opacity_icon" fontIcon="public"></mat-icon>
                             <label for="userCountry">País</label>
                         </div>
                         <input matInput formControlName="userCountry" id="userCountry">
+                        <span error-msg [message]="controlError(form, 'userCountry')"
+                            [invalid]="isInvalidField(form, 'userCountry')"></span>
+                    </div>
+
+                    <div class="form-control">
+                        <div class="label">
+                            <mat-icon class="opacity_icon" fontIcon="person_pin_circle"></mat-icon>
+                            <label for="userLocation">Ubicación</label>
+                        </div>
+                        <input matInput formControlName="userLocation" id="userLocation">
+                        <span error-msg [message]="controlError(form, 'userLocation')"
+                            [invalid]="isInvalidField(form, 'userLocation')"></span>
                     </div>
                 </div>
             </section>
@@ -98,6 +114,8 @@
                             <label for="userLogonType">Tipo de ingreso</label>
                         </div>
                         <input matInput formControlName="userLogonType" id="userLogonType">
+                        <span error-msg [message]="controlError(form, 'userLogonType')"
+                            [invalid]="isInvalidField(form, 'userLogonType')"></span>
                     </div>
 
                     <div class="form-control">
@@ -106,6 +124,8 @@
                             <label for="userLastLogonDt">Última fecha de ingreso</label>
                         </div>
                         <input matInput formControlName="userLastLogonDt" id="userLastLogonDt">
+                        <span error-msg [message]="controlError(form, 'userLastLogonDt')"
+                            [invalid]="isInvalidField(form, 'userLastLogonDt')"></span>
                         <!-- <mat-form-field disabled>
                         <input matInput id="userLastLogonDt" formControlName="userLastLogonDt"
                             [matDatepicker]="userLastLogonDtPicker">
@@ -119,6 +139,8 @@
                             <label for="userLogonStatus">Estado de ingreso</label>
                         </div>
                         <input matInput formControlName="userLogonStatus" id="userLogonStatus">
+                        <span error-msg [message]="controlError(form, 'userLogonStatus')"
+                            [invalid]="isInvalidField(form, 'userLogonStatus')"></span>
                     </div>
                 </div>
             </section>
@@ -157,7 +179,7 @@
         </div>
 
         <ng-container *ngIf="isAdminUser">
-            <section class="form__actions">
+            <section class="form__actions">2
                 <button mat-raised-button color="primary" [disabled]="!isDataChanged">
                     Actualizar Usuario de la Compañía
                 </button>

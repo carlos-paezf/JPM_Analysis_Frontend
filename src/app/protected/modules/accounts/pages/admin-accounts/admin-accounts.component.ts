@@ -68,10 +68,14 @@ export class AdminAccountsComponent extends BaseDetailClass<AccountEagerType> im
         if ( !this.data ) return;
 
         this.form = this._formBuilder.group( {
-            accountNumber: [ { value: this.data.accountNumber, disabled: true }, Validators.required ],
+            // Required properties
             accountName: [ this.data.accountName, Validators.required ],
             accountType: [ this.data.accountType, Validators.required ],
+            // Optional properties
             bankCurrency: [ this.data.bankCurrency ],
+            // Disabled properties
+            accountNumber: [ { value: this.data.accountNumber, disabled: true }, Validators.required ],
+            // Control Date properties
             createdAt: [ { value: this.data.createdAt, disabled: true } ],
             updatedAt: [ { value: this.data.updatedAt, disabled: true } ],
             deletedAt: [ { value: this.data.deletedAt, disabled: true } ],

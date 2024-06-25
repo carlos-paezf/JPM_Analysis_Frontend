@@ -1,6 +1,6 @@
 import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { forkJoin } from 'rxjs';
 
@@ -119,14 +119,18 @@ export class AdminUserEntitlementsComponent extends BaseDetailClass<UserEntitlem
         if ( !this.data ) return;
 
         this.form = this._formBuilder.group( {
-            companyUser: [ this._getCompanyUser( this.data.accessId ) ],
-            account: [ this._getAccount( this.data.accountNumber ) ],
-            product: [ this._getProduct( this.data.productId ) ],
-            function: [ this._getFunction( this.data.functionId ) ],
+            // Required properties
+            companyUser: [ this._getCompanyUser( this.data.accessId ), Validators.required ],
+            product: [ this._getProduct( this.data.productId ), Validators.required ],
+            // Optional properties
             functionType: [ this.data.functionType ],
+            function: [ this._getFunction( this.data.functionId ) ],
+            account: [ this._getAccount( this.data.accountNumber ) ],
+            // Control Date properties
             createdAt: [ { value: this.data.createdAt, disabled: true } ],
             updatedAt: [ { value: this.data.updatedAt, disabled: true } ],
             deletedAt: [ { value: this.data.deletedAt, disabled: true } ],
+            // Search input
             companyUserSearch: [ '' ],
             accountSearch: [ '' ],
             productSearch: [ '' ],

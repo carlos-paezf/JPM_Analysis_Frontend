@@ -1,6 +1,6 @@
 import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 
 import { BaseDetailClass } from '../../../../../shared/classes/base-detail.class';
@@ -67,8 +67,11 @@ export class AdminProductsComponent extends BaseDetailClass<ProductType> impleme
         if ( !this.data ) return;
 
         this.form = this._formBuilder.group( {
-            productName: [ this.data.productName ],
+            // Required properties
+            productName: [ this.data.productName, Validators.required ],
+            // Optional properties
             subProduct: [ this.data.subProduct ],
+            // Control Date properties
             createdAt: [ { value: this.data.createdAt, disabled: true } ],
             updatedAt: [ { value: this.data.updatedAt, disabled: true } ],
             deletedAt: [ { value: this.data.deletedAt, disabled: true } ],

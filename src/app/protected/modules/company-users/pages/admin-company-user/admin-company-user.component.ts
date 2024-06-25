@@ -91,23 +91,28 @@ export class AdminCompanyUserComponent extends BaseDetailClass<CompanyUserEagerT
         if ( !this.data ) return;
 
         this.form = this._formBuilder.group( {
-            accessId: [ { value: this.data.accessId, disabled: true }, Validators.required ],
+            // Required properties
             userName: [ this.data.userName, Validators.required ],
-            userStatus: [ this.data.userStatus, Validators.required ],
+            emailAddress: [ this.data.emailAddress, [ Validators.required, Validators.email ] ],
             userType: [ this.data.userType, Validators.required ],
-            employeeId: [ this.data.employeeId ],
-            emailAddress: [ this.data.emailAddress, Validators.required ],
-            userLocation: [ this.data.userLocation ],
+            profileId: [ this.data.profileId, Validators.required ],
+            userStatus: [ this.data.userStatus, Validators.required ],
             userCountry: [ this.data.userCountry, Validators.required ],
+            // Optional properties
+            userLocation: [ this.data.userLocation ],
+            // Disabled properties
+            accessId: [ { value: this.data.accessId, disabled: true }, [ Validators.required ] ],
             userLogonType: [ { value: this.data.userLogonType, disabled: true } ],
             userLastLogonDt: [ { value: this.formatDate( this.data.userLastLogonDt ), disabled: true } ],
             userLogonStatus: [ { value: this.data.userLogonStatus, disabled: true }, Validators.required ],
-            userGroupMembership: [ this.data.userGroupMembership ],
-            userRole: [ this.data.userRole ],
-            profileId: [ this.data.profileId, Validators.required ],
+            // Control Date properties
             createdAt: [ { value: this.data.createdAt, disabled: true } ],
             updatedAt: [ { value: this.data.updatedAt, disabled: true } ],
             deletedAt: [ { value: this.data.deletedAt, disabled: true } ],
+            // Unused properties
+            userRole: [ this.data.userRole ],
+            employeeId: [ this.data.employeeId ],
+            userGroupMembership: [ this.data.userGroupMembership ],
         } );
 
         this.isAdminUser || this.form.disable();

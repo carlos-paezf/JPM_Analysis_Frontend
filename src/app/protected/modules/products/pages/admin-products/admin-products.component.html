@@ -18,6 +18,8 @@
                             <label for="productName">Nombre del producto</label>
                         </div>
                         <input matInput formControlName="productName" id="productName" [disabled]="true">
+                        <span error-msg [message]="controlError(form, 'productName')"
+                            [invalid]="isInvalidField(form, 'productName')"></span>
                     </div>
 
                     <div class="form-control">
@@ -26,6 +28,8 @@
                             <label for="subProduct">Sub Producto</label>
                         </div>
                         <input matInput formControlName="subProduct" id="subProduct">
+                        <span error-msg [message]="controlError(form, 'subProduct')"
+                            [invalid]="isInvalidField(form, 'subProduct')"></span>
                     </div>
                 </div>
             </section>

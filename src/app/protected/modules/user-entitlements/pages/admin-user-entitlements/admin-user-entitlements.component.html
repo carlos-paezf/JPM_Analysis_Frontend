@@ -29,6 +29,8 @@
                                 {{companyUser.accessId ? companyUser.accessId + " - " + companyUser.userName : "Sin usuario asociado"}}
                             </mat-option>
                         </mat-select>
+                        <span error-msg [message]="controlError(form, 'companyUser')"
+                            [invalid]="isInvalidField(form, 'companyUser')"></span>
                     </div>
 
                     <div class="form-control">
@@ -45,6 +47,8 @@
                                 {{ account.accountNumber ? account.accountNumber + ' - ' + account.accountName : 'Sin cuenta asociada' }}
                             </mat-option>
                         </mat-select>
+                        <span error-msg [message]="controlError(form, 'account')"
+                            [invalid]="isInvalidField(form, 'account')"></span>
                     </div>
 
                     <div class="form-control">
@@ -66,6 +70,8 @@
                                             : 'Sin producto asociado' }}
                             </mat-option>
                         </mat-select>
+                        <span error-msg [message]="controlError(form, 'product')"
+                            [invalid]="isInvalidField(form, 'product')"></span>
                     </div>
 
                     <div class="form-control">
@@ -85,6 +91,8 @@
                                 {{function.id ? function.functionName : 'Sin función asociada'}}
                             </mat-option>
                         </mat-select>
+                        <span error-msg [message]="controlError(form, 'function')"
+                            [invalid]="isInvalidField(form, 'function')"></span>
                     </div>
 
                     <div class="form-control">
@@ -93,6 +101,8 @@
                             <label for="functionType">Function Type</label>
                         </div>
                         <input matInput formControlName="functionType" id="functionType">
+                        <span error-msg [message]="controlError(form, 'functionType')"
+                            [invalid]="isInvalidField(form, 'functionType')"></span>
                     </div>
                 </div>
             </section>
