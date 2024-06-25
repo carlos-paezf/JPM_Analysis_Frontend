@@ -4,14 +4,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { NotFoundComponent } from '../../../shared/components/not-found/not-found.component';
 import { leaveActiveFormGuard } from '../../../shared/guards/leave-active-form.guard';
 import { CompareResultsComponent } from './pages/compare-results/compare-results.component';
-import { FormComponent } from './pages/form/form.component';
+import { ReportFormComponent } from './pages/report-form/report-form.component';
 import { PostResultsComponent } from './pages/post-results/post-results.component';
 
 
 const routes: Routes = [
     {
         path: '',
-        component: FormComponent,
+        component: ReportFormComponent,
         canDeactivate: [ leaveActiveFormGuard ],
         pathMatch: 'full',
         data: { title: 'Carga de reportes', breadcrumb: 'Carga de reportes' }

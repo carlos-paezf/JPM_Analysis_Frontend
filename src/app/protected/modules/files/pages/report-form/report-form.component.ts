@@ -18,10 +18,10 @@ import { UploadFileService } from '../../services/upload-file.service';
  */
 @Component( {
     selector: 'app-form',
-    templateUrl: './form.component.html',
-    styleUrls: [ './form.component.scss' ]
+    templateUrl: './report-form.component.html',
+    styleUrls: [ './report-form.component.scss' ]
 } )
-export class FormComponent extends CustomValidators implements FormBaseType, OnInit {
+export class ReportFormComponent extends CustomValidators implements FormBaseType, OnInit {
     public form!: FormGroup;
     public initialFormValues!: FormGroup<any>;
     public submitted: boolean = false;
