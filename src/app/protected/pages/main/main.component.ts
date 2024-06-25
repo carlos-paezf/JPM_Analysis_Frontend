@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Location } from '@angular/common';
 import { HttpStatusService } from '../../../shared/services/http-status.service';
 
 
@@ -22,8 +23,10 @@ export class MainComponent implements OnInit {
     public forbiddenError: boolean = false;
     public internalServerError: boolean = false;
 
+
     constructor (
         private readonly _httpStatusService: HttpStatusService,
+        private readonly _location: Location
     ) { }
 
     /**
@@ -42,5 +45,13 @@ export class MainComponent implements OnInit {
         this._httpStatusService.currentStatusNotFoundError.subscribe( status => this.notFoundError = status );
         this._httpStatusService.currentStatusForbiddenError.subscribe( status => this.forbiddenError = status );
         this._httpStatusService.currentStatusInternalServerError.subscribe( status => this.internalServerError = status );
+    }
+
+    goBack () {
+        return this._location.back();
+    }
+
+    goForward () {
+        return this._location.forward();
     }
 }

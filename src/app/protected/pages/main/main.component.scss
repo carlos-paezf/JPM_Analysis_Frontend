@@ -1,10 +1,34 @@
 mat-drawer {
-    width: 450px;
+    width: 22.5%;
     position: fixed;
     margin: 0;
     padding: 0 .5rem 1rem .5rem;
+    -webkit-box-shadow: 0px 6px 15px -8px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0px 6px 15px -8px rgba(0, 0, 0, 1);
+    box-shadow: 0px 6px 15px -8px rgba(0, 0, 0, 1);
 }
 
 main {
     margin-top: 2rem;
+}
+
+.history__navigation {
+    display: flex;
+    flex-direction: row;
+
+    button {
+        font-size: 12px;
+        height: 30px;
+        display: flex;
+        border-radius: 5px;
+
+        br &:nth-last-child(odd) {
+            flex-direction: row-reverse;
+
+            mat-icon {
+                margin-right: -.5rem;
+                margin-left: .75rem;
+            }
+        }
+    }
 }

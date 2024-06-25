@@ -1,25 +1,30 @@
 <mat-drawer-container hasBackdrop="false">
-    <mat-drawer #drawer mode="over">
+    <!-- <mat-drawer #drawer mode="over"> -->
+    <mat-drawer #drawer mode="push" opened>
         <app-sidenav [drawer]="drawer"></app-sidenav>
     </mat-drawer>
 
-    <mat-drawer-content>
+    <mat-drawer-content [ngStyle]="{'width': drawer.opened ? '77.5%' : '100%'}">
         <app-header [drawer]="drawer"></app-header>
 
-        <div class="protected" (click)="drawer.close()">
+        <!-- <div class="protected" (click)="drawer.close()"> -->
+        <div class="protected">
             <app-loading></app-loading>
 
             <main>
+
                 <!-- TODO: Analizar si es útil esta forma de navegación -->
-                <!-- <div class="history__navigation">
-                    <button mat-icon-button color="accent" aria-label="Back History" (click)="goBack()">
-                        <mat-icon>chevron_left</mat-icon>
+                <div class="history__navigation">
+                    <button mat-fab extended color="accent" aria-label="Back History" (click)="goBack()">
+                        <mat-icon>chevron_left</mat-icon><span>Ir atrás</span>
                     </button>
 
-                    <button mat-icon-button color="accent" aria-label="Forward History" (click)="goForward()">
-                        <mat-icon>chevron_right</mat-icon>
+                    <app-breadcrumb></app-breadcrumb>
+
+                    <button mat-fab extended color="accent" aria-label="Forward History" (click)="goForward()">
+                        <span>Ir adelante</span><mat-icon>chevron_right</mat-icon>
                     </button>
-                </div> -->
+                </div>
 
                 <app-support-image *ngIf="notFoundError" [imgSrc]="imgSrc" [sourceSrcset]="sourceSrcset"
                     alt="Curiosity People"></app-support-image>
