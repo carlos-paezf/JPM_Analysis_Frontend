@@ -3,7 +3,7 @@ import { FileActionTypeEnum } from "../../protected/constants";
 
 export type ReportHistoryType = {
     id: string;
-    appUserId?: string;
+    appUserId: string;
     reportName: string;
     reportComments: string;
     reportUploadDate: Date;

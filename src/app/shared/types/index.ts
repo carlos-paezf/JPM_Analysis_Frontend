@@ -49,6 +49,7 @@ export type ResponseSheetsType<T> = {
 export type PanelLinkType = {
     label: string;
     routeLink: string;
+    icon?: string;
 };
 
 
@@ -75,4 +76,10 @@ export type FormBaseType = {
     submitted: boolean;
     onSubmit (): void;
     onRestartForm (): void;
+};
+
+
+export type BreadcrumbType = {
+    label: string;
+    url: string;
 };
