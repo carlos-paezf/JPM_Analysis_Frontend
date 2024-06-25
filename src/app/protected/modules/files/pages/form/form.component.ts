@@ -9,13 +9,13 @@ import { CompareSeedResponseType, FormBaseType, PostSeedResponseType, UploadFile
 import { FileActionTypeEnum } from '../../../../constants';
 import { UploadFileService } from '../../services/upload-file.service';
 
+
 /**
  * The FormComponent class is a TypeScript component that handles form submission, 
  * file upload, and validation. 
  *
  * @author cpaezfer
  */
-
 @Component( {
     selector: 'app-form',
     templateUrl: './form.component.html',
@@ -126,6 +126,14 @@ export class FormComponent extends CustomValidators implements FormBaseType, OnI
     }
 
 
+    /**
+     * The function checks if a file is required before submitting a form and returns an error message
+     * if it is not loaded.
+     * @returns The `get fileError()` function is returning a message that says "Se debe cargar un
+     * archivo antes de enviar el formulario" which translates to "A file must be uploaded before
+     * submitting the form" in English. If the 'file' field is required and no file has been uploaded,
+     * this message will be returned. Otherwise, an empty string will be returned.
+     */
     get fileError () {
         if ( this.form.get( 'file' )!.getError( 'required' ) )
             return 'Se debe cargar un archivo antes de enviar el formulario';
