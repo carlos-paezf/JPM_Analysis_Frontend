@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Observable } from 'rxjs';
 
 import { LoadingService } from '../../services/loading.service';
@@ -16,6 +16,7 @@ import { LoadingService } from '../../services/loading.service';
     styleUrls: [ './loading.component.scss' ]
 } )
 export class LoadingComponent {
+    @Input() width!: number;
     isLoading: Observable<boolean>;
 
     constructor ( private readonly _loadingService: LoadingService ) {
