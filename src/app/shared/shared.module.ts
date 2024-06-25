@@ -22,6 +22,7 @@ import { InputErrorMessageDirective } from './directives/input-error-message.dir
 import { NoteFieldFormDirective } from './directives/note-field-form.directive';
 import { OptionalFieldDirective } from './directives/optional-field.directive';
 import { TransformCellValuePipe } from './pipes/transform-cell-value.pipe';
+import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component';
 
 
 
@@ -45,6 +46,7 @@ import { TransformCellValuePipe } from './pipes/transform-cell-value.pipe';
         TableLoadingComponent,
         TransformCellValuePipe,
         NumberCardComponent,
+        BreadcrumbComponent,
     ],
     imports: [
         CommonModule,
@@ -71,6 +73,7 @@ import { TransformCellValuePipe } from './pipes/transform-cell-value.pipe';
         TableLoadingComponent,
         TransformCellValuePipe,
         NumberCardComponent,
+        BreadcrumbComponent,
     ]
 } )
 export class SharedModule { }
