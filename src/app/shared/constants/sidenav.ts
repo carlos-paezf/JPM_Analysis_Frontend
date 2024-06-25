@@ -25,14 +25,14 @@ export const SIDENAV_ITEMS: SidenavLinkType[] = [
         routeLink: 'file-upload',
         requiresAdmin: false
     },
-    // {
-    //     label: 'Perfiles de usuarios JPM',
-    //     icon: 'people',
-    //     routeLink: 'profiles',
-    //     requiresAdmin: false
-    // },
     {
-        label: 'Perfiles JPM',
+        label: 'Usuarios de la compañía',
+        icon: 'contacts',
+        routeLink: 'company-users',
+        requiresAdmin: false
+    },
+    {
+        label: 'Perfiles',
         icon: 'people',
         openTab: false,
         children: [
@@ -55,39 +55,15 @@ export const SIDENAV_ITEMS: SidenavLinkType[] = [
         requiresAdmin: false
     },
     {
-        label: 'Usuarios de la compañía',
-        icon: 'contacts',
-        routeLink: 'company-users',
+        label: 'Productos',
+        icon: 'category',
+        routeLink: 'products',
         requiresAdmin: false
     },
     {
         label: 'Cuentas',
         icon: 'account_balance_wallet',
         routeLink: 'accounts',
-        requiresAdmin: false
-    },
-    {
-        label: 'Productos JPM',
-        icon: 'category',
-        routeLink: 'products',
-        /* openTab: false,
-        children: [
-            {
-                label: 'TIM Cash',
-                routeLink: 'sheets/tim-cash',
-                requiresAdmin: false
-            },
-            {
-                label: 'TIM FX',
-                routeLink: 'sheets/tim-fx',
-                requiresAdmin: false
-            },
-            {
-                label: 'TIM Listed Sec',
-                routeLink: 'sheets/tim-listed-sec',
-                requiresAdmin: false
-            },
-        ], */
         requiresAdmin: false
     },
     {
