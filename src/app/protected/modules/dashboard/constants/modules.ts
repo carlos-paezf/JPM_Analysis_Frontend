@@ -7,7 +7,8 @@ export const APP_MODULES_PANELS: ModulesPanelsType[] = [
         panels: [
             {
                 label: 'Cargar reporte de usuarios JPM',
-                routeLink: 'file-upload'
+                routeLink: 'file-upload',
+                icon: 'upload_file',
             }
         ],
         requireData: false
@@ -17,73 +18,84 @@ export const APP_MODULES_PANELS: ModulesPanelsType[] = [
         panels: [
             {
                 label: 'Usuarios de la compañía',
-                routeLink: 'company-users'
+                routeLink: 'company-users',
+                icon: 'contacts',
             }
         ],
-        requireData: true
+        requireData: true,
     },
     {
         title: 'Perfiles',
         panels: [
             {
                 label: 'Listado de perfiles',
-                routeLink: 'profiles'
+                routeLink: 'profiles',
+                icon: 'manage_accounts',
             },
             {
                 label: 'Relación de Perfiles - Usuarios',
-                routeLink: 'profiles/users-by-profiles'
+                routeLink: 'profiles/users-by-profiles',
+                icon: 'account_tree',
             },
             {
                 label: 'Funciones',
-                routeLink: 'profiles/functions'
+                routeLink: 'profiles/functions',
+                icon: 'functions',
             }
         ],
-        requireData: true
+        requireData: true,
     },
     {
-        title: 'Productos JPM',
+        title: 'Productos',
         panels: [
             {
                 label: 'Productos',
-                routeLink: 'products'
+                routeLink: 'products',
+                icon: 'category',
             },
             {
                 label: 'Cuentas',
-                routeLink: 'accounts'
+                routeLink: 'accounts',
+                icon: 'group',
             },
             {
                 label: 'Relación de Productos - Cuentas',
-                routeLink: 'products-accounts'
+                routeLink: 'products-accounts',
+                icon: 'badge',
             }
         ],
-        requireData: true
+        requireData: true,
     },
     {
         title: 'Títulos de usuarios',
         panels: [
             {
                 label: 'Títulos de los usuarios',
-                routeLink: 'users-entitlements'
+                routeLink: 'users-entitlements',
+                icon: 'shield_person',
             }
         ],
-        requireData: true
+        requireData: true,
     },
     {
         title: 'Administración de la aplicación',
         panels: [
             {
                 label: 'Historial de reportes',
-                routeLink: 'admin-app/reports-history'
+                routeLink: 'admin-app/reports-history',
+                icon: 'content_paste_search',
             },
             {
                 label: 'Listado de usuarios de la aplicación',
-                routeLink: 'admin-app/list-app-user'
+                routeLink: 'admin-app/list-app-user',
+                icon: 'settings_account_box',
             },
             {
                 label: 'Crear nuevo usuario de la aplicación',
-                routeLink: 'admin-app/create-app-user'
+                routeLink: 'admin-app/create-app-user',
+                icon: 'desktop_windows',
             }
         ],
-        requireData: false
+        requireData: false,
     }
 ];
