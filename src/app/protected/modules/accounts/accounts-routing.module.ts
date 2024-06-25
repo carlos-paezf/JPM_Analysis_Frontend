@@ -11,7 +11,7 @@ const routes: Routes = [
     {
         path: 'list-accounts',
         component: ListAccountsComponent,
-        data: { title: 'JPM Lista de Cuentas' },
+        data: { title: 'Lista de Cuentas', breadcrumb: 'Lista de cuentas' },
         pathMatch: 'full'
     },
     {
@@ -19,7 +19,7 @@ const routes: Routes = [
         component: AdminAccountsComponent,
         canDeactivate: [ leaveActiveFormGuard ],
         pathMatch: 'full',
-        data: { title: 'JPM Detalle de Cuenta' }
+        data: { title: 'Detalle de Cuenta', breadcrumb: 'Detalle de cuenta' }
     },
     {
         path: '', redirectTo: 'list-accounts', pathMatch: 'full'

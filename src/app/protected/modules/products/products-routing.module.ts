@@ -11,7 +11,7 @@ const routes: Routes = [
     {
         path: 'list-products',
         component: ListProductsComponent,
-        data: { title: 'JPM Lista de Productos' },
+        data: { title: 'Lista de Productos', breadcrumb: 'Lista de productos' },
         pathMatch: 'full'
     },
     {
@@ -19,7 +19,7 @@ const routes: Routes = [
         component: AdminProductsComponent,
         canDeactivate: [ leaveActiveFormGuard ],
         pathMatch: 'full',
-        data: { title: 'JPM Detalle de Producto' }
+        data: { title: 'Detalle de Producto', breadcrumb: 'Detalle de producto' }
     },
     {
         path: '', redirectTo: 'list-products', pathMatch: 'full'

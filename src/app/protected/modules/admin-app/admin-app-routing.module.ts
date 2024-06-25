@@ -9,7 +9,7 @@ const routes: Routes = [
     {
         path: 'reports-history',
         component: ReportsHistoryComponent,
-        data: { title: 'Historial de Reportes' },
+        data: { title: 'Historial de Reportes', breadcrumb: 'Historial de reportes' },
         pathMatch: 'full'
     },
     {

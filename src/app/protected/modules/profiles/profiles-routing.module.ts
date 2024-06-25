@@ -13,7 +13,7 @@ const routes: Routes = [
     {
         path: 'list-profiles',
         component: ListProfilesComponent,
-        data: { title: 'JPM Lista de Perfiles' },
+        data: { title: 'Lista de Perfiles', breadcrumb: 'Lista de perfiles' },
         pathMatch: 'full'
     },
     {
@@ -21,26 +21,26 @@ const routes: Routes = [
         component: AdminProfilesComponent,
         canDeactivate: [ leaveActiveFormGuard ],
         pathMatch: 'full',
-        data: { title: 'JPM Detalle de Usuario' }
+        data: { title: 'Detalle de Usuario', breadcrumb: 'Detalle de usuario' }
     },
     {
         path: 'users-by-profiles',
         component: UsersByProfilesComponent,
         pathMatch: 'full',
-        data: { title: 'Usuarios por Perfiles' }
+        data: { title: 'Usuarios por Perfiles', breadcrumb: 'Usuarios por perfil' }
     },
     {
         path: 'functions',
         component: FunctionsComponent,
         pathMatch: 'full',
-        data: { title: 'Funciones' }
+        data: { title: 'Funciones', breadcrumb: 'Funciones' }
     },
     {
         path: 'functions/:id',
         canDeactivate: [ leaveActiveFormGuard ],
         component: FunctionsComponent,
         pathMatch: 'full',
-        data: { title: 'Funciones' }
+        data: { title: 'Funciones', breadcrumb: 'Detalles de función' }
     },
     {
         path: '', redirectTo: 'list-profiles', pathMatch: 'full'

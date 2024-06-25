@@ -1,0 +1,17 @@
+.breadcrumb {
+    background-color: transparent;
+    list-style: none;
+    margin-bottom: 1rem;
+    padding: 8px 15px;
+    display: flex;
+    flex-direction: row;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    content: "/";
+    padding: 0 5px;
+}
+
+.breadcrumb-item.active {
+    color: #6c757d;
+}

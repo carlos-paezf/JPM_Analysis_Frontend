@@ -11,7 +11,7 @@ const routes: Routes = [
     {
         path: 'list-company-users',
         component: ListCompanyUserComponent,
-        data: { title: 'JPM Lista de Usuarios' },
+        data: { title: 'Lista de Usuarios', breadcrumb: 'Lista de Usuarios' },
         pathMatch: 'full'
     },
     {
@@ -19,7 +19,7 @@ const routes: Routes = [
         component: AdminCompanyUserComponent,
         canDeactivate: [ leaveActiveFormGuard ],
         pathMatch: 'full',
-        data: { title: 'JPM Detalle de Usuario' }
+        data: { title: 'Detalle de Usuario', breadcrumb: 'Detalle de Usuario' }
     },
     {
         path: '', redirectTo: 'list-company-users', pathMatch: 'full'

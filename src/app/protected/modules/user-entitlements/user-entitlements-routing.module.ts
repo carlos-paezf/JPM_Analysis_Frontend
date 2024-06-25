@@ -11,7 +11,7 @@ const routes: Routes = [
     {
         path: 'list-users-entitlements',
         component: ListUserEntitlementsComponent,
-        data: { title: 'JPM Lista de Títulos' },
+        data: { title: 'Lista de Títulos', breadcrumb: 'Lista de títulos' },
         pathMatch: 'full'
     },
     {
@@ -19,7 +19,7 @@ const routes: Routes = [
         component: AdminUserEntitlementsComponent,
         canDeactivate: [ leaveActiveFormGuard ],
         pathMatch: 'full',
-        data: { title: 'JPM Detalle de Título' }
+        data: { title: 'Detalle de Título', breadcrumb: 'Detalle de título' }
     },
     {
         path: '', redirectTo: 'list-users-entitlements', pathMatch: 'full'

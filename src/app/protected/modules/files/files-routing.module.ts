@@ -14,19 +14,19 @@ const routes: Routes = [
         component: FormComponent,
         canDeactivate: [ leaveActiveFormGuard ],
         pathMatch: 'full',
-        data: { title: 'Carga de reportes' }
+        data: { title: 'Carga de reportes', breadcrumb: 'Carga de reportes' }
     },
     {
         path: 'post-result',
         component: PostResultsComponent,
         pathMatch: 'full',
-        data: { title: 'Resultado última carga' }
+        data: { title: 'Resultado última carga', breadcrumb: 'Resultado última carga' }
     },
     {
         path: 'compare-result',
         component: CompareResultsComponent,
         pathMatch: 'full',
-        data: { title: 'Resultado de comparación' }
+        data: { title: 'Resultado de comparación', breadcrumb: 'Resultado de comparación' }
     },
     {
         path: '**', component: NotFoundComponent,
