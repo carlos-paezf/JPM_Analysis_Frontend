@@ -1,6 +1,9 @@
 <section>
     <mat-form-field>
-        <mat-label>Ingresa un término de búsqueda</mat-label>
+        <mat-label>
+            <mat-icon color="accent">search</mat-icon>
+            <span>Ingresa un término de búsqueda</span>
+        </mat-label>
         <input matInput (keyup)="applyFilter($event)" placeholder="Ejemplo: Captura" #input>
     </mat-form-field>
 

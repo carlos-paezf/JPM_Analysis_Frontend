@@ -4,6 +4,22 @@ section {
 
 mat-form-field {
     width: 100%;
+
+    mat-label {
+        display: flex;
+        place-items: center;
+        gap: 1rem;
+
+        mat-icon {
+            font-size: 22px;
+        }
+    }
+
+    &.mat-focused {
+        mat-label {
+            gap: .5rem;
+        }
+    }
 }
 
 .table__options {
