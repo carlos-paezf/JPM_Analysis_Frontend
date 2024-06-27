@@ -11,24 +11,3 @@ mat-drawer {
 main {
     margin-top: 2rem;
 }
-
-.history__navigation {
-    display: flex;
-    flex-direction: row;
-
-    button {
-        font-size: 12px;
-        height: 30px;
-        display: flex;
-        border-radius: 5px;
-
-        br &:nth-last-child(odd) {
-            flex-direction: row-reverse;
-
-            mat-icon {
-                margin-right: -.5rem;
-                margin-left: .75rem;
-            }
-        }
-    }
-}
