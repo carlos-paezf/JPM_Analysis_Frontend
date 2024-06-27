@@ -23,6 +23,7 @@ import { NoteFieldFormDirective } from './directives/note-field-form.directive';
 import { OptionalFieldDirective } from './directives/optional-field.directive';
 import { TransformCellValuePipe } from './pipes/transform-cell-value.pipe';
 import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component';
+import { NavigationComponent } from './components/navigation/navigation.component';
 
 
 
@@ -47,6 +48,7 @@ import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.componen
         TransformCellValuePipe,
         NumberCardComponent,
         BreadcrumbComponent,
+        NavigationComponent,
     ],
     imports: [
         CommonModule,
@@ -74,6 +76,7 @@ import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.componen
         TransformCellValuePipe,
         NumberCardComponent,
         BreadcrumbComponent,
+        NavigationComponent,
     ]
 } )
 export class SharedModule { }

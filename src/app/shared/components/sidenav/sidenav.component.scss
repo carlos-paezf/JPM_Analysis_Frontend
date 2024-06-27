@@ -3,6 +3,10 @@
     top: 1rem;
     right: 5px;
     z-index: 5;
+
+    // mat-icon {
+    //     color: white;
+    // }
 }
 
 .sidenav {
@@ -50,6 +54,7 @@
                 width: 100%;
                 background-color: transparent;
                 color: var(--text-color);
+                // color: var(--third-background);
                 align-items: center;
                 height: 3rem;
                 font-size: 15px;
@@ -72,6 +77,7 @@
                 gap: 1rem;
                 padding-left: 1rem;
                 border-bottom: 1px solid var(--second-background);
+                // border-bottom: 1px solid var(--overlay-background);
 
                 &.active {
                     box-shadow: 2px 2px 2px 0px #002f5259;
@@ -86,6 +92,7 @@
                 padding: 0 1rem;
                 z-index: 1000;
                 border-bottom: 1px solid var(--second-background);
+                // border-bottom: 1px solid var(--overlay-background);
 
                 .button-label {
                     display: flex;
@@ -144,6 +151,8 @@
                         align-items: center;
                         padding-left: 1rem;
                         color: var(--text-color);
+                        // color: var(--third-background);
+                        border-radius: 5px;
 
                         &.active {
                             color: var(--primary-dark);
@@ -157,6 +166,7 @@
 
                         &:hover {
                             background-color: var(--main-background);
+                            // color: var(--primary-dark);
                         }
                     }
                 }

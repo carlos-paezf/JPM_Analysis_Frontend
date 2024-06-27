@@ -144,6 +144,10 @@ mat-drawer-content {
     align-items: center;
 }
 
+mat-drawer {
+    // background: var(--primary-dark) !important;
+}
+
 mat-drawer-container {
     width: 100vw;
 }
