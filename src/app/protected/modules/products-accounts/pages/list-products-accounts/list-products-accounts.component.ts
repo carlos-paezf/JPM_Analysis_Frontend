@@ -4,6 +4,7 @@ import { InfoTableBaseComponent } from '../../../../../shared/classes/sheet-base
 import { AppUtilsMessagesService } from '../../../../../shared/services/app-utils-messages.service';
 import { ColumnTableType, ProductAccountEagerType } from '../../../../../shared/types';
 import { ProductsAccountsService } from '../../services/products-accounts.service';
+import { ProductAccountEagerV2Type } from '../../../../../shared/types/jpm-types.type';
 
 
 @Component( {
@@ -11,7 +12,7 @@ import { ProductsAccountsService } from '../../services/products-accounts.servic
     templateUrl: './list-products-accounts.component.html',
     styleUrls: [ './list-products-accounts.component.scss' ]
 } )
-export class ListProductsAccountsComponent extends InfoTableBaseComponent<ProductAccountEagerType> implements OnInit {
+export class ListProductsAccountsComponent extends InfoTableBaseComponent<ProductAccountEagerV2Type> implements OnInit {
     public override displayedColumns: string[] = [
         'productName',
         'subProduct',
@@ -21,13 +22,13 @@ export class ListProductsAccountsComponent extends InfoTableBaseComponent<Produc
         'deletedAt',
     ];
 
-    public override columns: ColumnTableType<ProductAccountEagerType>[] = [
+    public override columns: ColumnTableType<ProductAccountEagerV2Type>[] = [
+        { columnDef: 'productName', header: 'Product Name', cell: ( row ) => row.productName ?? '' },
+        { columnDef: 'subProduct', header: 'Sub Product', cell: ( row ) => row.subProduct ?? '' },
         { columnDef: 'accountNumber', header: 'Account Number', cell: ( row ) => row.accountNumber ?? '' },
-        { columnDef: 'accountName', header: 'Account Name', cell: ( row ) => row.account?.accountName ?? '' },
-        { columnDef: 'productName', header: 'Product Name', cell: ( row ) => row.product?.productName ?? '' },
-        { columnDef: 'subProduct', header: 'Sub Product', cell: ( row ) => row.product?.subProduct ?? '' },
-        { columnDef: 'updatedAt', header: 'Última Actualización', cell: ( row ) => row.updatedAt },
-        { columnDef: 'deletedAt', header: 'Fecha de Desactivación', cell: ( row ) => row.deletedAt },
+        { columnDef: 'accountName', header: 'Account Name', cell: ( row ) => row.accountName ?? '' },
+        { columnDef: 'updatedAt', header: 'Última Actualización', cell: ( row ) => new Date( row.updatedAt ).toLocaleString() },
+        { columnDef: 'deletedAt', header: 'Fecha de Desactivación', cell: ( row ) => row.deletedAt && new Date( row.deletedAt ).toLocaleString() },
     ];
 
     public deactivateItem!: Function;

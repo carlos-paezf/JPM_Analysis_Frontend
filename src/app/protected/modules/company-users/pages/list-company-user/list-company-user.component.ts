@@ -48,7 +48,7 @@ export class ListCompanyUserComponent extends ListEntityBase<CompanyUserType, Co
         { columnDef: 'userRole', header: 'Rol', cell: ( row ) => row.userRole },
         { columnDef: 'profileId', header: 'Perfil', cell: ( row ) => row.profileId },
         { columnDef: 'updatedAt', header: 'Última Actualización', cell: ( row ) => new Date( row.updatedAt ).toLocaleString() },
-        { columnDef: 'deletedAt', header: 'Fecha de Desactivación', cell: ( row ) => row.deletedAt },
+        { columnDef: 'deletedAt', header: 'Fecha de Desactivación', cell: ( row ) => row.deletedAt && new Date( row.deletedAt ).toLocaleString() },
     ];
 
     constructor (

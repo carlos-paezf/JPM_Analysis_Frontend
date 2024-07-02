@@ -25,8 +25,8 @@ export class ListProductsComponent extends ListEntityBase<ProductType, ProductEa
     public override columns: ColumnTableType<ProductType>[] = [
         { columnDef: 'productName', header: 'Nombre del producto', cell: ( row ) => row.productName },
         { columnDef: 'subProduct', header: 'Sub-Producto', cell: ( row ) => row.subProduct },
-        { columnDef: 'updatedAt', header: 'Última Actualización', cell: ( row ) => row.updatedAt },
-        { columnDef: 'deletedAt', header: 'Fecha de Desactivación', cell: ( row ) => row.deletedAt },
+        { columnDef: 'updatedAt', header: 'Última Actualización', cell: ( row ) => new Date( row.updatedAt ).toLocaleString() },
+        { columnDef: 'deletedAt', header: 'Fecha de Desactivación', cell: ( row ) => row.deletedAt && new Date( row.deletedAt ).toLocaleString() },
     ];
 
     constructor (

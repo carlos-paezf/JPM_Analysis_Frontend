@@ -29,8 +29,8 @@ export class ListAccountsComponent extends ListEntityBase<AccountType, AccountEa
         { columnDef: 'accountName', header: 'Nombre de cuenta', cell: ( row ) => row.accountName },
         { columnDef: 'accountType', header: 'Tipo de cuenta', cell: ( row ) => row.accountType },
         { columnDef: 'bankCurrency', header: 'Moneda bancaria', cell: ( row ) => row.bankCurrency },
-        { columnDef: 'updatedAt', header: 'Última Actualización', cell: ( row ) => row.updatedAt },
-        { columnDef: 'deletedAt', header: 'Fecha de Desactivación', cell: ( row ) => row.deletedAt },
+        { columnDef: 'updatedAt', header: 'Última Actualización', cell: ( row ) => new Date( row.updatedAt ).toLocaleString() },
+        { columnDef: 'deletedAt', header: 'Fecha de Desactivación', cell: ( row ) => row.deletedAt && new Date( row.deletedAt ).toLocaleString() },
     ];
 
     constructor (

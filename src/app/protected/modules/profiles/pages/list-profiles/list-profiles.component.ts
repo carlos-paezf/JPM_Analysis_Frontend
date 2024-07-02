@@ -21,7 +21,7 @@ export class ListProfilesComponent extends InfoTableBaseComponent<ProfileType> i
         { columnDef: 'id', header: 'ID', cell: ( row ) => row.id },
         { columnDef: 'profileName', header: 'Nombre de Perfil', cell: ( row ) => row.profileName },
         { columnDef: 'createdAt', header: 'Fecha de creación', cell: ( row ) => row.createdAt },
-        { columnDef: 'updatedAt', header: 'Fecha de última actualización', cell: ( row ) => row.updatedAt },
+        { columnDef: 'updatedAt', header: 'Fecha de última actualización', cell: ( row ) => new Date( row.updatedAt ).toLocaleString() },
     ];
 
     public deleteProfile!: Function;
