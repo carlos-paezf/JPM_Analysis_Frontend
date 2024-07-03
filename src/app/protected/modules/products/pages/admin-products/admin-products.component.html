@@ -17,7 +17,8 @@
                             <mat-icon class="opacity_icon" fontIcon="person"></mat-icon>
                             <label for="productName">Nombre del producto</label>
                         </div>
-                        <input matInput formControlName="productName" id="productName" [disabled]="true">
+                        <input matInput formControlName="productName" id="productName" [disabled]="true"
+                            [ngClass]="{'input-error': getControl(form, 'productName')!.touched && getControl(form, 'productName')!.invalid}">
                         <span error-msg [message]="controlError(form, 'productName')"
                             [invalid]="isInvalidField(form, 'productName')"></span>
                     </div>

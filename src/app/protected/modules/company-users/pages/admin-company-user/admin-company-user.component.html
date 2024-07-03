@@ -27,7 +27,8 @@
                             <mat-icon class="opacity_icon" fontIcon="person"></mat-icon>
                             <label for="userName">Nombre</label>
                         </div>
-                        <input matInput formControlName="userName" id="userName">
+                        <input matInput formControlName="userName" id="userName"
+                            [ngClass]="{'input-error': getControl(form, 'userName')!.touched && getControl(form, 'userName')!.invalid}">
                         <span error-msg [message]="controlError(form, 'userName')"
                             [invalid]="isInvalidField(form, 'userName')"></span>
                     </div>
@@ -37,7 +38,8 @@
                             <mat-icon class="opacity_icon" fontIcon="mail"></mat-icon>
                             <label for="emailAddress">Dirección de Correo</label>
                         </div>
-                        <input matInput formControlName="emailAddress" id="emailAddress">
+                        <input matInput formControlName="emailAddress" id="emailAddress"
+                            [ngClass]="{'input-error': getControl(form, 'emailAddress')!.touched && getControl(form, 'emailAddress')!.invalid}">
                         <span error-msg [message]="controlError(form, 'emailAddress')"
                             [invalid]="isInvalidField(form, 'emailAddress')"></span>
                     </div>
@@ -47,7 +49,8 @@
                             <mat-icon class="opacity_icon" fontIcon="assignment_ind"></mat-icon>
                             <label for="userType">Tipo de usuario</label>
                         </div>
-                        <input matInput formControlName="userType" id="userType">
+                        <input matInput formControlName="userType" id="userType"
+                            [ngClass]="{'input-error': getControl(form, 'userType')!.touched && getControl(form, 'userType')!.invalid}">
                         <span error-msg [message]="controlError(form, 'userType')"
                             [invalid]="isInvalidField(form, 'userType')"></span>
                     </div>
@@ -88,7 +91,8 @@
                             <mat-icon class="opacity_icon" fontIcon="public"></mat-icon>
                             <label for="userCountry">País</label>
                         </div>
-                        <input matInput formControlName="userCountry" id="userCountry">
+                        <input matInput formControlName="userCountry" id="userCountry"
+                            [ngClass]="{'input-error': getControl(form, 'userCountry')!.touched && getControl(form, 'userCountry')!.invalid}">
                         <span error-msg [message]="controlError(form, 'userCountry')"
                             [invalid]="isInvalidField(form, 'userCountry')"></span>
                     </div>
@@ -98,7 +102,8 @@
                             <mat-icon class="opacity_icon" fontIcon="person_pin_circle"></mat-icon>
                             <label for="userLocation">Ubicación</label>
                         </div>
-                        <input matInput formControlName="userLocation" id="userLocation">
+                        <input matInput formControlName="userLocation" id="userLocation"
+                            [ngClass]="{'input-error': getControl(form, 'userLocation')!.touched && getControl(form, 'userLocation')!.invalid}">
                         <span error-msg [message]="controlError(form, 'userLocation')"
                             [invalid]="isInvalidField(form, 'userLocation')"></span>
                     </div>
@@ -113,7 +118,8 @@
                             <mat-icon class="opacity_icon" fontIcon="badge"></mat-icon>
                             <label for="userLogonType">Tipo de ingreso</label>
                         </div>
-                        <input matInput formControlName="userLogonType" id="userLogonType">
+                        <input matInput formControlName="userLogonType" id="userLogonType"
+                            [ngClass]="{'input-error': getControl(form, 'userLogonType')!.touched && getControl(form, 'userLogonType')!.invalid}">
                         <span error-msg [message]="controlError(form, 'userLogonType')"
                             [invalid]="isInvalidField(form, 'userLogonType')"></span>
                     </div>
@@ -123,15 +129,10 @@
                             <mat-icon class="opacity_icon" fontIcon="event_available"></mat-icon>
                             <label for="userLastLogonDt">Última fecha de ingreso</label>
                         </div>
-                        <input matInput formControlName="userLastLogonDt" id="userLastLogonDt">
+                        <input matInput formControlName="userLastLogonDt" id="userLastLogonDt"
+                            [ngClass]="{'input-error': getControl(form, 'userLastLogonDt')!.touched && getControl(form, 'userLastLogonDt')!.invalid}">
                         <span error-msg [message]="controlError(form, 'userLastLogonDt')"
                             [invalid]="isInvalidField(form, 'userLastLogonDt')"></span>
-                        <!-- <mat-form-field disabled>
-                        <input matInput id="userLastLogonDt" formControlName="userLastLogonDt"
-                            [matDatepicker]="userLastLogonDtPicker">
-                        <mat-datepicker-toggle matIconSuffix [for]="userLastLogonDtPicker"></mat-datepicker-toggle>
-                        <mat-datepicker #userLastLogonDtPicker></mat-datepicker>
-                    </mat-form-field> -->
                     </div>
                     <div class="form-control">
                         <div class="label">
@@ -145,41 +146,12 @@
                 </div>
             </section>
 
-            <!-- <section>
-                <h4>TODO: No sé que poner</h4>
-                <div class="form-group">
-                    <div class="form-control">
-                        <div class="label">
-                            <mat-icon class="opacity_icon" fontIcon="badge"></mat-icon>
-                            <label for="userGroupMembership">Group Membership</label>
-                        </div>
-                        <input matInput formControlName="userGroupMembership" id="userGroupMembership">
-                    </div>
-
-                    <div class="form-control">
-                        <div class="label">
-                            <mat-icon class="opacity_icon" fontIcon="badge"></mat-icon>
-                            <label for="userRole">Role</label>
-                        </div>
-                        <input matInput formControlName="userRole" id="userRole">
-                    </div>
-
-                    <div class="form-control">
-                        <div class="label">
-                            <mat-icon class="opacity_icon" fontIcon="badge"></mat-icon>
-                            <label for="employeeId">Employee Id</label>
-                        </div>
-                        <input matInput formControlName="employeeId" id="employeeId">
-                    </div>
-                </div>
-            </section> -->
-
             <app-control-dates-form [createdAt]="data!.createdAt" [updatedAt]="data!.updatedAt"
                 [deletedAt]="data?.deletedAt" />
         </div>
 
         <ng-container *ngIf="isAdminUser">
-            <section class="form__actions">2
+            <section class="form__actions">
                 <button mat-raised-button color="primary" [disabled]="!isDataChanged">
                     Actualizar Usuario de la Compañía
                 </button>
@@ -193,4 +165,3 @@
 
 
 </ng-template>
-<!-- </app-dialog-section> -->

@@ -17,7 +17,8 @@
                             <mat-icon class="opacity_icon" fontIcon="person"></mat-icon>
                             <label for="id">Profile Id:</label>
                         </div>
-                        <input matInput formControlName="id" id="id">
+                        <input matInput formControlName="id" id="id"
+                            [ngClass]="{'input-error': getControl(form, 'id')!.touched && getControl(form, 'id')!.invalid}">
                         <span error-msg [message]="controlError(form, 'id')"
                             [invalid]="isInvalidField(form, 'id')"></span>
                     </div>
@@ -27,7 +28,8 @@
                             <mat-icon class="opacity_icon" fontIcon="person"></mat-icon>
                             <label for="profileName">Profile Name:</label>
                         </div>
-                        <input matInput formControlName="profileName" id="profileName">
+                        <input matInput formControlName="profileName" id="profileName"
+                            [ngClass]="{'input-error': getControl(form, 'profileName')!.touched && getControl(form, 'profileName')!.invalid}">
                         <span error-msg [message]="controlError(form, 'profileName')"
                             [invalid]="isInvalidField(form, 'profileName')"></span>
                     </div>

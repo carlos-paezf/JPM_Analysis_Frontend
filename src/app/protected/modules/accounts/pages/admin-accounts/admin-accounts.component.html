@@ -27,7 +27,8 @@
                             <mat-icon class="opacity_icon" fontIcon="person"></mat-icon>
                             <label for="accountName">Nombre de cuenta</label>
                         </div>
-                        <input matInput formControlName="accountName" id="accountName">
+                        <input matInput formControlName="accountName" id="accountName"
+                            [ngClass]="{'input-error': getControl(form, 'accountName')!.touched && getControl(form, 'accountName')!.invalid}">
                         <span error-msg [message]="controlError(form, 'accountName')"
                             [invalid]="isInvalidField(form, 'accountName')"></span>
                     </div>
@@ -37,7 +38,8 @@
                             <mat-icon class="opacity_icon" fontIcon="mail"></mat-icon>
                             <label for="accountType">Tipo de cuenta</label>
                         </div>
-                        <input matInput formControlName="accountType" id="accountType">
+                        <input matInput formControlName="accountType" id="accountType"
+                            [ngClass]="{'input-error': getControl(form, 'accountType')!.touched && getControl(form, 'accountType')!.invalid}">
                         <span error-msg [message]="controlError(form, 'accountType')"
                             [invalid]="isInvalidField(form, 'accountType')"></span>
                     </div>
