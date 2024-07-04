@@ -1,5 +1,6 @@
-<button class="sidenav__toggle" mat-icon-button color="primary" aria-label="Toggle" (click)="toggleDrawer()">
-    <mat-icon>swap_horiz</mat-icon>
+<button *ngIf="isOver" class="sidenav__toggle" mat-icon-button color="primary" aria-label="Toggle"
+    (click)="toggleDrawer()" #tooltip="matTooltip" matTooltip="Contraer sidenav" matTooltipPosition="right">
+    <mat-icon>menu_open</mat-icon>
 </button>
 
 <div class="sidenav">
@@ -26,7 +27,9 @@
                             <span>{{ link.label }}</span>
                         </div>
 
-                        <mat-icon>{{ link.openTab ? 'expand_less' : 'expand_more' }}</mat-icon>
+                        <mat-icon #tooltip="matTooltip"
+                            [matTooltip]="link.openTab ? 'Contraer sub-menu' : 'Expandir sub-menu'"
+                            matTooltipPosition="right">{{ link.openTab ? 'expand_less' : 'expand_more' }}</mat-icon>
                     </button>
 
                     <ul class="sub-links" [@slideInOut]="link.openTab">

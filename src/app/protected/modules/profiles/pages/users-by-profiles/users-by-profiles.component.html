@@ -9,8 +9,12 @@
 
     <ng-template #tableComponent>
         <div class="action-buttons">
-            <button mat-flat-button color="primary" (click)="accordion.openAll()">Expand All</button>
-            <button mat-flat-button color="accent" (click)="accordion.closeAll()">Collapse All</button>
+            <button mat-flat-button color="primary" (click)="accordion.openAll()" #tooltip="matTooltip"
+                matTooltip="Expandir todos las secciones" matTooltipPosition="below" matTooltipShowDelay="500">Expardir
+                todos</button>
+            <button mat-flat-button color="accent" (click)="accordion.closeAll()" #tooltip="matTooltip"
+                matTooltip="Colapsar todos las secciones" matTooltipPosition="below" matTooltipShowDelay="500">Colapsar
+                todos</button>
         </div>
 
         <mat-accordion multi>

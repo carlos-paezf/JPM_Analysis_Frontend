@@ -8,13 +8,17 @@
     </mat-form-field>
 
     <div class="table__options">
-        <button mat-fab extended color="primary" aria-label="Reload info" (click)="reloadData()">
+        <button mat-fab extended color="primary" aria-label="Reload info" (click)="reloadData()" #tooltip="matTooltip"
+            matTooltip="Recargar la información de la base de datos" matTooltipPosition="above"
+            matTooltipShowDelay="500">
             <mat-icon>cloud_sync</mat-icon>
             Refrescar información
         </button>
 
-        <mat-paginator [pageSizeOptions]="[10, 15, 20, 25, 50, 100]" showFirstLastButtons
-            aria-label="Seleccionar página de registros">
+        <mat-paginator [pageSizeOptions]="[5, 8, 10, 15, 20, 25, 50, 100]" showFirstLastButtons
+            aria-label="Seleccionar página de registros" #tooltip="matTooltip"
+            matTooltip="Cambia la cantidad de registros a mostrar en la tabla" matTooltipPosition="above"
+            matTooltipShowDelay="500">
         </mat-paginator>
     </div>
 
@@ -27,7 +31,9 @@
                 [sticky]="column.columnDef === stickyColumn">
                 <ng-container *ngIf="column.columnDef === 'userName'; else restColumns">
                     <th mat-header-cell cdkDrag *matHeaderCellDef mat-sort-header
-                        sortActionDescription="Sort by User Name">
+                        sortActionDescription="Sort by User Name" #tooltip="matTooltip"
+                        [matTooltip]="column.tooltip ?? 'Ordena Ascendente o Descendente'" matTooltipPosition="above"
+                        matTooltipShowDelay="500">
                         {{ column.header }}
                     </th>
                     <td mat-cell *matCellDef="let row" class="user-link"
@@ -38,7 +44,9 @@
 
                 <ng-template #restColumns>
                     <th mat-header-cell cdkDrag *matHeaderCellDef mat-sort-header
-                        [sortActionDescription]="'Sort by ' + column.header">
+                        [sortActionDescription]="'Sort by ' + column.header" #tooltip="matTooltip"
+                        [matTooltip]="column.tooltip ?? 'Ordena Ascendente o Descendente'" matTooltipPosition="above"
+                        matTooltipShowDelay="500">
                         {{ column.header }}
                     </th>
                     <!-- <td mat-cell *matCellDef="let row" (click)="handleRedirectDetail(row.id)"> -->

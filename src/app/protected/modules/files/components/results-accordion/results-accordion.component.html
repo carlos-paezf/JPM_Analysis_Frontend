@@ -2,13 +2,19 @@
     <h3>{{ sectionName }}</h3>
 
     <div class="action-buttons">
-        <button mat-flat-button color="primary" (click)="accordion.openAll()">Expand All</button>
-        <button mat-flat-button color="accent" (click)="accordion.closeAll()">Collapse All</button>
+        <button mat-flat-button color="primary" (click)="accordion.openAll()" #tooltip="matTooltip"
+            matTooltip="Expandir todos las secciones" matTooltipPosition="below" matTooltipShowDelay="500">Expardir
+            todos</button>
+        <button mat-flat-button color="accent" (click)="accordion.closeAll()" #tooltip="matTooltip"
+            matTooltip="Colapsar todos las secciones" matTooltipPosition="below" matTooltipShowDelay="500">Colapsar
+            todos</button>
     </div>
 
 
     <mat-accordion multi>
-        <mat-expansion-panel>
+        <mat-expansion-panel #tooltip="matTooltip"
+            matTooltip="Nuevos registros que SI aparecen en el reporte Excel y NO en la base de datos"
+            matTooltipPosition="above" matTooltipPositionAtOrigin="true" matTooltipShowDelay="500">
             <mat-expansion-panel-header>
                 <mat-panel-title>
                     Nuevos registros
@@ -31,7 +37,9 @@
 
 
         <mat-expansion-panel>
-            <mat-expansion-panel-header>
+            <mat-expansion-panel-header #tooltip="matTooltip"
+                matTooltip="Registros que aparecen en el reporte Excel y tienen diferencias con los registros existentes en la base de datos"
+                matTooltipPosition="above" matTooltipPositionAtOrigin="true" matTooltipShowDelay="500">
                 <mat-panel-title>
                     Registros con diferencias
                 </mat-panel-title>
@@ -54,7 +62,9 @@
 
 
         <mat-expansion-panel>
-            <mat-expansion-panel-header>
+            <mat-expansion-panel-header #tooltip="matTooltip"
+                matTooltip="Registros que NO aparecen en el reporte Excel y SI en la base de datos"
+                matTooltipPosition="above" matTooltipPositionAtOrigin="true" matTooltipShowDelay="500">
                 <mat-panel-title>
                     Registros a eliminar
                 </mat-panel-title>

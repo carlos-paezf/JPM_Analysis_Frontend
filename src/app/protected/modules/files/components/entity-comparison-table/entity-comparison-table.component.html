@@ -2,15 +2,21 @@
     <details>
         <summary>
             <ul>
-                <li class="titleName">
+                <li class="titleName" #tooltip="matTooltip"
+                    matTooltip="Nuevos datos que se añaden a un registro ya almacenado" matTooltipPosition="above"
+                    matTooltipPositionAtOrigin="true" matTooltipShowDelay="500">
                     <span class="add"></span>
                     <span>Adiciones: {{totalAdds}}</span>
                 </li>
-                <li class="titleValue">
+                <li class="titleValue" #tooltip="matTooltip"
+                    matTooltip="Datos que se modifican en un registro ya almacenado" matTooltipPosition="above"
+                    matTooltipPositionAtOrigin="true" matTooltipShowDelay="500">
                     <span class="update"></span>
                     <span>Modificaciones: {{totalUpdates}}</span>
                 </li>
-                <li class="titleValue">
+                <li class="titleValue" #tooltip="matTooltip"
+                    matTooltip="Datos que se eliminan en un registro ya almacenado" matTooltipPosition="above"
+                    matTooltipPositionAtOrigin="true" matTooltipShowDelay="500">
                     <span class="delete"></span>
                     <span>Eliminaciones: {{totalDeletes}}</span>
                 </li>

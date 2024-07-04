@@ -4,7 +4,8 @@
             [ngClass]="{'breadcrumb-item': true, 'active': last}">
 
             <ng-container *ngIf="!last; else lastBreadcrumb">
-                <a [routerLink]="breadcrumb.url">{{ breadcrumb.label }}</a>
+                <a [routerLink]="breadcrumb.url" #tooltip="matTooltip" matTooltip="Ir a la página principal del módulo"
+                    matTooltipPosition="above" matTooltipShowDelay="500">{{ breadcrumb.label }}</a>
             </ng-container>
             <ng-template #lastBreadcrumb>{{ breadcrumb.label }}</ng-template>
         </li>

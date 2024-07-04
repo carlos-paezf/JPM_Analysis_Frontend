@@ -44,7 +44,10 @@
 
     <div class="actions">
         <button type="submit" mat-flat-button color="primary" (click)="approveChanges()"
-            [disabled]="results?.totalNewEntities === 0 && results?.totalEntitiesWithDifferences === 0 && results?.totalToDeleteEntities === 0">Aprobar
-            cambios</button>
+            [disabled]="results?.totalNewEntities === 0 && results?.totalEntitiesWithDifferences === 0 && results?.totalToDeleteEntities === 0"
+            #tooltip="matTooltip" matTooltip="Aceptar todos los cambios del nuevo reporte Excel"
+            matTooltipPosition="left" matTooltipShowDelay="500">
+            Aprobar cambios
+        </button>
     </div>
 </ng-template>
