@@ -22,7 +22,7 @@ export class FunctionsComponent extends BaseDetailClass<ProfileFunctionType[]> i
     public profiles: ProfileType[] = [];
     public functions: FunctionType[] = [];
 
-    public showForm: boolean = true;
+    public showForm: boolean = false;
 
     constructor (
         private readonly _activateRoute: ActivatedRoute,
@@ -91,7 +91,7 @@ export class FunctionsComponent extends BaseDetailClass<ProfileFunctionType[]> i
 
 
     onClick ( func: FunctionType ) {
-        this.showForm = true;
         this._router.navigate( [ `profiles/functions/${ func.id }` ] );
+        this.toggleShowForm();
     }
 }

@@ -146,6 +146,8 @@ export class FunctionFormComponent implements OnChanges {
 
         this._router.navigate( [ 'profiles/functions' ] );
 
+        window.location.reload();
+
         this.showForm = false;
     }
 

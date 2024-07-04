@@ -18,7 +18,11 @@
                     <mat-icon class="opacity_icon" fontIcon="functions"></mat-icon>
                     <label for="functionName">Nombre de la función:</label>
                 </div>
-                <input matInput formControlName="functionName" id="functionName">
+                <input matInput formControlName="functionName" id="functionName"
+                    [ngClass]="{'input-error': form.get('functionName')!.touched && form.get('functionName')!.invalid}">
+                <span error-msg
+                    [message]="form.get( 'functionName' )?.getError( 'required' ) && 'Este campo es requerido'"
+                    [invalid]="form.get('functionName')!.touched && form.get('functionName')!.hasError('required')"></span>
             </div>
 
             <div class="form-control">
