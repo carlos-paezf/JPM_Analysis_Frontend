@@ -19,6 +19,7 @@ import { SidenavLinkType } from '../../types';
 } )
 export class SidenavComponent implements OnInit {
     @Input() drawer!: MatDrawer;
+    @Input() isOver: boolean = false;
 
     public logoSrc = "../../../../assets/images/banrep-logo2.png";
 
