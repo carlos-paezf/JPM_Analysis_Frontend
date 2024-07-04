@@ -122,6 +122,15 @@ export type ProductAccountEagerType = ProductAccountType & {
 };
 
 
+export type ProductAccountEagerV2Type = ProductAccountType & {
+    productName: string;
+    subProduct: string | null;
+    accountName: string;
+    accountType: string;
+    bankCurrency: string | null;
+};
+
+
 export type UserEntitlementType = ControlDateType & {
     id: string;
     accessId: string;

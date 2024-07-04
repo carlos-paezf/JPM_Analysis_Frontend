@@ -36,6 +36,7 @@ export {
 export type ColumnTableType<T> = {
     columnDef: string;
     header: string;
+    tooltip?: string;
     cell: ( row: T ) => unknown;
 };
 
@@ -82,4 +83,13 @@ export type FormBaseType = {
 export type BreadcrumbType = {
     label: string;
     url: string;
+};
+
+
+export type StatisticsSectionType = {
+    name: string,
+    sectionName: string,
+    reportName: 'accountsReport' | 'companyUsersReport' | 'functionsReport' |
+    'profilesReport' | 'profilesFunctionsReport' | 'productsReport' |
+    'productsAccountsReport' | 'usersEntitlementsReport';
 };
