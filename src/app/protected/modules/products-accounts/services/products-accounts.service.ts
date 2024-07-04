@@ -5,6 +5,7 @@ import { BaseServiceWithSoftDelete } from '../../../../shared/classes/base-servi
 import { ProductAccountEagerType, ProductAccountType } from '../../../../shared/types';
 import { Observable } from 'rxjs';
 import { ResponseSheetsType } from '../../../../shared/types/index';
+import { ProductAccountEagerV2Type } from '../../../../shared/types/jpm-types.type';
 
 
 /**
@@ -22,7 +23,7 @@ export class ProductsAccountsService extends BaseServiceWithSoftDelete<ProductAc
      * The function `getAll` makes an HTTP GET request to retrieve eager-loaded product account data.
      * @returns An Observable of type ResponseSheetsType<ProductAccountEagerType> is being returned.
      */
-    public override getAll (): Observable<ResponseSheetsType<ProductAccountEagerType>> {
-        return this._http.get<ResponseSheetsType<ProductAccountEagerType>>( `${ this._baseUrl }/eager` );
+    public override getAll (): Observable<ResponseSheetsType<ProductAccountEagerV2Type>> {
+        return this._http.get<ResponseSheetsType<ProductAccountEagerV2Type>>( `${ this._baseUrl }/eager` );
     }
 }
