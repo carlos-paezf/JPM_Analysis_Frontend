@@ -41,4 +41,20 @@ export abstract class BaseDetailClass<T> extends CustomValidators {
 
         else return '';
     }
+
+
+    /**
+     * The function `getControl` takes a `FormGroup` and a control name as input, and returns the
+     * corresponding control from the form.
+     * @param {FormGroup} form - The `form` parameter is of type `FormGroup`, which is a part of
+     * Angular's Reactive Forms module. It represents a group of FormControls that are organized into a
+     * single object.
+     * @param {string} controlName - The `controlName` parameter is a string that represents the name
+     * of the form control within the `FormGroup` that you want to retrieve.
+     * @returns The `getControl` function is returning the form control with the specified
+     * `controlName` from the `FormGroup` provided as input.
+     */
+    public getControl ( form: FormGroup, controlName: string ) {
+        return form.get( controlName );
+    }
 }
