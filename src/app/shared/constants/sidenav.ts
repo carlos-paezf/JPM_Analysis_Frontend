@@ -68,13 +68,13 @@ export const SIDENAV_ITEMS: SidenavLinkType[] = [
     },
     {
         label: 'Productos - Cuentas',
-        icon: 'account_balance_wallet',
+        icon: 'account_tree',
         routeLink: 'products-accounts',
         requiresAdmin: false
     },
     {
-        label: 'Títulos de Usuarios',
-        icon: 'list',
+        label: 'Autorizaciones de Usuarios',
+        icon: 'shield_person',
         routeLink: 'users-entitlements',
         requiresAdmin: false
     },
