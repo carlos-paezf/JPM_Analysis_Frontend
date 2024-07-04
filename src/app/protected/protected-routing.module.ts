@@ -48,7 +48,7 @@ const routes: Routes = [
             {
                 path: 'users-entitlements',
                 loadChildren: () => import( './modules/user-entitlements/user-entitlements.module' ).then( m => m.UserEntitlementsModule ),
-                data: { breadcrumb: 'Títulos de usuarios' }
+                data: { breadcrumb: 'Autorizaciones de Usuarios' }
             },
             {
                 path: 'admin-app',
