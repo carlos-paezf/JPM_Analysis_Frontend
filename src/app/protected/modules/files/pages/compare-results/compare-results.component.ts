@@ -122,7 +122,7 @@ export class CompareResultsComponent implements OnInit {
                 functionId: "ID de la función"
             },
             userEntitlement: {
-                id: "ID del título de usuario",
+                id: "ID del autorización de usuario",
                 accessId: "Access ID",
                 accountNumber: "Número de cuenta",
                 productId: "ID del producto",

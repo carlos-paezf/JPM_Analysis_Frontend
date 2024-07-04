@@ -1,4 +1,4 @@
-<h2>Información detallada del título</h2>
+<h2>Información detallada del autorización</h2>
 
 <ng-container *ngIf="isLoading || !data; else userEntitlementInfo">
     <div class="loading__section">
@@ -115,7 +115,7 @@
         <ng-container *ngIf="isAdminUser">
             <section class="form__actions">
                 <button mat-raised-button color="primary" [disabled]="!isDataChanged">
-                    Actualizar título
+                    Actualizar autorización
                 </button>
                 <button type="button" (click)="onRestartForm()" mat-raised-button color="accent"
                     [disabled]="!isDataChanged">

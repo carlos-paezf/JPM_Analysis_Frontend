@@ -11,7 +11,7 @@ const routes: Routes = [
     {
         path: 'list-users-entitlements',
         component: ListUserEntitlementsComponent,
-        data: { title: 'Lista de Títulos', breadcrumb: 'Lista de títulos' },
+        data: { title: 'Lista de Autorizaciones', breadcrumb: 'Lista de autorizaciones' },
         pathMatch: 'full'
     },
     {
@@ -19,7 +19,7 @@ const routes: Routes = [
         component: AdminUserEntitlementsComponent,
         canDeactivate: [ leaveActiveFormGuard ],
         pathMatch: 'full',
-        data: { title: 'Detalle de Título', breadcrumb: 'Detalle de título' }
+        data: { title: 'Detalle de Autorización', breadcrumb: 'Detalle de autorización' }
     },
     {
         path: '', redirectTo: 'list-users-entitlements', pathMatch: 'full'
