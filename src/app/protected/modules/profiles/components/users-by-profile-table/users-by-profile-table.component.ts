@@ -35,7 +35,7 @@ export class UsersByProfileTableComponent extends InfoTableBaseComponent<Company
         { columnDef: 'userGroupMembership', header: 'Group Membership', cell: ( row ) => row.userGroupMembership },
         { columnDef: 'userRole', header: 'Role', cell: ( row ) => row.userRole },
         { columnDef: 'profileId', header: 'Profile', cell: ( row ) => row.profileId },
-        { columnDef: 'updatedAt', header: 'Última Actualización', cell: ( row ) => row.updatedAt },
+        { columnDef: 'updatedAt', header: 'Última Actualización', cell: ( row ) => new Date( row.updatedAt ).toLocaleString() },
     ];
 
     @Input() profileId!: string;
