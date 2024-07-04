@@ -9,53 +9,33 @@
     </thead>
 
     <tbody>
-        <tr>
-            <td (click)="redirectSection('accounts')">Cuentas</td>
-            <td>{{getAmount('accountsReport', 'countNewEntities')}}</td>
-            <td>{{getAmount('accountsReport', 'countEntitiesWithDifferences')}}</td>
-            <td>{{getAmount('accountsReport', 'countToDeleteEntities')}}</td>
-        </tr>
-        <tr>
-            <td (click)="redirectSection('company_users')">Company Users</td>
-            <td>{{getAmount('companyUsersReport', 'countNewEntities')}}</td>
-            <td>{{getAmount('companyUsersReport', 'countEntitiesWithDifferences')}}</td>
-            <td>{{getAmount('companyUsersReport', 'countToDeleteEntities')}}</td>
-        </tr>
-        <tr>
-            <td (click)="redirectSection('functions')">Funciones</td>
-            <td>{{getAmount('functionsReport', 'countNewEntities')}}</td>
-            <td>{{getAmount('functionsReport', 'countEntitiesWithDifferences')}}</td>
-            <td>{{getAmount('functionsReport', 'countToDeleteEntities')}}</td>
-        </tr>
-        <tr>
-            <td (click)="redirectSection('profiles')">Perfiles</td>
-            <td>{{getAmount('profilesReport', 'countNewEntities')}}</td>
-            <td>{{getAmount('profilesReport', 'countEntitiesWithDifferences')}}</td>
-            <td>{{getAmount('profilesReport', 'countToDeleteEntities')}}</td>
-        </tr>
-        <tr>
-            <td (click)="redirectSection('profiles_functions')">Perfiles - Funciones</td>
-            <td>{{getAmount('profilesFunctionsReport', 'countNewEntities')}}</td>
-            <td>{{getAmount('profilesFunctionsReport', 'countEntitiesWithDifferences')}}</td>
-            <td>{{getAmount('profilesFunctionsReport', 'countToDeleteEntities')}}</td>
-        </tr>
-        <tr>
-            <td (click)="redirectSection('products')">Productos</td>
-            <td>{{getAmount('productsReport', 'countNewEntities')}}</td>
-            <td>{{getAmount('productsReport', 'countEntitiesWithDifferences')}}</td>
-            <td>{{getAmount('productsReport', 'countToDeleteEntities')}}</td>
-        </tr>
-        <tr>
-            <td (click)="redirectSection('products_accounts')">Productos - Cuentas</td>
-            <td>{{getAmount('productsAccountsReport', 'countNewEntities')}}</td>
-            <td>{{getAmount('productsAccountsReport', 'countEntitiesWithDifferences')}}</td>
-            <td>{{getAmount('productsAccountsReport', 'countToDeleteEntities')}}</td>
-        </tr>
-        <tr>
-            <td (click)="redirectSection('users_entitlements')">Títulos de usuarios</td>
-            <td>{{getAmount('usersEntitlementsReport', 'countNewEntities')}}</td>
-            <td>{{getAmount('usersEntitlementsReport', 'countEntitiesWithDifferences')}}</td>
-            <td>{{getAmount('usersEntitlementsReport', 'countToDeleteEntities')}}</td>
+        <tr *ngFor="let section of sections">
+            <td (click)="redirectSection(section.sectionName)" #tooltip="matTooltip"
+                matTooltip="Click para más detalles" matTooltipPosition="below">{{section.name}}</td>
+            <td #tooltip="matTooltip"
+                [matTooltip]="
+                    getAmount(section.reportName, 'countNewEntities') == '--' 
+                        ? 'No se han encontrado nuevos registros' 
+                        : 'Se han encontrado ' + getAmount(section.reportName, 'countNewEntities') + ' nuevos registros'"
+                matTooltipPosition="below" matTooltipShowDelay="500">
+                {{getAmount(section.reportName, 'countNewEntities')}}
+            </td>
+            <td #tooltip="matTooltip"
+                [matTooltip]="
+                    getAmount(section.reportName, 'countEntitiesWithDifferences') == '--' 
+                        ? 'No se han encontrado registros con diferencias' 
+                        : 'Se han encontrado ' + getAmount(section.reportName, 'countEntitiesWithDifferences') + ' registros con diferencias'"
+                matTooltipPosition="below" matTooltipShowDelay="500">
+                {{getAmount(section.reportName, 'countEntitiesWithDifferences')}}
+            </td>
+            <td #tooltip="matTooltip"
+                [matTooltip]="
+                getAmount(section.reportName, 'countToDeleteEntities') == '--' 
+                        ? 'No se han encontrado registros a eliminar' 
+                        : 'Se han encontrado ' + getAmount(section.reportName, 'countToDeleteEntities') + ' registros a eliminar'"
+                matTooltipPosition="below" matTooltipShowDelay="500">
+                {{getAmount(section.reportName, 'countToDeleteEntities')}}
+            </td>
         </tr>
     </tbody>
 </table>

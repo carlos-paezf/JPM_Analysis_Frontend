@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
-import { CompareSeedResponseType } from '../../../../../shared/types';
+import { CompareSeedResponseType, StatisticsSectionType } from '../../../../../shared/types';
 
 
 @Component( {
@@ -13,6 +13,19 @@ export class StatisticsTableComponent {
 
 
     constructor ( private _router: Router ) { }
+
+
+    public sections: StatisticsSectionType[] = [
+        { name: 'Cuentas', sectionName: "accounts", 'reportName': 'accountsReport' },
+        { name: 'Usuarios de la Compañía', sectionName: "company_users", 'reportName': 'companyUsersReport' },
+        { name: 'Funciones', sectionName: "functions", 'reportName': 'functionsReport' },
+        { name: 'Perfiles', sectionName: "profiles", 'reportName': 'profilesReport' },
+        { name: 'Perfiles - Funciones', sectionName: "profiles_functions", 'reportName': 'profilesFunctionsReport' },
+        { name: 'Productos', sectionName: "products", 'reportName': 'productsReport' },
+        { name: 'Productos - Cuentas', sectionName: "products_accounts", 'reportName': 'productsAccountsReport' },
+        { name: 'Autorizaciones de Usuarios', sectionName: "users_entitlements", 'reportName': 'usersEntitlementsReport' }
+    ];
+
 
     /**
      * The function `redirectSection` scrolls the webpage to a specified section element and updates
