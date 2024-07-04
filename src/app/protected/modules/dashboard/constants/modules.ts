@@ -61,16 +61,16 @@ export const APP_MODULES_PANELS: ModulesPanelsType[] = [
             {
                 label: 'Relación de Productos - Cuentas',
                 routeLink: 'products-accounts',
-                icon: 'badge',
+                icon: 'account_tree',
             }
         ],
         requireData: true,
     },
     {
-        title: 'Títulos de usuarios',
+        title: 'Autorizaciones de Usuarios',
         panels: [
             {
-                label: 'Títulos de los usuarios',
+                label: 'Autorizaciones de los usuarios',
                 routeLink: 'users-entitlements',
                 icon: 'shield_person',
             }
