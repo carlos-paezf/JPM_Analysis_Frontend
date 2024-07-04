@@ -62,7 +62,8 @@ mat-form-field {
             }
 
             td {
-                min-width: max-content;
+                // min-width: max-content;
+                min-width: 200px !important;
             }
         }
 
