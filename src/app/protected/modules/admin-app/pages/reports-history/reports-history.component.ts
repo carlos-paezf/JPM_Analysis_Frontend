@@ -11,18 +11,18 @@ import { InfoTableBaseComponent } from '../../../../../shared/classes/sheet-base
 } )
 export class ReportsHistoryComponent extends InfoTableBaseComponent<ReportHistoryType> implements OnInit {
     public override displayedColumns: string[] = [
-        "reportName",
         "runReportDate",
         "reportUploadDate",
-        "reportComments",
         "appUserId",
+        "reportName",
+        "reportComments",
     ];
     public override columns: ColumnTableType<ReportHistoryType>[] = [
-        { columnDef: 'reportName', header: 'Nombre', cell: ( row ) => row.reportName },
-        { columnDef: 'runReportDate', header: 'Fecha de generación', cell: ( row ) => row.runReportDate },
-        { columnDef: 'reportUploadDate', header: 'Fecha de cargue', cell: ( row ) => row.reportUploadDate },
-        { columnDef: 'reportComments', header: 'Comentarios', cell: ( row ) => row.reportComments },
-        { columnDef: 'appUserId', header: 'Usuario de la APP', cell: ( row ) => row.appUserId },
+        { columnDef: 'reportName', tooltip: 'Nombre del reporte excel cargado', header: 'Nombre', cell: ( row ) => row.reportName },
+        { columnDef: 'runReportDate', tooltip: 'Fecha en la cual fue generado el reporte desde la aplicación oficial de JPMorgan', header: 'Fecha de generación', cell: ( row ) => new Date( row.runReportDate ).toLocaleString() },
+        { columnDef: 'reportUploadDate', tooltip: 'Fecha de cargue del archivo en la aplicación JPM Analysis', header: 'Fecha de cargue', cell: ( row ) => new Date( row.reportUploadDate ).toLocaleString() },
+        { columnDef: 'reportComments', tooltip: 'Comentarios añadidos por el encargado del cargue del reporte', header: 'Comentarios', cell: ( row ) => ( row.reportComments === 'null' ) ? '' : row.reportComments },
+        { columnDef: 'appUserId', tooltip: 'Usuario encargado del cargue del reporte', header: 'Usuario de la APP', cell: ( row ) => row.appUserId },
     ];
 
 

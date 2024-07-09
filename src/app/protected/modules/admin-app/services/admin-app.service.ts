@@ -22,9 +22,20 @@ export class AdminAppService {
      * last uploaded report data from a specified URL.
      * @returns An Observable of type ReportHistoryType or undefined is being returned.
      */
+    public getReportById ( id: string ): Observable<ReportHistoryType | null> {
+        return this._http.get<ReportHistoryType | null>( `${ this._baseURL }/report-by-id/${ id }` );
+    }
+
+
+    /**
+     * This function returns an Observable of type ReportHistoryType or undefined, which fetches the
+     * last uploaded report data from a specified URL.
+     * @returns An Observable of type ReportHistoryType or undefined is being returned.
+     */
     public getLastReportDate (): Observable<ReportHistoryType | undefined> {
         return this._http.get<ReportHistoryType | undefined>( `${ this._baseURL }/last-upload-report-data` );
     }
+
 
     /**
      * This function retrieves the history of reports using an HTTP GET request.

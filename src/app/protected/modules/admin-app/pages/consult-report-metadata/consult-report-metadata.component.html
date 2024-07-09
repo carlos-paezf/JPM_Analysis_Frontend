@@ -1,0 +1,64 @@
+<h2>Información detallada del reporte "{{ id }}"</h2>
+
+<ng-container *ngIf="isLoading || !data; else reportInfo">
+    <div class="loading__section">
+        <mat-spinner *ngIf="isLoading"></mat-spinner>
+    </div>
+</ng-container>
+
+<ng-template #reportInfo>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div class="form__data">
+            <section>
+                <h4>Fechas relacionadas</h4>
+                <div class="form-group">
+                    <div class="form-control">
+                        <div class="label">
+                            <mat-icon class="opacity_icon" fontIcon="person"></mat-icon>
+                            <label for="runReportDate">Fecha de generación del reporte</label>
+                        </div>
+                        <input matInput [value]="formatDate(data!.runReportDate)" id="runReportDate" [disabled]="true">
+                    </div>
+
+                    <div class="form-control">
+                        <div class="label">
+                            <mat-icon class="opacity_icon" fontIcon="person"></mat-icon>
+                            <label for="reportUploadDate">Fecha de cargue en la aplicación</label>
+                        </div>
+                        <input matInput [value]="formatDate(data!.reportUploadDate)" id="reportUploadDate"
+                            [disabled]="true">
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h4>Información del cargue</h4>
+                <div class="form-group">
+                    <div class="form-control">
+                        <div class="label">
+                            <mat-icon class="opacity_icon" fontIcon="public"></mat-icon>
+                            <label for="appUserId">Usuario que realizó el cargue</label>
+                        </div>
+                        <input matInput formControlName="appUserId" id="appUserId">
+                    </div>
+
+                    <div class="form-control">
+                        <div class="label">
+                            <mat-icon class="opacity_icon" fontIcon="person_pin_circle"></mat-icon>
+                            <label for="reportName">Nombre del reporte</label>
+                        </div>
+                        <input matInput formControlName="reportName" id="reportName">
+                    </div>
+
+                    <div class="form-control">
+                        <div class="label">
+                            <mat-icon class="opacity_icon" fontIcon="person_pin_circle"></mat-icon>
+                            <label for="reportComments">Comentarios del cargue</label>
+                        </div>
+                        <input matInput formControlName="reportComments" id="reportComments">
+                    </div>
+                </div>
+            </section>
+        </div>
+    </form>
+</ng-template>
