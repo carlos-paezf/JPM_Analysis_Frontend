@@ -19,7 +19,7 @@ export const APP_MODULES_PANELS: ModulesPanelsType[] = [
             {
                 label: 'Usuarios de la compañía',
                 routeLink: 'company-users',
-                icon: 'contacts',
+                icon: 'group',
             }
         ],
         requireData: true,
@@ -76,6 +76,22 @@ export const APP_MODULES_PANELS: ModulesPanelsType[] = [
             }
         ],
         requireData: true,
+    },
+    {
+        title: 'Circularización de Usuarios',
+        panels: [
+            {
+                label: 'Circularización de Usuarios',
+                routeLink: 'user-circularization',
+                icon: 'contacts'
+            },
+            {
+                label: 'Relación de Usuarios - Departamentos',
+                routeLink: 'user-circularization/list-company-users-departments',
+                icon: 'account_tree'
+            }
+        ],
+        requireData: true
     },
     {
         title: 'Administración de la aplicación',
