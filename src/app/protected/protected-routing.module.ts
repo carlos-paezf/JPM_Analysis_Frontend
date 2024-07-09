@@ -51,6 +51,11 @@ const routes: Routes = [
                 data: { breadcrumb: 'Autorizaciones de Usuarios' }
             },
             {
+                path: 'user-circularization',
+                loadChildren: () => import( './modules/user-circularization/user-circularization.module' ).then( m => m.UserCircularizationModule ),
+                data: { breadcrumb: 'Circularización de Usuarios' }
+            },
+            {
                 path: 'admin-app',
                 loadChildren: () => import( './modules/admin-app/admin-app.module' ).then( m => m.AdminAppModule ),
                 data: { breadcrumb: 'Administración de la aplicación' }

@@ -27,13 +27,13 @@ export const SIDENAV_ITEMS: SidenavLinkType[] = [
     },
     {
         label: 'Usuarios de la compañía',
-        icon: 'contacts',
+        icon: 'group',
         routeLink: 'company-users',
         requiresAdmin: false
     },
     {
         label: 'Perfiles',
-        icon: 'people',
+        icon: 'manage_accounts',
         openTab: false,
         children: [
             {
@@ -80,8 +80,20 @@ export const SIDENAV_ITEMS: SidenavLinkType[] = [
     },
     {
         label: 'Circularización de Usuarios',
-        icon: 'group',
+        icon: 'contacts',
         routeLink: 'circularization',
+        children: [
+            {
+                label: 'Circularización de Usuarios',
+                routeLink: 'user-circularization',
+                requiresAdmin: false
+            },
+            {
+                label: 'Relación de Usuarios - Departamentos',
+                routeLink: 'user-circularization/list-company-users-departments',
+                requiresAdmin: false
+            }
+        ],
         requiresAdmin: false
     },
     {
