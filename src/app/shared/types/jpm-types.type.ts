@@ -7,7 +7,7 @@ export type ReportHistoryType = {
     reportName: string;
     reportComments: string;
     reportUploadDate: Date;
-    runReportDate?: Date;
+    runReportDate: Date;
 };
 
 
