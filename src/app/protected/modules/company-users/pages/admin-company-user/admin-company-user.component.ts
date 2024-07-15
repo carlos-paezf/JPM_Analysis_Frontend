@@ -93,6 +93,7 @@ export class AdminCompanyUserComponent extends BaseDetailClass<CompanyUserEagerT
         this.form = this._formBuilder.group( {
             // Required properties
             userName: [ this.data.userName, Validators.required ],
+            windowsUserId: [ this.data.windowsUserId, Validators.required ],
             emailAddress: [ this.data.emailAddress, [ Validators.required, Validators.email ] ],
             userType: [ this.data.userType, Validators.required ],
             profileId: [ this.data.profileId, Validators.required ],
