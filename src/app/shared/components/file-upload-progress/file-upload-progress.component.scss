@@ -1,0 +1,13 @@
+div {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-top: .5rem;
+    justify-content: center;
+    align-items: center;
+
+    small {
+        width: 210px;
+        text-align: center;
+    }
+}

@@ -1,0 +1,4 @@
+<div *ngIf="progress >= 0">
+    <mat-progress-bar mode="determinate" [value]="progress"></mat-progress-bar>
+    <small>{{ loaded.toFixed(2) }} KB / {{ total.toFixed(2) }} KB ({{ progress }}%)</small>
+</div>
