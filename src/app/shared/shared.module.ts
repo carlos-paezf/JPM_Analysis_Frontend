@@ -24,6 +24,7 @@ import { OptionalFieldDirective } from './directives/optional-field.directive';
 import { TransformCellValuePipe } from './pipes/transform-cell-value.pipe';
 import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
+import { FileUploadProgressComponent } from './components/file-upload-progress/file-upload-progress.component';
 
 
 
@@ -49,6 +50,7 @@ import { NavigationComponent } from './components/navigation/navigation.componen
         NumberCardComponent,
         BreadcrumbComponent,
         NavigationComponent,
+        FileUploadProgressComponent,
     ],
     imports: [
         CommonModule,
@@ -77,6 +79,7 @@ import { NavigationComponent } from './components/navigation/navigation.componen
         NumberCardComponent,
         BreadcrumbComponent,
         NavigationComponent,
+        FileUploadProgressComponent,
     ]
 } )
 export class SharedModule { }
