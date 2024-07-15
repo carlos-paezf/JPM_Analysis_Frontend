@@ -6,6 +6,9 @@
     <input type="file" #fileInput id="excel-file" name="excel-file" accept=".xlsx" (change)="inputFile($event)">
 </label>
 
+<app-file-upload-progress *ngIf="selectedFile" [file]="selectedFile"
+    (fileUploaded)="onFileUploaded($event)"></app-file-upload-progress>
+
 <div class="file-list">
     <button mat-stroked-button color="accent" (click)="removeFile()" type="button" [disabled]="!fileName">Eliminar
         archivo</button>

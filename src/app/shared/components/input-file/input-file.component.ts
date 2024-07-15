@@ -20,6 +20,7 @@ export class InputFileComponent {
 
     public fileName: string | null = null;
     public loading: boolean = false;
+    public selectedFile: File | null = null;
 
     constructor ( private readonly _toastNotificationService: ToastrNotificationService ) { }
 
@@ -89,9 +90,10 @@ export class InputFileComponent {
             } );
         }
 
-        this.file.emit( file );
+        this.selectedFile = file;
         this.fileName = file.name;
         this.loading = false;
+        this.file.emit( file );
 
         return this._toastNotificationService.info( {
             title: 'Archivo cargado con éxito',
@@ -105,8 +107,9 @@ export class InputFileComponent {
      * containing a title and message for a notification.
      */
     removeFile () {
-        this.file.emit();
+        this.selectedFile = null;
         this.fileName = null;
+        this.file.emit();
 
         return this._toastNotificationService.info( {
             title: 'Eliminación exitosa',
@@ -126,4 +129,7 @@ export class InputFileComponent {
 
         this.uploadFile( files as FileList );
     }
+
+
+    onFileUploaded ( file: File ): void { }
 }
