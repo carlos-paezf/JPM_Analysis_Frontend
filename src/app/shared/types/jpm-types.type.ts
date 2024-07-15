@@ -77,6 +77,7 @@ export type CompanyUserType = ControlDateType & {
     userType: "SA1" | "SA2" | "SAviewer" | "End User" | "SAOther";
     employeeId: string | null;
     emailAddress: string;
+    windowsUserId: string;
     userLocation: string | null;
     userCountry: string;
     userLogonType: "RSA Token" | "Password";
