@@ -89,6 +89,11 @@ export const APP_MODULES_PANELS: ModulesPanelsType[] = [
                 label: 'Relación de Usuarios - Departamentos',
                 routeLink: 'user-circularization/list-company-users-departments',
                 icon: 'account_tree'
+            },
+            {
+                label: 'Asignación de Usuarios por Departamento',
+                routeLink: 'user-circularization/user-assignment-by-department',
+                icon: 'manager'
             }
         ],
         requireData: true
