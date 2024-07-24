@@ -5,9 +5,10 @@ import { ActivatedRoute } from '@angular/router';
 import { BaseDetailClass } from '../../../../../shared/classes/base-detail.class';
 import { AppUtilsMessagesService } from '../../../../../shared/services/app-utils-messages.service';
 import { AuthUsersService } from '../../../../../shared/services/auth-users.service';
-import { CompanyUserEagerType, FormBaseType, ProfileType } from '../../../../../shared/types';
-import { CompanyUsersService } from '../../services/company-users.service';
+import { CompanyUserEagerType, DepartmentType, FormBaseType, ProfileType } from '../../../../../shared/types';
+import { DepartmentsService } from '../../../departments/services/departments.service';
 import { ProfilesService } from '../../../profiles/services/profiles.service';
+import { CompanyUsersService } from '../../services/company-users.service';
 
 
 /**
@@ -31,6 +32,7 @@ export class AdminCompanyUserComponent extends BaseDetailClass<CompanyUserEagerT
     public isAdminUser: boolean = false;
 
     public profilesInfo: ProfileType[] = [];
+    public departmentsInfo: DepartmentType[] = [];
 
     constructor (
         private readonly _activateRoute: ActivatedRoute,
@@ -38,6 +40,7 @@ export class AdminCompanyUserComponent extends BaseDetailClass<CompanyUserEagerT
         private readonly _companyUsersService: CompanyUsersService,
         private readonly _authUserService: AuthUsersService,
         private readonly _profilesService: ProfilesService,
+        private readonly _departmentsService: DepartmentsService,
         private readonly _appUtilMessagesService: AppUtilsMessagesService
     ) {
         super();
@@ -50,6 +53,8 @@ export class AdminCompanyUserComponent extends BaseDetailClass<CompanyUserEagerT
     ngOnInit (): void {
         this.isAdminUser = this._authUserService.getIsAdminAppUser();
         this._setProfilesInfo();
+        this._setDepartmentsInfo();
+
 
         this._activateRoute.params.subscribe( params => {
             this.id = params[ 'accessId' ];
@@ -80,6 +85,15 @@ export class AdminCompanyUserComponent extends BaseDetailClass<CompanyUserEagerT
         } );
     }
 
+
+
+    private _setDepartmentsInfo () {
+        this._departmentsService.getAll().subscribe( value => {
+            this.departmentsInfo = value.data;
+            console.log( this.departmentsInfo );
+        } );
+    }
+
     /**
      * The function `formActions` creates a form using the FormBuilder module in Angular, sets the
      * initial values of the form fields based on the data object, disables the form if the user is not
@@ -101,6 +115,7 @@ export class AdminCompanyUserComponent extends BaseDetailClass<CompanyUserEagerT
             userCountry: [ this.data.userCountry, Validators.required ],
             // Optional properties
             userLocation: [ this.data.userLocation ],
+            departmentId: [ this.data.departmentId ],
             // Disabled properties
             accessId: [ { value: this.data.accessId, disabled: true }, [ Validators.required ] ],
             userLogonType: [ { value: this.data.userLogonType, disabled: true } ],

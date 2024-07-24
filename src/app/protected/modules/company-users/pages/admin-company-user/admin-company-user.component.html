@@ -35,28 +35,6 @@
 
                     <div class="form-control">
                         <div class="label">
-                            <mat-icon class="opacity_icon" fontIcon="mail"></mat-icon>
-                            <label for="windowsUserId">Nombre de Usuario Windows</label>
-                        </div>
-                        <input matInput formControlName="windowsUserId" id="windowsUserId"
-                            [ngClass]="{'input-error': getControl(form, 'windowsUserId')!.touched && getControl(form, 'windowsUserId')!.invalid}">
-                        <span error-msg [message]="controlError(form, 'windowsUserId')"
-                            [invalid]="isInvalidField(form, 'windowsUserId')"></span>
-                    </div>
-
-                    <div class="form-control">
-                        <div class="label">
-                            <mat-icon class="opacity_icon" fontIcon="mail"></mat-icon>
-                            <label for="emailAddress">Dirección de Correo</label>
-                        </div>
-                        <input matInput formControlName="emailAddress" id="emailAddress"
-                            [ngClass]="{'input-error': getControl(form, 'emailAddress')!.touched && getControl(form, 'emailAddress')!.invalid}">
-                        <span error-msg [message]="controlError(form, 'emailAddress')"
-                            [invalid]="isInvalidField(form, 'emailAddress')"></span>
-                    </div>
-
-                    <div class="form-control">
-                        <div class="label">
                             <mat-icon class="opacity_icon" fontIcon="assignment_ind"></mat-icon>
                             <label for="userType">Tipo de usuario</label>
                         </div>
@@ -90,6 +68,47 @@
                         </mat-slide-toggle>
                         <span error-msg [message]="controlError(form, 'userStatus')"
                             [invalid]="isInvalidField(form, 'userStatus')"></span>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h4>Información Corporativa</h4>
+                <div class="form-group">
+                    <div class="form-control">
+                        <div class="label">
+                            <mat-icon class="opacity_icon" fontIcon="desktop_windows"></mat-icon>
+                            <label for="windowsUserId">Nombre de Usuario Windows</label>
+                        </div>
+                        <input matInput formControlName="windowsUserId" id="windowsUserId"
+                            [ngClass]="{'input-error': getControl(form, 'windowsUserId')!.touched && getControl(form, 'windowsUserId')!.invalid}">
+                        <span error-msg [message]="controlError(form, 'windowsUserId')"
+                            [invalid]="isInvalidField(form, 'windowsUserId')"></span>
+                    </div>
+
+                    <div class="form-control">
+                        <div class="label">
+                            <mat-icon class="opacity_icon" fontIcon="mail"></mat-icon>
+                            <label for="emailAddress">Dirección de Correo</label>
+                        </div>
+                        <input matInput formControlName="emailAddress" id="emailAddress"
+                            [ngClass]="{'input-error': getControl(form, 'emailAddress')!.touched && getControl(form, 'emailAddress')!.invalid}">
+                        <span error-msg [message]="controlError(form, 'emailAddress')"
+                            [invalid]="isInvalidField(form, 'emailAddress')"></span>
+                    </div>
+
+                    <div class="form-control">
+                        <div class="label">
+                            <mat-icon class="opacity_icon" fontIcon="corporate_fare"></mat-icon>
+                            <label for="windowsUserId">Departamento</label>
+                        </div>
+                        <mat-select formControlName="departmentId" id="departmentId" class="form__select">
+                            <mat-option *ngFor="let department of departmentsInfo"
+                                [value]="department.initials">{{ department.initials }} -
+                                {{ department.departmentName }}</mat-option>
+                        </mat-select>
+                        <span error-msg [message]="controlError(form, 'departmentId')"
+                            [invalid]="isInvalidField(form, 'departmentId')"></span>
                     </div>
                 </div>
             </section>

@@ -26,9 +26,20 @@ export type ProfileType = {
 };
 
 
+export type DepartmentType = ControlDateType & {
+    initials: string;
+    departmentName: string;
+};
+
+
 export type ProfileEagerType = ProfileType & {
     companyUsers: CompanyUserType[];
     profilesFunctions: ProfileFunctionType[];
+};
+
+
+export type DepartmentEagerType = DepartmentType & {
+    companyUsers: CompanyUserType[];
 };
 
 
@@ -86,6 +97,7 @@ export type CompanyUserType = ControlDateType & {
     userGroupMembership: string | null;
     userRole: string | null;
     profileId: string;
+    departmentId: string | null;
 };
 
 

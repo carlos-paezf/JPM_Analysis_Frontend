@@ -10,6 +10,8 @@ export {
     CompanyUserType,
     CompareSeedResponseType,
     ControlDateType,
+    DepartmentEagerType,
+    DepartmentType,
     DiffExcelVsDatabaseType,
     EntitiesToChangesType,
     EntityWithDifferencesType,
