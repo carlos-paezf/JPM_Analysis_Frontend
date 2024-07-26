@@ -1,1 +1,27 @@
-<p>department-assignment works!</p>
+<h2>Asignación de Usuarios por Departamento</h2>
+
+<ng-container *ngIf="isLoading || !departments || !companyUsers; else dataTable">
+    <div class="loading__section">
+        <mat-spinner *ngIf="isLoading"></mat-spinner>
+    </div>
+</ng-container>
+
+<ng-template #dataTable>
+    <pre *ngFor="let companyUser of companyUsers">{{ companyUser.accessId }}</pre>
+    <pre *ngFor="let department of departments">{{ department.initials }}</pre>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Usuario de la Compañía - Departamento</th>
+                <th *ngFor="let department of departments">{{ department.initials }}</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let companyUser of companyUsers">
+                <th>{{ companyUser.accessId }}</th>
+            </tr>
+        </tbody>
+    </table>
+</ng-template>
