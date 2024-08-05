@@ -73,7 +73,7 @@
                 <td mat-cell *matCellDef="let row" [attr.colspan]="columnsToDisplayWithExpand.length">
                     <div class="element-detail" [@detailExpand]="row == expandedRow ? 'expanded' : 'collapsed'">
                         <button mat-fab extended color="primary"
-                            (click)="handleRedirectDetail(row.id || row.accessId || row.accountNumber)">
+                            (click)="handleRedirectDetail(row.id || row.accessId || row.accountNumber || row.initials)">
                             <mat-icon>edit</mat-icon>
                             Ver/Editar información
                         </button>
