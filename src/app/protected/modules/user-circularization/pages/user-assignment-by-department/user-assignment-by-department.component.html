@@ -1,5 +1,7 @@
 <h2>Asignación de Usuarios por Departamento</h2>
 
+<p>Asignación de usuarios por departamento</p>
+
 <ng-container *ngIf="isLoading || !departments || !companyUsers; else dataTable">
     <div class="loading__section">
         <mat-spinner *ngIf="isLoading"></mat-spinner>
@@ -7,21 +9,35 @@
 </ng-container>
 
 <ng-template #dataTable>
-    <pre *ngFor="let companyUser of companyUsers">{{ companyUser.accessId }}</pre>
-    <pre *ngFor="let department of departments">{{ department.initials }}</pre>
-
     <table>
         <thead>
             <tr>
-                <th>Usuario de la Compañía - Departamento</th>
-                <th *ngFor="let department of departments">{{ department.initials }}</th>
+                <th>Usuario de la Compañía</th>
+                <th>Departamento</th>
             </tr>
         </thead>
 
         <tbody>
             <tr *ngFor="let companyUser of companyUsers">
                 <th>{{ companyUser.accessId }}</th>
+                <td>
+                    <mat-select [value]="companyUser.departmentId"
+                        (selectionChange)="updateDepartment(companyUser.accessId, $event.value)">
+                        <mat-option *ngFor="let department of departments"
+                            [value]="department.initials">{{ department.initials + ' - ' + department.departmentName }}</mat-option>
+                    </mat-select>
+                </td>
             </tr>
         </tbody>
     </table>
+
+
+    <div class="actions">
+        <button type="submit" mat-flat-button color="primary" (click)="onSubmit()"
+            [disabled]="updatedUserDepartmentList.length === 0" #tooltip="matTooltip"
+            matTooltip="Asignar los nuevos departamentos a los usuarios" matTooltipPosition="left"
+            matTooltipShowDelay="500">
+            Aprobar Cambios
+        </button>
+    </div>
 </ng-template>
