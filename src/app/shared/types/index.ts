@@ -95,3 +95,9 @@ export type StatisticsSectionType = {
     'profilesReport' | 'profilesFunctionsReport' | 'productsReport' |
     'productsAccountsReport' | 'usersEntitlementsReport';
 };
+
+
+export type UserDepartmentAssignmentType = {
+    accessId: string;
+    departmentInitials: string;
+};
