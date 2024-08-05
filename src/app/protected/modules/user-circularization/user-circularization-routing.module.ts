@@ -3,8 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { NotFoundComponent } from '../../../shared/components/not-found/not-found.component';
 import { GenerateUserCircularizationComponent } from './pages/generate-user-circularization/generate-user-circularization.component';
-import { ListCompanyUsersDepartmentsComponent } from './pages/list-company-users-departments/list-company-users-departments.component';
+import { ListDepartmentsComponent } from './pages/list-departments/list-departments.component';
 import { UserAssignmentByDepartmentComponent } from './pages/user-assignment-by-department/user-assignment-by-department.component';
+import { AdminDepartmentComponent } from './pages/admin-department/admin-department.component';
 
 
 const routes: Routes = [
@@ -15,16 +16,28 @@ const routes: Routes = [
         pathMatch: 'full'
     },
     {
-        path: 'list-company-users-departments',
-        component: ListCompanyUsersDepartmentsComponent,
-        data: { title: 'Relación de Usuarios - Departamentos', breadcrumb: 'Relación de Usuarios - Departamentos' },
-        pathMatch: 'full'
-    },
-    {
         path: 'user-assignment-by-department',
         component: UserAssignmentByDepartmentComponent,
         data: { title: 'Asignación de Usuarios por Departamento', breadcrumb: 'Asignación de Usuarios por Departamento' },
         pathMatch: 'full'
+    },
+    {
+        path: 'departments',
+        component: ListDepartmentsComponent,
+        data: { title: 'Listado de Departamentos', breadcrumb: 'Listado de Departamentos' },
+        pathMatch: 'full'
+    },
+    {
+        path: 'admin',
+        component: AdminDepartmentComponent,
+        pathMatch: 'full',
+        data: { title: 'Administración de Departamentos', breadcrumb: 'Administración de Departamentos' }
+    },
+    {
+        path: 'admin/:initials',
+        component: AdminDepartmentComponent,
+        pathMatch: 'full',
+        data: { title: 'Administración de Departamentos', breadcrumb: 'Administración de Departamentos' }
     },
     {
         path: '', redirectTo: 'generate-user-circularization', pathMatch: 'full'
