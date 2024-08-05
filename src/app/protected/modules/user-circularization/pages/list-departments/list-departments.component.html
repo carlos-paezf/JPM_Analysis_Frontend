@@ -1,0 +1,19 @@
+<h2>Listado de Departamentos</h2>
+
+<p>Listado y gestión de departamentos</p>
+
+<div class="actions">
+    <button mat-raised-button color="primary" [routerLink]="'../admin'">Crear Departamento</button>
+</div>
+
+<section>
+    <ng-container *ngIf="isLoadingResults || isEmptyTable; else tableComponent">
+        <app-table-loading [isLoadingResults]="isLoadingResults" [isEmptyTable]="isEmptyTable"></app-table-loading>
+    </ng-container>
+
+    <ng-template #tableComponent>
+        <app-table-base [displayedColumns]="displayedColumns" [data]="data" [columns]="columns"
+            baseUrl="user-circularization" [deactivateFunction]="deactivateItem"
+            [reactivateFunction]="reactivateItem"></app-table-base>
+    </ng-template>
+</section>
