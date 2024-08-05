@@ -1,0 +1,64 @@
+<ng-container *ngIf="id; else create">
+    <h2>Información detallada del departamento "{{ id }}"</h2>
+</ng-container>
+<ng-template #create>
+    <h2>Creación de nuevo departamento</h2>
+</ng-template>
+
+
+<ng-container *ngIf="isLoading; else accountInfo">
+    <div class="loading__section">
+        <mat-spinner *ngIf="isLoading"></mat-spinner>
+    </div>
+</ng-container>
+
+<ng-template #accountInfo>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div class="form__data">
+            <section>
+                <h4>Datos básicos</h4>
+                <div class="form-group">
+                    <div class="form-control">
+                        <div class="label">
+                            <mat-icon class="opacity_icon" fontIcon="person"></mat-icon>
+                            <label for="initials">Iniciales del departamento</label>
+                        </div>
+                        <input matInput formControlName="initials" id="initials">
+                        <span error-msg [message]="controlError(form, 'initials')"
+                            [invalid]="isInvalidField(form, 'initials')"></span>
+                    </div>
+
+                    <div class="form-control">
+                        <div class="label">
+                            <mat-icon class="opacity_icon" fontIcon="person"></mat-icon>
+                            <label for="departmentName">Nombre del departamento</label>
+                        </div>
+                        <input matInput formControlName="departmentName" id="departmentName"
+                            [ngClass]="{'input-error': getControl(form, 'departmentName')!.touched && getControl(form, 'departmentName')!.invalid}">
+                        <span error-msg [message]="controlError(form, 'departmentName')"
+                            [invalid]="isInvalidField(form, 'departmentName')"></span>
+                    </div>
+                </div>
+            </section>
+
+            <app-control-dates-form *ngIf="id" [createdAt]="data!.createdAt" [updatedAt]="data!.updatedAt"
+                [deletedAt]="data?.deletedAt" />
+        </div>
+
+        <ng-container *ngIf="isAdminUser">
+            <section class="form__actions">
+                <button mat-raised-button color="primary" [disabled]="!isDataChanged">
+                    {{id ? 'Actualizar Departamento' : 'Crear Departamento'}}
+                </button>
+                <button type="button" (click)="onRestartForm()" mat-raised-button color="accent"
+                    [disabled]="!isDataChanged">
+                    Restaurar Formulario
+                </button>
+            </section>
+        </ng-container>
+    </form>
+
+
+</ng-template>
+
+<!-- </app-dialog-section> -->
