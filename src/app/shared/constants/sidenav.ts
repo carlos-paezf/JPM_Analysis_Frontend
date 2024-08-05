@@ -89,8 +89,8 @@ export const SIDENAV_ITEMS: SidenavLinkType[] = [
                 requiresAdmin: false
             },
             {
-                label: 'Relación de Usuarios - Departamentos',
-                routeLink: 'user-circularization/list-company-users-departments',
+                label: 'Listado de Departamentos',
+                routeLink: 'user-circularization/departments',
                 requiresAdmin: false
             },
             {

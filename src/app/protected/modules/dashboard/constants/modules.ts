@@ -86,8 +86,8 @@ export const APP_MODULES_PANELS: ModulesPanelsType[] = [
                 icon: 'contacts'
             },
             {
-                label: 'Relación de Usuarios - Departamentos',
-                routeLink: 'user-circularization/list-company-users-departments',
+                label: 'Listado de Departamentos',
+                routeLink: 'user-circularization/departments',
                 icon: 'account_tree'
             },
             {
