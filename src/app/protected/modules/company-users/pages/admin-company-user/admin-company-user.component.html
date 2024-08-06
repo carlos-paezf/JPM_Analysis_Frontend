@@ -102,13 +102,13 @@
                             <mat-icon class="opacity_icon" fontIcon="corporate_fare"></mat-icon>
                             <label for="windowsUserId">Departamento</label>
                         </div>
-                        <mat-select formControlName="departmentId" id="departmentId" class="form__select">
+                        <mat-select formControlName="departmentInitials" id="departmentInitials" class="form__select">
                             <mat-option *ngFor="let department of departmentsInfo"
                                 [value]="department.initials">{{ department.initials }} -
                                 {{ department.departmentName }}</mat-option>
                         </mat-select>
-                        <span error-msg [message]="controlError(form, 'departmentId')"
-                            [invalid]="isInvalidField(form, 'departmentId')"></span>
+                        <span error-msg [message]="controlError(form, 'departmentInitials')"
+                            [invalid]="isInvalidField(form, 'departmentInitials')"></span>
                     </div>
                 </div>
             </section>

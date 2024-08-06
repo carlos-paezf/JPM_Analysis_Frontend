@@ -97,7 +97,7 @@ export type CompanyUserType = ControlDateType & {
     userGroupMembership: string | null;
     userRole: string | null;
     profileId: string;
-    departmentId: string | null;
+    departmentInitials: string | null;
 };
 
 

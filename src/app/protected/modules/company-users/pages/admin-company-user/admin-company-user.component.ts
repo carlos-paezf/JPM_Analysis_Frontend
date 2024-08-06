@@ -115,7 +115,7 @@ export class AdminCompanyUserComponent extends BaseDetailClass<CompanyUserEagerT
             userCountry: [ this.data.userCountry, Validators.required ],
             // Optional properties
             userLocation: [ this.data.userLocation ],
-            departmentId: [ this.data.departmentId ],
+            departmentInitials: [ this.data.departmentInitials ],
             // Disabled properties
             accessId: [ { value: this.data.accessId, disabled: true }, [ Validators.required ] ],
             userLogonType: [ { value: this.data.userLogonType, disabled: true } ],

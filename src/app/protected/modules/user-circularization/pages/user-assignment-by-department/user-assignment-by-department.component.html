@@ -21,8 +21,9 @@
             <tr *ngFor="let companyUser of companyUsers">
                 <th>{{ companyUser.accessId }}</th>
                 <td>
-                    <mat-select [value]="companyUser.departmentId"
+                    <mat-select [value]="companyUser.departmentInitials"
                         (selectionChange)="updateDepartment(companyUser.accessId, $event.value)">
+                        <mat-option [value]="null">Sin Asignar</mat-option>
                         <mat-option *ngFor="let department of departments"
                             [value]="department.initials">{{ department.initials + ' - ' + department.departmentName }}</mat-option>
                     </mat-select>

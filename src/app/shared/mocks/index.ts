@@ -675,7 +675,7 @@ export const COMPANY_USERS: CompanyUserType[] = [
         "userRole": "",
         "accessId": "adiazcortes",
         "profileId": "capture",
-        "departmentId": null,
+        "departmentInitials": null,
         ...controlDateHelper
     },
     {
@@ -694,7 +694,7 @@ export const COMPANY_USERS: CompanyUserType[] = [
         "userRole": "",
         "accessId": "amachete",
         "profileId": "viewer",
-        "departmentId": null,
+        "departmentInitials": null,
         ...controlDateHelper
     },
     {
@@ -713,7 +713,7 @@ export const COMPANY_USERS: CompanyUserType[] = [
         "userRole": "",
         "accessId": "carlespinosa",
         "profileId": "verification",
-        "departmentId": null,
+        "departmentInitials": null,
         ...controlDateHelper
     },
     {
@@ -732,7 +732,7 @@ export const COMPANY_USERS: CompanyUserType[] = [
         "userRole": "",
         "accessId": "cecanon",
         "profileId": "viewer",
-        "departmentId": null,
+        "departmentInitials": null,
         ...controlDateHelper
     },
     {
@@ -751,7 +751,7 @@ export const COMPANY_USERS: CompanyUserType[] = [
         "userRole": "",
         "accessId": "claudiamartin",
         "profileId": "authorization",
-        "departmentId": null,
+        "departmentInitials": null,
         ...controlDateHelper
     },
     {
@@ -770,7 +770,7 @@ export const COMPANY_USERS: CompanyUserType[] = [
         "userRole": "",
         "accessId": "glperalta",
         "profileId": "viewer",
-        "departmentId": null,
+        "departmentInitials": null,
         ...controlDateHelper
     },
     {
@@ -789,7 +789,7 @@ export const COMPANY_USERS: CompanyUserType[] = [
         "userRole": "",
         "accessId": "jackbohn8002",
         "profileId": "verification",
-        "departmentId": null,
+        "departmentInitials": null,
         ...controlDateHelper
     },
     {
@@ -808,7 +808,7 @@ export const COMPANY_USERS: CompanyUserType[] = [
         "userRole": "",
         "accessId": "jammoreno",
         "profileId": "administrator",
-        "departmentId": null,
+        "departmentInitials": null,
         ...controlDateHelper
     },
     {
@@ -827,7 +827,7 @@ export const COMPANY_USERS: CompanyUserType[] = [
         "userRole": "",
         "accessId": "jsandovalfernandez",
         "profileId": "administrator",
-        "departmentId": null,
+        "departmentInitials": null,
         ...controlDateHelper
     },
     {
@@ -846,7 +846,7 @@ export const COMPANY_USERS: CompanyUserType[] = [
         "userRole": "",
         "accessId": "juandiaz1980",
         "profileId": "viewer",
-        "departmentId": null,
+        "departmentInitials": null,
         ...controlDateHelper
     },
     {
@@ -865,7 +865,7 @@ export const COMPANY_USERS: CompanyUserType[] = [
         "userRole": "",
         "accessId": "juangutierrez0496",
         "profileId": "capture",
-        "departmentId": null,
+        "departmentInitials": null,
         ...controlDateHelper
     },
     {
@@ -884,7 +884,7 @@ export const COMPANY_USERS: CompanyUserType[] = [
         "userRole": "",
         "accessId": "julioalvarez1052",
         "profileId": "administrator",
-        "departmentId": null,
+        "departmentInitials": null,
         ...controlDateHelper
     },
     {
@@ -903,7 +903,7 @@ export const COMPANY_USERS: CompanyUserType[] = [
         "userRole": "",
         "accessId": "lacifuentes",
         "profileId": "authorization",
-        "departmentId": null,
+        "departmentInitials": null,
         ...controlDateHelper
     },
     {
@@ -922,7 +922,7 @@ export const COMPANY_USERS: CompanyUserType[] = [
         "userRole": "",
         "accessId": "larincon",
         "profileId": "verification",
-        "departmentId": null,
+        "departmentInitials": null,
         ...controlDateHelper
     },
     {
@@ -941,7 +941,7 @@ export const COMPANY_USERS: CompanyUserType[] = [
         "userRole": "",
         "accessId": "lorenagutierrez0120",
         "profileId": "capture",
-        "departmentId": null,
+        "departmentInitials": null,
         ...controlDateHelper
     },
     {
@@ -960,7 +960,7 @@ export const COMPANY_USERS: CompanyUserType[] = [
         "userRole": "",
         "accessId": "martbarreto",
         "profileId": "viewer",
-        "departmentId": null,
+        "departmentInitials": null,
         ...controlDateHelper
     },
     {
@@ -979,7 +979,7 @@ export const COMPANY_USERS: CompanyUserType[] = [
         "userRole": "",
         "accessId": "nathalortiz",
         "profileId": "authorization",
-        "departmentId": null,
+        "departmentInitials": null,
         ...controlDateHelper
     },
     {
@@ -998,7 +998,7 @@ export const COMPANY_USERS: CompanyUserType[] = [
         "userRole": "",
         "accessId": "vibenavides",
         "profileId": "administrator",
-        "departmentId": null,
+        "departmentInitials": null,
         ...controlDateHelper
     },
     {
@@ -1017,7 +1017,7 @@ export const COMPANY_USERS: CompanyUserType[] = [
         "userRole": "",
         "accessId": "xiomgalvis",
         "profileId": "viewer",
-        "departmentId": null,
+        "departmentInitials": null,
         ...controlDateHelper
     },
     {
@@ -1036,7 +1036,7 @@ export const COMPANY_USERS: CompanyUserType[] = [
         "userRole": "",
         "accessId": "yureyes",
         "profileId": "administrator",
-        "departmentId": null,
+        "departmentInitials": null,
         ...controlDateHelper
     }
 ];
