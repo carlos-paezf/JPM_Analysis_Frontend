@@ -101,3 +101,19 @@ export type UserDepartmentAssignmentType = {
     accessId: string;
     departmentInitials: string;
 };
+
+
+export type UserCompanyCircularization = {
+    name: string;
+    accessId: string;
+    departmentsInitials: string;
+    profileName: string;
+    status: boolean;
+    email: string;
+};
+
+
+export interface CircularizationData {
+    department: string;
+    users: UserCompanyCircularization[];
+}
