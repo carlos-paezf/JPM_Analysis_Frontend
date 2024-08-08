@@ -9,6 +9,7 @@ import { GenerateUserCircularizationComponent } from './pages/generate-user-circ
 import { ListDepartmentsComponent } from './pages/list-departments/list-departments.component';
 import { UserAssignmentByDepartmentComponent } from './pages/user-assignment-by-department/user-assignment-by-department.component';
 import { UserCircularizationRoutingModule } from './user-circularization-routing.module';
+import { UsersByDepartmentTableComponent } from './components/users-by-department-table/users-by-department-table.component';
 
 
 @NgModule( {
@@ -16,7 +17,8 @@ import { UserCircularizationRoutingModule } from './user-circularization-routing
         ListDepartmentsComponent,
         GenerateUserCircularizationComponent,
         UserAssignmentByDepartmentComponent,
-        AdminDepartmentComponent
+        AdminDepartmentComponent,
+        UsersByDepartmentTableComponent
     ],
     imports: [
         CommonModule,
