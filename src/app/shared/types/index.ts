@@ -103,10 +103,11 @@ export type UserDepartmentAssignmentType = {
 };
 
 
-export type UserCompanyCircularization = {
+export type UserCompanyCircularizationType = {
     name: string;
     accessId: string;
-    departmentsInitials: string;
+    departmentInitials: string;
+    departmentName: string;
     profileName: string;
     status: boolean;
     email: string;
@@ -115,5 +116,5 @@ export type UserCompanyCircularization = {
 
 export interface CircularizationData {
     department: string;
-    users: UserCompanyCircularization[];
+    users: UserCompanyCircularizationType[];
 }
