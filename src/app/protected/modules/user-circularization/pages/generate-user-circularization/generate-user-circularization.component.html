@@ -1,1 +1,45 @@
-<p>generate-user-circularization works!</p>
+<h2>Circularización de Usuarios</h2>
+
+<p>En esta página se puede generar los datos para la circularización de usuarios de JPMorgan</p>
+
+<div class="actions">
+    <button type="submit" mat-flat-button color="primary" (click)="generateUserCircularization()" #tooltip="matTooltip"
+        matTooltip="Solicitar datos para circularización de usuarios" matTooltipPosition="right"
+        matTooltipShowDelay="500">
+        Consultar datos para circularización de usuarios
+    </button>
+</div>
+
+<!-- <pre>{{ circularizationData | json }}</pre> -->
+
+<section>
+    <ng-container *ngIf="circularizationData.length <= 0; else tableComponent">
+        <app-table-loading [isLoadingResults]="isLoadingResults" [isEmptyTable]="isEmptyResults"></app-table-loading>
+    </ng-container>
+
+    <ng-template #tableComponent>
+        <div class="action-buttons">
+            <button mat-flat-button color="primary" (click)="accordion.openAll()" #tooltip="matTooltip"
+                matTooltip="Expandir todos las secciones" matTooltipPosition="below" matTooltipShowDelay="500">Expandir
+                todos</button>
+            <button mat-flat-button color="accent" (click)="accordion.closeAll()" #tooltip="matTooltip"
+                matTooltip="Colapsar todos las secciones" matTooltipPosition="below" matTooltipShowDelay="500">Colapsar
+                todos</button>
+        </div>
+
+        <mat-accordion multi>
+            <mat-expansion-panel *ngFor="let data of circularizationData">
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        <strong>{{ data.department }}</strong>
+                    </mat-panel-title>
+                    <mat-panel-description>
+                        Usuarios por departamento: {{ data.users.length }}
+                    </mat-panel-description>
+                </mat-expansion-panel-header>
+
+                <app-users-by-department-table [usersCompanyCircularization]="data.users" />
+            </mat-expansion-panel>
+        </mat-accordion>
+    </ng-template>
+</section>
