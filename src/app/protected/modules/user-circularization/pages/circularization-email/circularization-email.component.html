@@ -1,0 +1,89 @@
+<h2>Bosquejo para email de circularización</h2>
+
+<!-- <pre>{{ circularizationData | json }}</pre> -->
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="form__data">
+        <section>
+            <h4>Datos de envío</h4>
+            <!-- <div class="form-group"> -->
+            <div class="form-control">
+                <div class="label">
+                    <mat-icon class="opacity_icon" fontIcon="person"></mat-icon>
+                    <label for="toRecipients">Destinatarios principales de la circularización: (Ingresar usuario
+                        windows)</label>
+                </div>
+                <input mat-input class="mat-chip-input" [matChipInputFor]="chipGridToRecipients"
+                    [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="addOnBlur"
+                    (matChipInputTokenEnd)="addChip('toRecipients', $event)"
+                    [ngClass]="{'input-error': getControl(form, 'toRecipients')!.touched && getControl(form, 'toRecipients')!.invalid}">
+                <mat-chip-grid #chipGridToRecipients aria-label="Ingresa los correos" formControlName="toRecipients"
+                    id="toRecipients">
+                    <mat-chip-row *ngFor="let email of form.get('toRecipients')?.value"
+                        (removed)="removeChip('toRecipients', email)" [editable]="true"
+                        (edited)="editChip('toRecipients', email, $event)">
+                        {{ email }}
+                        <button matChipRemove aria-label="'remove ' + keyword">
+                            <mat-icon>cancel</mat-icon>
+                        </button>
+                    </mat-chip-row>
+                </mat-chip-grid>
+                <span error-msg [message]="controlError(form, 'toRecipients')"
+                    [invalid]="isInvalidField(form, 'toRecipients')"></span>
+            </div>
+
+            <div class="form-control">
+                <div class="label">
+                    <mat-icon class="opacity_icon" fontIcon="person"></mat-icon>
+                    <label for="ccRecipients">Destinatarios que recibirán una copia del correo:</label>
+                </div>
+                <input mat-input class="mat-chip-input" matInput [matChipInputFor]="chipGridCCRecipients"
+                    (matChipInputTokenEnd)="addChip('ccRecipients', $event)"
+                    [ngClass]="{'input-error': getControl(form, 'ccRecipients')!.touched && getControl(form, 'ccRecipients')!.invalid}">
+                <mat-chip-grid #chipGridCCRecipients aria-label="Ingresa los correos" formControlName="ccRecipients"
+                    id="ccRecipients">
+                    <mat-chip-row *ngFor="let email of form.get('ccRecipients')?.value"
+                        (removed)="removeChip('ccRecipients', email)" [editable]="true"
+                        (edited)="editChip('ccRecipients', email, $event)">
+                        {{ email }}
+                        <button matChipRemove aria-label="'remove ' + keyword">
+                            <mat-icon>cancel</mat-icon>
+                        </button>
+                    </mat-chip-row>
+                </mat-chip-grid>
+                <span error-msg [message]="controlError(form, 'ccRecipients')"
+                    [invalid]="isInvalidField(form, 'ccRecipients')"></span>
+            </div>
+
+            <div class="form-control">
+                <div class="label">
+                    <mat-icon class="opacity_icon" fontIcon="mail"></mat-icon>
+                    <label for="subject">Asunto</label>
+                </div>
+                <input matInput formControlName="subject" id="subject"
+                    [ngClass]="{'input-error': getControl(form, 'subject')!.touched && getControl(form, 'subject')!.invalid}">
+                <span error-msg [message]="controlError(form, 'subject')"
+                    [invalid]="isInvalidField(form, 'subject')"></span>
+            </div>
+            <!-- </div> -->
+        </section>
+    </div>
+
+    <!-- <ng-container *ngIf="isAdminUser"> -->
+    <section class="form__actions">
+        <button mat-raised-button color="primary">
+            Enviar Correo
+        </button>
+        <button type="button" (click)="onRestartForm()" mat-raised-button color="accent">
+            Restaurar Formulario
+        </button>
+    </section>
+    <!-- </ng-container> -->
+
+    <section>
+        <div>
+            <h3>Vista previa del correo:</h3>
+            <div [innerHTML]="body"></div>
+        </div>
+    </section>
+</form>
