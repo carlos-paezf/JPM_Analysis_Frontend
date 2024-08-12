@@ -4,6 +4,7 @@ import { MAT_MOMENT_DATE_ADAPTER_OPTIONS, MomentDateAdapter } from '@angular/mat
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatChipsModule } from '@angular/material/chips';
 import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE, MatNativeDateModule, MatRippleModule } from '@angular/material/core';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatDialogModule } from '@angular/material/dialog';
@@ -55,7 +56,8 @@ import { NgxMatSelectSearchModule } from 'ngx-mat-select-search';
         MatExpansionModule,
         NgxMatSelectSearchModule,
         MatTooltipModule,
-        MatRadioModule
+        MatRadioModule,
+        MatChipsModule
     ],
     providers: [
         {
