@@ -4,7 +4,7 @@ import { forkJoin } from 'rxjs';
 import { AppUtilsMessagesService } from '../../../../../shared/services/app-utils-messages.service';
 import { CompanyUserType, DepartmentType, UserDepartmentAssignmentType } from '../../../../../shared/types';
 import { CompanyUsersService } from '../../../company-users/services/company-users.service';
-import { DepartmentsService } from '../../../departments/services/departments.service';
+import { DepartmentsService } from '../../services/departments.service';
 import { UserCircularizationService } from '../../services/user-circularization.service';
 
 
