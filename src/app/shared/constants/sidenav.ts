@@ -85,7 +85,7 @@ export const SIDENAV_ITEMS: SidenavLinkType[] = [
         children: [
             {
                 label: 'Circularización de Usuarios',
-                routeLink: 'user-circularization',
+                routeLink: 'user-circularization/generate-user-circularization',
                 requiresAdmin: false
             },
             {
