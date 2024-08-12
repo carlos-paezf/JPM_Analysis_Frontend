@@ -79,13 +79,13 @@
                         </button>
 
                         <button *ngIf="deactivateFunction !== undefined && !row.deletedAt" mat-fab extended color="warn"
-                            (click)="deleteItem(row.id || row.accessId || row.accountNumber); reloadData()">
+                            (click)="deleteItem(row.id || row.accessId || row.accountNumber || row.initials); reloadData()">
                             <mat-icon>delete</mat-icon>
                             Desactivar item
                         </button>
 
                         <button *ngIf="reactivateFunction !== undefined && row.deletedAt" mat-fab extended
-                            (click)="reactivateItem(row.id || row.accessId || row.accountNumber); reloadData()">
+                            (click)="reactivateItem(row.id || row.accessId || row.accountNumber || row.initials ); reloadData()">
                             <mat-icon>check</mat-icon>
                             Reactivar item
                         </button>
