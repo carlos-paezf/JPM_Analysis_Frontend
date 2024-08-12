@@ -4,7 +4,7 @@ import { DepartmentEagerType, DepartmentType, FormBaseType } from '../../../../.
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { AppUtilsMessagesService } from '../../../../../shared/services/app-utils-messages.service';
-import { DepartmentsService } from '../../../departments/services/departments.service';
+import { DepartmentsService } from '../../services/departments.service';
 import { AuthUsersService } from '../../../../../shared/services/auth-users.service';
 import { Location } from '@angular/common';
 
@@ -115,6 +115,6 @@ export class AdminDepartmentComponent extends BaseDetailClass<DepartmentEagerTyp
 
 
     onRestartForm (): void {
-        throw new Error( 'Method not implemented.' );
+        this.form.reset( this.initialFormValues );
     }
 }
