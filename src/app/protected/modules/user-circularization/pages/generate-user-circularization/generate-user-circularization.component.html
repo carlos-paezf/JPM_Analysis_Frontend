@@ -19,7 +19,7 @@
 
     <ng-template #tableComponent>
         <div class="action-buttons">
-            <button mat-flat-button color="primary" (click)="accordion.openAll()" #tooltip="matTooltip"
+            <button mat-flat-button color="accent" (click)="accordion.openAll()" #tooltip="matTooltip"
                 matTooltip="Expandir todos las secciones" matTooltipPosition="below" matTooltipShowDelay="500">Expandir
                 todos</button>
             <button mat-flat-button color="accent" (click)="accordion.closeAll()" #tooltip="matTooltip"
@@ -38,8 +38,12 @@
                     </mat-panel-description>
                 </mat-expansion-panel-header>
 
-                <app-users-by-department-table [usersCompanyCircularization]="data.users" />
+                <app-users-by-department-table [circularizationData]="data" />
             </mat-expansion-panel>
         </mat-accordion>
+
+        <button style="margin-top: 1rem;" mat-flat-button color="primary" type="submit"
+            (click)="generateExcel()">Generar Excel con
+            Circularización</button>
     </ng-template>
 </section>
