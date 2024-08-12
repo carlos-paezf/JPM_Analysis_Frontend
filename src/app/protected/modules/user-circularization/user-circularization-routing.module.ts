@@ -6,6 +6,7 @@ import { GenerateUserCircularizationComponent } from './pages/generate-user-circ
 import { ListDepartmentsComponent } from './pages/list-departments/list-departments.component';
 import { UserAssignmentByDepartmentComponent } from './pages/user-assignment-by-department/user-assignment-by-department.component';
 import { AdminDepartmentComponent } from './pages/admin-department/admin-department.component';
+import { CircularizationEmailComponent } from './pages/circularization-email/circularization-email.component';
 
 
 const routes: Routes = [
@@ -38,6 +39,12 @@ const routes: Routes = [
         component: AdminDepartmentComponent,
         pathMatch: 'full',
         data: { title: 'Administración de Departamentos', breadcrumb: 'Administración de Departamentos' }
+    },
+    {
+        path: 'circularization-email',
+        component: CircularizationEmailComponent,
+        data: { title: 'Email de Circularización', breadcrumb: 'Email de Circularización' },
+        pathMatch: 'full'
     },
     {
         path: '', redirectTo: 'generate-user-circularization', pathMatch: 'full'
