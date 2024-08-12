@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { ListEntityBase } from '../../../../../shared/classes/list-entity-base.class';
 import { AppUtilsMessagesService } from '../../../../../shared/services/app-utils-messages.service';
 import { ColumnTableType, DepartmentEagerType, DepartmentType } from '../../../../../shared/types';
-import { DepartmentsService } from '../../../departments/services/departments.service';
+import { DepartmentsService } from '../../services/departments.service';
 
 
 @Component( {
