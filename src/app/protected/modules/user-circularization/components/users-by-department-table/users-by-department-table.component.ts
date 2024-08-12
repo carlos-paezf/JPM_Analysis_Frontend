@@ -1,9 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
 
+import { Router } from '@angular/router';
 import { InfoTableBaseComponent } from '../../../../../shared/classes/sheet-base-component.class';
-import { AppUtilsMessagesService } from '../../../../../shared/services/app-utils-messages.service';
-import { ColumnTableType, UserCompanyCircularizationType } from '../../../../../shared/types';
-import { ProfilesService } from '../../../profiles/services/profiles.service';
+import { SessionStorageService } from '../../../../../shared/services/session-storage.service';
+import { CircularizationData, ColumnTableType, UserCompanyCircularizationType } from '../../../../../shared/types';
 
 
 @Component( {
@@ -28,11 +28,11 @@ export class UsersByDepartmentTableComponent extends InfoTableBaseComponent<User
         { columnDef: 'email', header: 'Email', cell: ( row ) => row.email },
     ];
 
-    @Input() usersCompanyCircularization!: UserCompanyCircularizationType[];
+    @Input() circularizationData!: CircularizationData;
 
     constructor (
-        private _appUtilsMessages: AppUtilsMessagesService,
-        private _profilesService: ProfilesService
+        private readonly _router: Router,
+        private readonly _sessionStorageService: SessionStorageService<CircularizationData>
     ) {
         super();
     }
@@ -43,8 +43,18 @@ export class UsersByDepartmentTableComponent extends InfoTableBaseComponent<User
      * accordingly.
      */
     ngOnInit (): void {
-        this.data = this.usersCompanyCircularization;
+        this.data = this.circularizationData.users;
         this.isEmptyTable = this.data.length <= 0;
         this.isLoadingResults = false;
+    }
+
+
+    /**
+     * The function `redirectToCircularizationEmail` saves circularization data to session storage and
+     * navigates to the circularization email page.
+     */
+    redirectToCircularizationEmail (): void {
+        this._sessionStorageService.setItem( 'circularizationData', this.circularizationData );
+        this._router.navigateByUrl( "/user-circularization/circularization-email" );
     }
 }
