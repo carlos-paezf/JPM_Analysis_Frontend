@@ -19,7 +19,8 @@
                     "options": {
                         "allowedCommonJsDependencies": [
                             "moment",
-                            "rfdc"
+                            "rfdc",
+                            "exceljs"
                         ],
                         "outputPath": "dist/frontend-v2",
                         "index": "src/index.html",
