@@ -1,12 +1,14 @@
+import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { BaseDetailClass } from '../../../../../shared/classes/base-detail.class';
-import { DepartmentEagerType, DepartmentType, FormBaseType } from '../../../../../shared/types';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
+
+import { BaseDetailClass } from '../../../../../shared/classes/base-detail.class';
 import { AppUtilsMessagesService } from '../../../../../shared/services/app-utils-messages.service';
-import { DepartmentsService } from '../../services/departments.service';
 import { AuthUsersService } from '../../../../../shared/services/auth-users.service';
-import { Location } from '@angular/common';
+import { DepartmentEagerType, FormBaseType } from '../../../../../shared/types';
+import { DepartmentsService } from '../../services/departments.service';
+
 
 @Component( {
     selector: 'app-admin-department',
@@ -58,6 +60,7 @@ export class AdminDepartmentComponent extends BaseDetailClass<DepartmentEagerTyp
                         error: error => {
                             this.data = null;
                             this.isLoading = false;
+                            this._appUtilsMessagesService.showQueryErrorMessage( error );
                         }
                     } );
             }
@@ -65,6 +68,10 @@ export class AdminDepartmentComponent extends BaseDetailClass<DepartmentEagerTyp
     }
 
 
+    /**
+     * The `formActions` function in TypeScript creates a form with initial values, disables it for
+     * non-admin users, tracks changes, and stores initial form values.
+     */
     formActions () {
         this.form = this._formBuilder.group( {
             initials: [ this.data?.initials || '', Validators.required ],
@@ -84,6 +91,12 @@ export class AdminDepartmentComponent extends BaseDetailClass<DepartmentEagerTyp
     }
 
 
+    /**
+     * The `onSubmit` function handles form submission for creating or updating departments, displaying
+     * appropriate messages based on user permissions and form validity.
+     * @returns In the `onSubmit` method, the following actions are being returned based on certain
+     * conditions:
+     */
     onSubmit (): void {
         if ( !this.isAdminUser ) return this._appUtilsMessagesService.showNoPermissionError();
 
@@ -97,7 +110,9 @@ export class AdminDepartmentComponent extends BaseDetailClass<DepartmentEagerTyp
                     error: error => this._appUtilsMessagesService.showQueryErrorMessage( error )
                 } );
 
-            this._location.back();
+            // this._location.back();
+
+            this.onRestartForm();
 
             return;
         }
@@ -114,6 +129,9 @@ export class AdminDepartmentComponent extends BaseDetailClass<DepartmentEagerTyp
     }
 
 
+    /**
+     * The `onRestartForm` function resets a form to its initial values in TypeScript.
+     */
     onRestartForm (): void {
         this.form.reset( this.initialFormValues );
     }
