@@ -1,4 +1,6 @@
 import { FormGroup } from "@angular/forms";
+import * as ExcelJS from 'exceljs';
+
 
 export { AppUserType } from './app-user.type';
 export {
@@ -31,7 +33,7 @@ export {
     UploadFileResponseType,
     UploadFileType,
     UserEntitlementEagerType,
-    UserEntitlementType,
+    UserEntitlementType
 } from './jpm-types.type';
 
 
@@ -118,3 +120,15 @@ export interface CircularizationData {
     department: string;
     users: UserCompanyCircularizationType[];
 }
+
+
+export type CellStyleType = {
+    cell: ExcelJS.Cell,
+    value: string,
+    bgColor: string,
+    fontColor: string,
+    alignment?: Partial<ExcelJS.Alignment>,
+    bold?: boolean;
+    fontName?: string;
+    withBorder?: boolean;
+};
