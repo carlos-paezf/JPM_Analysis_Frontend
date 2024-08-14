@@ -82,6 +82,7 @@ export const SIDENAV_ITEMS: SidenavLinkType[] = [
         label: 'Circularización de Usuarios',
         icon: 'contacts',
         routeLink: 'circularization',
+        openTab: false,
         children: [
             {
                 label: 'Circularización de Usuarios',
